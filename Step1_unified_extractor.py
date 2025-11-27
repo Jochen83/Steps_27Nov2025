@@ -251,15 +251,8 @@ class UnifiedTextExtractorApp:
                             f.write(";".join(escaped_row) + "\n")
                     else:
                         # TXT Format - strukturiert
-                        f.write("="*100 + "\n")
-                        f.write("DATENBANK KOMPLETT-EXPORT - Regatta OCR & PDF\n")
-                        f.write(f"Exportiert am: {datetime.now().strftime('%d.%m.%Y %H:%M:%S')}\n")
-                        f.write(f"Anzahl Einträge: {anzahl}\n")
-                        f.write("="*100 + "\n\n")
-                        
                         # Feldnamen als Kopfzeile
                         f.write("ID;Dateiname;Typ;Seite;Zeile;Inhalt;Zeichen;Verarbeitet am;Status\n")
-                        f.write("-"*100 + "\n")
                         
                         for row in rows:
                             id_val, dateiname, quellentyp, seite_nr, zeile_nr, inhalt, zeichen, zeit, status = row
@@ -269,10 +262,6 @@ class UnifiedTextExtractorApp:
                             inhalt_voll = inhalt if inhalt else ""
                             
                             f.write(f"{id_val};{dateiname};{quellentyp};{seite_str};{zeile_nr};{inhalt_voll};{zeichen};{zeit};{status}\n")
-                        
-                        f.write("\n" + "="*100 + "\n")
-                        f.write(f"ENDE - {anzahl} Einträge exportiert\n")
-                        f.write("="*100 + "\n")
                 
                 messagebox.showinfo("Export erfolgreich", 
                     f"Datenbank erfolgreich exportiert:\n{dateipfad}\n\n{anzahl} Einträge mit allen Feldern")
