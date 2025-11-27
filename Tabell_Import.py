@@ -328,6 +328,12 @@ class TabellImportApp:
             for tabelle in tabellen:
                 tabellen_listbox.insert(tk.END, tabelle[0])
             
+            # Button: Tabelle löschen
+            btn_delete = tk.Button(left_frame, text="🗑️ Ausgewählte Tabelle löschen", 
+                                  command=lambda: tabelle_loeschen(tabellen_listbox, tree, info_label), 
+                                  bg="#ef5350", fg="white", font=("Arial", 9, "bold"))
+            btn_delete.pack(fill=tk.X, pady=(10, 0))
+            
             # Rechte Seite: Tabellenansicht mit Treeview
             right_frame = tk.Frame(main_frame)
             right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=(5, 0))
@@ -357,6 +363,64 @@ class TabellImportApp:
             
             # Variable für aktuelle Sortierung
             sort_data = {'column': None, 'reverse': False, 'tabelle': None, 'daten': []}
+            
+            def tabelle_loeschen(listbox, treeview, info_lbl):
+                """Löscht die ausgewählte Tabelle aus der Datenbank"""
+                selection = listbox.curselection()
+                if not selection:
+                    messagebox.showwarning("Keine Auswahl", "Bitte wählen Sie zuerst eine Tabelle aus.")
+                    return
+                
+                tabellen_name = listbox.get(selection[0])
+                
+                # Sicherheitsabfrage
+                antwort = messagebox.askyesno(
+                    "Tabelle löschen?",
+                    f"Möchten Sie die Tabelle '{tabellen_name}' wirklich LÖSCHEN?\n\n"
+                    "Diese Aktion kann NICHT rückgängig gemacht werden!",
+                    icon='warning'
+                )
+                
+                if not antwort:
+                    return
+                
+                # Finale Bestätigung
+                final = messagebox.askyesno(
+                    "Letzte Bestätigung",
+                    f"LETZTE WARNUNG:\n\n"
+                    f"Tabelle '{tabellen_name}' wird unwiderruflich gelöscht!\n\n"
+                    "Wirklich fortfahren?",
+                    icon='warning'
+                )
+                
+                if not final:
+                    return
+                
+                try:
+                    conn = sqlite3.connect(self.db_name)
+                    cursor = conn.cursor()
+                    
+                    cursor.execute(f'DROP TABLE IF EXISTS {tabellen_name}')
+                    
+                    conn.commit()
+                    conn.close()
+                    
+                    # Listbox aktualisieren
+                    listbox.delete(selection[0])
+                    
+                    # Treeview leeren
+                    for item in treeview.get_children():
+                        treeview.delete(item)
+                    
+                    treeview["columns"] = []
+                    
+                    # Info aktualisieren
+                    info_lbl.config(text=f"Tabelle '{tabellen_name}' wurde gelöscht")
+                    
+                    messagebox.showinfo("Erfolgreich", f"Tabelle '{tabellen_name}' wurde gelöscht.")
+                    
+                except Exception as e:
+                    messagebox.showerror("Fehler", f"Fehler beim Löschen der Tabelle:\n{str(e)}")
             
             def tabelle_anzeigen(event):
                 """Zeigt die ausgewählte Tabelle im Treeview an"""
