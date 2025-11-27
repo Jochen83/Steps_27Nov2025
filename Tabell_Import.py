@@ -197,10 +197,11 @@ class TabellImportApp:
             
             # Daten importieren
             platzhalter = ', '.join(['?' for _ in feldnamen_sql])
-            insert_sql = f'INSERT INTO {self.tabellenname} ({", ".join([f"{feld}" for feld in feldnamen_sql])}) VALUES ({platzhalter})'
+            insert_sql = f'INSERT INTO {self.tabellenname} ({", ".join([f"\"{feld}\"" for feld in feldnamen_sql])}) VALUES ({platzhalter})'
             
             importiert = 0
             fehler = 0
+            fehler_details = []
             
             for i, zeile in enumerate(zeilen[1:], start=2):  # Ab Zeile 2 (nach Kopfzeile)
                 zeile = zeile.strip()
@@ -225,7 +226,10 @@ class TabellImportApp:
                     importiert += 1
                 except Exception as e:
                     fehler += 1
-                    print(f"Fehler in Zeile {i}: {str(e)}")
+                    fehler_msg = f"Zeile {i}: {str(e)}"
+                    fehler_details.append(fehler_msg)
+                    if fehler <= 10:  # Nur erste 10 Fehler ausgeben
+                        print(fehler_msg)
             
             conn.commit()
             conn.close()
@@ -233,13 +237,15 @@ class TabellImportApp:
             # Erfolgsmeldung
             self.status_label.config(text=f"Import abgeschlossen: {importiert} Zeilen importiert, {fehler} Fehler")
             
-            messagebox.showinfo(
-                "Import erfolgreich",
-                f"Tabelle '{self.tabellenname}' wurde erstellt!\n\n"
-                f"Importiert: {importiert} Zeilen\n"
-                f"Fehler: {fehler}\n"
-                f"Datenbank: {self.db_name}"
-            )
+            erfolg_msg = f"Tabelle '{self.tabellenname}' wurde erstellt!\n\n" \
+                        f"Importiert: {importiert} Zeilen\n" \
+                        f"Fehler: {fehler}\n" \
+                        f"Datenbank: {self.db_name}"
+            
+            if fehler > 0 and fehler_details:
+                erfolg_msg += f"\n\nErste Fehler:\n" + "\n".join(fehler_details[:5])
+            
+            messagebox.showinfo("Import abgeschlossen", erfolg_msg)
             
             # Vorschau aktualisieren
             self.tabelle_anzeigen()
