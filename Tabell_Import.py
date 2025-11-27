@@ -61,6 +61,13 @@ class TabellImportApp:
                                     font=("Arial", 11, "bold"))
         self.btn_import.pack(fill=tk.X, padx=20, pady=10)
         
+        # Button: Tabellen anzeigen
+        self.btn_tabellen = tk.Button(root, text="📊 Tabellen der Datenbank anzeigen", 
+                                      command=self.tabellen_fenster_oeffnen, 
+                                      bg="#ffb74d", height=2, 
+                                      font=("Arial", 11, "bold"))
+        self.btn_tabellen.pack(fill=tk.X, padx=20, pady=5)
+        
         # Statusleiste
         self.status_label = tk.Label(root, text="Bereit", bg="#e0e0e0", anchor=tk.W, font=("Arial", 9))
         self.status_label.pack(fill=tk.X, side=tk.BOTTOM)
@@ -269,6 +276,184 @@ class TabellImportApp:
             
         except Exception as e:
             print(f"Fehler beim Anzeigen: {str(e)}")
+    
+    def tabellen_fenster_oeffnen(self):
+        """Öffnet ein neues Fenster mit Liste aller Tabellen"""
+        try:
+            conn = sqlite3.connect(self.db_name)
+            cursor = conn.cursor()
+            
+            # Alle Tabellen abrufen
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name")
+            tabellen = cursor.fetchall()
+            conn.close()
+            
+            if not tabellen:
+                messagebox.showinfo("Keine Tabellen", "Die Datenbank enthält keine Tabellen.")
+                return
+            
+            # Neues Fenster erstellen
+            tabellen_window = tk.Toplevel(self.root)
+            tabellen_window.title("Datenbank-Tabellen")
+            tabellen_window.geometry("900x600")
+            
+            # Titel
+            tk.Label(tabellen_window, text=f"Tabellen in {self.db_name}", 
+                    font=("Arial", 12, "bold"), bg="#e1bee7", pady=10).pack(fill=tk.X)
+            
+            # Frame für Tabellenliste und Anzeige
+            main_frame = tk.Frame(tabellen_window)
+            main_frame.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+            
+            # Linke Seite: Tabellenliste
+            left_frame = tk.Frame(main_frame)
+            left_frame.pack(side=tk.LEFT, fill=tk.BOTH, padx=(0, 5))
+            
+            tk.Label(left_frame, text=f"Tabellen ({len(tabellen)}):", 
+                    font=("Arial", 10, "bold")).pack(anchor=tk.W, pady=5)
+            
+            # Listbox für Tabellen
+            list_frame = tk.Frame(left_frame)
+            list_frame.pack(fill=tk.BOTH, expand=True)
+            
+            scrollbar = tk.Scrollbar(list_frame)
+            scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+            
+            tabellen_listbox = tk.Listbox(list_frame, yscrollcommand=scrollbar.set, 
+                                         font=("Arial", 10), width=30)
+            tabellen_listbox.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+            scrollbar.config(command=tabellen_listbox.yview)
+            
+            # Tabellen in Listbox einfügen
+            for tabelle in tabellen:
+                tabellen_listbox.insert(tk.END, tabelle[0])
+            
+            # Rechte Seite: Tabellenansicht mit Treeview
+            right_frame = tk.Frame(main_frame)
+            right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=(5, 0))
+            
+            # Info-Label
+            info_label = tk.Label(right_frame, text="Wählen Sie eine Tabelle aus", 
+                                 font=("Arial", 10, "italic"), fg="grey")
+            info_label.pack(anchor=tk.W, pady=5)
+            
+            # Frame für Treeview
+            tree_frame = tk.Frame(right_frame)
+            tree_frame.pack(fill=tk.BOTH, expand=True)
+            
+            # Scrollbars für Treeview
+            vsb = tk.Scrollbar(tree_frame, orient="vertical")
+            vsb.pack(side=tk.RIGHT, fill=tk.Y)
+            
+            hsb = tk.Scrollbar(tree_frame, orient="horizontal")
+            hsb.pack(side=tk.BOTTOM, fill=tk.X)
+            
+            # Treeview erstellen
+            tree = ttk.Treeview(tree_frame, yscrollcommand=vsb.set, xscrollcommand=hsb.set)
+            tree.pack(fill=tk.BOTH, expand=True)
+            
+            vsb.config(command=tree.yview)
+            hsb.config(command=tree.xview)
+            
+            # Variable für aktuelle Sortierung
+            sort_data = {'column': None, 'reverse': False, 'tabelle': None, 'daten': []}
+            
+            def tabelle_anzeigen(event):
+                """Zeigt die ausgewählte Tabelle im Treeview an"""
+                selection = tabellen_listbox.curselection()
+                if not selection:
+                    return
+                
+                tabellen_name = tabellen_listbox.get(selection[0])
+                
+                try:
+                    conn = sqlite3.connect(self.db_name)
+                    cursor = conn.cursor()
+                    
+                    # Tabellenstruktur abrufen
+                    cursor.execute(f'PRAGMA table_info({tabellen_name})')
+                    spalten_info = cursor.fetchall()
+                    spalten = [info[1] for info in spalten_info]
+                    
+                    # Daten abrufen
+                    cursor.execute(f'SELECT * FROM {tabellen_name}')
+                    rows = cursor.fetchall()
+                    
+                    cursor.execute(f'SELECT COUNT(*) FROM {tabellen_name}')
+                    anzahl = cursor.fetchone()[0]
+                    
+                    conn.close()
+                    
+                    # Treeview leeren
+                    for item in tree.get_children():
+                        tree.delete(item)
+                    
+                    # Spalten konfigurieren
+                    tree["columns"] = spalten
+                    tree["show"] = "headings"
+                    
+                    # Spaltenüberschriften mit Sortier-Funktion
+                    for col in spalten:
+                        tree.heading(col, text=col, 
+                                   command=lambda c=col: sortiere_spalte(c, False))
+                        tree.column(col, width=100, anchor=tk.W)
+                    
+                    # Daten in Treeview einfügen
+                    for row in rows:
+                        tree.insert("", tk.END, values=row)
+                    
+                    # Sort-Daten speichern
+                    sort_data['tabelle'] = tabellen_name
+                    sort_data['daten'] = rows
+                    sort_data['column'] = None
+                    sort_data['reverse'] = False
+                    
+                    # Info aktualisieren
+                    info_label.config(text=f"Tabelle: {tabellen_name} ({anzahl} Einträge, {len(spalten)} Spalten)")
+                    
+                except Exception as e:
+                    messagebox.showerror("Fehler", f"Fehler beim Laden der Tabelle:\n{str(e)}")
+            
+            def sortiere_spalte(col, reverse):
+                """Sortiert die Treeview-Spalte"""
+                try:
+                    # Spaltenindex finden
+                    spalten = tree["columns"]
+                    col_index = list(spalten).index(col)
+                    
+                    # Daten aus Treeview holen
+                    daten = [(tree.set(child, col), child) for child in tree.get_children("")]
+                    
+                    # Versuche numerisch zu sortieren, sonst alphabetisch
+                    try:
+                        daten.sort(key=lambda t: float(t[0]) if t[0] else 0, reverse=reverse)
+                    except (ValueError, TypeError):
+                        daten.sort(key=lambda t: str(t[0]).lower(), reverse=reverse)
+                    
+                    # Neu anordnen
+                    for index, (val, child) in enumerate(daten):
+                        tree.move(child, "", index)
+                    
+                    # Sortier-Indikator in Überschrift
+                    pfeil = " ▼" if reverse else " ▲"
+                    
+                    # Alle Überschriften zurücksetzen
+                    for spalte in spalten:
+                        tree.heading(spalte, text=spalte.replace(" ▲", "").replace(" ▼", ""),
+                                   command=lambda c=spalte: sortiere_spalte(c, False))
+                    
+                    # Aktuelle Spalte mit Pfeil
+                    tree.heading(col, text=col + pfeil,
+                               command=lambda: sortiere_spalte(col, not reverse))
+                    
+                except Exception as e:
+                    print(f"Fehler beim Sortieren: {str(e)}")
+            
+            # Event-Binding für Listbox
+            tabellen_listbox.bind("<<ListboxSelect>>", tabelle_anzeigen)
+            
+        except Exception as e:
+            messagebox.showerror("Fehler", f"Fehler beim Öffnen der Tabellenliste:\n{str(e)}")
 
 
 if __name__ == "__main__":
