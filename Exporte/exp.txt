@@ -1,225 +1,432 @@
-====================================================================================================
-DATENBANK KOMPLETT-EXPORT - Regatta OCR & PDF
-Exportiert am: 27.11.2025 05:42:55
-Anzahl Einträge: 1901
-====================================================================================================
-
 ID;Dateiname;Typ;Seite;Zeile;Inhalt;Zeichen;Verarbeitet am;Status
-----------------------------------------------------------------------------------------------------
 1;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;1;51. GROSSAUHEIMER;17;2025-11-27 05:42:07.854199;verarbeitet
+1902;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;1;51. GROSSAUHEIMER;17;2025-11-27 05:48:02.046805;verarbeitet
 2;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;2;KURZSTRECKEN-REGATTA;20;2025-11-27 05:42:07.854870;verarbeitet
+1903;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;2;KURZSTRECKEN-REGATTA;20;2025-11-27 05:48:02.048610;verarbeitet
 3;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;3;16. & 17.September 2023;23;2025-11-27 05:42:07.854891;verarbeitet
+1904;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;3;16. & 17.September 2023;23;2025-11-27 05:48:02.048634;verarbeitet
 4;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;4;AM BOOTSHAUS RC »MÖVE« 1919 e.V. GROSSAUHEIM;44;2025-11-27 05:42:07.854896;verarbeitet
+1905;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;4;AM BOOTSHAUS RC »MÖVE« 1919 e.V. GROSSAUHEIM;44;2025-11-27 05:48:02.048639;verarbeitet
 5;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;5;Offene Verbandsregatta des DRV;30;2025-11-27 05:42:07.854899;verarbeitet
+1906;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;5;Offene Verbandsregatta des DRV;30;2025-11-27 05:48:02.048643;verarbeitet
 6;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;6;/ , };5;2025-11-27 05:42:07.854902;verarbeitet
+1907;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;6;/ , };5;2025-11-27 05:48:02.048646;verarbeitet
 7;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;7;z li I NN;9;2025-11-27 05:42:07.854905;verarbeitet
+1908;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;7;z li I NN;9;2025-11-27 05:48:02.048648;verarbeitet
 8;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;8;N NT 7 1, A Y;13;2025-11-27 05:42:07.854908;verarbeitet
+1909;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;8;N NT 7 1, A Y;13;2025-11-27 05:48:02.048651;verarbeitet
 9;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;9;NIS A, Aal: N EN;16;2025-11-27 05:42:07.854911;verarbeitet
+1910;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;9;NIS A, Aal: N EN;16;2025-11-27 05:48:02.048654;verarbeitet
 10;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;10;Na } LUNG N N Syn RN RN;23;2025-11-27 05:42:07.854914;verarbeitet
+1911;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;10;Na } LUNG N N Syn RN RN;23;2025-11-27 05:48:02.048657;verarbeitet
 11;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;11;a! VIA AN Ma SIE UWoı N;23;2025-11-27 05:42:07.854917;verarbeitet
+1912;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;11;a! VIA AN Ma SIE UWoı N;23;2025-11-27 05:48:02.048660;verarbeitet
 12;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;12;: mE, aa RT N l;15;2025-11-27 05:42:07.854920;verarbeitet
+1913;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;12;: mE, aa RT N l;15;2025-11-27 05:48:02.048663;verarbeitet
 13;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;13;a ar EN ELTA „12;16;2025-11-27 05:42:07.854923;verarbeitet
+1914;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;13;a ar EN ELTA „12;16;2025-11-27 05:48:02.048666;verarbeitet
 14;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;14;a ZU NN;7;2025-11-27 05:42:07.854926;verarbeitet
+1915;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;14;a ZU NN;7;2025-11-27 05:48:02.048669;verarbeitet
 15;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;15;— AR yo, WEI ul;15;2025-11-27 05:42:07.854929;verarbeitet
+1916;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;15;— AR yo, WEI ul;15;2025-11-27 05:48:02.048672;verarbeitet
 16;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;16;=-£ Ze _ du;11;2025-11-27 05:42:07.854932;verarbeitet
+1917;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;16;=-£ Ze _ du;11;2025-11-27 05:48:02.048674;verarbeitet
 17;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;17;—— m —- — I —,;14;2025-11-27 05:42:07.854935;verarbeitet
+1918;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;17;—— m —- — I —,;14;2025-11-27 05:48:02.048727;verarbeitet
 18;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;18;;0;2025-11-27 05:42:07.854938;verarbeitet
+1919;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_01.jpf;OCR;-;18;;0;2025-11-27 05:48:02.048734;verarbeitet
 19;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_02.jpf;OCR;-;1;Regatta-Ausschuss und Regattaleitung;36;2025-11-27 05:42:08.510469;verarbeitet
+1920;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_02.jpf;OCR;-;1;Regatta-Ausschuss und Regattaleitung;36;2025-11-27 05:48:02.704766;verarbeitet
 20;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_02.jpf;OCR;-;2;Anschrift: Andrea Zöger, Wiesenstr. 34, 63457 Hanau;51;2025-11-27 05:42:08.520330;verarbeitet
+1921;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_02.jpf;OCR;-;2;Anschrift: Andrea Zöger, Wiesenstr. 34, 63457 Hanau;51;2025-11-27 05:48:02.705977;verarbeitet
 21;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_02.jpf;OCR;-;3;Tel.: privat 06181/51243 - regattameldung@ruderclub-moeve.de;60;2025-11-27 05:42:08.520355;verarbeitet
+1922;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_02.jpf;OCR;-;3;Tel.: privat 06181/51243 - regattameldung@ruderclub-moeve.de;60;2025-11-27 05:48:02.705994;verarbeitet
 22;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_02.jpf;OCR;-;4;Mitglieder: Jens Botzum, Werner Henning, Ralf Niederreuther, Andrea Zöger;73;2025-11-27 05:42:08.520360;verarbeitet
+1923;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_02.jpf;OCR;-;4;Mitglieder: Jens Botzum, Werner Henning, Ralf Niederreuther, Andrea Zöger;73;2025-11-27 05:48:02.705999;verarbeitet
 23;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_02.jpf;OCR;-;5;;0;2025-11-27 05:42:08.520365;verarbeitet
+1924;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_02.jpf;OCR;-;5;;0;2025-11-27 05:48:02.706002;verarbeitet
 24;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;1;” ya &;6;2025-11-27 05:42:09.511738;verarbeitet
+1925;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;1;” ya &;6;2025-11-27 05:48:03.721734;verarbeitet
 25;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;2;r BRRREEE .;11;2025-11-27 05:42:09.512392;verarbeitet
+1926;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;2;r BRRREEE .;11;2025-11-27 05:48:03.731138;verarbeitet
 26;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;3;x rel >];8;2025-11-27 05:42:09.512411;verarbeitet
+1927;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;3;x rel >];8;2025-11-27 05:48:03.731165;verarbeitet
 27;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;4;T a ER $;8;2025-11-27 05:42:09.512415;verarbeitet
+1928;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;4;T a ER $;8;2025-11-27 05:48:03.731173;verarbeitet
 28;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;5;l N x ö S =;11;2025-11-27 05:42:09.512418;verarbeitet
+1929;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;5;l N x ö S =;11;2025-11-27 05:48:03.731179;verarbeitet
 29;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;6;5 3 AR BaysE;12;2025-11-27 05:42:09.512421;verarbeitet
+1930;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;6;5 3 AR BaysE;12;2025-11-27 05:48:03.731186;verarbeitet
 30;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;7;$ iv | \ | gps ESEES;20;2025-11-27 05:42:09.512424;verarbeitet
+1931;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;7;$ iv | \ | gps ESEES;20;2025-11-27 05:48:03.731189;verarbeitet
 31;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;8;” 5 \ ENRNRUNELAEN;18;2025-11-27 05:42:09.512427;verarbeitet
+1932;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;8;” 5 \ ENRNRUNELAEN;18;2025-11-27 05:48:03.731192;verarbeitet
 32;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;9;3;1;2025-11-27 05:42:09.512430;verarbeitet
+1933;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;9;3;1;2025-11-27 05:48:03.731195;verarbeitet
 33;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;10;SE |O;5;2025-11-27 05:42:09.512433;verarbeitet
+1934;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;10;SE |O;5;2025-11-27 05:48:03.731199;verarbeitet
 34;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;11;Pas) N;6;2025-11-27 05:42:09.512436;verarbeitet
+1935;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;11;Pas) N;6;2025-11-27 05:48:03.731202;verarbeitet
 35;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;12;S [3 | ı *F „a;14;2025-11-27 05:42:09.512438;verarbeitet
+1936;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;12;S [3 | ı *F „a;14;2025-11-27 05:48:03.731206;verarbeitet
 36;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;13;go sus TI | Sau 88;18;2025-11-27 05:42:09.512441;verarbeitet
+1937;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;13;go sus TI | Sau 88;18;2025-11-27 05:48:03.731211;verarbeitet
 37;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;14;Ss R x |. | Ran zu;18;2025-11-27 05:42:09.512444;verarbeitet
+1938;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;14;Ss R x |. | Ran zu;18;2025-11-27 05:48:03.731214;verarbeitet
 38;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;15;3 SE S;6;2025-11-27 05:42:09.512446;verarbeitet
+1939;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;15;3 SE S;6;2025-11-27 05:48:03.731216;verarbeitet
 39;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;16;= ar 3 | Se SR;14;2025-11-27 05:42:09.512449;verarbeitet
+1940;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;16;= ar 3 | Se SR;14;2025-11-27 05:48:03.731219;verarbeitet
 40;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;17;S 2 „| 358 SER;14;2025-11-27 05:42:09.512451;verarbeitet
+1941;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;17;S 2 „| 358 SER;14;2025-11-27 05:48:03.731262;verarbeitet
 41;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;18;= le \s SRPPEER;15;2025-11-27 05:42:09.512454;verarbeitet
+1942;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;18;= le \s SRPPEER;15;2025-11-27 05:48:03.731267;verarbeitet
 42;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;19;SDIS CH;7;2025-11-27 05:42:09.512457;verarbeitet
+1943;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;19;SDIS CH;7;2025-11-27 05:48:03.731270;verarbeitet
 43;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;20;1 DE: SBESOESS;14;2025-11-27 05:42:09.512460;verarbeitet
+1944;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;20;1 DE: SBESOESS;14;2025-11-27 05:48:03.731273;verarbeitet
 44;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;21;r al EBSSSHSS;13;2025-11-27 05:42:09.512462;verarbeitet
+1945;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;21;r al EBSSSHSS;13;2025-11-27 05:48:03.731276;verarbeitet
 45;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;22;3 za Su;7;2025-11-27 05:42:09.512465;verarbeitet
+1946;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;22;3 za Su;7;2025-11-27 05:48:03.731279;verarbeitet
 46;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;23;=: HE ge ı Lee me};18;2025-11-27 05:42:09.512467;verarbeitet
+1947;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;23;=: HE ge ı Lee me};18;2025-11-27 05:48:03.731282;verarbeitet
 47;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;24;SI j :;6;2025-11-27 05:42:09.512470;verarbeitet
+1948;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;24;SI j :;6;2025-11-27 05:48:03.731284;verarbeitet
 48;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;25;z * BEESS 2.;12;2025-11-27 05:42:09.512473;verarbeitet
+1949;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;25;z * BEESS 2.;12;2025-11-27 05:48:03.731288;verarbeitet
 49;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;26;S , ‚eh HEHE 3 S E & Ei;23;2025-11-27 05:42:09.512476;verarbeitet
+1950;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;26;S , ‚eh HEHE 3 S E & Ei;23;2025-11-27 05:48:03.731292;verarbeitet
 50;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;27;z mx KRSEE F;12;2025-11-27 05:42:09.512479;verarbeitet
+1951;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;27;z mx KRSEE F;12;2025-11-27 05:48:03.731296;verarbeitet
 51;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;28;= i ri ö;8;2025-11-27 05:42:09.512481;verarbeitet
+1952;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;28;= i ri ö;8;2025-11-27 05:48:03.731300;verarbeitet
 52;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;29;nl pi & FH: RN 3 2;18;2025-11-27 05:42:09.512484;verarbeitet
+1953;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;29;nl pi & FH: RN 3 2;18;2025-11-27 05:48:03.731303;verarbeitet
 53;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;30;z mit PER eo 8 2 8;18;2025-11-27 05:42:09.512486;verarbeitet
+1954;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;30;z mit PER eo 8 2 8;18;2025-11-27 05:48:03.731307;verarbeitet
 54;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;31;N „| ER 5 3 33;14;2025-11-27 05:42:09.512489;verarbeitet
+1955;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;31;N „| ER 5 3 33;14;2025-11-27 05:48:03.731311;verarbeitet
 55;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;32;er f BSR sg RN A;16;2025-11-27 05:42:09.512492;verarbeitet
+1956;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;32;er f BSR sg RN A;16;2025-11-27 05:48:03.731315;verarbeitet
 56;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;33;: ul SS & 28:85;15;2025-11-27 05:42:09.512494;verarbeitet
+1957;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;33;: ul SS & 28:85;15;2025-11-27 05:48:03.731319;verarbeitet
 57;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;34;= Mur ® $3 Ei :;15;2025-11-27 05:42:09.512497;verarbeitet
+1958;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;34;= Mur ® $3 Ei :;15;2025-11-27 05:48:03.731323;verarbeitet
 58;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;35;B =. KE-RIe 3;13;2025-11-27 05:42:09.512500;verarbeitet
+1959;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;35;B =. KE-RIe 3;13;2025-11-27 05:48:03.731328;verarbeitet
 59;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;36;rg ss Ä h gSanass S28s8;23;2025-11-27 05:42:09.512503;verarbeitet
+1960;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;36;rg ss Ä h gSanass S28s8;23;2025-11-27 05:48:03.731330;verarbeitet
 60;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;37;BE RE:;6;2025-11-27 05:42:09.512505;verarbeitet
+1961;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;37;BE RE:;6;2025-11-27 05:48:03.731333;verarbeitet
 61;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;38;ZHONYE — SERIT RER;18;2025-11-27 05:42:09.512508;verarbeitet
+1962;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;38;ZHONYE — SERIT RER;18;2025-11-27 05:48:03.731336;verarbeitet
 62;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;39;RSSERE 233;10;2025-11-27 05:42:09.512510;verarbeitet
+1963;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;39;RSSERE 233;10;2025-11-27 05:48:03.731338;verarbeitet
 63;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;40;nern] Ir KH SESsssEBase;23;2025-11-27 05:42:09.512513;verarbeitet
+1964;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;40;nern] Ir KH SESsssEBase;23;2025-11-27 05:48:03.731341;verarbeitet
 64;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;41;;0;2025-11-27 05:42:09.512516;verarbeitet
+1965;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_03.jpf;OCR;-;41;;0;2025-11-27 05:48:03.731344;verarbeitet
 65;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;1;Samstag, der 16.09.2023;23;2025-11-27 05:42:10.265083;verarbeitet
+1966;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;1;Samstag, der 16.09.2023;23;2025-11-27 05:48:04.472262;verarbeitet
 66;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;2;Re. 1 JM 1x BLKIbis ill Sa 09:00;32;2025-11-27 05:42:10.275407;verarbeitet
+1967;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;2;Re. 1 JM 1x BLKIbis ill Sa 09:00;32;2025-11-27 05:48:04.472870;verarbeitet
 67;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;3;Junior-Einer B LK I bis Ill;27;2025-11-27 05:42:10.275430;verarbeitet
+1968;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;3;Junior-Einer B LK I bis Ill;27;2025-11-27 05:48:04.472890;verarbeitet
 68;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;4;1 RVHellas Offenbach [Altersklasse B1];38;2025-11-27 05:42:10.275435;verarbeitet
+1969;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;4;1 RVHellas Offenbach [Altersklasse B1];38;2025-11-27 05:48:04.472894;verarbeitet
 69;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;5;Wilhelm Kaidel (07);19;2025-11-27 05:42:10.275439;verarbeitet
+1970;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;5;Wilhelm Kaidel (07);19;2025-11-27 05:48:04.472898;verarbeitet
 70;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;6;2 Hanauer RGBoot1 [Altersklasse B1];35;2025-11-27 05:42:10.275443;verarbeitet
+1971;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;6;2 Hanauer RGBoot1 [Altersklasse B1];35;2025-11-27 05:48:04.472901;verarbeitet
 71;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;7;Kenan Dogu Okul (08);20;2025-11-27 05:42:10.275446;verarbeitet
+1972;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;7;Kenan Dogu Okul (08);20;2025-11-27 05:48:04.472903;verarbeitet
 72;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;8;4 Hanauer RC Hassia [Altersklasse B1];37;2025-11-27 05:42:10.275505;verarbeitet
+1973;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;8;4 Hanauer RC Hassia [Altersklasse B1];37;2025-11-27 05:48:04.472906;verarbeitet
 73;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;9;Fabian Schwinghammer (08);25;2025-11-27 05:42:10.275512;verarbeitet
+1974;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;9;Fabian Schwinghammer (08);25;2025-11-27 05:48:04.472909;verarbeitet
 74;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;10;5 RGEberbach [Altersklasse B1];30;2025-11-27 05:42:10.275515;verarbeitet
+1975;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;10;5 RGEberbach [Altersklasse B1];30;2025-11-27 05:48:04.472912;verarbeitet
 75;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;11;Philipp Ehis (07);17;2025-11-27 05:42:10.275519;verarbeitet
+1976;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;11;Philipp Ehis (07);17;2025-11-27 05:48:04.472916;verarbeitet
 76;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;12;6 Hanauer RGBoot2 [Altersklasse B2];35;2025-11-27 05:42:10.275523;verarbeitet
+1977;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;12;6 Hanauer RGBoot2 [Altersklasse B2];35;2025-11-27 05:48:04.472921;verarbeitet
 77;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;13;Lian Meo (08);13;2025-11-27 05:42:10.275526;verarbeitet
+1978;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;13;Lian Meo (08);13;2025-11-27 05:48:04.472925;verarbeitet
 78;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;14;7 Frankfurter RG Oberrad Boot 1 [Altersklasse B2];49;2025-11-27 05:42:10.275530;verarbeitet
+1979;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;14;7 Frankfurter RG Oberrad Boot 1 [Altersklasse B2];49;2025-11-27 05:48:04.472929;verarbeitet
 79;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;15;Timm Runtemund (07);19;2025-11-27 05:42:10.275534;verarbeitet
+1980;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;15;Timm Runtemund (07);19;2025-11-27 05:48:04.472933;verarbeitet
 80;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;16;8 Nassovia Höchst [Altersklasse B2];35;2025-11-27 05:42:10.275537;verarbeitet
+1981;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;16;8 Nassovia Höchst [Altersklasse B2];35;2025-11-27 05:48:04.472938;verarbeitet
 81;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;17;Jakob Gelsen (08);17;2025-11-27 05:42:10.275541;verarbeitet
+1982;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;17;Jakob Gelsen (08);17;2025-11-27 05:48:04.472944;verarbeitet
 82;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;18;9 RGEberbach [Altersklasse B2];30;2025-11-27 05:42:10.275543;verarbeitet
+1983;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;18;9 RGEberbach [Altersklasse B2];30;2025-11-27 05:48:04.472950;verarbeitet
 83;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;19;Noel Maxim Heid (08);20;2025-11-27 05:42:10.275546;verarbeitet
+1984;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;19;Noel Maxim Heid (08);20;2025-11-27 05:48:04.472957;verarbeitet
 84;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;20;10 RG Weizlar [Altersklasse B2];31;2025-11-27 05:42:10.275549;verarbeitet
+1985;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;20;10 RG Weizlar [Altersklasse B2];31;2025-11-27 05:48:04.472986;verarbeitet
 85;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;21;"Theo Zeller (07);17;2025-11-27 05:42:10.275552;verarbeitet
+1986;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;21;"Theo Zeller (07);17;2025-11-27 05:48:04.473005;verarbeitet
 86;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;22;11 RCKarlstadt [Altersklasse B2];32;2025-11-27 05:42:10.275556;verarbeitet
+1987;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;22;11 RCKarlstadt [Altersklasse B2];32;2025-11-27 05:48:04.473140;verarbeitet
 87;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;23;Aron Hattwig (08);17;2025-11-27 05:42:10.275558;verarbeitet
+1988;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;23;Aron Hattwig (08);17;2025-11-27 05:48:04.473150;verarbeitet
 88;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;24;12 Wormser RC [Altersklasse B2];31;2025-11-27 05:42:10.275561;verarbeitet
+1989;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;24;12 Wormser RC [Altersklasse B2];31;2025-11-27 05:48:04.473154;verarbeitet
 89;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;25;Niko Urbach (08);16;2025-11-27 05:42:10.275565;verarbeitet
+1990;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;25;Niko Urbach (08);16;2025-11-27 05:48:04.473157;verarbeitet
 90;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;26;13 Frankfurter RG Oberrad Boot 2 [Altersklasse B3];50;2025-11-27 05:42:10.275569;verarbeitet
+1991;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;26;13 Frankfurter RG Oberrad Boot 2 [Altersklasse B3];50;2025-11-27 05:48:04.473160;verarbeitet
 91;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;27;Karsten Walshe (08);19;2025-11-27 05:42:10.275573;verarbeitet
+1992;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;27;Karsten Walshe (08);19;2025-11-27 05:48:04.473164;verarbeitet
 92;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;28;14 Hanauer RGBoot3 [Altersklasse B3];36;2025-11-27 05:42:10.275577;verarbeitet
+1993;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;28;14 Hanauer RGBoot3 [Altersklasse B3];36;2025-11-27 05:48:04.473169;verarbeitet
 93;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;29;Pacal Mundt (08);16;2025-11-27 05:42:10.275581;verarbeitet
+1994;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;29;Pacal Mundt (08);16;2025-11-27 05:48:04.473174;verarbeitet
 94;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;30;15 Hanauer RG Boot4 [Altersklasse B3];37;2025-11-27 05:42:10.275585;verarbeitet
+1995;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;30;15 Hanauer RG Boot4 [Altersklasse B3];37;2025-11-27 05:48:04.473179;verarbeitet
 95;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;31;Luka Herget (08);16;2025-11-27 05:42:10.275589;verarbeitet
+1996;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;31;Luka Herget (08);16;2025-11-27 05:48:04.473183;verarbeitet
 96;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;32;16 Frankfurter RC [Altersklasse B3];35;2025-11-27 05:42:10.275592;verarbeitet
+1997;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;32;16 Frankfurter RC [Altersklasse B3];35;2025-11-27 05:48:04.473188;verarbeitet
 97;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;33;Oliver Kempson (08);19;2025-11-27 05:42:10.275595;verarbeitet
+1998;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;33;Oliver Kempson (08);19;2025-11-27 05:48:04.473193;verarbeitet
 98;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;34;Re. 2 SM 1X ABLK WI Sa 09:15;28;2025-11-27 05:42:10.275599;verarbeitet
+1999;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;34;Re. 2 SM 1X ABLK WI Sa 09:15;28;2025-11-27 05:48:04.473198;verarbeitet
 99;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;35;Männer-Einer A/B LK I/II;24;2025-11-27 05:42:10.275602;verarbeitet
+2000;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;35;Männer-Einer A/B LK I/II;24;2025-11-27 05:48:04.473203;verarbeitet
 100;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;36;1 ‚Hanauer RC Hassia [Altersklasse B1];38;2025-11-27 05:42:10.275605;verarbeitet
+2001;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;36;1 ‚Hanauer RC Hassia [Altersklasse B1];38;2025-11-27 05:48:04.473207;verarbeitet
 101;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;37;Ole Hanack (04);15;2025-11-27 05:42:10.275609;verarbeitet
+2002;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;37;Ole Hanack (04);15;2025-11-27 05:48:04.473212;verarbeitet
 102;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;38;2 RGWeizlar [Altersklasse B1];29;2025-11-27 05:42:10.275612;verarbeitet
+2003;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;38;2 RGWeizlar [Altersklasse B1];29;2025-11-27 05:48:04.473216;verarbeitet
 103;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;39;Ben Sprenger (05);17;2025-11-27 05:42:10.275616;verarbeitet
+2004;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;39;Ben Sprenger (05);17;2025-11-27 05:48:04.473220;verarbeitet
 104;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;40;3 Wormser RC [Altersklasse B1];30;2025-11-27 05:42:10.275619;verarbeitet
+2005;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;40;3 Wormser RC [Altersklasse B1];30;2025-11-27 05:48:04.473224;verarbeitet
 105;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;41;Moritz Nultsch (04);19;2025-11-27 05:42:10.275622;verarbeitet
+2006;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;41;Moritz Nultsch (04);19;2025-11-27 05:48:04.473228;verarbeitet
 106;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;42;4 Hanauer RG [Altersklasse B1];30;2025-11-27 05:42:10.275625;verarbeitet
+2007;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;42;4 Hanauer RG [Altersklasse B1];30;2025-11-27 05:48:04.473232;verarbeitet
 107;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;43;Christoph Dübler (02);21;2025-11-27 05:42:10.275628;verarbeitet
+2008;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;43;Christoph Dübler (02);21;2025-11-27 05:48:04.473239;verarbeitet
 108;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;44;5 Marburger RV [Altersklasse B1];32;2025-11-27 05:42:10.275631;verarbeitet
+2009;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;44;5 Marburger RV [Altersklasse B1];32;2025-11-27 05:48:04.473248;verarbeitet
 109;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;45;Gerrit Gutberlet (05);21;2025-11-27 05:42:10.275633;verarbeitet
+2010;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;45;Gerrit Gutberlet (05);21;2025-11-27 05:48:04.473253;verarbeitet
 110;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;46;& WSV Hellas Gießen [Altersklasse B2];37;2025-11-27 05:42:10.275636;verarbeitet
+2011;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;46;& WSV Hellas Gießen [Altersklasse B2];37;2025-11-27 05:48:04.473260;verarbeitet
 111;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;47;Lukas Jürgens (04);18;2025-11-27 05:42:10.275639;verarbeitet
+2012;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;47;Lukas Jürgens (04);18;2025-11-27 05:48:04.473268;verarbeitet
 112;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;48;7 RGWetzlar [Altersklasse A2];29;2025-11-27 05:42:10.275642;verarbeitet
+2013;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;48;7 RGWetzlar [Altersklasse A2];29;2025-11-27 05:48:04.473273;verarbeitet
 113;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;49;Numan Akinti (99);17;2025-11-27 05:42:10.275644;verarbeitet
+2014;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;49;Numan Akinti (99);17;2025-11-27 05:48:04.473280;verarbeitet
 114;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;50;Programm der 51. Großauheimer Kurzstreckenregatta am 16./17.09.2023 Seite: 1/39;79;2025-11-27 05:42:10.275647;verarbeitet
+2015;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;50;Programm der 51. Großauheimer Kurzstreckenregatta am 16./17.09.2023 Seite: 1/39;79;2025-11-27 05:48:04.473285;verarbeitet
 115;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;51;;0;2025-11-27 05:42:10.275650;verarbeitet
+2016;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_04.jpf;OCR;-;51;;0;2025-11-27 05:48:04.473290;verarbeitet
 116;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;1;Re. 5 Jung 2x 13u 14J LK bis Ill Sa 09:21;41;2025-11-27 05:42:10.898091;verarbeitet
+2017;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;1;Re. 5 Jung 2x 13u 14J LK bis Ill Sa 09:21;41;2025-11-27 05:48:05.124714;verarbeitet
 117;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;2;Jungen-Doppelzweier 13 u 14J LK I bis Ill;41;2025-11-27 05:42:10.898876;verarbeitet
+2018;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;2;Jungen-Doppelzweier 13 u 14J LK I bis Ill;41;2025-11-27 05:48:05.134751;verarbeitet
 118;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;3;I RC Möve Grossauheim [Leistungsklasse 1];41;2025-11-27 05:42:10.898895;verarbeitet
+2019;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;3;I RC Möve Grossauheim [Leistungsklasse 1];41;2025-11-27 05:48:05.134780;verarbeitet
 119;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;4;Nils Fennig (09), Noah Seemann (09);35;2025-11-27 05:42:10.898900;verarbeitet
+2020;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;4;Nils Fennig (09), Noah Seemann (09);35;2025-11-27 05:48:05.134786;verarbeitet
 120;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;5;2 Frankfurter RG Oberrad Boot 1 [Leistungsklasse 1];51;2025-11-27 05:42:10.898903;verarbeitet
+2021;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;5;2 Frankfurter RG Oberrad Boot 1 [Leistungsklasse 1];51;2025-11-27 05:48:05.134789;verarbeitet
 121;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;6;Fabian Behm (10), Bruno Jung (10);33;2025-11-27 05:42:10.898905;verarbeitet
+2022;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;6;Fabian Behm (10), Bruno Jung (10);33;2025-11-27 05:48:05.134793;verarbeitet
 122;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;7;3 8G Wiking Boot 1 [Leistungsklasse 1];38;2025-11-27 05:42:10.898908;verarbeitet
+2023;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;7;3 8G Wiking Boot 1 [Leistungsklasse 1];38;2025-11-27 05:48:05.134796;verarbeitet
 123;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;8;Antonin Dickel (09), Nikita Lukauskas (09);42;2025-11-27 05:42:10.898911;verarbeitet
+2024;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;8;Antonin Dickel (09), Nikita Lukauskas (09);42;2025-11-27 05:48:05.134798;verarbeitet
 124;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;9;4 Frankfurter RG Germania Boot 1 [Leistungsklasse 1];52;2025-11-27 05:42:10.898913;verarbeitet
+2025;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;9;4 Frankfurter RG Germania Boot 1 [Leistungsklasse 1];52;2025-11-27 05:48:05.134801;verarbeitet
 125;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;10;Erik Eichmeyer (09), Maximilian Carl Eugen Preuße (09);54;2025-11-27 05:42:10.898916;verarbeitet
+2026;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;10;Erik Eichmeyer (09), Maximilian Carl Eugen Preuße (09);54;2025-11-27 05:48:05.134804;verarbeitet
 126;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;11;5 RGWeizlar [Leistungsklasse 1];31;2025-11-27 05:42:10.898919;verarbeitet
+2027;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;11;5 RGWeizlar [Leistungsklasse 1];31;2025-11-27 05:48:05.134807;verarbeitet
 127;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;12;Louis Wagner (09), Anton Loh (10);33;2025-11-27 05:42:10.898922;verarbeitet
+2028;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;12;Louis Wagner (09), Anton Loh (10);33;2025-11-27 05:48:05.134809;verarbeitet
 128;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;13;6 SG Wiking Boot2 [Leistungsklasse 2];37;2025-11-27 05:42:10.898924;verarbeitet
+2029;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;13;6 SG Wiking Boot2 [Leistungsklasse 2];37;2025-11-27 05:48:05.134812;verarbeitet
 129;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;14;Marcel Schilling (10), Lasse Hanspach (10);42;2025-11-27 05:42:10.898928;verarbeitet
+2030;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;14;Marcel Schilling (10), Lasse Hanspach (10);42;2025-11-27 05:48:05.134854;verarbeitet
 130;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;15;8 Frankfurter RG Germania Boot 2 [Leistungsklasse 2];52;2025-11-27 05:42:10.898930;verarbeitet
+2031;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;15;8 Frankfurter RG Germania Boot 2 [Leistungsklasse 2];52;2025-11-27 05:48:05.134859;verarbeitet
 131;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;16;Konstantin Muthesius (09), Matis Falcone (09);45;2025-11-27 05:42:10.898933;verarbeitet
+2032;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;16;Konstantin Muthesius (09), Matis Falcone (09);45;2025-11-27 05:48:05.134862;verarbeitet
 132;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;17;9 Frankfurter RG Oberrad Boot 2 [Leistungsklasse 2];51;2025-11-27 05:42:10.898936;verarbeitet
+2033;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;17;9 Frankfurter RG Oberrad Boot 2 [Leistungsklasse 2];51;2025-11-27 05:48:05.134865;verarbeitet
 133;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;18;Lukas Schäfer (10), Luis Schecker (09);38;2025-11-27 05:42:10.898939;verarbeitet
+2034;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;18;Lukas Schäfer (10), Luis Schecker (09);38;2025-11-27 05:48:05.134868;verarbeitet
 134;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;19;10 Frankfurter RG Germania Boot 3 [Leistungsklasse 2];53;2025-11-27 05:42:10.898943;verarbeitet
+2035;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;19;10 Frankfurter RG Germania Boot 3 [Leistungsklasse 2];53;2025-11-27 05:48:05.134870;verarbeitet
 135;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;20;Jurek Balzer (10), Oskar Maria Dietrich (10);44;2025-11-27 05:42:10.898946;verarbeitet
+2036;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;20;Jurek Balzer (10), Oskar Maria Dietrich (10);44;2025-11-27 05:48:05.134873;verarbeitet
 136;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;21;11 Hanauer RG [Leistungsklasse 3];33;2025-11-27 05:42:10.898950;verarbeitet
+2037;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;21;11 Hanauer RG [Leistungsklasse 3];33;2025-11-27 05:48:05.134876;verarbeitet
 137;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;22;Kianı Frank (09), Dorian Vanjorek (09);38;2025-11-27 05:42:10.899027;verarbeitet
+2038;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;22;Kianı Frank (09), Dorian Vanjorek (09);38;2025-11-27 05:48:05.134878;verarbeitet
 138;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;23;12. Mühlheimer RV [Leistungsklasse 3];37;2025-11-27 05:42:10.899035;verarbeitet
+2039;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;23;12. Mühlheimer RV [Leistungsklasse 3];37;2025-11-27 05:48:05.134881;verarbeitet
 139;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;24;Linus Rothenbücher (10), Aeneas Rydryck (10);44;2025-11-27 05:42:10.899038;verarbeitet
+2040;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;24;Linus Rothenbücher (10), Aeneas Rydryck (10);44;2025-11-27 05:48:05.134884;verarbeitet
 140;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;25;13 Frankfurter RC [Leistungsklasse 3];37;2025-11-27 05:42:10.899041;verarbeitet
+2041;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;25;13 Frankfurter RC [Leistungsklasse 3];37;2025-11-27 05:48:05.134887;verarbeitet
 141;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;26;Moritz Malik (10), Henry Schelm (10);36;2025-11-27 05:42:10.899043;verarbeitet
+2042;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;26;Moritz Malik (10), Henry Schelm (10);36;2025-11-27 05:48:05.134889;verarbeitet
 142;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;27;Programm der 51. Großauheimer Kurzstreckenregatta am 16./17.09.2023 Seite: 2/39;79;2025-11-27 05:42:10.899046;verarbeitet
+2043;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;27;Programm der 51. Großauheimer Kurzstreckenregatta am 16./17.09.2023 Seite: 2/39;79;2025-11-27 05:48:05.134892;verarbeitet
 143;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;28;;0;2025-11-27 05:42:10.899049;verarbeitet
+2044;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_05.jpf;OCR;-;28;;0;2025-11-27 05:48:05.134895;verarbeitet
 144;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;1;Re. 6 JF1xBLKlbis ll Sa 09:36;29;2025-11-27 05:42:11.722394;verarbeitet
+2045;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;1;Re. 6 JF1xBLKlbis ll Sa 09:36;29;2025-11-27 05:48:05.960514;verarbeitet
 145;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;2;Juniorinnen-Einer B LK Ibis Ill;31;2025-11-27 05:42:11.732513;verarbeitet
+2046;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;2;Juniorinnen-Einer B LK Ibis Ill;31;2025-11-27 05:48:05.969831;verarbeitet
 146;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;3;I RCMöve Grossauheim [Altersklasse B1];38;2025-11-27 05:42:11.732544;verarbeitet
+2047;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;3;I RCMöve Grossauheim [Altersklasse B1];38;2025-11-27 05:48:05.969861;verarbeitet
 147;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;4;Sophia Papenfuß (07);20;2025-11-27 05:42:11.732550;verarbeitet
+2048;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;4;Sophia Papenfuß (07);20;2025-11-27 05:48:05.969866;verarbeitet
 148;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;5;2 WSV Offenbach am Main-Bürgel Boot 1 [Altersklasse B1];55;2025-11-27 05:42:11.732553;verarbeitet
+2049;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;5;2 WSV Offenbach am Main-Bürgel Boot 1 [Altersklasse B1];55;2025-11-27 05:48:05.969869;verarbeitet
 149;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;6;Greta Meyer (08);16;2025-11-27 05:42:11.732557;verarbeitet
+2050;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;6;Greta Meyer (08);16;2025-11-27 05:48:05.969874;verarbeitet
 150;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;7;3 Hanauer RC Hassia Boot 1 [Altersklasse B1];44;2025-11-27 05:42:11.732560;verarbeitet
+2051;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;7;3 Hanauer RC Hassia Boot 1 [Altersklasse B1];44;2025-11-27 05:48:05.969927;verarbeitet
 151;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;8;Finja Grohs (08);16;2025-11-27 05:42:11.732562;verarbeitet
+2052;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;8;Finja Grohs (08);16;2025-11-27 05:48:05.969932;verarbeitet
 152;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;9;4 5G Wiking Boot 1 [Altersklasse B1];36;2025-11-27 05:42:11.732565;verarbeitet
+2053;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;9;4 5G Wiking Boot 1 [Altersklasse B1];36;2025-11-27 05:48:05.969935;verarbeitet
 153;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;10;Lilith Ludwig (08);18;2025-11-27 05:42:11.732568;verarbeitet
+2054;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;10;Lilith Ludwig (08);18;2025-11-27 05:48:05.969938;verarbeitet
 154;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;11;5 Limburger CIfW Boot 1 [Altersklasse B1];41;2025-11-27 05:42:11.732571;verarbeitet
+2055;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;11;5 Limburger CIfW Boot 1 [Altersklasse B1];41;2025-11-27 05:48:05.969941;verarbeitet
 155;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;12;Louisa Will (07);16;2025-11-27 05:42:11.732573;verarbeitet
+2056;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;12;Louisa Will (07);16;2025-11-27 05:48:05.969944;verarbeitet
 156;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;13;8 WSVOffenbach am Main-Bürgel Boot 2 [Altersklasse B1];54;2025-11-27 05:42:11.732576;verarbeitet
+2057;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;13;8 WSVOffenbach am Main-Bürgel Boot 2 [Altersklasse B1];54;2025-11-27 05:48:05.969947;verarbeitet
 157;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;14;Victoria Schäfer (07);21;2025-11-27 05:42:11.732580;verarbeitet
+2058;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;14;Victoria Schäfer (07);21;2025-11-27 05:48:05.969950;verarbeitet
 158;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;15;9 Limburger CIfW Boot 2 [Altersklasse B2];41;2025-11-27 05:42:11.732649;verarbeitet
+2059;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;15;9 Limburger CIfW Boot 2 [Altersklasse B2];41;2025-11-27 05:48:05.969953;verarbeitet
 159;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;16;Sophie Michel (07);18;2025-11-27 05:42:11.732667;verarbeitet
+2060;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;16;Sophie Michel (07);18;2025-11-27 05:48:05.969956;verarbeitet
 160;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;17;10 SGWiking Boot2 [Altersklasse B2];35;2025-11-27 05:42:11.732672;verarbeitet
+2061;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;17;10 SGWiking Boot2 [Altersklasse B2];35;2025-11-27 05:48:05.969958;verarbeitet
 161;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;18;Yasmine Dhraief (07);20;2025-11-27 05:42:11.732675;verarbeitet
+2062;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;18;Yasmine Dhraief (07);20;2025-11-27 05:48:05.969961;verarbeitet
 162;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;19;11 RG Wetzlar [Altersklasse B2];31;2025-11-27 05:42:11.732678;verarbeitet
+2063;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;19;11 RG Wetzlar [Altersklasse B2];31;2025-11-27 05:48:05.969964;verarbeitet
 163;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;20;Leni Lefevre (07);17;2025-11-27 05:42:11.732681;verarbeitet
+2064;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;20;Leni Lefevre (07);17;2025-11-27 05:48:05.969967;verarbeitet
 164;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;21;12 Nassovia Höchst [Altersklasse B2];36;2025-11-27 05:42:11.732684;verarbeitet
+2065;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;21;12 Nassovia Höchst [Altersklasse B2];36;2025-11-27 05:48:05.969969;verarbeitet
 165;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;22;Elisa Burau (07);16;2025-11-27 05:42:11.732688;verarbeitet
+2066;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;22;Elisa Burau (07);16;2025-11-27 05:48:05.969972;verarbeitet
 166;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;23;13 Limburger CHHW Boot 3 [Altersklasse B2];42;2025-11-27 05:42:11.732691;verarbeitet
+2067;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;23;13 Limburger CHHW Boot 3 [Altersklasse B2];42;2025-11-27 05:48:05.969975;verarbeitet
 167;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;24;Charlotte Bergmann (07);23;2025-11-27 05:42:11.732693;verarbeitet
+2068;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;24;Charlotte Bergmann (07);23;2025-11-27 05:48:05.969977;verarbeitet
 168;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;25;14 RGEberbach [Altersklasse B2];31;2025-11-27 05:42:11.732696;verarbeitet
+2069;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;25;14 RGEberbach [Altersklasse B2];31;2025-11-27 05:48:05.969980;verarbeitet
 169;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;26;Lili Kunze (08);15;2025-11-27 05:42:11.732699;verarbeitet
+2070;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;26;Lili Kunze (08);15;2025-11-27 05:48:05.969983;verarbeitet
 170;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;27;15 WSVHellas Gießen [Altersklasse B2];37;2025-11-27 05:42:11.732701;verarbeitet
+2071;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;27;15 WSVHellas Gießen [Altersklasse B2];37;2025-11-27 05:48:05.969985;verarbeitet
 171;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;28;Helene Smarsly (08);19;2025-11-27 05:42:11.732705;verarbeitet
+2072;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;28;Helene Smarsly (08);19;2025-11-27 05:48:05.969988;verarbeitet
 172;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;29;17 SGWiking Boot3 [Altersklasse B3];35;2025-11-27 05:42:11.732708;verarbeitet
+2073;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;29;17 SGWiking Boot3 [Altersklasse B3];35;2025-11-27 05:48:05.969991;verarbeitet
 173;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;30;Zuzanna Grabiec (08);20;2025-11-27 05:42:11.732711;verarbeitet
+2074;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;30;Zuzanna Grabiec (08);20;2025-11-27 05:48:05.969994;verarbeitet
 174;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;31;18 Hanauer RG [Altersklasse B3];31;2025-11-27 05:42:11.732715;verarbeitet
+2075;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;31;18 Hanauer RG [Altersklasse B3];31;2025-11-27 05:48:05.969997;verarbeitet
 175;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;32;Sarah Huzu (07);15;2025-11-27 05:42:11.732718;verarbeitet
+2076;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;32;Sarah Huzu (07);15;2025-11-27 05:48:05.969999;verarbeitet
 176;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;33;19 RC Aschaffenburg [Altersklasse B2];37;2025-11-27 05:42:11.732721;verarbeitet
+2077;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;33;19 RC Aschaffenburg [Altersklasse B2];37;2025-11-27 05:48:05.970002;verarbeitet
 177;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;34;Lara Stumpf (08);16;2025-11-27 05:42:11.732723;verarbeitet
+2078;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;34;Lara Stumpf (08);16;2025-11-27 05:48:05.970005;verarbeitet
 178;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;35;Re. 7 Mäd 4x+ 13 u 1 LKW Sa 09:47;33;2025-11-27 05:42:11.732726;verarbeitet
+2079;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;35;Re. 7 Mäd 4x+ 13 u 1 LKW Sa 09:47;33;2025-11-27 05:48:05.970007;verarbeitet
 179;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;36;Mädchen-Doppelvierer m. St. 13 u 14J LK I/II;44;2025-11-27 05:42:11.732729;verarbeitet
+2080;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;36;Mädchen-Doppelvierer m. St. 13 u 14J LK I/II;44;2025-11-27 05:48:05.970010;verarbeitet
 180;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;37;1 ‚Rgm. Frankfurter RG Germania/ SRR Schillerschule Frankfurt [Leistungsklasse 1];81;2025-11-27 05:42:11.732733;verarbeitet
+2081;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;37;1 ‚Rgm. Frankfurter RG Germania/ SRR Schillerschule Frankfurt [Leistungsklasse 1];81;2025-11-27 05:48:05.970013;verarbeitet
 181;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;38;Joana Pätz (09)[SRR Schill], Anela Kopalla (09)[SAR Schill], Emilia Kratz (O9)[SAR Schill], Helena Noemi Tibitanzl (1 0)[FRGG], St. Emil;136;2025-11-27 05:42:11.732736;verarbeitet
+2082;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;38;Joana Pätz (09)[SRR Schill], Anela Kopalla (09)[SAR Schill], Emilia Kratz (O9)[SAR Schill], Helena Noemi Tibitanzl (1 0)[FRGG], St. Emil;136;2025-11-27 05:48:05.970016;verarbeitet
 182;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;39;Eichmeyer (11)[FRGG];20;2025-11-27 05:42:11.732740;verarbeitet
+2083;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;39;Eichmeyer (11)[FRGG];20;2025-11-27 05:48:05.970019;verarbeitet
 183;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;40;2 Frankfurter RC [Leistungsklasse 1];36;2025-11-27 05:42:11.732742;verarbeitet
+2084;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;40;2 Frankfurter RC [Leistungsklasse 1];36;2025-11-27 05:48:05.970022;verarbeitet
 184;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;41;Frida Bischof (09), Danica Guertin (09), Anna Clarenz (09), Teresa Wahl (09), St. Hannah Nikolow (10);101;2025-11-27 05:42:11.732745;verarbeitet
+2085;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;41;Frida Bischof (09), Danica Guertin (09), Anna Clarenz (09), Teresa Wahl (09), St. Hannah Nikolow (10);101;2025-11-27 05:48:05.970024;verarbeitet
 185;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;42;3 Hanauer RC Hassia [Leistungsklasse 1];39;2025-11-27 05:42:11.732748;verarbeitet
+2086;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;42;3 Hanauer RC Hassia [Leistungsklasse 1];39;2025-11-27 05:48:05.970027;verarbeitet
 186;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;43;Hannah Reelfs (10), Antonia Baron (10), Lou Dörner (09), Nikki McMeeken (09), St. Salome Richters (11);102;2025-11-27 05:42:11.732752;verarbeitet
+2087;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;43;Hannah Reelfs (10), Antonia Baron (10), Lou Dörner (09), Nikki McMeeken (09), St. Salome Richters (11);102;2025-11-27 05:48:05.970030;verarbeitet
 187;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;44;Programm der 51. Großauheimer Kurzstreckenregatta am 16./17.09.2023 Seite: 3/39;79;2025-11-27 05:42:11.732755;verarbeitet
+2088;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;44;Programm der 51. Großauheimer Kurzstreckenregatta am 16./17.09.2023 Seite: 3/39;79;2025-11-27 05:48:05.970033;verarbeitet
 188;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;45;;0;2025-11-27 05:42:11.732757;verarbeitet
+2089;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_06.jpf;OCR;-;45;;0;2025-11-27 05:48:05.970035;verarbeitet
 189;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;1;Re. 8 JM 2-ABLKW Sa 09:50;25;2025-11-27 05:42:12.262739;verarbeitet
+2090;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;1;Re. 8 JM 2-ABLKW Sa 09:50;25;2025-11-27 05:48:06.501709;verarbeitet
 190;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;2;Junior-Zweier o. St. VBLK I/II;30;2025-11-27 05:42:12.263801;verarbeitet
+2091;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;2;Junior-Zweier o. St. VBLK I/II;30;2025-11-27 05:48:06.510801;verarbeitet
 191;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;3;3 RGEberbach [Altersklasse A1];30;2025-11-27 05:42:12.263823;verarbeitet
+2092;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;3;3 RGEberbach [Altersklasse A1];30;2025-11-27 05:48:06.510826;verarbeitet
 192;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;4;Harry Legat (06), Nils Miron Heid (05);38;2025-11-27 05:42:12.263828;verarbeitet
+2093;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;4;Harry Legat (06), Nils Miron Heid (05);38;2025-11-27 05:48:06.510902;verarbeitet
 193;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;5;4 Hanauer RC Hassia [Altersklasse AT];37;2025-11-27 05:42:12.263831;verarbeitet
+2094;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;5;4 Hanauer RC Hassia [Altersklasse AT];37;2025-11-27 05:48:06.510917;verarbeitet
 194;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;6;Jakob Rastetter (05), Simon Gimplinger (06);43;2025-11-27 05:42:12.263834;verarbeitet
+2095;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;6;Jakob Rastetter (05), Simon Gimplinger (06);43;2025-11-27 05:48:06.510922;verarbeitet
 195;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;7;5 Offenbacher RG Undine [Altersklasse B1];41;2025-11-27 05:42:12.263836;verarbeitet
+2096;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;7;5 Offenbacher RG Undine [Altersklasse B1];41;2025-11-27 05:48:06.510925;verarbeitet
 196;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;8;Julius Klein (07), Rufus Henning (07);37;2025-11-27 05:42:12.263839;verarbeitet
+2097;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;8;Julius Klein (07), Rufus Henning (07);37;2025-11-27 05:48:06.510927;verarbeitet
 197;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;9;Re. 9 SFIXABLKIM Sa 09:53;25;2025-11-27 05:42:12.263842;verarbeitet
+2098;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;9;Re. 9 SFIXABLKIM Sa 09:53;25;2025-11-27 05:48:06.510930;verarbeitet
 198;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;10;Frauen-Einer A/B LK I/II;24;2025-11-27 05:42:12.263845;verarbeitet
+2099;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;10;Frauen-Einer A/B LK I/II;24;2025-11-27 05:48:06.510933;verarbeitet
 199;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;11;3 Hanauer RC Hassia [Altersklasse B1];37;2025-11-27 05:42:12.263848;verarbeitet
+2100;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;11;3 Hanauer RC Hassia [Altersklasse B1];37;2025-11-27 05:48:06.510936;verarbeitet
 200;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;12;Celina Grunwald (04);20;2025-11-27 05:42:12.263897;verarbeitet
+2101;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;12;Celina Grunwald (04);20;2025-11-27 05:48:06.510938;verarbeitet
 201;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;13;4 Frauen-RV Freiweg Frankfurt [Altersklasse A2];47;2025-11-27 05:42:12.263903;verarbeitet
+2102;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;13;4 Frauen-RV Freiweg Frankfurt [Altersklasse A2];47;2025-11-27 05:48:06.510941;verarbeitet
 202;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;14;Michaela Hiemer (88);20;2025-11-27 05:42:12.263906;verarbeitet
+2103;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;14;Michaela Hiemer (88);20;2025-11-27 05:48:06.510943;verarbeitet
 203;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;15;5 Frankfurter RG Borussia [Altersklasse A2];43;2025-11-27 05:42:12.263909;verarbeitet
+2104;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;15;5 Frankfurter RG Borussia [Altersklasse A2];43;2025-11-27 05:48:06.510946;verarbeitet
 204;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;16;Hannah Schneider (96);21;2025-11-27 05:42:12.263912;verarbeitet
+2105;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;16;Hannah Schneider (96);21;2025-11-27 05:48:06.510949;verarbeitet
 205;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;17;6 RVHellas Offenbach [Altersklasse A2];38;2025-11-27 05:42:12.263914;verarbeitet
+2106;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;17;6 RVHellas Offenbach [Altersklasse A2];38;2025-11-27 05:48:06.510951;verarbeitet
 206;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;18;Mirjam Beitz (99);17;2025-11-27 05:42:12.263917;verarbeitet
+2107;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;18;Mirjam Beitz (99);17;2025-11-27 05:48:06.510954;verarbeitet
 207;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;19;7 RGWeizlar [Altersklasse B2];29;2025-11-27 05:42:12.263920;verarbeitet
+2108;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;19;7 RGWeizlar [Altersklasse B2];29;2025-11-27 05:48:06.510957;verarbeitet
 208;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;20;Lara Buseck (05);16;2025-11-27 05:42:12.263923;verarbeitet
+2109;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;20;Lara Buseck (05);16;2025-11-27 05:48:06.510959;verarbeitet
 209;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;21;8 Marburger RV [Altersklasse A1];32;2025-11-27 05:42:12.263926;verarbeitet
+2110;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;21;8 Marburger RV [Altersklasse A1];32;2025-11-27 05:48:06.510962;verarbeitet
 210;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;22;Caroline Joris (97);19;2025-11-27 05:42:12.263928;verarbeitet
+2111;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;22;Caroline Joris (97);19;2025-11-27 05:48:06.510965;verarbeitet
 211;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;23;rk x.2.3;8;2025-11-27 05:42:12.263931;verarbeitet
+2112;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;23;rk x.2.3;8;2025-11-27 05:48:06.510967;verarbeitet
 212;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;24;SCHIFFFAHRTSPAUSE;17;2025-11-27 05:42:12.263934;verarbeitet
+2113;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;24;SCHIFFFAHRTSPAUSE;17;2025-11-27 05:48:06.510970;verarbeitet
 213;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;25;Programm der 51. Großauheimer Kurzstreckenregatta am 16./17.09.2023 Seite: 4/39;79;2025-11-27 05:42:12.263937;verarbeitet
+2114;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;25;Programm der 51. Großauheimer Kurzstreckenregatta am 16./17.09.2023 Seite: 4/39;79;2025-11-27 05:48:06.510973;verarbeitet
 214;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;26;;0;2025-11-27 05:42:12.263940;verarbeitet
+2115;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_07.jpf;OCR;-;26;;0;2025-11-27 05:48:06.510978;verarbeitet
 215;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_08.jpf;OCR;-;1;Re. 10 Jung 1x 11u 12J LK bis Il Sa 11:05;41;2025-11-27 05:42:12.970065;verarbeitet
 216;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_08.jpf;OCR;-;2;Jungen-Einer 11 u 12J LK Ibis Ill;33;2025-11-27 05:42:12.971377;verarbeitet
 217;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_08.jpf;OCR;-;3;1 RC Aschaffenburg Boot 1 [Leistungsklasse 1];45;2025-11-27 05:42:12.971395;verarbeitet
@@ -1907,7 +2114,3 @@ ID;Dateiname;Typ;Seite;Zeile;Inhalt;Zeichen;Verarbeitet am;Status
 1899;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_48.jpf;OCR;-;20;Nicht zustande gekommene Rennen der 51. Großauheimer Kurzstreckenregatta am 16./17.09.2023;90;2025-11-27 05:42:44.844141;verarbeitet
 1900;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_48.jpf;OCR;-;21;Seite 2;7;2025-11-27 05:42:44.844144;verarbeitet
 1901;51-grossauheimer-kurzstrecken-regatta-meldeergebnis-meldeergebnis-2023-2023-09-19_Seite_48.jpf;OCR;-;22;;0;2025-11-27 05:42:44.844147;verarbeitet
-
-====================================================================================================
-ENDE - 1901 Einträge exportiert
-====================================================================================================
