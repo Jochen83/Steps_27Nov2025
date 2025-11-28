@@ -16,6 +16,8 @@ class RegexTrefferApp:
         # Variablen
         self.db_name = "regatta_unified.db"
         self.regex_pattern = r"^[1-4][ \w]*[\.]?[ \w]*\/*[ \w]*([- Boot ]*[1-9]*[ -])*0[1-3]:[0-5][0-9].[0-9][0-9] [1-9][0-9]?"
+        self.ausgewaehlte_tabelle = "extracted_data"
+        self.ausgewaehltes_feld = "zeile_inhalt"
         
         # GUI Elemente
         # Titel
@@ -26,8 +28,37 @@ class RegexTrefferApp:
         # Info Frame
         info_frame = tk.Frame(root, bg="#fff3cd", pady=5)
         info_frame.pack(fill=tk.X, padx=10, pady=5)
-        tk.Label(info_frame, text="🔍 Durchsucht extracted_data nach Regex-Pattern und speichert Treffer", 
+        tk.Label(info_frame, text="🔍 Durchsucht ausgewählte Tabelle nach Regex-Pattern und speichert Treffer", 
                  font=("Arial", 9), bg="#fff3cd").pack()
+        
+        # Auswahl Frame für Tabelle und Feld
+        auswahl_frame = tk.Frame(root, bg="#e9ecef", pady=10)
+        auswahl_frame.pack(fill=tk.X, padx=10, pady=5)
+        
+        # Tabellen-Auswahl
+        tabelle_frame = tk.Frame(auswahl_frame, bg="#e9ecef")
+        tabelle_frame.pack(fill=tk.X, padx=10, pady=5)
+        
+        tk.Label(tabelle_frame, text="Quell-Tabelle:", font=("Arial", 10, "bold"), 
+                bg="#e9ecef").pack(side=tk.LEFT, padx=(0, 10))
+        
+        self.combo_tabelle = ttk.Combobox(tabelle_frame, font=("Arial", 10), width=25, state="readonly")
+        self.combo_tabelle.pack(side=tk.LEFT, padx=(0, 10))
+        self.combo_tabelle.bind("<<ComboboxSelected>>", self.tabelle_geaendert)
+        
+        btn_refresh_tabellen = tk.Button(tabelle_frame, text="🔄", command=self.tabellen_laden, 
+                                        bg="#6c757d", fg="white", font=("Arial", 8))
+        btn_refresh_tabellen.pack(side=tk.LEFT)
+        
+        # Feld-Auswahl
+        feld_frame = tk.Frame(auswahl_frame, bg="#e9ecef")
+        feld_frame.pack(fill=tk.X, padx=10, pady=5)
+        
+        tk.Label(feld_frame, text="Zu durchsuchendes Feld:", font=("Arial", 10, "bold"), 
+                bg="#e9ecef").pack(side=tk.LEFT, padx=(0, 10))
+        
+        self.combo_feld = ttk.Combobox(feld_frame, font=("Arial", 10), width=25, state="readonly")
+        self.combo_feld.pack(side=tk.LEFT)
         
         # Regex Pattern Anzeige
         pattern_frame = tk.Frame(root)
@@ -89,15 +120,85 @@ class RegexTrefferApp:
         
         # Variable für gefundene Treffer
         self.gefundene_treffer = []
+        
+        # Tabellen beim Start laden
+        self.tabellen_laden()
+    
+    def tabellen_laden(self):
+        """Lädt alle verfügbaren Tabellen in die Combobox"""
+        try:
+            conn = sqlite3.connect(self.db_name)
+            cursor = conn.cursor()
+            
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name")
+            tabellen = [row[0] for row in cursor.fetchall()]
+            conn.close()
+            
+            self.combo_tabelle['values'] = tabellen
+            
+            # Wenn extracted_data vorhanden ist, als Standard setzen
+            if 'extracted_data' in tabellen:
+                self.combo_tabelle.set('extracted_data')
+                self.ausgewaehlte_tabelle = 'extracted_data'
+                self.felder_laden()
+            elif tabellen:
+                self.combo_tabelle.set(tabellen[0])
+                self.ausgewaehlte_tabelle = tabellen[0]
+                self.felder_laden()
+            
+        except Exception as e:
+            messagebox.showerror("Fehler", f"Fehler beim Laden der Tabellen:\n{str(e)}")
+    
+    def tabelle_geaendert(self, event=None):
+        """Wird aufgerufen wenn eine andere Tabelle ausgewählt wird"""
+        self.ausgewaehlte_tabelle = self.combo_tabelle.get()
+        self.felder_laden()
+    
+    def felder_laden(self):
+        """Lädt die Felder der ausgewählten Tabelle"""
+        if not self.ausgewaehlte_tabelle:
+            return
+        
+        try:
+            conn = sqlite3.connect(self.db_name)
+            cursor = conn.cursor()
+            
+            cursor.execute(f'PRAGMA table_info({self.ausgewaehlte_tabelle})')
+            felder_info = cursor.fetchall()
+            felder = [info[1] for info in felder_info]
+            conn.close()
+            
+            self.combo_feld['values'] = felder
+            
+            # Wenn zeile_inhalt vorhanden ist, als Standard setzen
+            if 'zeile_inhalt' in felder:
+                self.combo_feld.set('zeile_inhalt')
+                self.ausgewaehltes_feld = 'zeile_inhalt'
+            elif felder:
+                self.combo_feld.set(felder[0])
+                self.ausgewaehltes_feld = felder[0]
+            
+        except Exception as e:
+            messagebox.showerror("Fehler", f"Fehler beim Laden der Felder:\n{str(e)}")
     
     def suche_starten(self):
         """Startet die Regex-Suche in der extracted_data Tabelle"""
         try:
             # Pattern aus Textfeld holen
             self.regex_pattern = self.pattern_text.get(1.0, tk.END).strip()
+            self.ausgewaehlte_tabelle = self.combo_tabelle.get()
+            self.ausgewaehltes_feld = self.combo_feld.get()
             
             if not self.regex_pattern:
                 messagebox.showerror("Fehler", "Bitte geben Sie ein Regex-Pattern ein!")
+                return
+            
+            if not self.ausgewaehlte_tabelle:
+                messagebox.showerror("Fehler", "Bitte wählen Sie eine Tabelle aus!")
+                return
+            
+            if not self.ausgewaehltes_feld:
+                messagebox.showerror("Fehler", "Bitte wählen Sie ein Feld aus!")
                 return
             
             # Pattern validieren
@@ -117,21 +218,32 @@ class RegexTrefferApp:
             cursor = conn.cursor()
             
             # Prüfen ob Tabelle existiert
-            cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='extracted_data'")
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name=?", (self.ausgewaehlte_tabelle,))
             if not cursor.fetchone():
-                messagebox.showerror("Fehler", "Tabelle 'extracted_data' nicht gefunden!")
+                messagebox.showerror("Fehler", f"Tabelle '{self.ausgewaehlte_tabelle}' nicht gefunden!")
                 conn.close()
                 self.btn_search.config(state=tk.NORMAL)
                 return
             
-            # Alle Zeilen aus extracted_data holen
-            cursor.execute("SELECT id, zeile_inhalt FROM extracted_data WHERE zeile_inhalt IS NOT NULL")
+            # Prüfen ob Feld existiert
+            cursor.execute(f'PRAGMA table_info({self.ausgewaehlte_tabelle})')
+            felder_info = cursor.fetchall()
+            verfuegbare_felder = [info[1] for info in felder_info]
+            
+            if self.ausgewaehltes_feld not in verfuegbare_felder:
+                messagebox.showerror("Fehler", f"Feld '{self.ausgewaehltes_feld}' nicht in Tabelle '{self.ausgewaehlte_tabelle}' gefunden!")
+                conn.close()
+                self.btn_search.config(state=tk.NORMAL)
+                return
+            
+            # Alle Zeilen aus der ausgewählten Tabelle holen
+            cursor.execute(f'SELECT id, "{self.ausgewaehltes_feld}" FROM {self.ausgewaehlte_tabelle} WHERE "{self.ausgewaehltes_feld}" IS NOT NULL')
             rows = cursor.fetchall()
             
             conn.close()
             
             if not rows:
-                messagebox.showinfo("Keine Daten", "Keine Daten in extracted_data gefunden!")
+                messagebox.showinfo("Keine Daten", f"Keine Daten in Tabelle '{self.ausgewaehlte_tabelle}', Feld '{self.ausgewaehltes_feld}' gefunden!")
                 self.btn_search.config(state=tk.NORMAL)
                 return
             
@@ -158,6 +270,8 @@ class RegexTrefferApp:
         anzahl = len(self.gefundene_treffer)
         
         self.txt_results.insert(tk.END, f"=== SUCHERGEBNISSE ===\n")
+        self.txt_results.insert(tk.END, f"Tabelle: {self.ausgewaehlte_tabelle}\n")
+        self.txt_results.insert(tk.END, f"Feld: {self.ausgewaehltes_feld}\n")
         self.txt_results.insert(tk.END, f"Pattern: {self.regex_pattern}\n")
         self.txt_results.insert(tk.END, f"Gefunden: {anzahl} Treffer\n")
         self.txt_results.insert(tk.END, "="*60 + "\n\n")
@@ -195,17 +309,18 @@ class RegexTrefferApp:
                     extracted_data_id INTEGER NOT NULL,
                     zeile_inhalt TEXT NOT NULL,
                     regex_pattern TEXT NOT NULL,
-                    gefunden_am TIMESTAMP NOT NULL,
-                    FOREIGN KEY (extracted_data_id) REFERENCES extracted_data (id)
+                    quell_tabelle TEXT NOT NULL,
+                    quell_feld TEXT NOT NULL,
+                    gefunden_am TIMESTAMP NOT NULL
                 )
             ''')
             
             # Treffer einfügen
             for row_id, inhalt in self.gefundene_treffer:
                 cursor.execute('''
-                    INSERT INTO Treffer (extracted_data_id, zeile_inhalt, regex_pattern, gefunden_am)
-                    VALUES (?, ?, ?, ?)
-                ''', (row_id, inhalt, self.regex_pattern, datetime.now()))
+                    INSERT INTO Treffer (extracted_data_id, zeile_inhalt, regex_pattern, quell_tabelle, quell_feld, gefunden_am)
+                    VALUES (?, ?, ?, ?, ?, ?)
+                ''', (row_id, inhalt, self.regex_pattern, self.ausgewaehlte_tabelle, self.ausgewaehltes_feld, datetime.now()))
             
             conn.commit()
             conn.close()
@@ -234,7 +349,7 @@ class RegexTrefferApp:
             
             # Treffer abrufen
             cursor.execute('''
-                SELECT T.id, T.extracted_data_id, T.zeile_inhalt, T.regex_pattern, T.gefunden_am
+                SELECT T.id, T.extracted_data_id, T.zeile_inhalt, T.regex_pattern, T.quell_tabelle, T.quell_feld, T.gefunden_am
                 FROM Treffer T
                 ORDER BY T.id DESC
             ''')
@@ -248,7 +363,7 @@ class RegexTrefferApp:
             # Neues Fenster für Tabelle
             tabelle_window = tk.Toplevel(self.root)
             tabelle_window.title("Treffer-Tabelle")
-            tabelle_window.geometry("1000x600")
+            tabelle_window.geometry("1200x600")
             
             tk.Label(tabelle_window, text=f"Treffer-Tabelle ({anzahl} Einträge)", 
                     font=("Arial", 12, "bold"), bg="#e8f5e8", pady=10).pack(fill=tk.X)
@@ -272,7 +387,7 @@ class RegexTrefferApp:
             hsb.config(command=tree.xview)
             
             # Spalten definieren
-            spalten = ("ID", "Extracted_ID", "Zeile_Inhalt", "Regex_Pattern", "Gefunden_am")
+            spalten = ("ID", "Quell_ID", "Zeile_Inhalt", "Regex_Pattern", "Quell_Tabelle", "Quell_Feld", "Gefunden_am")
             tree["columns"] = spalten
             tree["show"] = "headings"
             
