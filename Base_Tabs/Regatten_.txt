@@ -112,5 +112,3 @@ ID_MSACCESS;Datum;Regatta;Jahr;Wasser-Ergo;Original-Reg-Text;Bermerkung;Saison;O
 117;28.09.2025;AthBotRace_WM_Shanghai25;2025;Rudern;AthBotRace_WM_Shanghai25;Races Athletes Boot Coach;25;1;MM:SS.ZZ;ja;;;;;FISA;13.9.2025 00:00:00
 118;14.09.2025;Schierstein14Sep2025;2025;Rudern;Schierstein14Sep2025;500;25;1;MM:SS.ZZ;Nein;;;;;;15.9.2025 00:00:00
 123;27.04.2025;Schoko43_27Apr2025;2025;Rudern;Schoko43_27Apr2025;100/1500/3000;25;1;MM:SS.ZZ;nein;;;;ja;;28.10.2025 00:00:00
-124;;;0;;;;;1;;;;;;;;30.12.1899 08:34:05
-125;;;0;;;;;1;;;;;;;;27.11.2025 08:34:50

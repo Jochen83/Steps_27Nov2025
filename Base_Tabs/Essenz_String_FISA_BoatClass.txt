@@ -1,0 +1,121 @@
+"IDEssenzFisa";"IDEssenzRWR";"MinvonIDIntern";"RenTYP_orig_ErgZei";"RenTypNeu";"RenTypNeuBootBemerkung";"Boot_Erg_Coast";"AltersKlasse";"AltersGruppe_JSKMP";"BootTyp";"AlterDetail";"Bemerkung";"LG";"aus RWID";"LK";"DrvRelationDatum";"Rel100ProzZeit";"FahrzeitZehntel";"Schnitt500mZehnt";"Schnitt500Zeit";"ConceptHwtLwt";"ConceptTypAlter";"ConceptTypAlterslash";"MW";"GeschlechtMF";"Knüpf";"RudererAnzahl"
+1;66;;"Under 19 Men's Single Sculls";"JM 1x";"JM 1x";"Boot";"JM";"J";"1x";"A";;;0;;;;0;0;;;;;"M";"M";;1
+2;75;;"Under 19 Men's Pair";"JM 2-";"JM 2-";"Boot";"JM";"J";"2-";"A";;;0;;;;0;0;;;;;"M";"M";;2
+3;80;;"Under 19 Men's Double Sculls";"JM 2x";"JM 2x";"Boot";"JM";"J";"2x";"A";;;0;;;;0;0;;;;;"M";"M";;2
+4;87;;"Under 19 Men's Four";"JM 4-";"JM 4-";"Boot";"JM";"J";"4-";"A";;;0;;;;0;0;;;;;"M";"M";;4
+5;95;;"Under 19 Men's Quadruple Sculls";"JM 4x";"JM 4x";"Boot";"JM";"J";"4x";"A";;;0;;;;0;0;;;;;"M";"M";;4
+6;102;;"Under 19 Men's Eight";"JM 8+";"JM 8+";"Boot";"JM";"J";"8+";"A";;;0;;;;0;0;;;;;"M";"M";;9
+7;22;;"Under 19 Women's Single Sculls";"JW 1x";"JW 1x";"Boot";"JW";"J";"1x";"A";;;0;;;;0;0;;;;;"W";"F";;1
+8;31;;"Under 19 Women's Pair";"JW 2-";"JW 2-";"Boot";"JW";"J";"2-";"A";;;0;;;;0;0;;;;;"W";"F";;2
+9;33;;"Under 19 Women's Double Sculls";"JW 2x";"JW 2x";"Boot";"JW";"J";"2x";"A";;;0;;;;0;0;;;;;"W";"F";;2
+10;40;;"Under 19 Women's Four";"JW 4-";"JW 4-";"Boot";"JW";"J";"4-";"A";;;0;;;;0;0;;;;;"W";"F";;4
+11;45;;"Under 19 Women's Quadruple Sculls";"JW 4x";"JW 4x";"Boot";"JW";"J";"4x";"A";;;0;;;;0;0;;;;;"W";"F";;4
+12;50;;"Under 19 Women's Eight";"JW 8+";"JW 8+";"Boot";"JW";"J";"8+";"A";;;0;;;;0;0;;;;;"W";"F";;9
+13;66;;"JM1x";"JM 1x";"JM 1x";"Boot";"JM";"J";"1x";"A";;;0;;;;0;0;;;;;"M";"M";;1
+14;75;;"JM2-";"JM 2-";"JM 2-";"Boot";"JM";"J";"2-";"A";;;0;;;;0;0;;;;;"M";"M";;2
+15;80;;"JM2x";"JM 2x";"JM 2x";"Boot";"JM";"J";"2x";"A";;;0;;;;0;0;;;;;"M";"M";;2
+16;87;;"JM4-";"JM 4-";"JM 4-";"Boot";"JM";"J";"4-";"A";;;0;;;;0;0;;;;;"M";"M";;4
+17;95;;"JM4x";"JM 4x";"JM 4x";"Boot";"JM";"J";"4x";"A";;;0;;;;0;0;;;;;"M";"M";;4
+18;102;;"JM8+";"JM 8+";"JM 8+";"Boot";"JM";"J";"8+";"A";;;0;;;;0;0;;;;;"M";"M";;9
+19;22;;"JW1x";"JW 1x";"JW 1x";"Boot";"JW";"J";"1x";"A";;;0;;;;0;0;;;;;"W";"F";;1
+20;31;;"JW2-";"JW 2-";"JW 2-";"Boot";"JW";"J";"2-";"A";;;0;;;;0;0;;;;;"W";"F";;2
+21;33;;"JW2x";"JW 2x";"JW 2x";"Boot";"JW";"J";"2x";"A";;;0;;;;0;0;;;;;"W";"F";;2
+22;40;;"JW4-";"JW 4-";"JW 4-";"Boot";"JW";"J";"4-";"A";;;0;;;;0;0;;;;;"W";"F";;4
+23;45;;"JW4x";"JW 4x";"JW 4x";"Boot";"JW";"J";"4x";"A";;;0;;;;0;0;;;;;"W";"F";;4
+24;50;;"JW8+";"JW 8+";"JW 8+";"Boot";"JW";"J";"8+";"A";;;0;;;;0;0;;;;;"W";"F";;9
+25;556;;"U23 Men's Single Sculls";"BM 1x";"BM 1x";"Boot";"BM";"S";"1x";"B";;;0;;;;0;0;;;;;"M";"M";;1
+26;38;;"U23 Men's Pair";"BM 2-";"BM 2-";"Boot";"BM";"S";"2-";"B";;;0;;;;0;0;;;;;"M";"M";;2
+27;571;;"U23 Men's Double Sculls";"BM 2x";"BM 2x";"Boot";"BM";"S";"2x";"B";;;0;;;;0;0;;;;;"M";"M";;2
+28;579;;"U23 Men's Four";"BM 4-";"BM 4-";"Boot";"BM";"S";"4-";"B";;;0;;;;0;0;;;;;"M";"M";;4
+29;585;;"U23 Men's Quadruple Sculls";"BM 4x";"BM 4x";"Boot";"BM";"S";"4x";"B";;;0;;;;0;0;;;;;"M";"M";;4
+30;583;;"U23 Men's Eight";"BM 8+";"BM 8+";"Boot";"BM";"S";"8+";"B";;;0;;;;0;0;;;;;"M";"M";;9
+31;512;;"U23 Women's Single Sculls";"BW 1x";"BW 1x";"Boot";"BW";"S";"1x";"B";;;0;;;;0;0;;;;;"W";"F";;1
+32;518;;"U23 Women's Pair";"BW 2-";"BW 2-";"Boot";"BW";"S";"2-";"B";;;0;;;;0;0;;;;;"W";"F";;2
+33;524;;"U23 Women's Double Sculls";"BW 2x";"BW 2x";"Boot";"BW";"S";"2x";"B";;;0;;;;0;0;;;;;"W";"F";;2
+34;528;;"U23 Women's Four";"BW 4-";"BW 4-";"Boot";"BW";"S";"4-";"B";;;0;;;;0;0;;;;;"W";"F";;4
+35;533;;"U23 Women's Quadruple Sculls";"BW 4x";"BW 4x";"Boot";"BW";"S";"4x";"B";;;0;;;;0;0;;;;;"W";"F";;4
+36;539;;"U23 Women's Eight";"BW 8+";"BW 8+";"Boot";"BW";"S";"8+";"B";;;0;;;;0;0;;;;;"W";"F";;9
+37;556;;"BM1x";"BM 1x";"BM 1x";"Boot";"BM";"S";"1x";"B";;;0;;;;0;0;;;;;"M";"M";;1
+38;38;;"BM2-";"BM 2-";"BM 2-";"Boot";"BM";"S";"2-";"B";;;0;;;;0;0;;;;;"M";"M";;2
+39;571;;"BM2x";"BM 2x";"BM 2x";"Boot";"BM";"S";"2x";"B";;;0;;;;0;0;;;;;"M";"M";;2
+40;579;;"BM4-";"BM 4-";"BM 4-";"Boot";"BM";"S";"4-";"B";;;0;;;;0;0;;;;;"M";"M";;4
+41;585;;"BM4x";"BM 4x";"BM 4x";"Boot";"BM";"S";"4x";"B";;;0;;;;0;0;;;;;"M";"M";;4
+42;583;;"BM8+";"BM 8+";"BM 8+";"Boot";"BM";"S";"8+";"B";;;0;;;;0;0;;;;;"M";"M";;9
+43;512;;"BW1x";"BW 1x";"BW 1x";"Boot";"BW";"S";"1x";"B";;;0;;;;0;0;;;;;"W";"F";;1
+44;518;;"BW2-";"BW 2-";"BW 2-";"Boot";"BW";"S";"2-";"B";;;0;;;;0;0;;;;;"W";"F";;2
+45;524;;"BW2x";"BW 2x";"BW 2x";"Boot";"BW";"S";"2x";"B";;;0;;;;0;0;;;;;"W";"F";;2
+46;528;;"BW4-";"BW 4-";"BW 4-";"Boot";"BW";"S";"4-";"B";;;0;;;;0;0;;;;;"W";"F";;4
+47;533;;"BW4x";"BW 4x";"BW 4x";"Boot";"BW";"S";"4x";"B";;;0;;;;0;0;;;;;"W";"F";;4
+48;539;;"BW8+";"BW 8+";"BW 8+";"Boot";"BW";"S";"8+";"B";;;0;;;;0;0;;;;;"W";"F";;9
+49;;;"PR3 U23 Men's Single Sculls";"PR3 BM 1x";"PR3 BM 1x";"Boot";"BM";"S";"1x";"B";;;0;;;;0;0;;;;;"M";"M";;1
+50;;;"PR3 U23 Women's Single Sculls";"PR3 BW 1x";"PR3 BW 1x";"Boot";"BW";"S";"1x";"B";;;0;;;;0;0;;;;;"W";"F";;1
+51;557;;"U23 Men's Lightweight Single Sculls";"BLM 1x";"BLM 1x";"Boot";"BM";"S";"1x";"B";;"L";0;;;;0;0;;;;;"M";"M";;1
+52;572;;"U23 Men's Lightweight Double Sculls";"BLM 2x";"BLM 2x";"Boot";"BM";"S";"2x";"B";;"L";0;;;;0;0;;;;;"M";"M";;2
+53;513;;"U23 Women's Lightweight Single Sculls";"BLW 1x";"BLW 1x";"Boot";"BW";"S";"1x";"B";;"L";0;;;;0;0;;;;;"W";"F";;1
+54;525;;"U23 Women's Lightweight Double Sculls";"BLW 2x";"BLW 2x";"Boot";"BW";"S";"2x";"B";;"L";0;;;;0;0;;;;;"W";"F";;2
+55;;;"PR3 BM1x";"PR3 BM 1x";"PR3 BM 1x";"Boot";"BM";"S";"1x";"B";;;0;;;;0;0;;;;;"M";"M";;1
+56;;;"PR3 BW1x";"PR3 BW 1x";"PR3 BW 1x";"Boot";"BW";"S";"1x";"B";;;0;;;;0;0;;;;;"W";"F";;1
+57;557;;"BLM1x";"BLM 1x";"BLM 1x";"Boot";"BM";"S";"1x";"B";;"L";0;;;;0;0;;;;;"M";"M";;1
+58;572;;"BLM2x";"BLM 2x";"BLM 2x";"Boot";"BM";"S";"2x";"B";;"L";0;;;;0;0;;;;;"M";"M";;2
+59;513;;"BLW1x";"BLW 1x";"BLW 1x";"Boot";"BW";"S";"1x";"B";;"L";0;;;;0;0;;;;;"W";"F";;1
+60;525;;"BLW2x";"BLW 2x";"BLW 2x";"Boot";"BW";"S";"2x";"B";;"L";0;;;;0;0;;;;;"W";"F";;2
+61;73;;"Men's Single Sculls";"M 1x";"M 1x";"Boot";"M";"S";"1x";"A";;;0;;;;0;0;;;;;"M";"M";;1
+62;561;;"Men's Pair";"M 2-";"M 2-";"Boot";"M";"S";"2-";"A";;;0;;;;0;0;;;;;"M";"M";;2
+63;568;;"Men's Double Sculls";"M 2x";"M 2x";"Boot";"M";"S";"2x";"A";;;0;;;;0;0;;;;;"M";"M";;2
+64;576;;"Men's Four";"M 4-";"M 4-";"Boot";"M";"S";"4-";"A";;;0;;;;0;0;;;;;"M";"M";;4
+65;582;;"Men's Quadruple Sculls";"M 4x";"M 4x";"Boot";"M";"S";"4x";"A";;;0;;;;0;0;;;;;"M";"M";;4
+66;594;;"Men's Eight";"M 8+";"M 8+";"Boot";"M";"S";"8+";"A";;;0;;;;0;0;;;;;"M";"M";;9
+67;79;;"Women's Single Sculls";"W 1x";"W 1x";"Boot";"W";"S";"1x";"A";;;0;;;;0;0;;;;;"W";"F";;1
+68;516;;"Women's Pair";"W 2-";"W 2-";"Boot";"W";"S";"2-";"A";;;0;;;;0;0;;;;;"W";"F";;2
+69;520;;"Women's Double Sculls";"W 2x";"W 2x";"Boot";"W";"S";"2x";"A";;;0;;;;0;0;;;;;"W";"F";;2
+70;528;;"Women's Four";"W 4-";"W 4-";"Boot";"W";"S";"4-";"A";;;0;;;;0;0;;;;;"W";"F";;4
+71;530;;"Women's Quadruple Sculls";"W 4x";"W 4x";"Boot";"W";"S";"4x";"A";;;0;;;;0;0;;;;;"W";"F";;4
+72;541;;"Women's Eight";"W 8+";"W 8+";"Boot";"W";"S";"8+";"A";;;0;;;;0;0;;;;;"W";"F";;9
+73;73;;"M1x";"M 1x";"M 1x";"Boot";"M";"S";"1x";"A";;;0;;;;0;0;;;;;"M";"M";;1
+74;561;;"M2-";"M 2-";"M 2-";"Boot";"M";"S";"2-";"A";;;0;;;;0;0;;;;;"M";"M";;2
+75;568;;"M2x";"M 2x";"M 2x";"Boot";"M";"S";"2x";"A";;;0;;;;0;0;;;;;"M";"M";;2
+76;576;;"M4-";"M 4-";"M 4-";"Boot";"M";"S";"4-";"A";;;0;;;;0;0;;;;;"M";"M";;4
+77;582;;"M4x";"M 4x";"M 4x";"Boot";"M";"S";"4x";"A";;;0;;;;0;0;;;;;"M";"M";;4
+78;594;;"M8+";"M 8+";"M 8+";"Boot";"M";"S";"8+";"A";;;0;;;;0;0;;;;;"M";"M";;9
+79;79;;"W1x";"W 1x";"W 1x";"Boot";"W";"S";"1x";"A";;;0;;;;0;0;;;;;"W";"F";;1
+80;516;;"W2-";"W 2-";"W 2-";"Boot";"W";"S";"2-";"A";;;0;;;;0;0;;;;;"W";"F";;2
+81;520;;"W2x";"W 2x";"W 2x";"Boot";"W";"S";"2x";"A";;;0;;;;0;0;;;;;"W";"F";;2
+82;528;;"W4-";"W 4-";"W 4-";"Boot";"W";"S";"4-";"A";;;0;;;;0;0;;;;;"W";"F";;4
+83;530;;"W4x";"W 4x";"W 4x";"Boot";"W";"S";"4x";"A";;;0;;;;0;0;;;;;"W";"F";;4
+84;541;;"W8+";"W 8+";"W 8+";"Boot";"W";"S";"8+";"A";;;0;;;;0;0;;;;;"W";"F";;9
+85;495;;"PR3 Men's Single Sculls";"PR3 M 1x";"PR3 M 1x";"Boot";"M";"S";"1x";"A";;;0;;;;0;0;;;;;"M";"M";;1
+86;497;;"PR3 Women's Single Sculls";"PR3 W 1x";"PR3 W 1x";"Boot";"W";"S";"1x";"A";;;0;;;;0;0;;;;;"W";"F";;1
+87;551;;"Men's Lightweight Single Sculls";"LM 1x";"LM 1x";"Boot";"M";"S";"1x";"A";;"L";0;;;;0;0;;;;;"M";"M";;1
+88;569;;"Men's Lightweight Double Sculls";"LM 2x";"LM 2x";"Boot";"M";"S";"2x";"A";;"L";0;;;;0;0;;;;;"M";"M";;2
+89;507;;"Women's Lightweight Single Sculls";"LW 1x";"LW 1x";"Boot";"W";"S";"1x";"A";;"L";0;;;;0;0;;;;;"W";"F";;1
+90;521;;"Women's Lightweight Double Sculls";"LW 2x";"LW 2x";"Boot";"W";"S";"2x";"A";;"L";0;;;;0;0;;;;;"W";"F";;2
+91;495;;"PR3 M1x";"PR3 M 1x";"PR3 M 1x";"Boot";"M";"S";"1x";"A";;;0;;;;0;0;;;;;"M";"M";;1
+92;497;;"PR3 W1x";"PR3 W 1x";"PR3 W 1x";"Boot";"W";"S";"1x";"A";;;0;;;;0;0;;;;;"W";"F";;1
+93;551;;"LM1x";"LM 1x";"LM 1x";"Boot";"M";"S";"1x";"A";;"L";0;;;;0;0;;;;;"M";"M";;1
+94;569;;"LM2x";"LM 2x";"LM 2x";"Boot";"M";"S";"2x";"A";;"L";0;;;;0;0;;;;;"M";"M";;2
+95;507;;"LW1x";"LW 1x";"LW 1x";"Boot";"W";"S";"1x";"A";;"L";0;;;;0;0;;;;;"W";"F";;1
+96;521;;"LW2x";"LW 2x";"LW 2x";"Boot";"W";"S";"2x";"A";;"L";0;;;;0;0;;;;;"W";"F";;2
+97;484;;"PR2 Men's Single Sculls";"PR2 M 1x";"PR2 M 1x";"Boot";"M";"S";"1x";"A";;;0;;;;0;0;;;;;"M";"M";;1
+98;486;;"PR2 Women's Single Sculls";"PR2 W 1x";"PR2 W 1x";"Boot";"W";"S";"1x";"A";;;0;;;;0;0;;;;;"W";"F";;1
+99;484;;"PR2 M1x";"PR2 M 1x";"PR2 M 1x";"Boot";"M";"S";"1x";"A";;;0;;;;0;0;;;;;"M";"M";;1
+100;486;;"PR2 W1x";"PR2 W 1x";"PR2 W 1x";"Boot";"W";"S";"1x";"A";;;0;;;;0;0;;;;;"W";"F";;1
+101;;;"PR3 Men's Pair Sculls";"PR3 M 2-";"PR3 M 2-";"Boot";"M";"S";"2-";"A";;;0;;;;0;0;;;;;"M";"M";;2
+102;;;"PR3 M2-";"PR3 M 2-";"PR3 M 2-";"Boot";"M";"S";"2-";"A";;;0;;;;0;0;;;;;"M";"M";;2
+103;482;;"PR2 Mixed Double Sculls";"PR2 Mix 2x";"PR2 Mix 2x";"Boot";"M";"S";"2x";"A";;;0;;;;0;0;;;;;"M";"M";;2
+104;482;;"PR2 Mix2x";"PR2 Mix 2x";"PR2 Mix 2x";"Boot";"M";"S";"2x";"A";;;0;;;;0;0;;;;;"M";"M";;2
+105;677;;"PR3 Mixed Double Sculls";"PR3 Mix 2x";"PR3 Mix 2x";"Boot";"M";"S";"2x";"A";;;0;;;;0;0;;;;;"M";"M";;2
+106;677;;"PR3 Mix2x";"PR3 Mix 2x";"PR3 Mix 2x";"Boot";"M";"S";"2x";"A";;;0;;;;0;0;;;;;"M";"M";;2
+107;492;;"PR3 Mixed Coxed Four";"PR3 Mix 4+";"PR3 Mix 4+";"Boot";"M";"S";"4+";"A";;;0;;;;0;0;;;;;"M";"M";;5
+108;492;;"PR3 Mix4+";"PR3 Mix 4+";"PR3 Mix 4+";"Boot";"M";"S";"4+";"A";;;0;;;;0;0;;;;;"M";"M";;5
+109;;;"PR3 Women's Pair Sculls";"PR3 W 2-";"PR3 W 2-";"Boot";"W";"S";"2-";"A";;;0;;;;0;0;;;;;"W";"F";;2
+110;;;"PR3 W2-";"PR3 W 2-";"PR3 W 2-";"Boot";"W";"S";"2-";"A";;;0;;;;0;0;;;;;"W";"F";;2
+111;562;;"Lightweight Men's Pair";"LM 2-";"LM 2-";"Boot";"M";"S";"2-";"A";;;0;;;;0;0;;;;;"M";"M";;2
+112;562;;"LM2-";"LM 2-";"LM 2-";"Boot";"M";"S";"2-";"A";;;0;;;;0;0;;;;;"M";"M";;2
+113;584;;"Lightweight Men's Quadruple Sculls";"LM 4x";"LM 4x";"Boot";"M";"S";"4x";"A";;;0;;;;0;0;;;;;"M";"M";;4
+114;584;;"LM4x";"LM 4x";"LM 4x";"Boot";"M";"S";"4x";"A";;;0;;;;0;0;;;;;"M";"M";;4
+115;531;;"Lightweight Women's Quadruple Sculls";"LW 4x";"LW 4x";"Boot";"W";"S";"4x";"A";;;0;;;;0;0;;;;;"W";"F";;4
+116;531;;"LM4x";"LW 4x";"LW 4x";"Boot";"W";"S";"4x";"A";;;0;;;;0;0;;;;;"W";"F";;4
+117;477;;"PR1 Men's Single Sculls";"PR1 M 1x";"PR1 M 1x";"Boot";"M";"S";"1x";"A";;;0;;;;0;0;;;;;"M";"M";;1
+118;477;;"PR1 M1x";"PR1 M 1x";"PR1 M 1x";"Boot";"M";"S";"1x";"A";;;0;;;;0;0;;;;;"M";"M";;1
+119;479;;"PR1 Women's Single Sculls";"PR1 W 1x";"PR1 W 1x";"Boot";"W";"S";"1x";"A";;;0;;;;0;0;;;;;"W";"F";;1
+120;479;;"PR1 W1x";"PR1 W 1x";"PR1 W 1x";"Boot";"W";"S";"1x";"A";;;0;;;;0;0;;;;;"W";"F";;1

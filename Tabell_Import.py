@@ -11,7 +11,7 @@ class TabellImportApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Tabellen-Import aus TXT-Dateien")
-        self.root.geometry("700x600")
+        self.root.geometry("700x650")
         
         # Variablen
         self.db_name = "regatta_unified.db"
@@ -66,7 +66,7 @@ class TabellImportApp:
                                       command=self.tabellen_fenster_oeffnen, 
                                       bg="#ffb74d", height=2, 
                                       font=("Arial", 11, "bold"))
-        self.btn_tabellen.pack(fill=tk.X, padx=20, pady=5)
+        self.btn_tabellen.pack(fill=tk.X, padx=20, pady=10)
         
         # Statusleiste
         self.status_label = tk.Label(root, text="Bereit", bg="#e0e0e0", anchor=tk.W, font=("Arial", 9))

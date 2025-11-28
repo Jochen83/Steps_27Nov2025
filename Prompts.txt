@@ -1,0 +1,29 @@
+Prompts
+
+Ziel: Test 2 Tabellen ,
+Quelle : RennErgebnisse ist in der Zeile ein Verein zu finden
+
+Vereinstabelle: Felder: 
+		Verein lang
+		Verein kurz, 
+		Verein kürzel
+
+
+erstelle eine neue Tabelle: Abgleich_Verein_Ergebnis,	
+		Felder:				
+		ID aus Erfassten OCR_PDF Zeilen,
+		Inhalte der Zeile 
+Treffer1 aus Vereinstabelle ID und Vereinsname, 
+Treffer2 aus Vereinstabelle ID und Vereinsname
+Treffer 3 - 9
+
+
+
+Bootszeile erfassen in GA_ER_23
+1 RG Eberbach 01:43.73 5 
+2 RV Hellas Offenbach 01:50.78 1
+3 Hanauer RG - Boot 1 - 01:51.64 2
+1 Hanauer RC Hassia 01:46.24 3
+2 Rgm. Frankfurter RG Germania/ SRR Schillerschule Frankfurt 01:46.24 1
+
+^[1-4][ \w]*[\.]?[ \w]*\/*[ \w]*([- Boot ]*[1-9]*[ -])*0[1-3]:[0-5][0-9].[0-9][0-9] [1-9][0-9]?
