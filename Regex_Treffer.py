@@ -76,6 +76,13 @@ class RegexTrefferApp:
                                     font=("Arial", 11, "bold"))
         self.btn_search.pack(fill=tk.X, padx=20, pady=10)
         
+        # Button: Treffer direkt speichern
+        self.btn_search_save = tk.Button(root, text="🔍💾 Suchen und Treffer automatisch speichern", 
+                                         command=self.suche_und_speichern, 
+                                         bg="#20a744", fg="white", height=2, 
+                                         font=("Arial", 11, "bold"))
+        self.btn_search_save.pack(fill=tk.X, padx=20, pady=5)
+        
         # Statistik Frame
         stats_frame = tk.Frame(root)
         stats_frame.pack(fill=tk.X, padx=20, pady=5)
@@ -262,6 +269,124 @@ class RegexTrefferApp:
             messagebox.showerror("Fehler", f"Fehler bei der Suche:\n{str(e)}")
         finally:
             self.btn_search.config(state=tk.NORMAL)
+    
+    def suche_und_speichern(self):
+        """Führt Suche durch und speichert Treffer automatisch"""
+        try:
+            # Pattern aus Textfeld holen
+            self.regex_pattern = self.pattern_text.get(1.0, tk.END).strip()
+            self.ausgewaehlte_tabelle = self.combo_tabelle.get()
+            self.ausgewaehltes_feld = self.combo_feld.get()
+            
+            if not self.regex_pattern:
+                messagebox.showerror("Fehler", "Bitte geben Sie ein Regex-Pattern ein!")
+                return
+            
+            if not self.ausgewaehlte_tabelle:
+                messagebox.showerror("Fehler", "Bitte wählen Sie eine Tabelle aus!")
+                return
+            
+            if not self.ausgewaehltes_feld:
+                messagebox.showerror("Fehler", "Bitte wählen Sie ein Feld aus!")
+                return
+            
+            # Pattern validieren
+            try:
+                re.compile(self.regex_pattern)
+            except re.error as e:
+                messagebox.showerror("Ungültiger Regex", f"Das Regex-Pattern ist ungültig:\n{str(e)}")
+                return
+            
+            self.btn_search.config(state=tk.DISABLED)
+            self.btn_search_save.config(state=tk.DISABLED)
+            self.txt_results.delete(1.0, tk.END)
+            self.txt_results.insert(tk.END, "Durchsuche Datenbank und speichere Treffer...\n\n")
+            self.root.update()
+            
+            # Datenbank-Verbindung
+            conn = sqlite3.connect(self.db_name)
+            cursor = conn.cursor()
+            
+            # Prüfen ob Tabelle existiert
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name=?", (self.ausgewaehlte_tabelle,))
+            if not cursor.fetchone():
+                messagebox.showerror("Fehler", f"Tabelle '{self.ausgewaehlte_tabelle}' nicht gefunden!")
+                conn.close()
+                return
+            
+            # Prüfen ob Feld existiert
+            cursor.execute(f'PRAGMA table_info({self.ausgewaehlte_tabelle})')
+            felder_info = cursor.fetchall()
+            verfuegbare_felder = [info[1] for info in felder_info]
+            
+            if self.ausgewaehltes_feld not in verfuegbare_felder:
+                messagebox.showerror("Fehler", f"Feld '{self.ausgewaehltes_feld}' nicht in Tabelle '{self.ausgewaehlte_tabelle}' gefunden!")
+                conn.close()
+                return
+            
+            # Alle Zeilen aus der ausgewählten Tabelle holen
+            cursor.execute(f'SELECT id, "{self.ausgewaehltes_feld}" FROM {self.ausgewaehlte_tabelle} WHERE "{self.ausgewaehltes_feld}" IS NOT NULL')
+            rows = cursor.fetchall()
+            
+            if not rows:
+                messagebox.showinfo("Keine Daten", f"Keine Daten in Tabelle '{self.ausgewaehlte_tabelle}', Feld '{self.ausgewaehltes_feld}' gefunden!")
+                conn.close()
+                return
+            
+            # Treffer-Tabelle erstellen (falls nicht vorhanden)
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS Treffer (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    extracted_data_id INTEGER NOT NULL,
+                    zeile_inhalt TEXT NOT NULL,
+                    regex_pattern TEXT NOT NULL,
+                    quell_tabelle TEXT NOT NULL,
+                    quell_feld TEXT NOT NULL,
+                    gefunden_am TIMESTAMP NOT NULL
+                )
+            ''')
+            
+            # Regex-Suche durchführen und direkt speichern
+            pattern = re.compile(self.regex_pattern)
+            treffer_count = 0
+            
+            for row_id, zeile_inhalt in rows:
+                if pattern.match(zeile_inhalt):
+                    cursor.execute('''
+                        INSERT INTO Treffer (extracted_data_id, zeile_inhalt, regex_pattern, quell_tabelle, quell_feld, gefunden_am)
+                        VALUES (?, ?, ?, ?, ?, ?)
+                    ''', (row_id, zeile_inhalt, self.regex_pattern, self.ausgewaehlte_tabelle, self.ausgewaehltes_feld, datetime.now()))
+                    treffer_count += 1
+            
+            conn.commit()
+            conn.close()
+            
+            # Ergebnis anzeigen
+            self.txt_results.delete(1.0, tk.END)
+            self.txt_results.insert(tk.END, f"=== SUCHE UND SPEICHERUNG ABGESCHLOSSEN ===\n")
+            self.txt_results.insert(tk.END, f"Tabelle: {self.ausgewaehlte_tabelle}\n")
+            self.txt_results.insert(tk.END, f"Feld: {self.ausgewaehltes_feld}\n")
+            self.txt_results.insert(tk.END, f"Pattern: {self.regex_pattern}\n")
+            self.txt_results.insert(tk.END, f"Gefundene Treffer: {treffer_count}\n")
+            self.txt_results.insert(tk.END, "="*60 + "\n\n")
+            
+            if treffer_count > 0:
+                self.txt_results.insert(tk.END, f"✅ {treffer_count} Treffer wurden automatisch in der Tabelle 'Treffer' gespeichert!\n")
+                messagebox.showinfo("Erfolgreich", f"{treffer_count} Treffer wurden gefunden und gespeichert!")
+            else:
+                self.txt_results.insert(tk.END, "ℹ️ Keine Treffer gefunden.\n")
+                messagebox.showinfo("Keine Treffer", "Keine Treffer für das angegebene Pattern gefunden.")
+            
+            # Statistik aktualisieren
+            self.lbl_stats.config(text=f"Suche abgeschlossen: {treffer_count} Treffer gefunden und gespeichert", 
+                                  bg="#d4edda", fg="black")
+            self.status_label.config(text=f"Suche abgeschlossen: {treffer_count} Treffer gespeichert")
+            
+        except Exception as e:
+            messagebox.showerror("Fehler", f"Fehler bei Suche und Speicherung:\n{str(e)}")
+        finally:
+            self.btn_search.config(state=tk.NORMAL)
+            self.btn_search_save.config(state=tk.NORMAL)
     
     def ergebnisse_anzeigen(self):
         """Zeigt die gefundenen Treffer an"""
