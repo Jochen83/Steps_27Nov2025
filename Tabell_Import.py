@@ -340,6 +340,12 @@ class TabellImportApp:
                                   bg="#ef5350", fg="white", font=("Arial", 9, "bold"))
             btn_delete.pack(fill=tk.X, pady=(10, 0))
             
+            # Button: Tabelle exportieren
+            btn_export = tk.Button(left_frame, text="💾 Tabelle als TXT exportieren", 
+                                  command=lambda: tabelle_exportieren(tabellen_listbox), 
+                                  bg="#4caf50", fg="white", font=("Arial", 9, "bold"))
+            btn_export.pack(fill=tk.X, pady=(5, 0))
+            
             # Rechte Seite: Tabellenansicht mit Treeview
             right_frame = tk.Frame(main_frame)
             right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True, padx=(5, 0))
@@ -427,6 +433,96 @@ class TabellImportApp:
                     
                 except Exception as e:
                     messagebox.showerror("Fehler", f"Fehler beim Löschen der Tabelle:\n{str(e)}")
+            
+            def tabelle_exportieren(listbox):
+                """Exportiert die ausgewählte Tabelle als TXT-Datei"""
+                selection = listbox.curselection()
+                if not selection:
+                    messagebox.showwarning("Keine Auswahl", "Bitte wählen Sie zuerst eine Tabelle aus.")
+                    return
+                
+                tabellen_name = listbox.get(selection[0])
+                
+                try:
+                    conn = sqlite3.connect(self.db_name)
+                    cursor = conn.cursor()
+                    
+                    # Prüfen ob Tabelle existiert
+                    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name=?", (tabellen_name,))
+                    if not cursor.fetchone():
+                        messagebox.showerror("Fehler", f"Tabelle '{tabellen_name}' nicht gefunden!")
+                        conn.close()
+                        return
+                    
+                    # Tabellenstruktur abrufen
+                    cursor.execute(f'PRAGMA table_info("{tabellen_name}")')
+                    spalten_info = cursor.fetchall()
+                    spalten = [info[1] for info in spalten_info]
+                    
+                    # Alle Daten abrufen - mit Anführungszeichen um Tabellenname
+                    cursor.execute(f'SELECT * FROM "{tabellen_name}"')
+                    rows = cursor.fetchall()
+                    
+                    cursor.execute(f'SELECT COUNT(*) FROM "{tabellen_name}"')
+                    anzahl = cursor.fetchone()[0]
+                    
+                    conn.close()
+                    
+                    if anzahl == 0:
+                        messagebox.showinfo("Keine Daten", f"Die Tabelle '{tabellen_name}' enthält keine Daten.")
+                        return
+                    
+                    # Datei-Dialog
+                    dateipfad = filedialog.asksaveasfilename(
+                        defaultextension=".txt",
+                        filetypes=[("Textdatei", "*.txt"), ("CSV-Datei", "*.csv")],
+                        title=f"Tabelle '{tabellen_name}' exportieren"
+                    )
+                    
+                    if dateipfad:
+                        # Bestimme Format anhand Dateiendung
+                        is_csv = dateipfad.lower().endswith('.csv')
+                        
+                        with open(dateipfad, 'w', encoding='utf-8') as f:
+                            if is_csv:
+                                # CSV Format mit Semikolon
+                                # Kopfzeile
+                                kopfzeile = ";".join([f'"{spalte}"' for spalte in spalten])
+                                f.write(kopfzeile + "\n")
+                                
+                                # Datenzeilen
+                                for row in rows:
+                                    zeile_werte = []
+                                    for wert in row:
+                                        if wert is None:
+                                            zeile_werte.append('""')
+                                        else:
+                                            # Anführungszeichen escapen
+                                            escaped_value = str(wert).replace('"', '""')
+                                            zeile_werte.append(f'"{escaped_value}"')
+                                    f.write(";".join(zeile_werte) + "\n")
+                            else:
+                                # TXT Format mit Semikolon
+                                # Kopfzeile
+                                kopfzeile = ";".join(spalten)
+                                f.write(kopfzeile + "\n")
+                                
+                                # Datenzeilen
+                                for row in rows:
+                                    zeile_werte = [str(wert) if wert is not None else "" for wert in row]
+                                    f.write(";".join(zeile_werte) + "\n")
+                        
+                        messagebox.showinfo("Export erfolgreich", 
+                                           f"Tabelle '{tabellen_name}' erfolgreich exportiert:\n{dateipfad}\n\n"
+                                           f"{anzahl} Zeilen, {len(spalten)} Spalten")
+                        
+                        # Frage ob Datei geöffnet werden soll
+                        oeffnen = messagebox.askyesno("Datei öffnen?", "Möchten Sie die Datei jetzt öffnen?")
+                        if oeffnen:
+                            os.startfile(dateipfad)
+                
+                except Exception as e:
+                    messagebox.showerror("Export-Fehler", f"Fehler beim Exportieren der Tabelle:\n{str(e)}")
             
             def tabelle_anzeigen(event):
                 """Zeigt die ausgewählte Tabelle im Treeview an"""
