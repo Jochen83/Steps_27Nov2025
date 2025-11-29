@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox, scrolledtext, ttk
 import sqlite3
 import re
+import os
 from datetime import datetime
 
 # Regex-Treffer Extraktor für regatta_unified.db
@@ -14,7 +15,9 @@ class RegexTrefferApp:
         self.root.geometry("800x700")
         
         # Variablen
-        self.db_name = "regatta_unified.db"
+        # Absoluter Pfad zur Datenbank (im gleichen Verzeichnis wie das Skript)
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        self.db_name = os.path.join(script_dir, "regatta_unified.db")
         self.regex_pattern = r"^.+0[1-3]:[0-5][0-9].[0-9][0-9] [1-9][0-9]?"
         self.ausgewaehlte_tabelle = "extracted_data"
         self.ausgewaehltes_feld = "zeile_inhalt"
