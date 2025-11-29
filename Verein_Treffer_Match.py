@@ -381,45 +381,92 @@ class VereinTrefferApp:
             tree["columns"] = spalten
             tree["show"] = "headings"
             
-            # Variable für Sortierung
+            # Variable für Sortierung (erweitert für 2 Spalten)
             sort_reverse = {}
+            sort_order = []  # Liste der Sortierspalten in Reihenfolge
             
             def sortiere_spalte(col):
-                """Sortiert die Treeview-Spalte auf- oder absteigend"""
+                """Sortiert die Treeview-Spalte auf- oder absteigend mit Unterstützung für 2-Spalten-Sortierung"""
                 try:
-                    # Aktuelle Sortierrichtung umkehren
-                    reverse = sort_reverse.get(col, False)
-                    sort_reverse[col] = not reverse
+                    # Ctrl-Taste gedrückt? Dann sekundäre Sortierung
+                    is_secondary = len(sort_order) > 0 and col != sort_order[0]
+                    
+                    if col in sort_order:
+                        # Spalte bereits in Sortierung - Richtung umkehren
+                        sort_reverse[col] = not sort_reverse.get(col, False)
+                    else:
+                        # Neue Spalte - aufsteigend starten
+                        sort_reverse[col] = False
+                        
+                        # Zur Sortierliste hinzufügen (max 2 Spalten)
+                        if col in sort_order:
+                            sort_order.remove(col)
+                        sort_order.insert(0, col)
+                        if len(sort_order) > 2:
+                            # Älteste Sortierung entfernen
+                            old_col = sort_order.pop()
+                            if old_col in sort_reverse:
+                                del sort_reverse[old_col]
                     
                     # Daten aus Treeview holen
-                    daten = [(tree.set(child, col), child) for child in tree.get_children("")]
+                    daten = []
+                    for child in tree.get_children(""):
+                        row_values = []
+                        for spalte in spalten:
+                            row_values.append(tree.set(child, spalte))
+                        daten.append((row_values, child))
                     
-                    # Spaltenindex für die ursprünglichen Daten
-                    col_index = list(spalten).index(col)
+                    # Sortierlogik für bis zu 2 Spalten
+                    def sort_key(item):
+                        row_values = item[0]
+                        keys = []
+                        
+                        for sort_col in sort_order:
+                            if sort_col in spalten:
+                                col_index = list(spalten).index(sort_col)
+                                value = row_values[col_index]
+                                
+                                # Nach Datentyp sortieren
+                                if sort_col in ["ID", "Extracted_Data_ID"]:
+                                    # Numerische Sortierung
+                                    sort_value = int(value) if value and value.isdigit() else 0
+                                else:
+                                    # Alphabetische Sortierung (case-insensitive)
+                                    sort_value = str(value).lower() if value else ""
+                                
+                                # Bei absteigender Sortierung negieren (für Zahlen) oder umkehren
+                                if sort_reverse.get(sort_col, False):
+                                    if isinstance(sort_value, int):
+                                        sort_value = -sort_value
+                                    else:
+                                        sort_value = ''.join(reversed(sort_value))
+                                
+                                keys.append(sort_value)
+                        
+                        return tuple(keys) if keys else (0,)
                     
-                    # Nach Datentyp sortieren
-                    if col in ["ID", "Extracted_Data_ID"]:
-                        # Numerische Sortierung
-                        daten.sort(key=lambda t: int(t[0]) if t[0] and t[0].isdigit() else 0, reverse=reverse)
-                    else:
-                        # Alphabetische Sortierung (case-insensitive)
-                        daten.sort(key=lambda t: str(t[0]).lower() if t[0] else "", reverse=reverse)
+                    # Sortieren
+                    daten.sort(key=sort_key)
                     
                     # Treeview neu anordnen
-                    for index, (val, child) in enumerate(daten):
+                    for index, (row_values, child) in enumerate(daten):
                         tree.move(child, "", index)
-                    
-                    # Sortier-Indikator in Überschrift
-                    pfeil = " ▼" if reverse else " ▲"
                     
                     # Alle Überschriften zurücksetzen
                     for spalte in spalten:
-                        clean_text = spalte.replace(" ▲", "").replace(" ▼", "")
+                        clean_text = spalte.replace(" ▲", "").replace(" ▼", "").replace(" ①", "").replace(" ②", "")
                         tree.heading(spalte, text=clean_text, command=lambda c=spalte: sortiere_spalte(c))
                     
-                    # Aktuelle Spalte mit Pfeil markieren
-                    clean_col = col.replace(" ▲", "").replace(" ▼", "")
-                    tree.heading(col, text=clean_col + pfeil, command=lambda: sortiere_spalte(col))
+                    # Sortier-Indikatoren setzen
+                    for i, sort_col in enumerate(sort_order):
+                        if sort_col in spalten:
+                            # Pfeil für Richtung
+                            pfeil = " ▼" if sort_reverse.get(sort_col, False) else " ▲"
+                            # Nummer für Priorität
+                            nummer = f" ①" if i == 0 else f" ②"
+                            
+                            clean_col = sort_col.replace(" ▲", "").replace(" ▼", "").replace(" ①", "").replace(" ②", "")
+                            tree.heading(sort_col, text=clean_col + pfeil + nummer, command=lambda c=sort_col: sortiere_spalte(c))
                     
                 except Exception as e:
                     print(f"Fehler beim Sortieren: {str(e)}")
@@ -429,6 +476,12 @@ class VereinTrefferApp:
                 tree.heading(col, text=col, command=lambda c=col: sortiere_spalte(c))
                 tree.column(col, width=150, anchor=tk.W)
                 sort_reverse[col] = False  # Standard: aufsteigend
+            
+            # Info-Text für Benutzer
+            info_text = tk.Label(result_window, 
+                               text="💡 Tipp: Klicken Sie auf Spaltenüberschriften zum Sortieren. Bis zu 2 Spalten gleichzeitig möglich (① = Primär, ② = Sekundär)", 
+                               font=("Arial", 9), fg="gray", pady=5)
+            info_text.pack()
             
             # Daten in Treeview einfügen
             for row in rows:
