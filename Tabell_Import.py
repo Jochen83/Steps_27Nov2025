@@ -70,6 +70,13 @@ class TabellImportApp:
                                       font=("Arial", 11, "bold"))
         self.btn_tabellen.pack(fill=tk.X, padx=20, pady=10)
         
+        # Button: Treffer_Verein_Hit löschen
+        self.btn_delete_hits = tk.Button(root, text="🗑️ Treffer_Verein_Hit Tabelle löschen", 
+                                         command=self.treffer_verein_hit_loeschen, 
+                                         bg="#dc3545", fg="white", height=2, 
+                                         font=("Arial", 11, "bold"))
+        self.btn_delete_hits.pack(fill=tk.X, padx=20, pady=5)
+        
         # Statusleiste
         self.status_label = tk.Label(root, text="Bereit", bg="#e0e0e0", anchor=tk.W, font=("Arial", 9))
         self.status_label.pack(fill=tk.X, side=tk.BOTTOM)
@@ -622,6 +629,57 @@ class TabellImportApp:
             
         except Exception as e:
             messagebox.showerror("Fehler", f"Fehler beim Öffnen der Tabellenliste:\n{str(e)}")
+    
+    def treffer_verein_hit_loeschen(self):
+        """Löscht die Treffer_Verein_Hit Tabelle"""
+        try:
+            conn = sqlite3.connect(self.db_name)
+            cursor = conn.cursor()
+            
+            # Prüfen ob Tabelle existiert
+            cursor.execute("SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name='Treffer_Verein_Hit'")
+            if cursor.fetchone()[0] == 0:
+                messagebox.showinfo("Keine Tabelle", "Tabelle 'Treffer_Verein_Hit' existiert nicht!")
+                conn.close()
+                return
+            
+            # Anzahl Einträge ermitteln
+            cursor.execute("SELECT COUNT(*) FROM Treffer_Verein_Hit")
+            anzahl = cursor.fetchone()[0]
+            
+            # Erste Bestätigung
+            antwort = messagebox.askyesno(
+                "Tabelle löschen?", 
+                f"Möchten Sie die Tabelle 'Treffer_Verein_Hit' mit {anzahl} Einträgen wirklich löschen?\n\n"
+                "Diese Aktion kann NICHT rückgängig gemacht werden!",
+                icon='warning'
+            )
+            
+            if not antwort:
+                conn.close()
+                return
+            
+            # Finale Bestätigung
+            final = messagebox.askyesno(
+                "Letzte Bestätigung",
+                f"LETZTE WARNUNG:\n\n"
+                f"Tabelle 'Treffer_Verein_Hit' wird unwiderruflich gelöscht!\n\n"
+                "Wirklich fortfahren?",
+                icon='warning'
+            )
+            
+            if final:
+                cursor.execute("DROP TABLE Treffer_Verein_Hit")
+                conn.commit()
+                conn.close()
+                
+                messagebox.showinfo("Erfolgreich", f"Tabelle 'Treffer_Verein_Hit' wurde gelöscht!")
+                self.status_label.config(text="Treffer_Verein_Hit Tabelle wurde gelöscht")
+            else:
+                conn.close()
+                
+        except Exception as e:
+            messagebox.showerror("Fehler", f"Fehler beim Löschen der Tabelle:\n{str(e)}")
 
 
 if __name__ == "__main__":
