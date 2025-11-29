@@ -163,7 +163,7 @@ class VereinTrefferApp:
                     zeile_inhalt TEXT NOT NULL,
                     extracted_data_id INTEGER NOT NULL,
                     zeile_inhalt_ohne_treffer TEXT,
-                    Verein_DRVID INTEGER,
+                    Verein_DRVID TEXT,
                     Verein TEXT,
                     gefunden_am TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 )
