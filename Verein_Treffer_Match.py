@@ -3,6 +3,7 @@ from tkinter import messagebox, scrolledtext, ttk
 import sqlite3
 from datetime import datetime
 import re
+import os
 
 # Verein-Treffer Matcher für regatta_unified.db
 # Erstellt am 28.11.2025
@@ -14,7 +15,9 @@ class VereinTrefferApp:
         self.root.geometry("900x800")
         
         # Variablen
-        self.db_name = "regatta_unified.db"
+        # Absoluter Pfad zur Datenbank (im gleichen Verzeichnis wie das Skript)
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        self.db_name = os.path.join(script_dir, "regatta_unified.db")
         
         # GUI Elemente
         # Titel
