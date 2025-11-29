@@ -162,7 +162,7 @@ class VereinTrefferApp:
         try:
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS Vereine (
-                    Verein_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    verein_DRVID INTEGER PRIMARY KEY AUTOINCREMENT,
                     Verein TEXT NOT NULL,
                     Lettern TEXT,
                     Kurzident TEXT,
@@ -189,7 +189,7 @@ class VereinTrefferApp:
                     zeile_inhalt TEXT NOT NULL,
                     extracted_data_id INTEGER NOT NULL,
                     zeile_inhalt_ohne_treffer TEXT,
-                    Verein_ID INTEGER,
+                    verein_DRVID INTEGER,
                     Verein TEXT,
                     gefunden_am TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 )
@@ -200,7 +200,7 @@ class VereinTrefferApp:
             treffer_rows = cursor.fetchall()
             
             # Alle Vereine holen
-            cursor.execute("SELECT Verein_ID, Verein FROM Vereine WHERE Verein IS NOT NULL AND Verein != ''")
+            cursor.execute("SELECT verein_DRVID, Verein FROM Vereine WHERE Verein IS NOT NULL AND Verein != ''")
             vereine_rows = cursor.fetchall()
             
             self.log(f"📊 {len(treffer_rows)} Treffer und {len(vereine_rows)} Vereine gefunden")
@@ -208,7 +208,7 @@ class VereinTrefferApp:
             treffer_count = 0
             
             for treffer_id, zeile_inhalt, extracted_data_id in treffer_rows:
-                for verein_id, verein_name in vereine_rows:
+                for verein_DRVID, verein_name in vereine_rows:
                     if verein_name.lower() in zeile_inhalt.lower():
                         # Vereinsname aus zeile_inhalt entfernen
                         zeile_ohne_verein = zeile_inhalt.replace(verein_name, "").strip()
@@ -217,9 +217,9 @@ class VereinTrefferApp:
                         
                         cursor.execute('''
                             INSERT INTO Treffer_Verein_Hit 
-                            (zeile_inhalt, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_ID, Verein)
+                            (zeile_inhalt, extracted_data_id, zeile_inhalt_ohne_treffer, verein_DRVID, Verein)
                             VALUES (?, ?, ?, ?, ?)
-                        ''', (zeile_inhalt, extracted_data_id, zeile_ohne_verein, verein_id, verein_name))
+                        ''', (zeile_inhalt, extracted_data_id, zeile_ohne_verein, verein_DRVID, verein_name))
                         
                         treffer_count += 1
                         
@@ -263,7 +263,7 @@ class VereinTrefferApp:
             hit_rows = cursor.fetchall()
             
             # Alle Vereine holen
-            cursor.execute("SELECT Verein_ID, Verein FROM Vereine WHERE Verein IS NOT NULL AND Verein != ''")
+            cursor.execute("SELECT verein_DRVID, Verein FROM Vereine WHERE Verein IS NOT NULL AND Verein != ''")
             vereine_rows = cursor.fetchall()
             
             self.log(f"📊 {len(hit_rows)} vorhandene Hits prüfen auf weitere Vereine...")
@@ -271,7 +271,7 @@ class VereinTrefferApp:
             neue_treffer = 0
             
             for hit_id, original_zeile, extracted_data_id, zeile_ohne_treffer in hit_rows:
-                for verein_id, verein_name in vereine_rows:
+                for verein_DRVID, verein_name in vereine_rows:
                     if verein_name.lower() in zeile_ohne_treffer.lower():
                         # Vereinsname aus zeile_inhalt_ohne_treffer entfernen
                         neue_zeile_ohne_verein = zeile_ohne_treffer.replace(verein_name, "").strip()
@@ -280,9 +280,9 @@ class VereinTrefferApp:
                         
                         cursor.execute('''
                             INSERT INTO Treffer_Verein_Hit 
-                            (zeile_inhalt, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_ID, Verein)
+                            (zeile_inhalt, extracted_data_id, zeile_inhalt_ohne_treffer, verein_DRVID, Verein)
                             VALUES (?, ?, ?, ?, ?)
-                        ''', (original_zeile, extracted_data_id, neue_zeile_ohne_verein, verein_id, verein_name))
+                        ''', (original_zeile, extracted_data_id, neue_zeile_ohne_verein, verein_DRVID, verein_name))
                         
                         neue_treffer += 1
                         
@@ -326,7 +326,7 @@ class VereinTrefferApp:
                 return
             
             cursor.execute('''
-                SELECT ID, zeile_inhalt, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_ID, Verein, gefunden_am
+                SELECT ID, zeile_inhalt, extracted_data_id, zeile_inhalt_ohne_treffer, verein_DRVID, Verein, gefunden_am
                 FROM Treffer_Verein_Hit 
                 ORDER BY ID DESC
             ''')
@@ -358,7 +358,7 @@ class VereinTrefferApp:
             hsb.config(command=tree.xview)
             
             # Spalten
-            spalten = ("ID", "Zeile_Inhalt", "Extracted_Data_ID", "Zeile_ohne_Verein", "Verein_ID", "Verein", "Gefunden_am")
+            spalten = ("ID", "Zeile_Inhalt", "Extracted_Data_ID", "Zeile_ohne_Verein", "verein_DRVID", "Verein", "Gefunden_am")
             tree["columns"] = spalten
             tree["show"] = "headings"
             
@@ -381,7 +381,7 @@ class VereinTrefferApp:
             cursor.execute("SELECT COUNT(*) FROM Vereine")
             anzahl = cursor.fetchone()[0]
             
-            cursor.execute("SELECT * FROM Vereine ORDER BY Verein_ID")
+            cursor.execute("SELECT * FROM Vereine ORDER BY verein_DRVID")
             rows = cursor.fetchall()
             conn.close()
             
@@ -406,7 +406,7 @@ class VereinTrefferApp:
             vsb.config(command=tree.yview)
             
             # Spalten
-            spalten = ("Verein_ID", "Verein", "Lettern", "Kurzident", "Kurzident2")
+            spalten = ("verein_DRVID", "Verein", "Lettern", "Kurzident", "Kurzident2")
             tree["columns"] = spalten
             tree["show"] = "headings"
             
