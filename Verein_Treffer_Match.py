@@ -161,6 +161,7 @@ class VereinTrefferApp:
                 CREATE TABLE IF NOT EXISTS Treffer_Verein_Hit (
                     ID INTEGER PRIMARY KEY AUTOINCREMENT,
                     zeile_inhalt TEXT NOT NULL,
+                    zeile_inhalt_orig TEXT,
                     extracted_data_id INTEGER NOT NULL,
                     zeile_inhalt_ohne_treffer TEXT,
                     Verein_DRVID TEXT,
@@ -184,16 +185,24 @@ class VereinTrefferApp:
             for treffer_id, zeile_inhalt, extracted_data_id in treffer_rows:
                 for Verein_DRVID, verein_name in vereine_rows:
                     if verein_name.lower() in zeile_inhalt.lower():
+                        # Ursprünglichen Inhalt in zeile_inhalt_orig speichern
+                        zeile_inhalt_orig = zeile_inhalt
+                        
                         # Vereinsname aus zeile_inhalt entfernen
+                        zeile_inhalt_neu = zeile_inhalt.replace(verein_name, "").strip()
+                        # Mehrfache Leerzeichen entfernen
+                        zeile_inhalt_neu = re.sub(r'\s+', ' ', zeile_inhalt_neu)
+                        
+                        # Vereinsname aus zeile_inhalt entfernen für zeile_inhalt_ohne_treffer
                         zeile_ohne_verein = zeile_inhalt.replace(verein_name, "").strip()
                         # Mehrfache Leerzeichen entfernen
                         zeile_ohne_verein = re.sub(r'\s+', ' ', zeile_ohne_verein)
                         
                         cursor.execute('''
                             INSERT INTO Treffer_Verein_Hit 
-                            (zeile_inhalt, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein)
-                            VALUES (?, ?, ?, ?, ?)
-                        ''', (zeile_inhalt, extracted_data_id, zeile_ohne_verein, Verein_DRVID, verein_name))
+                            (zeile_inhalt, zeile_inhalt_orig, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein)
+                            VALUES (?, ?, ?, ?, ?, ?)
+                        ''', (zeile_inhalt_neu, zeile_inhalt_orig, extracted_data_id, zeile_ohne_verein, Verein_DRVID, verein_name))
                         
                         treffer_count += 1
                         
@@ -230,7 +239,7 @@ class VereinTrefferApp:
             
             # Aktuelle Treffer_Verein_Hit holen
             cursor.execute('''
-                SELECT ID, zeile_inhalt, extracted_data_id, zeile_inhalt_ohne_treffer 
+                SELECT ID, zeile_inhalt, zeile_inhalt_orig, extracted_data_id, zeile_inhalt_ohne_treffer 
                 FROM Treffer_Verein_Hit 
                 WHERE zeile_inhalt_ohne_treffer IS NOT NULL AND zeile_inhalt_ohne_treffer != ''
             ''')
@@ -244,9 +253,18 @@ class VereinTrefferApp:
             
             neue_treffer = 0
             
-            for hit_id, original_zeile, extracted_data_id, zeile_ohne_treffer in hit_rows:
+            for hit_id, zeile_inhalt, zeile_inhalt_orig, extracted_data_id, zeile_ohne_treffer in hit_rows:
                 for Verein_DRVID, verein_name in vereine_rows:
                     if verein_name.lower() in zeile_ohne_treffer.lower():
+                        # Ursprünglichen Inhalt verwenden (falls noch nicht gesetzt)
+                        if not zeile_inhalt_orig:
+                            zeile_inhalt_orig = zeile_inhalt
+                        
+                        # Vereinsname aus zeile_inhalt entfernen
+                        zeile_inhalt_neu = zeile_inhalt.replace(verein_name, "").strip()
+                        # Mehrfache Leerzeichen entfernen
+                        zeile_inhalt_neu = re.sub(r'\s+', ' ', zeile_inhalt_neu)
+                        
                         # Vereinsname aus zeile_inhalt_ohne_treffer entfernen
                         neue_zeile_ohne_verein = zeile_ohne_treffer.replace(verein_name, "").strip()
                         # Mehrfache Leerzeichen entfernen
@@ -254,9 +272,9 @@ class VereinTrefferApp:
                         
                         cursor.execute('''
                             INSERT INTO Treffer_Verein_Hit 
-                            (zeile_inhalt, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein)
-                            VALUES (?, ?, ?, ?, ?)
-                        ''', (original_zeile, extracted_data_id, neue_zeile_ohne_verein, Verein_DRVID, verein_name))
+                            (zeile_inhalt, zeile_inhalt_orig, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein)
+                            VALUES (?, ?, ?, ?, ?, ?)
+                        ''', (zeile_inhalt_neu, zeile_inhalt_orig, extracted_data_id, neue_zeile_ohne_verein, Verein_DRVID, verein_name))
                         
                         neue_treffer += 1
                         
@@ -300,7 +318,7 @@ class VereinTrefferApp:
                 return
             
             cursor.execute('''
-                SELECT ID, zeile_inhalt, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein, gefunden_am
+                SELECT ID, zeile_inhalt, zeile_inhalt_orig, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein, gefunden_am
                 FROM Treffer_Verein_Hit 
                 ORDER BY ID DESC
             ''')
@@ -332,7 +350,7 @@ class VereinTrefferApp:
             hsb.config(command=tree.xview)
             
             # Spalten
-            spalten = ("ID", "Zeile_Inhalt", "Extracted_Data_ID", "Zeile_ohne_Verein", "Verein_DRVID", "Verein", "Gefunden_am")
+            spalten = ("ID", "Zeile_Inhalt", "Zeile_Inhalt_Orig", "Extracted_Data_ID", "Zeile_ohne_Verein", "Verein_DRVID", "Verein", "Gefunden_am")
             tree["columns"] = spalten
             tree["show"] = "headings"
             
