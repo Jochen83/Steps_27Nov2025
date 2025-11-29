@@ -187,6 +187,8 @@ class VereinTrefferApp:
             for i, (treffer_id, zeile_inhalt, extracted_data_id) in enumerate(treffer_rows, 1):
                 self.log(f"🔍 Prüfe Zeile {i}/{len(treffer_rows)} (ID: {treffer_id})...")
                 
+                treffer_gefunden = False
+                
                 # Durch alle Vereine für diese Treffer-Zeile
                 for Verein_DRVID, verein_name in vereine_rows:
                     if verein_name.lower() in zeile_inhalt.lower():
@@ -211,6 +213,11 @@ class VereinTrefferApp:
                         
                         treffer_count += 1
                         self.log(f"   ✅ Treffer {treffer_count}: '{verein_name}' in Zeile {treffer_id}")
+                        treffer_gefunden = True
+                        break  # Sofort nach erstem Treffer zur nächsten Zeile
+                
+                if not treffer_gefunden:
+                    self.log(f"   ❌ Kein Verein gefunden in Zeile {treffer_id}")
                 
                 # Fortschritt anzeigen
                 if i % 10 == 0:
@@ -507,37 +514,33 @@ class VereinTrefferApp:
         while True:
             runden_treffer = 0
             
-            # Mittlere Schleife: Durch alle Treffer-Zeilen
-            for treffer_id, zeile_inhalt, extracted_data_id in treffer_rows:
-                # Innere Schleife: Durch alle Vereine für diese Quellzeile
-                for Verein_DRVID, verein_name in vereine_rows:
-                    if verein_name.lower() in zeile_inhalt.lower():
-                        # Ursprünglichen Inhalt in zeile_inhalt_orig speichern
-                        zeile_inhalt_orig = zeile_inhalt
-                        
-                        # Vereinsname aus zeile_inhalt entfernen
-                        zeile_inhalt_neu = zeile_inhalt.replace(verein_name, "").strip()
-                        zeile_inhalt_neu = re.sub(r'\s+', ' ', zeile_inhalt_neu)
-                        
-                        # Vereinsname aus zeile_inhalt entfernen für zeile_inhalt_ohne_treffer
-                        zeile_ohne_verein = zeile_inhalt.replace(verein_name, "").strip()
-                        zeile_ohne_verein = re.sub(r'\s+', ' ', zeile_ohne_verein)
-                        
-                        cursor.execute('''
-                            INSERT INTO Treffer_Verein_Hit 
-                            (zeile_inhalt, zeile_inhalt_orig, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein)
-                            VALUES (?, ?, ?, ?, ?, ?)
-                        ''', (zeile_inhalt_neu, zeile_inhalt_orig, extracted_data_id, zeile_ohne_verein, Verein_DRVID, verein_name))
-                        
-                        # Quellzeile für nächste Runde aktualisieren
-                        zeile_inhalt = zeile_inhalt_neu
-                        treffer_rows[treffer_rows.index((treffer_id, zeile_inhalt_orig, extracted_data_id))] = (treffer_id, zeile_inhalt_neu, extracted_data_id)
-                        
-                        treffer_count += 1
-                        runden_treffer += 1
-                        break  # Nur ein Verein pro Zeile pro Runde
+        # Mittlere Schleife: Durch alle Treffer-Zeilen
+        for treffer_id, zeile_inhalt, extracted_data_id in treffer_rows:
+            treffer_gefunden = False
             
-            # Prüfung: Wurden in dieser Runde Treffer gefunden?
+            # Innere Schleife: Durch alle Vereine für diese Quellzeile
+            for Verein_DRVID, verein_name in vereine_rows:
+                if verein_name.lower() in zeile_inhalt.lower():
+                    # Ursprünglichen Inhalt in zeile_inhalt_orig speichern
+                    zeile_inhalt_orig = zeile_inhalt
+                    
+                    # Vereinsname aus zeile_inhalt entfernen
+                    zeile_inhalt_neu = zeile_inhalt.replace(verein_name, "").strip()
+                    zeile_inhalt_neu = re.sub(r'\s+', ' ', zeile_inhalt_neu)
+                    
+                    # Vereinsname aus zeile_inhalt entfernen für zeile_inhalt_ohne_treffer
+                    zeile_ohne_verein = zeile_inhalt.replace(verein_name, "").strip()
+                    zeile_ohne_verein = re.sub(r'\s+', ' ', zeile_ohne_verein)
+                    
+                    cursor.execute('''
+                        INSERT INTO Treffer_Verein_Hit 
+                        (zeile_inhalt, zeile_inhalt_orig, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein)
+                        VALUES (?, ?, ?, ?, ?, ?)
+                    ''', (zeile_inhalt_neu, zeile_inhalt_orig, extracted_data_id, zeile_ohne_verein, Verein_DRVID, verein_name))
+                    
+                    treffer_count += 1
+                    treffer_gefunden = True
+                    break  # Sofort nach erstem Treffer zur nächsten Zeile            # Prüfung: Wurden in dieser Runde Treffer gefunden?
             if runden_treffer == 0:
                 break
             else:
