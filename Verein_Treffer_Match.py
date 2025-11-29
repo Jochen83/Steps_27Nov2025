@@ -132,18 +132,7 @@ class VereinTrefferApp:
             cursor.execute("SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name='Vereine'")
             vereine_exists = cursor.fetchone()[0] > 0
             
-            if vereine_exists:
-                cursor.execute("SELECT COUNT(*) FROM Vereine")
-                vereine_count = cursor.fetchone()[0]
-                self.lbl_stats_vereine.config(text=f"Vereine-Tabelle: {vereine_count} Einträge vorhanden", 
-                                             fg="green")
-            else:
-                self.lbl_stats_vereine.config(text="Vereine-Tabelle: NICHT VORHANDEN", fg="red")
-                # Vereine-Tabelle erstellen
-                self.vereine_tabelle_erstellen(cursor)
-                self.lbl_stats_vereine.config(text="Vereine-Tabelle: Leer erstellt - bitte Daten importieren", 
-                                             fg="orange")
-            
+                        
             conn.close()
             
             # Buttons aktivieren wenn beide Tabellen vorhanden
