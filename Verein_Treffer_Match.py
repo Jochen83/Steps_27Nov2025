@@ -59,8 +59,8 @@ class VereinTrefferApp:
                                       font=("Arial", 11, "bold"))
         self.btn_schritt1.pack(fill=tk.X, padx=20, pady=5)
         
-        # Button: Schritt 2 - Weiterer Abgleich mit Verein_Hit
-        self.btn_schritt2 = tk.Button(root, text="🔄 Schritt 2: Weiterer Abgleich (Verein_Hit)", 
+        # Button: Schritt 2 - Weiterer Abgleich mit Treffer_Verein_Hit
+        self.btn_schritt2 = tk.Button(root, text="🔄 Schritt 2: Weiterer Abgleich (Treffer_Verein_Hit)", 
                                       command=self.schritt2_abgleich, 
                                       bg="#fd7e14", fg="white", height=2, state=tk.DISABLED,
                                       font=("Arial", 11, "bold"))
@@ -164,7 +164,18 @@ class VereinTrefferApp:
             conn = sqlite3.connect(self.db_name)
             cursor = conn.cursor()
             
-            # Verein_Hit Tabelle erstellen
+            # Treffer_Verein_Hit Tabelle erstellen (Zwischentabelle)
+            cursor.execute('''
+                CREATE TABLE IF NOT EXISTS Treffer_Verein_Hit (
+                    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    zeile_inhalt TEXT,
+                    zeile_inhalt_orig TEXT,
+                    extracted_data_id INTEGER NOT NULL,
+                    gefunden_am TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+            ''')
+            
+            # Verein_Hit Tabelle erstellen (Treffer-Tabelle)
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS Verein_Hit (
                     ID INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -177,20 +188,27 @@ class VereinTrefferApp:
                 )
             ''')
             
-            # Alle Treffer holen
-            cursor.execute("SELECT id, zeile_inhalt, extracted_data_id FROM Treffer")
-            treffer_rows = cursor.fetchall()
+            # Zuerst alle Treffer in Treffer_Verein_Hit kopieren
+            cursor.execute("DELETE FROM Treffer_Verein_Hit")  # Tabelle leeren
+            cursor.execute('''
+                INSERT INTO Treffer_Verein_Hit (zeile_inhalt, zeile_inhalt_orig, extracted_data_id)
+                SELECT zeile_inhalt, zeile_inhalt, extracted_data_id FROM Treffer
+            ''')
             
             # Alle Vereine holen
             cursor.execute("SELECT Verein_DRVID, Verein FROM Vereine WHERE Verein IS NOT NULL AND Verein != ''")
             vereine_rows = cursor.fetchall()
             
+            # Alle Zeilen aus Treffer_Verein_Hit holen
+            cursor.execute("SELECT ID, zeile_inhalt, zeile_inhalt_orig, extracted_data_id FROM Treffer_Verein_Hit")
+            treffer_rows = cursor.fetchall()
+            
             self.log(f"📊 {len(treffer_rows)} Treffer und {len(vereine_rows)} Vereine gefunden")
             
             treffer_count = 0
             
-            # Einfacher Durchlauf: Jede Treffer-Zeile mit allen Vereinen abgleichen
-            for i, (treffer_id, zeile_inhalt, extracted_data_id) in enumerate(treffer_rows, 1):
+            # Durch alle Treffer-Zeilen
+            for i, (treffer_id, zeile_inhalt, zeile_inhalt_orig, extracted_data_id) in enumerate(treffer_rows, 1):
                 self.log(f"🔍 Prüfe Zeile {i}/{len(treffer_rows)} (ID: {treffer_id})...")
                 
                 treffer_gefunden = False
@@ -198,19 +216,23 @@ class VereinTrefferApp:
                 # Durch alle Vereine für diese Treffer-Zeile
                 for Verein_DRVID, verein_name in vereine_rows:
                     if verein_name.lower() in zeile_inhalt.lower():
-                        # Ursprünglichen Inhalt in zeile_inhalt_orig speichern
-                        zeile_inhalt_orig = zeile_inhalt
+                        # Vereinsname aus zeile_inhalt entfernen
+                        zeile_inhalt_neu = zeile_inhalt.replace(verein_name, "").strip()
+                        zeile_inhalt_neu = re.sub(r'\s+', ' ', zeile_inhalt_neu)
                         
-                        # Vereinsname aus zeile_inhalt entfernen für zeile_inhalt_ohne_treffer
-                        zeile_ohne_verein = zeile_inhalt.replace(verein_name, "").strip()
-                        # Mehrfache Leerzeichen entfernen
-                        zeile_ohne_verein = re.sub(r'\s+', ' ', zeile_ohne_verein)
+                        # Treffer_Verein_Hit aktualisieren (Verein aus zeile_inhalt entfernen)
+                        cursor.execute('''
+                            UPDATE Treffer_Verein_Hit 
+                            SET zeile_inhalt = ?
+                            WHERE ID = ?
+                        ''', (zeile_inhalt_neu, treffer_id))
                         
+                        # Treffer in Verein_Hit einfügen
                         cursor.execute('''
                             INSERT INTO Verein_Hit 
                             (zeile_inhalt_orig, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein)
                             VALUES (?, ?, ?, ?, ?)
-                        ''', (zeile_inhalt_orig, extracted_data_id, zeile_ohne_verein, Verein_DRVID, verein_name))
+                        ''', (zeile_inhalt_orig, extracted_data_id, zeile_inhalt_neu, Verein_DRVID, verein_name))
                         
                         treffer_count += 1
                         self.log(f"   ✅ Treffer {treffer_count}: '{verein_name}' in Zeile {treffer_id}")
@@ -245,40 +267,47 @@ class VereinTrefferApp:
             self.btn_schritt1.config(state=tk.NORMAL)
     
     def schritt2_abgleich(self):
-        """Führt den zweiten Abgleich mit Verein_Hit als Quelle durch"""
+        """Führt den zweiten Abgleich mit Treffer_Verein_Hit als Quelle durch"""
         try:
             self.btn_schritt2.config(state=tk.DISABLED)
-            self.log("🔄 Starte Schritt 2: Weiterer Abgleich mit Verein_Hit...")
+            self.log("🔄 Starte Schritt 2: Weiterer Abgleich mit Treffer_Verein_Hit...")
             
             conn = sqlite3.connect(self.db_name)
             cursor = conn.cursor()
             
-            # Alle Einträge aus Verein_Hit als Quelle holen
-            cursor.execute("SELECT ID, zeile_inhalt_ohne_treffer, zeile_inhalt_orig, extracted_data_id FROM Verein_Hit WHERE zeile_inhalt_ohne_treffer IS NOT NULL AND zeile_inhalt_ohne_treffer != ''")
+            # Alle Einträge aus Treffer_Verein_Hit als Quelle holen
+            cursor.execute("SELECT ID, zeile_inhalt, zeile_inhalt_orig, extracted_data_id FROM Treffer_Verein_Hit WHERE zeile_inhalt IS NOT NULL AND zeile_inhalt != ''")
             hit_rows = cursor.fetchall()
             
             # Alle Vereine holen
             cursor.execute("SELECT Verein_DRVID, Verein FROM Vereine WHERE Verein IS NOT NULL AND Verein != ''")
             vereine_rows = cursor.fetchall()
             
-            self.log(f"📊 {len(hit_rows)} Verein_Hit Einträge und {len(vereine_rows)} Vereine gefunden")
+            self.log(f"📊 {len(hit_rows)} Treffer_Verein_Hit Einträge und {len(vereine_rows)} Vereine gefunden")
             
             neue_treffer = 0
             aktualisierte_zeilen = 0
             
-            # Durchlauf durch alle Verein_Hit Einträge
-            for i, (hit_id, zeile_inhalt_ohne_treffer, zeile_inhalt_orig, extracted_data_id) in enumerate(hit_rows, 1):
+            # Durchlauf durch alle Treffer_Verein_Hit Einträge
+            for i, (hit_id, zeile_inhalt, zeile_inhalt_orig, extracted_data_id) in enumerate(hit_rows, 1):
                 self.log(f"🔍 Prüfe Hit-Zeile {i}/{len(hit_rows)} (ID: {hit_id})...")
                 
                 treffer_gefunden = False
                 
                 # Durch alle Vereine für diese Hit-Zeile
                 for Verein_DRVID, verein_name in vereine_rows:
-                    if verein_name.lower() in zeile_inhalt_ohne_treffer.lower():
-                        # Vereinsname aus zeile_inhalt_ohne_treffer entfernen
-                        zeile_inhalt_neu = zeile_inhalt_ohne_treffer.replace(verein_name, "").strip()
+                    if verein_name.lower() in zeile_inhalt.lower():
+                        # Vereinsname aus zeile_inhalt entfernen
+                        zeile_inhalt_neu = zeile_inhalt.replace(verein_name, "").strip()
                         # Mehrfache Leerzeichen entfernen
                         zeile_inhalt_neu = re.sub(r'\s+', ' ', zeile_inhalt_neu)
+                        
+                        # Treffer_Verein_Hit aktualisieren (Verein aus zeile_inhalt entfernen)
+                        cursor.execute('''
+                            UPDATE Treffer_Verein_Hit 
+                            SET zeile_inhalt = ?
+                            WHERE ID = ?
+                        ''', (zeile_inhalt_neu, hit_id))
                         
                         # Treffer in Verein_Hit einfügen
                         cursor.execute('''
@@ -286,13 +315,6 @@ class VereinTrefferApp:
                             (zeile_inhalt_orig, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein)
                             VALUES (?, ?, ?, ?, ?)
                         ''', (zeile_inhalt_orig, extracted_data_id, zeile_inhalt_neu, Verein_DRVID, verein_name))
-                        
-                        # Ursprüngliche Zeile in Verein_Hit aktualisieren (zeile_inhalt_ohne_treffer)
-                        cursor.execute('''
-                            UPDATE Verein_Hit 
-                            SET zeile_inhalt_ohne_treffer = ?
-                            WHERE ID = ?
-                        ''', (zeile_inhalt_neu, hit_id))
                         
                         neue_treffer += 1
                         aktualisierte_zeilen += 1
@@ -580,9 +602,9 @@ class VereinTrefferApp:
                 "Abgleich erneut durchführen?",
                 "Möchten Sie den kompletten Abgleich erneut durchführen?\n\n"
                 "Dies führt beide Schritte nacheinander aus:\n"
-                "- Schritt 1: Erster Abgleich (Treffer → Vereine)\n"
-                "- Schritt 2: Weiterer Abgleich (Verein_Hit → Vereine)\n\n"
-                "Vorhandene Verein_Hit Tabelle wird gelöscht!",
+                "- Schritt 1: Erster Abgleich (Treffer → Treffer_Verein_Hit + Verein_Hit)\n"
+                "- Schritt 2: Weiterer Abgleich (Treffer_Verein_Hit → Verein_Hit)\n\n"
+                "Vorhandene Tabellen werden gelöscht!",
                 icon='question'
             )
             
@@ -592,15 +614,23 @@ class VereinTrefferApp:
             self.btn_erneut.config(state=tk.DISABLED)
             self.log("🚀 Starte kompletten Abgleich erneut...")
             
-            # Zuerst Verein_Hit Tabelle löschen (falls vorhanden)
+            # Zuerst beide Tabellen löschen (falls vorhanden)
             conn = sqlite3.connect(self.db_name)
             cursor = conn.cursor()
             
+            # Verein_Hit Tabelle löschen
             cursor.execute("SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name='Verein_Hit'")
             if cursor.fetchone()[0] > 0:
                 cursor.execute("DROP TABLE Verein_Hit")
                 conn.commit()
                 self.log("🗑️ Alte Verein_Hit Tabelle gelöscht")
+            
+            # Treffer_Verein_Hit Tabelle löschen
+            cursor.execute("SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name='Treffer_Verein_Hit'")
+            if cursor.fetchone()[0] > 0:
+                cursor.execute("DROP TABLE Treffer_Verein_Hit")
+                conn.commit()
+                self.log("🗑️ Alte Treffer_Verein_Hit Tabelle gelöscht")
             
             conn.close()
             
@@ -641,11 +671,21 @@ class VereinTrefferApp:
         conn = sqlite3.connect(self.db_name)
         cursor = conn.cursor()
         
-        # Treffer_Verein_Hit Tabelle erstellen
+        # Treffer_Verein_Hit Tabelle erstellen (Zwischentabelle)
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS Treffer_Verein_Hit (
                 ID INTEGER PRIMARY KEY AUTOINCREMENT,
-                zeile_inhalt TEXT NOT NULL,
+                zeile_inhalt TEXT,
+                zeile_inhalt_orig TEXT,
+                extracted_data_id INTEGER NOT NULL,
+                gefunden_am TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        ''')
+        
+        # Verein_Hit Tabelle erstellen (Treffer-Tabelle)
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS Verein_Hit (
+                ID INTEGER PRIMARY KEY AUTOINCREMENT,
                 zeile_inhalt_orig TEXT,
                 extracted_data_id INTEGER NOT NULL,
                 zeile_inhalt_ohne_treffer TEXT,
@@ -655,39 +695,47 @@ class VereinTrefferApp:
             )
         ''')
         
-        # Alle Treffer holen
-        cursor.execute("SELECT id, zeile_inhalt, extracted_data_id FROM Treffer")
-        treffer_rows = cursor.fetchall()
+        # Zuerst alle Treffer in Treffer_Verein_Hit kopieren
+        cursor.execute("DELETE FROM Treffer_Verein_Hit")  # Tabelle leeren
+        cursor.execute('''
+            INSERT INTO Treffer_Verein_Hit (zeile_inhalt, zeile_inhalt_orig, extracted_data_id)
+            SELECT zeile_inhalt, zeile_inhalt, extracted_data_id FROM Treffer
+        ''')
         
         # Alle Vereine holen
         cursor.execute("SELECT Verein_DRVID, Verein FROM Vereine WHERE Verein IS NOT NULL AND Verein != ''")
         vereine_rows = cursor.fetchall()
         
+        # Alle Zeilen aus Treffer_Verein_Hit holen
+        cursor.execute("SELECT ID, zeile_inhalt, zeile_inhalt_orig, extracted_data_id FROM Treffer_Verein_Hit")
+        treffer_rows = cursor.fetchall()
+        
         treffer_count = 0
         
-        # Mittlere Schleife: Durch alle Treffer-Zeilen
-        for treffer_id, zeile_inhalt, extracted_data_id in treffer_rows:
+        # Durch alle Treffer-Zeilen
+        for treffer_id, zeile_inhalt, zeile_inhalt_orig, extracted_data_id in treffer_rows:
             treffer_gefunden = False
             
-            # Innere Schleife: Durch alle Vereine für diese Quellzeile
+            # Durch alle Vereine für diese Treffer-Zeile
             for Verein_DRVID, verein_name in vereine_rows:
                 if verein_name.lower() in zeile_inhalt.lower():
-                    # Ursprünglichen Inhalt in zeile_inhalt_orig speichern
-                    zeile_inhalt_orig = zeile_inhalt
-                    
                     # Vereinsname aus zeile_inhalt entfernen
                     zeile_inhalt_neu = zeile_inhalt.replace(verein_name, "").strip()
                     zeile_inhalt_neu = re.sub(r'\s+', ' ', zeile_inhalt_neu)
                     
-                    # Vereinsname aus zeile_inhalt entfernen für zeile_inhalt_ohne_treffer
-                    zeile_ohne_verein = zeile_inhalt.replace(verein_name, "").strip()
-                    zeile_ohne_verein = re.sub(r'\s+', ' ', zeile_ohne_verein)
-                    
+                    # Treffer_Verein_Hit aktualisieren (Verein aus zeile_inhalt entfernen)
                     cursor.execute('''
-                        INSERT INTO Treffer_Verein_Hit 
-                        (zeile_inhalt, zeile_inhalt_orig, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein)
-                        VALUES (?, ?, ?, ?, ?, ?)
-                    ''', (zeile_inhalt_neu, zeile_inhalt_orig, extracted_data_id, zeile_ohne_verein, Verein_DRVID, verein_name))
+                        UPDATE Treffer_Verein_Hit 
+                        SET zeile_inhalt = ?
+                        WHERE ID = ?
+                    ''', (zeile_inhalt_neu, treffer_id))
+                    
+                    # Treffer in Verein_Hit einfügen
+                    cursor.execute('''
+                        INSERT INTO Verein_Hit 
+                        (zeile_inhalt_orig, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein)
+                        VALUES (?, ?, ?, ?, ?)
+                    ''', (zeile_inhalt_orig, extracted_data_id, zeile_inhalt_neu, Verein_DRVID, verein_name))
                     
                     treffer_count += 1
                     treffer_gefunden = True
@@ -703,8 +751,8 @@ class VereinTrefferApp:
         conn = sqlite3.connect(self.db_name)
         cursor = conn.cursor()
         
-        # Alle Einträge aus Verein_Hit als Quelle holen
-        cursor.execute("SELECT ID, zeile_inhalt_ohne_treffer, zeile_inhalt_orig, extracted_data_id FROM Verein_Hit WHERE zeile_inhalt_ohne_treffer IS NOT NULL AND zeile_inhalt_ohne_treffer != ''")
+        # Alle Einträge aus Treffer_Verein_Hit als Quelle holen
+        cursor.execute("SELECT ID, zeile_inhalt, zeile_inhalt_orig, extracted_data_id FROM Treffer_Verein_Hit WHERE zeile_inhalt IS NOT NULL AND zeile_inhalt != ''")
         hit_rows = cursor.fetchall()
         
         # Alle Vereine holen
@@ -713,16 +761,23 @@ class VereinTrefferApp:
         
         neue_treffer = 0
         
-        # Durchlauf durch alle Verein_Hit Einträge
-        for hit_id, zeile_inhalt_ohne_treffer, zeile_inhalt_orig, extracted_data_id in hit_rows:
+        # Durchlauf durch alle Treffer_Verein_Hit Einträge
+        for hit_id, zeile_inhalt, zeile_inhalt_orig, extracted_data_id in hit_rows:
             treffer_gefunden = False
             
             # Durch alle Vereine für diese Hit-Zeile
             for Verein_DRVID, verein_name in vereine_rows:
-                if verein_name.lower() in zeile_inhalt_ohne_treffer.lower():
-                    # Vereinsname aus zeile_inhalt_ohne_treffer entfernen
-                    zeile_inhalt_neu = zeile_inhalt_ohne_treffer.replace(verein_name, "").strip()
+                if verein_name.lower() in zeile_inhalt.lower():
+                    # Vereinsname aus zeile_inhalt entfernen
+                    zeile_inhalt_neu = zeile_inhalt.replace(verein_name, "").strip()
                     zeile_inhalt_neu = re.sub(r'\s+', ' ', zeile_inhalt_neu)
+                    
+                    # Treffer_Verein_Hit aktualisieren (Verein aus zeile_inhalt entfernen)
+                    cursor.execute('''
+                        UPDATE Treffer_Verein_Hit 
+                        SET zeile_inhalt = ?
+                        WHERE ID = ?
+                    ''', (zeile_inhalt_neu, hit_id))
                     
                     # Treffer in Verein_Hit einfügen
                     cursor.execute('''
@@ -730,13 +785,6 @@ class VereinTrefferApp:
                         (zeile_inhalt_orig, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein)
                         VALUES (?, ?, ?, ?, ?)
                     ''', (zeile_inhalt_orig, extracted_data_id, zeile_inhalt_neu, Verein_DRVID, verein_name))
-                    
-                    # Ursprüngliche Zeile in Verein_Hit aktualisieren
-                    cursor.execute('''
-                        UPDATE Verein_Hit 
-                        SET zeile_inhalt_ohne_treffer = ?
-                        WHERE ID = ?
-                    ''', (zeile_inhalt_neu, hit_id))
                     
                     neue_treffer += 1
                     treffer_gefunden = True
