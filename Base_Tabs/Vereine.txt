@@ -1,29 +1,4 @@
-"Verein_DRVID";"Verein";"Lettern";"Kurzident";"Kurzident2";"AnzahlKurzIdent";"ErstesVereinZeichen";"Knüpf";"Laenge"
-11116;"Münchener Ruder- und Segelverein 'Bayern' von 1910 e.V.";"MRSV";"München";"segel";2;"M";"K";55
-30017;"Landesruderverband Mecklenburg-Vorpommern von 1990 e.V.";"LRVMVP";"Mecklen";"landes";2;"L";"K";55
-19717;"Landesruderverband Mecklenburg-Vorpommern von 1990 e.V.";"LRV MV";"Mecklen";"landes";2;"L";"K";55
-11011;"Heilbronner Rudergesellschaft 'Schwaben' von 1879 e.V.";"HRGS";"schwaben";"heil";2;"H";"K";54
-11203;"Ruderriege des Akademischen Turnvereins zu Berlin e.V.";"ATVB";"Berlin";"riege";2;"R";"K";54
-11205;"Astoria-Rudergemeinschaft in der Berliner Turnerschaft";"BRKA";"Astoria";;1;"A";"K";54
-12417;"Möllner Ruder-Club vorm. Möllner Turnerschaft v. 1884";"MRC";"mölln";"club";2;"M";"K";53
-11832;"Ruderverein für das 'Große Freie' e.V. Lehrte/ Sehnde";"RGF";"roße Freie";"lehrte";2;"R";"K";53
-15504;"Gymnasial Ruder Verein 'Hamburg' am Wilhelm-Gymnasium";"GRVH";"Hamburg";"wilhelm";2;"G";"K";53
-11954;"RTHC Ruder-Tennis-Hockey-Club Bayer Leverkusen Ruder-";"RTHC";"RTHC";;1;"R";"K";53
-12305;"Hallescher Ruderclub im Universitätssportverein Halle";"HRC";"halle";"uni";2;"H";"K";53
-11642;"Wassersportverein 1926 e.V. Offenbach am Main- Bürgel";"WSVO";"bürgel";;1;"W";"K";53
-11832;"Ruderverein für das 'Große Freie' e.V. Lehrte/Sehnde";"RGF";"freie";"Lehrte";2;"R";"K";52
-11642;"Wassersportverein 1926 e.V. Offenbach am Main-Bürgel";"WSVO";"bürgel";;1;"W";"K";52
-15920;"Ruderriege von 1899 am Max-Planck-Gymnasium Dortmund";"RRMPGDO";"planck";"dortm";2;"R";"K";52
-15920;"Ruderriege von 1899 am Max-Planck-Gymnasium Dortmund";"RRMPGDO";"planck";"dortm";2;"R";"K";52
-11036;"Rudergesellschaft 'Ghibellinia' Waiblingen 1920 e.V.";"RGGW";"Waibl";;1;"R";"K";52
-60012;"Universität zu Köln -Abteilung 24- Universitätssport";"UniK24";"köln";"24";2;"U";"K";52
-12411;"Rudervereinigung Kappeln im Turn- und SV Kappen 1876";"RVK";"Kappeln";;1;"R";"K";52
-11639;"Interessengemeinschaft Offenbacher Rudervereine IGOR";"IGOR";"IGOR";;1;"I";"K";52
-11036;"Rudergesellschaft ""Ghibellinia"" Waiblingen 1920 e.V.";"RGGW";"Waibl";;1;"R";"K";52
-11642;"Wassersportverein 1926 e.V. Offenbach a.M. - Bürgel";"WSVO";"bürgel";;1;"W";"K";51
-60006;"Ruderriege der TH Darmstadt -Hochschulsportzentrum-";"THD";"Darmstadt";"riege";2;"R";"K";51
-15510;"Berufliche Schule Recycling- u. Umwelttechnik (G 8)";"BSRU";"Recycling";;1;"B";"K";51
-11603;"Darmstädter Schwimm- und Wassersport-Club 1912 e.V.";"DSW";"Darmstädter";"Schwimm";2;"D";"K";51
+"Verein_ID";"Verein";"Lettern";"Kurzident";"Kurzident2";"AnzahlKurzIdent";"ErstesVereinZeichen";"Knüpf";"Laenge"
 12303;"Hallesche-Ruder-Vereinigung Böllberg v. 1884 u. Nelson v. 1874 e.V. im Sportverein Halle";"HRBN";"böll";;1;"H";"K";88
 12303;"Hallesche-Ruder-Vereinigung Böllberg v. 1884 u. Nelson v. 1874 im Sportverein Halle";"HRBN";"böll";;1;"H";"K";83
 12303;"Hallesche-Ruder-Vereinigung Böllberg v. 1884 u. Nelson v. 1874 e.V. im SV Halle";"HRBN";"böll";;1;"H";"K";79
@@ -89,6 +64,31 @@
 11612;"Ruder-Club Nassovia Höchst 1881 e.V., Frankfurt am Main";"RCNH";"Frankfurt";"höchst";2;"R";"K";55
 11811;"Sportgemeinschaft Diepholz von 1870 e.V. Ruderabteilung";"SGD";"Diepholz";;1;"S";"K";55
 11212;"Sport-Vereinigung Dresdenia Berlin e.V. Ruder-Abteilung";"SVgDB";"Berlin";"dresde";2;"S";"K";55
+11116;"Münchener Ruder- und Segelverein 'Bayern' von 1910 e.V.";"MRSV";"München";"segel";2;"M";"K";55
+30017;"Landesruderverband Mecklenburg-Vorpommern von 1990 e.V.";"LRVMVP";"Mecklen";"landes";2;"L";"K";55
+19717;"Landesruderverband Mecklenburg-Vorpommern von 1990 e.V.";"LRV MV";"Mecklen";"landes";2;"L";"K";55
+11011;"Heilbronner Rudergesellschaft 'Schwaben' von 1879 e.V.";"HRGS";"schwaben";"heil";2;"H";"K";54
+11203;"Ruderriege des Akademischen Turnvereins zu Berlin e.V.";"ATVB";"Berlin";"riege";2;"R";"K";54
+11205;"Astoria-Rudergemeinschaft in der Berliner Turnerschaft";"BRKA";"Astoria";;1;"A";"K";54
+12417;"Möllner Ruder-Club vorm. Möllner Turnerschaft v. 1884";"MRC";"mölln";"club";2;"M";"K";53
+11832;"Ruderverein für das 'Große Freie' e.V. Lehrte/ Sehnde";"RGF";"roße Freie";"lehrte";2;"R";"K";53
+15504;"Gymnasial Ruder Verein 'Hamburg' am Wilhelm-Gymnasium";"GRVH";"Hamburg";"wilhelm";2;"G";"K";53
+11954;"RTHC Ruder-Tennis-Hockey-Club Bayer Leverkusen Ruder-";"RTHC";"RTHC";;1;"R";"K";53
+12305;"Hallescher Ruderclub im Universitätssportverein Halle";"HRC";"halle";"uni";2;"H";"K";53
+11642;"Wassersportverein 1926 e.V. Offenbach am Main- Bürgel";"WSVO";"bürgel";;1;"W";"K";53
+11832;"Ruderverein für das 'Große Freie' e.V. Lehrte/Sehnde";"RGF";"freie";"Lehrte";2;"R";"K";52
+11642;"Wassersportverein 1926 e.V. Offenbach am Main-Bürgel";"WSVO";"bürgel";;1;"W";"K";52
+15920;"Ruderriege von 1899 am Max-Planck-Gymnasium Dortmund";"RRMPGDO";"planck";"dortm";2;"R";"K";52
+15920;"Ruderriege von 1899 am Max-Planck-Gymnasium Dortmund";"RRMPGDO";"planck";"dortm";2;"R";"K";52
+11036;"Rudergesellschaft 'Ghibellinia' Waiblingen 1920 e.V.";"RGGW";"Waibl";;1;"R";"K";52
+60012;"Universität zu Köln -Abteilung 24- Universitätssport";"UniK24";"köln";"24";2;"U";"K";52
+12411;"Rudervereinigung Kappeln im Turn- und SV Kappen 1876";"RVK";"Kappeln";;1;"R";"K";52
+11639;"Interessengemeinschaft Offenbacher Rudervereine IGOR";"IGOR";"IGOR";;1;"I";"K";52
+11036;"Rudergesellschaft ""Ghibellinia"" Waiblingen 1920 e.V.";"RGGW";"Waibl";;1;"R";"K";52
+11642;"Wassersportverein 1926 e.V. Offenbach a.M. - Bürgel";"WSVO";"bürgel";;1;"W";"K";51
+60006;"Ruderriege der TH Darmstadt -Hochschulsportzentrum-";"THD";"Darmstadt";"riege";2;"R";"K";51
+15510;"Berufliche Schule Recycling- u. Umwelttechnik (G 8)";"BSRU";"Recycling";;1;"B";"K";51
+11603;"Darmstädter Schwimm- und Wassersport-Club 1912 e.V.";"DSW";"Darmstädter";"Schwimm";2;"D";"K";51
 12214;"Universitätssportverein TU Dresden e.V. Abt. Rudern";"USVD";"dresden";"uni";2;"U";"K";51
 60009;"Hochschulsport Förderverein der Universität Hamburg";"UniH";"Hamburg";"hochschulsport";2;"H";"K";51
 12310;"Universitätssportclub ""Otto-von-Guericke"" Magdeburg";"USCM";"Magdeburg";"otto";2;"U";"K";51
