@@ -53,21 +53,14 @@ class VereinTrefferApp:
         self.btn_check.pack(fill=tk.X, padx=20, pady=10)
         
         # Button: Schritt 1 - Erster Abgleich
-        self.btn_schritt1 = tk.Button(root, text="⚡ Schritt 1: Ersten Abgleich durchführen", 
+        self.btn_schritt1 = tk.Button(root, text="⚡ Schritt 1: Abgleich durchführen", 
                                       command=self.schritt1_abgleich, 
                                       bg="#28a745", fg="white", height=2, state=tk.DISABLED,
                                       font=("Arial", 11, "bold"))
         self.btn_schritt1.pack(fill=tk.X, padx=20, pady=5)
         
-        # Button: Schritt 2 - Zweiter Abgleich
-        self.btn_schritt2 = tk.Button(root, text="🔄 Schritt 2: Nachfolgenden Abgleich durchführen", 
-                                      command=self.schritt2_abgleich, 
-                                      bg="#fd7e14", fg="white", height=2, state=tk.DISABLED,
-                                      font=("Arial", 11, "bold"))
-        self.btn_schritt2.pack(fill=tk.X, padx=20, pady=5)
-        
         # Button: Abgleich erneut durchführen
-        self.btn_erneut = tk.Button(root, text="♾️ Abgleich erneut durchführen (Schritt 1 + 2)", 
+        self.btn_erneut = tk.Button(root, text="♾️ Abgleich erneut durchführen", 
                                     command=self.abgleich_erneut, 
                                     bg="#28a745", fg="white", height=2, state=tk.DISABLED,
                                     font=("Arial", 11, "bold"))
@@ -227,88 +220,16 @@ class VereinTrefferApp:
             conn.close()
             
             self.log(f"✅ Schritt 1 abgeschlossen: {treffer_count} Vereins-Treffer gefunden")
-            self.status_label.config(text=f"Schritt 1: {treffer_count} Treffer gefunden")
+            self.status_label.config(text=f"Abgleich abgeschlossen: {treffer_count} Treffer gefunden")
             
-            if treffer_count > 0:
-                self.btn_schritt2.config(state=tk.NORMAL)
-            
-            messagebox.showinfo("Schritt 1 abgeschlossen", 
-                               f"Erster Abgleich erfolgreich!\n\n{treffer_count} Vereins-Treffer gefunden")
+            messagebox.showinfo("Abgleich abgeschlossen", 
+                               f"Abgleich erfolgreich!\n\n{treffer_count} Vereins-Treffer gefunden")
             
         except Exception as e:
             self.log(f"❌ Fehler in Schritt 1: {str(e)}")
             messagebox.showerror("Fehler", f"Fehler in Schritt 1:\n{str(e)}")
         finally:
             self.btn_schritt1.config(state=tk.NORMAL)
-    
-    def schritt2_abgleich(self):
-        """Führt den zweiten Abgleich durch (auf zeile_inhalt_ohne_treffer)"""
-        try:
-            self.btn_schritt2.config(state=tk.DISABLED)
-            self.log("🔄 Starte Schritt 2: Nachfolgenden Abgleich...")
-            
-            conn = sqlite3.connect(self.db_name)
-            cursor = conn.cursor()
-            
-            # Alle Treffer erneut holen für zweiten Durchlauf
-            cursor.execute("SELECT id, zeile_inhalt, extracted_data_id FROM Treffer")
-            treffer_rows = cursor.fetchall()
-            
-            # Alle Vereine holen
-            cursor.execute("SELECT Verein_DRVID, Verein FROM Vereine WHERE Verein IS NOT NULL AND Verein != ''")
-            vereine_rows = cursor.fetchall()
-            
-            self.log(f"📊 Zweiter Durchlauf: {len(treffer_rows)} Treffer prüfen...")
-            
-            neue_treffer = 0
-            
-            # Zweiter einfacher Durchlauf: Jede Treffer-Zeile erneut mit allen Vereinen abgleichen
-            for i, (treffer_id, zeile_inhalt, extracted_data_id) in enumerate(treffer_rows, 1):
-                self.log(f"🔍 2. Durchlauf - Prüfe Zeile {i}/{len(treffer_rows)} (ID: {treffer_id})...")
-                
-                # Durch alle Vereine für diese Treffer-Zeile
-                for Verein_DRVID, verein_name in vereine_rows:
-                    if verein_name.lower() in zeile_inhalt.lower():
-                        # Ursprünglichen Inhalt in zeile_inhalt_orig speichern
-                        zeile_inhalt_orig = zeile_inhalt
-                        
-                        # Vereinsname aus zeile_inhalt entfernen
-                        zeile_inhalt_neu = zeile_inhalt.replace(verein_name, "").strip()
-                        # Mehrfache Leerzeichen entfernen
-                        zeile_inhalt_neu = re.sub(r'\s+', ' ', zeile_inhalt_neu)
-                        
-                        # Vereinsname aus zeile_inhalt entfernen für zeile_inhalt_ohne_treffer
-                        neue_zeile_ohne_verein = zeile_inhalt.replace(verein_name, "").strip()
-                        # Mehrfache Leerzeichen entfernen
-                        neue_zeile_ohne_verein = re.sub(r'\s+', ' ', neue_zeile_ohne_verein)
-                        
-                        cursor.execute('''
-                            INSERT INTO Treffer_Verein_Hit 
-                            (zeile_inhalt, zeile_inhalt_orig, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein)
-                            VALUES (?, ?, ?, ?, ?, ?)
-                        ''', (zeile_inhalt_neu, zeile_inhalt_orig, extracted_data_id, neue_zeile_ohne_verein, Verein_DRVID, verein_name))
-                        
-                        neue_treffer += 1
-                        self.log(f"   ✅ Zusatz-Treffer {neue_treffer}: '{verein_name}' in Zeile {treffer_id}")
-                
-                # Fortschritt anzeigen
-                if i % 10 == 0:
-                    self.root.update()
-            
-            conn.commit()
-            conn.close()
-            
-            self.log(f"✅ Schritt 2 abgeschlossen: {neue_treffer} zusätzliche Vereins-Treffer gefunden")
-            self.status_label.config(text=f"Schritt 2: {neue_treffer} zusätzliche Treffer gefunden")
-            
-            messagebox.showinfo("Schritt 2 abgeschlossen", 
-                               f"Zweiter Abgleich erfolgreich!\n\n{neue_treffer} zusätzliche Vereins-Treffer gefunden")
-            
-        except Exception as e:
-            self.log(f"❌ Fehler in Schritt 2: {str(e)}")
-            messagebox.showerror("Fehler", f"Fehler in Schritt 2:\n{str(e)}")
-        finally:
-            self.btn_schritt2.config(state=tk.NORMAL)
     
     def ergebnis_anzeigen(self):
         """Zeigt die Treffer_Verein_Hit Tabelle an"""
@@ -498,7 +419,6 @@ class VereinTrefferApp:
                 
                 self.log("🗑️ Treffer_Verein_Hit Tabelle wurde gelöscht")
                 messagebox.showinfo("Gelöscht", "Tabelle 'Treffer_Verein_Hit' wurde gelöscht!")
-                self.btn_schritt2.config(state=tk.DISABLED)
             else:
                 conn.close()
                 
@@ -512,10 +432,7 @@ class VereinTrefferApp:
             # Bestätigung
             antwort = messagebox.askyesno(
                 "Abgleich erneut durchführen?",
-                "Möchten Sie den kompletten Abgleich erneut durchführen?\n\n"
-                "Dies führt beide Schritte nacheinander aus:\n"
-                "- Schritt 1: Erster Abgleich\n"
-                "- Schritt 2: Nachfolgender Abgleich\n\n"
+                "Möchten Sie den Abgleich erneut durchführen?\n\n"
                 "Vorhandene Treffer_Verein_Hit Tabelle wird gelöscht!",
                 icon='question'
             )
@@ -538,23 +455,16 @@ class VereinTrefferApp:
             
             conn.close()
             
-            # Buttons zurücksetzen
-            self.btn_schritt2.config(state=tk.DISABLED)
+            # Buttons zurücksetzen - nicht mehr nötig da kein Schritt 2
+            # self.btn_schritt2.config(state=tk.DISABLED)
             
             # Schritt 1 ausführen
-            self.log("⚡ Starte Schritt 1...")
+            self.log("⚡ Starte Abgleich...")
             self.schritt1_abgleich_intern()
             
-            # Kurze Pause
-            self.root.after(100)
-            
-            # Schritt 2 ausführen
-            self.log("🔄 Starte Schritt 2...")
-            self.schritt2_abgleich_intern()
-            
-            self.log("✅ Kompletter Abgleich erfolgreich abgeschlossen!")
+            self.log("✅ Abgleich erfolgreich abgeschlossen!")
             messagebox.showinfo("Abgleich abgeschlossen", 
-                               "Der komplette Abgleich wurde erfolgreich durchgeführt!\n\n"
+                               "Der Abgleich wurde erfolgreich durchgeführt!\n\n"
                                "Sie können nun die Ergebnisse anzeigen.")
             
         except Exception as e:
@@ -637,71 +547,6 @@ class VereinTrefferApp:
         conn.close()
         self.log(f"✅ Schritt 1 intern: {treffer_count} Vereins-Treffer gefunden")
         return treffer_count
-    
-    def schritt2_abgleich_intern(self):
-        """Interne Methode für Schritt 2 (ohne GUI-Updates)"""
-        conn = sqlite3.connect(self.db_name)
-        cursor = conn.cursor()
-        
-        # Aktuelle Treffer_Verein_Hit holen
-        cursor.execute('''
-            SELECT DISTINCT extracted_data_id, zeile_inhalt, zeile_inhalt_orig
-            FROM Treffer_Verein_Hit 
-            WHERE zeile_inhalt IS NOT NULL AND zeile_inhalt != ''
-        ''')
-        hit_rows = cursor.fetchall()
-        
-        # Alle Vereine holen
-        cursor.execute("SELECT Verein_DRVID, Verein FROM Vereine WHERE Verein IS NOT NULL AND Verein != ''")
-        vereine_rows = cursor.fetchall()
-        
-        neue_treffer = 0
-        runde = 1
-        
-        # Äußere Schleife: Solange noch Treffer gefunden werden
-        while True:
-            runden_treffer = 0
-            
-            # Mittlere Schleife: Durch alle Hit-Zeilen
-            for i, (extracted_data_id, zeile_inhalt, zeile_inhalt_orig) in enumerate(hit_rows):
-                # Innere Schleife: Durch alle Vereine für diese Zeile
-                for Verein_DRVID, verein_name in vereine_rows:
-                    if verein_name.lower() in zeile_inhalt.lower():
-                        # Ursprünglichen Inhalt verwenden
-                        if not zeile_inhalt_orig:
-                            zeile_inhalt_orig = zeile_inhalt
-                        
-                        # Vereinsname aus zeile_inhalt entfernen
-                        zeile_inhalt_neu = zeile_inhalt.replace(verein_name, "").strip()
-                        zeile_inhalt_neu = re.sub(r'\s+', ' ', zeile_inhalt_neu)
-                        
-                        # Vereinsname aus zeile_inhalt entfernen für zeile_inhalt_ohne_treffer
-                        neue_zeile_ohne_verein = zeile_inhalt.replace(verein_name, "").strip()
-                        neue_zeile_ohne_verein = re.sub(r'\s+', ' ', neue_zeile_ohne_verein)
-                        
-                        cursor.execute('''
-                            INSERT INTO Treffer_Verein_Hit 
-                            (zeile_inhalt, zeile_inhalt_orig, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein)
-                            VALUES (?, ?, ?, ?, ?, ?)
-                        ''', (zeile_inhalt_neu, zeile_inhalt_orig, extracted_data_id, neue_zeile_ohne_verein, Verein_DRVID, verein_name))
-                        
-                        # Hit-Zeile für nächste Runde aktualisieren
-                        hit_rows[i] = (extracted_data_id, zeile_inhalt_neu, zeile_inhalt_orig)
-                        
-                        neue_treffer += 1
-                        runden_treffer += 1
-                        break  # Nur ein Verein pro Zeile pro Runde
-            
-            # Prüfung: Wurden in dieser Runde Treffer gefunden?
-            if runden_treffer == 0:
-                break
-            else:
-                runde += 1
-        
-        conn.commit()
-        conn.close()
-        self.log(f"✅ Schritt 2 intern: {neue_treffer} zusätzliche Vereins-Treffer gefunden")
-        return neue_treffer
 
 
 if __name__ == "__main__":
