@@ -14,7 +14,9 @@ class TabellImportApp:
         self.root.geometry("700x650")
         
         # Variablen
-        self.db_name = "regatta_unified.db"
+        # Absoluter Pfad zur Datenbank (im gleichen Verzeichnis wie das Skript)
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        self.db_name = os.path.join(script_dir, "regatta_unified.db")
         self.ausgewaehlte_datei = None
         self.feldnamen = []
         self.tabellenname = ""

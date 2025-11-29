@@ -15,7 +15,7 @@ class RegexTrefferApp:
         
         # Variablen
         self.db_name = "regatta_unified.db"
-        self.regex_pattern = r"^[1-4][ \w]*[\.]?[ \w]*\/*[ \w]*([- Boot ]*[1-9]*[ -])*0[1-3]:[0-5][0-9].[0-9][0-9] [1-9][0-9]?"
+        self.regex_pattern = r"^.+0[1-3]:[0-5][0-9].[0-9][0-9] [1-9][0-9]?"
         self.ausgewaehlte_tabelle = "extracted_data"
         self.ausgewaehltes_feld = "zeile_inhalt"
         
