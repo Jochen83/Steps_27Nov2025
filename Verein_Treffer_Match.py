@@ -66,6 +66,13 @@ class VereinTrefferApp:
                                       font=("Arial", 11, "bold"))
         self.btn_schritt2.pack(fill=tk.X, padx=20, pady=5)
         
+        # Button: Abgleich erneut durchführen
+        self.btn_erneut = tk.Button(root, text="♾️ Abgleich erneut durchführen (Schritt 1 + 2)", 
+                                    command=self.abgleich_erneut, 
+                                    bg="#28a745", fg="white", height=2, state=tk.DISABLED,
+                                    font=("Arial", 11, "bold"))
+        self.btn_erneut.pack(fill=tk.X, padx=20, pady=5)
+        
         # Button: Ergebnis anzeigen
         self.btn_show = tk.Button(root, text="📊 Treffer_Verein_Hit anzeigen", 
                                   command=self.ergebnis_anzeigen, 
@@ -138,6 +145,7 @@ class VereinTrefferApp:
             # Buttons aktivieren wenn beide Tabellen vorhanden
             if treffer_exists and vereine_exists:
                 self.btn_schritt1.config(state=tk.NORMAL)
+                self.btn_erneut.config(state=tk.NORMAL)
                 self.log("✅ Beide Tabellen vorhanden - Abgleich kann gestartet werden")
             else:
                 self.log("❌ Fehlende Tabellen - bitte erst Daten importieren")
@@ -409,10 +417,56 @@ class VereinTrefferApp:
             tree["columns"] = spalten
             tree["show"] = "headings"
             
-            for col in spalten:
-                tree.heading(col, text=col)
-                tree.column(col, width=150, anchor=tk.W)
+            # Variable für Sortierung
+            sort_reverse = {}
             
+            def sortiere_spalte(col):
+                """Sortiert die Treeview-Spalte auf- oder absteigend"""
+                try:
+                    # Aktuelle Sortierrichtung umkehren
+                    reverse = sort_reverse.get(col, False)
+                    sort_reverse[col] = not reverse
+                    
+                    # Daten aus Treeview holen
+                    daten = [(tree.set(child, col), child) for child in tree.get_children("")]
+                    
+                    # Spaltenindex für die ursprünglichen Daten
+                    col_index = list(spalten).index(col)
+                    
+                    # Nach Datentyp sortieren
+                    if col in ["ID", "Extracted_Data_ID"]:
+                        # Numerische Sortierung
+                        daten.sort(key=lambda t: int(t[0]) if t[0] and t[0].isdigit() else 0, reverse=reverse)
+                    else:
+                        # Alphabetische Sortierung (case-insensitive)
+                        daten.sort(key=lambda t: str(t[0]).lower() if t[0] else "", reverse=reverse)
+                    
+                    # Treeview neu anordnen
+                    for index, (val, child) in enumerate(daten):
+                        tree.move(child, "", index)
+                    
+                    # Sortier-Indikator in Überschrift
+                    pfeil = " ▼" if reverse else " ▲"
+                    
+                    # Alle Überschriften zurücksetzen
+                    for spalte in spalten:
+                        clean_text = spalte.replace(" ▲", "").replace(" ▼", "")
+                        tree.heading(spalte, text=clean_text, command=lambda c=spalte: sortiere_spalte(c))
+                    
+                    # Aktuelle Spalte mit Pfeil markieren
+                    clean_col = col.replace(" ▲", "").replace(" ▼", "")
+                    tree.heading(col, text=clean_col + pfeil, command=lambda: sortiere_spalte(col))
+                    
+                except Exception as e:
+                    print(f"Fehler beim Sortieren: {str(e)}")
+            
+            # Spaltenüberschriften mit Sortier-Funktion konfigurieren
+            for col in spalten:
+                tree.heading(col, text=col, command=lambda c=col: sortiere_spalte(c))
+                tree.column(col, width=150, anchor=tk.W)
+                sort_reverse[col] = False  # Standard: aufsteigend
+            
+            # Daten in Treeview einfügen
             for row in rows:
                 tree.insert("", tk.END, values=row)
             
@@ -501,6 +555,203 @@ class VereinTrefferApp:
         except Exception as e:
             self.log(f"❌ Fehler beim Löschen: {str(e)}")
             messagebox.showerror("Fehler", f"Fehler beim Löschen der Tabelle:\n{str(e)}")
+    
+    def abgleich_erneut(self):
+        """Führt den kompletten Abgleich erneut durch (Schritt 1 + 2)"""
+        try:
+            # Bestätigung
+            antwort = messagebox.askyesno(
+                "Abgleich erneut durchführen?",
+                "Möchten Sie den kompletten Abgleich erneut durchführen?\n\n"
+                "Dies führt beide Schritte nacheinander aus:\n"
+                "- Schritt 1: Erster Abgleich\n"
+                "- Schritt 2: Nachfolgender Abgleich\n\n"
+                "Vorhandene Treffer_Verein_Hit Tabelle wird gelöscht!",
+                icon='question'
+            )
+            
+            if not antwort:
+                return
+            
+            self.btn_erneut.config(state=tk.DISABLED)
+            self.log("🚀 Starte kompletten Abgleich erneut...")
+            
+            # Zuerst Treffer_Verein_Hit Tabelle löschen (falls vorhanden)
+            conn = sqlite3.connect(self.db_name)
+            cursor = conn.cursor()
+            
+            cursor.execute("SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name='Treffer_Verein_Hit'")
+            if cursor.fetchone()[0] > 0:
+                cursor.execute("DROP TABLE Treffer_Verein_Hit")
+                conn.commit()
+                self.log("🗑️ Alte Treffer_Verein_Hit Tabelle gelöscht")
+            
+            conn.close()
+            
+            # Buttons zurücksetzen
+            self.btn_schritt2.config(state=tk.DISABLED)
+            
+            # Schritt 1 ausführen
+            self.log("⚡ Starte Schritt 1...")
+            self.schritt1_abgleich_intern()
+            
+            # Kurze Pause
+            self.root.after(100)
+            
+            # Schritt 2 ausführen
+            self.log("🔄 Starte Schritt 2...")
+            self.schritt2_abgleich_intern()
+            
+            self.log("✅ Kompletter Abgleich erfolgreich abgeschlossen!")
+            messagebox.showinfo("Abgleich abgeschlossen", 
+                               "Der komplette Abgleich wurde erfolgreich durchgeführt!\n\n"
+                               "Sie können nun die Ergebnisse anzeigen.")
+            
+        except Exception as e:
+            self.log(f"❌ Fehler beim erneuten Abgleich: {str(e)}")
+            messagebox.showerror("Fehler", f"Fehler beim erneuten Abgleich:\n{str(e)}")
+        finally:
+            self.btn_erneut.config(state=tk.NORMAL)
+    
+    def schritt1_abgleich_intern(self):
+        """Interne Methode für Schritt 1 (ohne GUI-Updates)"""
+        conn = sqlite3.connect(self.db_name)
+        cursor = conn.cursor()
+        
+        # Treffer_Verein_Hit Tabelle erstellen
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS Treffer_Verein_Hit (
+                ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                zeile_inhalt TEXT NOT NULL,
+                zeile_inhalt_orig TEXT,
+                extracted_data_id INTEGER NOT NULL,
+                zeile_inhalt_ohne_treffer TEXT,
+                Verein_DRVID TEXT,
+                Verein TEXT,
+                gefunden_am TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        ''')
+        
+        # Alle Treffer holen
+        cursor.execute("SELECT id, zeile_inhalt, extracted_data_id FROM Treffer")
+        treffer_rows = cursor.fetchall()
+        
+        # Alle Vereine holen
+        cursor.execute("SELECT Verein_DRVID, Verein FROM Vereine WHERE Verein IS NOT NULL AND Verein != ''")
+        vereine_rows = cursor.fetchall()
+        
+        treffer_count = 0
+        runde = 1
+        
+        # Äußere Schleife: Solange noch Treffer gefunden werden
+        while True:
+            runden_treffer = 0
+            
+            # Mittlere Schleife: Durch alle Treffer-Zeilen
+            for treffer_id, zeile_inhalt, extracted_data_id in treffer_rows:
+                # Innere Schleife: Durch alle Vereine für diese Quellzeile
+                for Verein_DRVID, verein_name in vereine_rows:
+                    if verein_name.lower() in zeile_inhalt.lower():
+                        # Ursprünglichen Inhalt in zeile_inhalt_orig speichern
+                        zeile_inhalt_orig = zeile_inhalt
+                        
+                        # Vereinsname aus zeile_inhalt entfernen
+                        zeile_inhalt_neu = zeile_inhalt.replace(verein_name, "").strip()
+                        zeile_inhalt_neu = re.sub(r'\s+', ' ', zeile_inhalt_neu)
+                        
+                        # Vereinsname aus zeile_inhalt entfernen für zeile_inhalt_ohne_treffer
+                        zeile_ohne_verein = zeile_inhalt.replace(verein_name, "").strip()
+                        zeile_ohne_verein = re.sub(r'\s+', ' ', zeile_ohne_verein)
+                        
+                        cursor.execute('''
+                            INSERT INTO Treffer_Verein_Hit 
+                            (zeile_inhalt, zeile_inhalt_orig, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein)
+                            VALUES (?, ?, ?, ?, ?, ?)
+                        ''', (zeile_inhalt_neu, zeile_inhalt_orig, extracted_data_id, zeile_ohne_verein, Verein_DRVID, verein_name))
+                        
+                        # Quellzeile für nächste Runde aktualisieren
+                        zeile_inhalt = zeile_inhalt_neu
+                        treffer_rows[treffer_rows.index((treffer_id, zeile_inhalt_orig, extracted_data_id))] = (treffer_id, zeile_inhalt_neu, extracted_data_id)
+                        
+                        treffer_count += 1
+                        runden_treffer += 1
+                        break  # Nur ein Verein pro Zeile pro Runde
+            
+            # Prüfung: Wurden in dieser Runde Treffer gefunden?
+            if runden_treffer == 0:
+                break
+            else:
+                runde += 1
+        
+        conn.commit()
+        conn.close()
+        self.log(f"✅ Schritt 1 intern: {treffer_count} Vereins-Treffer gefunden")
+        return treffer_count
+    
+    def schritt2_abgleich_intern(self):
+        """Interne Methode für Schritt 2 (ohne GUI-Updates)"""
+        conn = sqlite3.connect(self.db_name)
+        cursor = conn.cursor()
+        
+        # Aktuelle Treffer_Verein_Hit holen
+        cursor.execute('''
+            SELECT DISTINCT extracted_data_id, zeile_inhalt, zeile_inhalt_orig
+            FROM Treffer_Verein_Hit 
+            WHERE zeile_inhalt IS NOT NULL AND zeile_inhalt != ''
+        ''')
+        hit_rows = cursor.fetchall()
+        
+        # Alle Vereine holen
+        cursor.execute("SELECT Verein_DRVID, Verein FROM Vereine WHERE Verein IS NOT NULL AND Verein != ''")
+        vereine_rows = cursor.fetchall()
+        
+        neue_treffer = 0
+        runde = 1
+        
+        # Äußere Schleife: Solange noch Treffer gefunden werden
+        while True:
+            runden_treffer = 0
+            
+            # Mittlere Schleife: Durch alle Hit-Zeilen
+            for i, (extracted_data_id, zeile_inhalt, zeile_inhalt_orig) in enumerate(hit_rows):
+                # Innere Schleife: Durch alle Vereine für diese Zeile
+                for Verein_DRVID, verein_name in vereine_rows:
+                    if verein_name.lower() in zeile_inhalt.lower():
+                        # Ursprünglichen Inhalt verwenden
+                        if not zeile_inhalt_orig:
+                            zeile_inhalt_orig = zeile_inhalt
+                        
+                        # Vereinsname aus zeile_inhalt entfernen
+                        zeile_inhalt_neu = zeile_inhalt.replace(verein_name, "").strip()
+                        zeile_inhalt_neu = re.sub(r'\s+', ' ', zeile_inhalt_neu)
+                        
+                        # Vereinsname aus zeile_inhalt entfernen für zeile_inhalt_ohne_treffer
+                        neue_zeile_ohne_verein = zeile_inhalt.replace(verein_name, "").strip()
+                        neue_zeile_ohne_verein = re.sub(r'\s+', ' ', neue_zeile_ohne_verein)
+                        
+                        cursor.execute('''
+                            INSERT INTO Treffer_Verein_Hit 
+                            (zeile_inhalt, zeile_inhalt_orig, extracted_data_id, zeile_inhalt_ohne_treffer, Verein_DRVID, Verein)
+                            VALUES (?, ?, ?, ?, ?, ?)
+                        ''', (zeile_inhalt_neu, zeile_inhalt_orig, extracted_data_id, neue_zeile_ohne_verein, Verein_DRVID, verein_name))
+                        
+                        # Hit-Zeile für nächste Runde aktualisieren
+                        hit_rows[i] = (extracted_data_id, zeile_inhalt_neu, zeile_inhalt_orig)
+                        
+                        neue_treffer += 1
+                        runden_treffer += 1
+                        break  # Nur ein Verein pro Zeile pro Runde
+            
+            # Prüfung: Wurden in dieser Runde Treffer gefunden?
+            if runden_treffer == 0:
+                break
+            else:
+                runde += 1
+        
+        conn.commit()
+        conn.close()
+        self.log(f"✅ Schritt 2 intern: {neue_treffer} zusätzliche Vereins-Treffer gefunden")
+        return neue_treffer
 
 
 if __name__ == "__main__":
