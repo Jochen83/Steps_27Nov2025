@@ -613,12 +613,7 @@ class VereinTrefferApp:
         vereine_rows = cursor.fetchall()
         
         treffer_count = 0
-        runde = 1
         
-        # Äußere Schleife: Solange noch Treffer gefunden werden
-        while True:
-            runden_treffer = 0
-            
         # Mittlere Schleife: Durch alle Treffer-Zeilen
         for treffer_id, zeile_inhalt, extracted_data_id in treffer_rows:
             treffer_gefunden = False
@@ -645,11 +640,7 @@ class VereinTrefferApp:
                     
                     treffer_count += 1
                     treffer_gefunden = True
-                    break  # Sofort nach erstem Treffer zur nächsten Zeile            # Prüfung: Wurden in dieser Runde Treffer gefunden?
-            if runden_treffer == 0:
-                break
-            else:
-                runde += 1
+                    break  # Sofort nach erstem Treffer zur nächsten Zeile
         
         conn.commit()
         conn.close()
