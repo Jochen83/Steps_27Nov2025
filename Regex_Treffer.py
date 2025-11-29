@@ -18,7 +18,7 @@ class RegexTrefferApp:
         # Absoluter Pfad zur Datenbank (im gleichen Verzeichnis wie das Skript)
         script_dir = os.path.dirname(os.path.abspath(__file__))
         self.db_name = os.path.join(script_dir, "regatta_unified.db")
-        self.regex_pattern = r"^.+0[1-3]:[0-5][0-9].[0-9][0-9] [1-9][0-9]?"
+        self.regex_pattern = r"^[1-4] .+0[1-3]:[0-5][0-9].[0-9][0-9] [1-9][0-9]?"
         self.ausgewaehlte_tabelle = "extracted_data"
         self.ausgewaehltes_feld = "zeile_inhalt"
         
@@ -345,20 +345,46 @@ class RegexTrefferApp:
                     regex_pattern TEXT NOT NULL,
                     quell_tabelle TEXT NOT NULL,
                     quell_feld TEXT NOT NULL,
+                    Hit_Platz TEXT,
+                    Hit_StartNr TEXT,
+                    Hit_Zeit TEXT,
                     gefunden_am TIMESTAMP NOT NULL
                 )
             ''')
             
             # Regex-Suche durchführen und direkt speichern
             pattern = re.compile(self.regex_pattern)
+            # Regex-Pattern für spezifische Felder
+            platz_pattern = re.compile(r'^[1-4]')
+            startnr_pattern = re.compile(r'\s([1-9][0-9]?)$')
+            zeit_pattern = re.compile(r'0[1-3]:[0-5][0-9]\.[0-9][0-9]')
+            
             treffer_count = 0
             
             for row_id, zeile_inhalt in rows:
                 if pattern.match(zeile_inhalt):
+                    # Hit_Platz extrahieren (^[1-4])
+                    hit_platz = None
+                    platz_match = platz_pattern.match(zeile_inhalt)
+                    if platz_match:
+                        hit_platz = platz_match.group()
+                    
+                    # Hit_StartNr extrahieren ([1-9][0-9]? am Ende)
+                    hit_startnr = None
+                    startnr_match = startnr_pattern.search(zeile_inhalt)
+                    if startnr_match:
+                        hit_startnr = startnr_match.group(1)
+                    
+                    # Hit_Zeit extrahieren (Zeit-Format)
+                    hit_zeit = None
+                    zeit_match = zeit_pattern.search(zeile_inhalt)
+                    if zeit_match:
+                        hit_zeit = zeit_match.group()
+                    
                     cursor.execute('''
-                        INSERT INTO Treffer (extracted_data_id, zeile_inhalt, regex_pattern, quell_tabelle, quell_feld, gefunden_am)
-                        VALUES (?, ?, ?, ?, ?, ?)
-                    ''', (row_id, zeile_inhalt, self.regex_pattern, self.ausgewaehlte_tabelle, self.ausgewaehltes_feld, datetime.now()))
+                        INSERT INTO Treffer (extracted_data_id, zeile_inhalt, regex_pattern, quell_tabelle, quell_feld, Hit_Platz, Hit_StartNr, Hit_Zeit, gefunden_am)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ''', (row_id, zeile_inhalt, self.regex_pattern, self.ausgewaehlte_tabelle, self.ausgewaehltes_feld, hit_platz, hit_startnr, hit_zeit, datetime.now()))
                     treffer_count += 1
             
             conn.commit()
@@ -439,16 +465,42 @@ class RegexTrefferApp:
                     regex_pattern TEXT NOT NULL,
                     quell_tabelle TEXT NOT NULL,
                     quell_feld TEXT NOT NULL,
+                    Hit_Platz TEXT,
+                    Hit_StartNr TEXT,
+                    Hit_Zeit TEXT,
                     gefunden_am TIMESTAMP NOT NULL
                 )
             ''')
             
+            # Regex-Pattern für spezifische Felder
+            platz_pattern = re.compile(r'^[1-4]')
+            startnr_pattern = re.compile(r'\s([1-9][0-9]?)$')
+            zeit_pattern = re.compile(r'0[1-3]:[0-5][0-9]\.[0-9][0-9]')
+            
             # Treffer einfügen
             for row_id, inhalt in self.gefundene_treffer:
+                # Hit_Platz extrahieren (^[1-4])
+                hit_platz = None
+                platz_match = platz_pattern.match(inhalt)
+                if platz_match:
+                    hit_platz = platz_match.group()
+                
+                # Hit_StartNr extrahieren ([1-9][0-9]? am Ende)
+                hit_startnr = None
+                startnr_match = startnr_pattern.search(inhalt)
+                if startnr_match:
+                    hit_startnr = startnr_match.group(1)
+                
+                # Hit_Zeit extrahieren (Zeit-Format)
+                hit_zeit = None
+                zeit_match = zeit_pattern.search(inhalt)
+                if zeit_match:
+                    hit_zeit = zeit_match.group()
+                
                 cursor.execute('''
-                    INSERT INTO Treffer (extracted_data_id, zeile_inhalt, regex_pattern, quell_tabelle, quell_feld, gefunden_am)
-                    VALUES (?, ?, ?, ?, ?, ?)
-                ''', (row_id, inhalt, self.regex_pattern, self.ausgewaehlte_tabelle, self.ausgewaehltes_feld, datetime.now()))
+                    INSERT INTO Treffer (extracted_data_id, zeile_inhalt, regex_pattern, quell_tabelle, quell_feld, Hit_Platz, Hit_StartNr, Hit_Zeit, gefunden_am)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ''', (row_id, inhalt, self.regex_pattern, self.ausgewaehlte_tabelle, self.ausgewaehltes_feld, hit_platz, hit_startnr, hit_zeit, datetime.now()))
             
             conn.commit()
             conn.close()
@@ -477,7 +529,7 @@ class RegexTrefferApp:
             
             # Treffer abrufen
             cursor.execute('''
-                SELECT T.id, T.extracted_data_id, T.zeile_inhalt, T.regex_pattern, T.quell_tabelle, T.quell_feld, T.gefunden_am
+                SELECT T.id, T.extracted_data_id, T.zeile_inhalt, T.regex_pattern, T.quell_tabelle, T.quell_feld, T.Hit_Platz, T.Hit_StartNr, T.Hit_Zeit, T.gefunden_am
                 FROM Treffer T
                 ORDER BY T.id DESC
             ''')
@@ -491,7 +543,7 @@ class RegexTrefferApp:
             # Neues Fenster für Tabelle
             tabelle_window = tk.Toplevel(self.root)
             tabelle_window.title("Treffer-Tabelle")
-            tabelle_window.geometry("1200x600")
+            tabelle_window.geometry("1400x600")
             
             tk.Label(tabelle_window, text=f"Treffer-Tabelle ({anzahl} Einträge)", 
                     font=("Arial", 12, "bold"), bg="#e8f5e8", pady=10).pack(fill=tk.X)
@@ -515,14 +567,17 @@ class RegexTrefferApp:
             hsb.config(command=tree.xview)
             
             # Spalten definieren
-            spalten = ("ID", "Quell_ID", "Zeile_Inhalt", "Regex_Pattern", "Quell_Tabelle", "Quell_Feld", "Gefunden_am")
+            spalten = ("ID", "Quell_ID", "Zeile_Inhalt", "Regex_Pattern", "Quell_Tabelle", "Quell_Feld", "Hit_Platz", "Hit_StartNr", "Hit_Zeit", "Gefunden_am")
             tree["columns"] = spalten
             tree["show"] = "headings"
             
             # Spaltenüberschriften
             for col in spalten:
                 tree.heading(col, text=col)
-                tree.column(col, width=150, anchor=tk.W)
+                if col in ["Hit_Platz", "Hit_StartNr", "Hit_Zeit"]:
+                    tree.column(col, width=100, anchor=tk.W)
+                else:
+                    tree.column(col, width=150, anchor=tk.W)
             
             # Daten einfügen
             for row in treffer:
