@@ -24,6 +24,10 @@ class UnifiedTextExtractorApp:
         self.alle_ergebnisse = []
         self.verarbeitungsmodus = "Bild (OCR)"  # Default
         
+        # Regatta-Auswahl aus Umgebungsvariablen
+        self.selected_regatta_id = os.environ.get('SELECTED_REGATTA_ID')
+        self.selected_regatta_name = os.environ.get('SELECTED_REGATTA_NAME', 'Keine Regatta ausgewählt')
+        
         # Datenbank initialisieren
         self.db_name = "regatta_unified.db"
         self.init_database()
@@ -46,6 +50,15 @@ class UnifiedTextExtractorApp:
                                 value="PDF", command=self.modus_geaendert,
                                 font=("Arial", 10), bg="#e0e0e0")
         rb_pdf.pack(side=tk.LEFT, padx=10)
+        
+        # Regatta-Anzeige
+        regatta_frame = tk.Frame(root, bg="#f0f8ff", pady=8)
+        regatta_frame.pack(fill=tk.X, padx=10, pady=5)
+        
+        tk.Label(regatta_frame, text="🏁 Ausgewählte Regatta:", font=("Arial", 10, "bold"), bg="#f0f8ff").pack(side=tk.LEFT, padx=10)
+        self.lbl_regatta = tk.Label(regatta_frame, text=self.selected_regatta_name, 
+                                   font=("Arial", 10), bg="#f0f8ff", fg="#0066cc")
+        self.lbl_regatta.pack(side=tk.LEFT, padx=5)
         
         # Info Label
         self.lbl_info = tk.Label(root, text="Schritt 1: Modus wählen und Dateien auswählen", font=("Arial", 12))
@@ -118,6 +131,24 @@ class UnifiedTextExtractorApp:
             )
         ''')
         
+        # Import-Tabelle erstellen (neue universelle Import-Tabelle)
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS Import (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                regatta_id INTEGER,
+                dateiname TEXT,
+                quellentyp TEXT,
+                seite_nummer INTEGER,
+                zeile_nummer INTEGER,
+                zeile_inhalt TEXT,
+                zeichen_anzahl INTEGER,
+                verarbeitet_am TIMESTAMP,
+                status TEXT,
+                regatta TEXT,
+                FOREIGN KEY (regatta_id) REFERENCES Regatta_(id)
+            )
+        ''')
+        
         conn.commit()
         conn.close()
         
@@ -143,6 +174,7 @@ class UnifiedTextExtractorApp:
         zeilen = text.split('\n')
         
         for zeile_nr, zeile in enumerate(zeilen, start=1):
+            # In extracted_data speichern (bestehende Struktur)
             cursor.execute('''
                 INSERT INTO extracted_data 
                 (dateiname, quellentyp, seite_nummer, zeile_nummer, zeile_inhalt, zeichen_anzahl, verarbeitet_am, status)
@@ -157,6 +189,17 @@ class UnifiedTextExtractorApp:
                 datetime.now(),
                 'verarbeitet'
             ))
+            
+            # Zusätzlich in Import-Tabelle speichern wenn Regatta ausgewählt
+            if self.selected_regatta_id:
+                cursor.execute('''
+                    INSERT INTO Import 
+                    (regatta_id, dateiname, quellentyp, seite_nummer, zeile_nummer, zeile_inhalt, zeichen_anzahl, verarbeitet_am, status, regatta)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ''', (
+                    int(self.selected_regatta_id), dateiname, quellentyp, seite_nr, zeile_nr, zeile.strip(),
+                    len(zeile.strip()), datetime.now(), 'verarbeitet', self.selected_regatta_name
+                ))
         
         conn.commit()
         conn.close()

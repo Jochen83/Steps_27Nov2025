@@ -7,6 +7,16 @@ from datetime import datetime
 
 # Regex-Treffer Extraktor für regatta_unified.db
 # Erstellt am 28.11.2025
+# Findet Boot: 1 RG Eberbach 01:43.73 5 oder
+# 2 Rgm. Frankfurter RG Germania/ SRR Schillerschule Frankfurt 01:46.24 1
+# markiert Typ mit Boot
+# findet alle Zeilen mt dem Pattern \([0-9]+\) und markiert Typ mit Sportler  
+# Bsp.: Max Mustermann (11)
+# Speichert Treffer in Tabelle Treffer mit zusätzlichen Feldern:
+# - zeile_inhalt_orig: Originaler Zeileninhalt vor Bereinigung
+# - zeile_inhalt_Typ: "Boot" oder "Sportler"
+# extrahiert auch Platz, StartNr und Zeit in eigene Felder
+
 
 class RegexTrefferApp:
     def __init__(self, root):
@@ -21,6 +31,9 @@ class RegexTrefferApp:
         self.regex_pattern = r"^[1-4] .+0[1-3]:[0-5][0-9].[0-9][0-9] [1-9][0-9]?"
         self.ausgewaehlte_tabelle = "extracted_data"
         self.ausgewaehltes_feld = "zeile_inhalt"
+        
+        # Datenbank-Schema beim Start initialisieren
+        self.init_database_schema()
         
         # GUI Elemente
         # Titel
@@ -191,6 +204,48 @@ class RegexTrefferApp:
         except Exception as e:
             messagebox.showerror("Fehler", f"Fehler beim Laden der Felder:\n{str(e)}")
     
+    def init_database_schema(self):
+        """Initialisiert das Datenbank-Schema beim Start der Anwendung"""
+        try:
+            conn = sqlite3.connect(self.db_name)
+            cursor = conn.cursor()
+            
+            # Prüfe aktuelle Tabellen-Struktur
+            cursor.execute("PRAGMA table_info(Treffer)")
+            existing_columns = [column[1] for column in cursor.fetchall()]
+            
+            # Falls die Tabelle nicht existiert oder wichtige Spalten fehlen, erstelle neue Tabelle
+            if 'zeile_inhalt_orig' not in existing_columns or 'zeile_inhalt_Typ' not in existing_columns:
+                print("Erstelle Treffer-Tabelle mit allen erforderlichen Spalten...")
+                
+                # Lösche alte Tabelle falls vorhanden
+                cursor.execute("DROP TABLE IF EXISTS Treffer")
+                
+                # Neue Tabelle mit allen Spalten erstellen
+                cursor.execute('''
+                    CREATE TABLE Treffer (
+                        id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        extracted_data_id INTEGER NOT NULL,
+                        zeile_inhalt TEXT NOT NULL,
+                        zeile_inhalt_orig TEXT,
+                        regex_pattern TEXT NOT NULL,
+                        quell_tabelle TEXT NOT NULL,
+                        quell_feld TEXT NOT NULL,
+                        Hit_Platz TEXT,
+                        Hit_StartNr TEXT,
+                        Hit_Zeit TEXT,
+                        zeile_inhalt_Typ TEXT,
+                        gefunden_am TIMESTAMP NOT NULL
+                    )
+                ''')
+                print("Neue Treffer-Tabelle mit allen Spalten erstellt")
+            
+            conn.commit()
+            conn.close()
+            
+        except Exception as e:
+            print(f"Fehler bei Schema-Initialisierung: {e}")
+
     def suche_starten(self):
         """Startet die Regex-Suche in der extracted_data Tabelle"""
         try:
@@ -260,9 +315,22 @@ class RegexTrefferApp:
             # Regex-Suche durchführen
             self.gefundene_treffer = []
             pattern = re.compile(self.regex_pattern)
+            sportler_pattern = re.compile(r'\([0-9]+\)')
             
+            # Erster Durchgang: Haupt-Regex
             for row_id, zeile_inhalt in rows:
+                # Sicherstellen dass zeile_inhalt ein String ist
+                zeile_inhalt = str(zeile_inhalt) if zeile_inhalt is not None else ""
+                
                 if pattern.match(zeile_inhalt):
+                    self.gefundene_treffer.append((row_id, zeile_inhalt))
+            
+            # Zweiter Durchgang: Sportler-Pattern (nur wenn nicht bereits erfasst)
+            for row_id, zeile_inhalt in rows:
+                # Sicherstellen dass zeile_inhalt ein String ist
+                zeile_inhalt = str(zeile_inhalt) if zeile_inhalt is not None else ""
+                
+                if sportler_pattern.search(zeile_inhalt) and not pattern.match(zeile_inhalt):
                     self.gefundene_treffer.append((row_id, zeile_inhalt))
             
             # Ergebnisse anzeigen
@@ -359,10 +427,28 @@ class RegexTrefferApp:
             startnr_pattern = re.compile(r'\s([1-9][0-9]?)$')
             zeit_pattern = re.compile(r'0[1-3]:[0-5][0-9]\.[0-9][0-9]')
             
+            # Typ-Pattern für zeile_inhalt_Typ
+            boot_pattern = re.compile(r'^[1-4] .+0[1-3]:[0-5][0-9]\.[0-9][0-9] [1-9][0-9]?')
+            sportler_pattern = re.compile(r'\([0-9]+\)')
+            
             treffer_count = 0
             
+            # Erste Durchgang: Haupt-Regex Pattern
             for row_id, zeile_inhalt in rows:
+                # Sicherstellen dass zeile_inhalt ein String ist
+                zeile_inhalt = str(zeile_inhalt) if zeile_inhalt is not None else ""
+                
                 if pattern.match(zeile_inhalt):
+                    # Originalen Inhalt speichern
+                    zeile_inhalt_orig = zeile_inhalt
+                    
+                    # Typ bestimmen
+                    zeile_typ = None
+                    if boot_pattern.match(zeile_inhalt):
+                        zeile_typ = "Boot"
+                    elif sportler_pattern.search(zeile_inhalt):
+                        zeile_typ = "Sportler"
+                    
                     # Hit_Platz extrahieren (^[1-4])
                     hit_platz = None
                     platz_match = platz_pattern.match(zeile_inhalt)
@@ -381,10 +467,63 @@ class RegexTrefferApp:
                     if zeit_match:
                         hit_zeit = zeit_match.group()
                     
+                    # zeile_inhalt bereinigen
+                    zeile_bereinigt = zeile_inhalt
+                    
+                    # Platz entfernen (am Anfang)
+                    if hit_platz:
+                        zeile_bereinigt = re.sub(r'^[1-4]\s*', '', zeile_bereinigt)
+                    
+                    # Zeit entfernen
+                    if hit_zeit:
+                        zeile_bereinigt = zeile_bereinigt.replace(hit_zeit, '')
+                    
+                    # Startnummer entfernen (am Ende)
+                    if hit_startnr:
+                        zeile_bereinigt = re.sub(r'\s+' + re.escape(hit_startnr) + r'$', '', zeile_bereinigt)
+                    
+                    # "rgm." entfernen
+                    zeile_bereinigt = zeile_bereinigt.replace('rgm.', '')
+                    
+                    # Boot-Pattern entfernen [1-9]
+                    zeile_bereinigt = re.sub(r'(- Boot [1-9] -)', ' ', zeile_bereinigt)
+                    
+                    # Führende und folgende Leerzeichen entfernen
+                    zeile_bereinigt = zeile_bereinigt.strip()
+                    
+                    # Doppelte Leerzeichen reduzieren
+                    zeile_bereinigt = re.sub(r'\s+', ' ', zeile_bereinigt)
+                    
                     cursor.execute('''
-                        INSERT INTO Treffer (extracted_data_id, zeile_inhalt, regex_pattern, quell_tabelle, quell_feld, Hit_Platz, Hit_StartNr, Hit_Zeit, gefunden_am)
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-                    ''', (row_id, zeile_inhalt, self.regex_pattern, self.ausgewaehlte_tabelle, self.ausgewaehltes_feld, hit_platz, hit_startnr, hit_zeit, datetime.now()))
+                        INSERT INTO Treffer (extracted_data_id, zeile_inhalt, zeile_inhalt_orig, regex_pattern, quell_tabelle, quell_feld, Hit_Platz, Hit_StartNr, Hit_Zeit, zeile_inhalt_Typ, gefunden_am)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ''', (row_id, zeile_bereinigt, zeile_inhalt_orig, self.regex_pattern, self.ausgewaehlte_tabelle, self.ausgewaehltes_feld, hit_platz, hit_startnr, hit_zeit, zeile_typ, datetime.now()))
+                    treffer_count += 1
+            
+            # Zweiter Durchgang: Sportler-Pattern auf alle Zeilen anwenden
+            for row_id, zeile_inhalt in rows:
+                # Sicherstellen dass zeile_inhalt ein String ist
+                zeile_inhalt = str(zeile_inhalt) if zeile_inhalt is not None else ""
+                
+                # Nur Sportler-Pattern prüfen und nur wenn es nicht bereits vom Haupt-Pattern erfasst wurde
+                if sportler_pattern.search(zeile_inhalt) and not pattern.match(zeile_inhalt):
+                    # Originalen Inhalt speichern
+                    zeile_inhalt_orig = zeile_inhalt
+                    zeile_typ = "Sportler"
+                    
+                    # Für Sportler-Treffer keine speziellen Hit-Felder extrahieren
+                    hit_platz = None
+                    hit_startnr = None
+                    hit_zeit = None
+                    
+                    # Minimale Bereinigung für Sportler-Treffer
+                    zeile_bereinigt = zeile_inhalt.strip()
+                    zeile_bereinigt = re.sub(r'\s+', ' ', zeile_bereinigt)
+                    
+                    cursor.execute('''
+                        INSERT INTO Treffer (extracted_data_id, zeile_inhalt, zeile_inhalt_orig, regex_pattern, quell_tabelle, quell_feld, Hit_Platz, Hit_StartNr, Hit_Zeit, zeile_inhalt_Typ, gefunden_am)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ''', (row_id, zeile_bereinigt, zeile_inhalt_orig, '\\([0-9]+\\)', self.ausgewaehlte_tabelle, self.ausgewaehltes_feld, hit_platz, hit_startnr, hit_zeit, zeile_typ, datetime.now()))
                     treffer_count += 1
             
             conn.commit()
@@ -395,7 +534,8 @@ class RegexTrefferApp:
             self.txt_results.insert(tk.END, f"=== SUCHE UND SPEICHERUNG ABGESCHLOSSEN ===\n")
             self.txt_results.insert(tk.END, f"Tabelle: {self.ausgewaehlte_tabelle}\n")
             self.txt_results.insert(tk.END, f"Feld: {self.ausgewaehltes_feld}\n")
-            self.txt_results.insert(tk.END, f"Pattern: {self.regex_pattern}\n")
+            self.txt_results.insert(tk.END, f"Haupt-Pattern: {self.regex_pattern}\n")
+            self.txt_results.insert(tk.END, f"Zusätzlich: Sportler-Pattern \\([0-9]+\\)\n")
             self.txt_results.insert(tk.END, f"Gefundene Treffer: {treffer_count}\n")
             self.txt_results.insert(tk.END, "="*60 + "\n\n")
             
@@ -456,29 +596,27 @@ class RegexTrefferApp:
             conn = sqlite3.connect(self.db_name)
             cursor = conn.cursor()
             
-            # Treffer-Tabelle erstellen (falls nicht vorhanden)
-            cursor.execute('''
-                CREATE TABLE IF NOT EXISTS Treffer (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    extracted_data_id INTEGER NOT NULL,
-                    zeile_inhalt TEXT NOT NULL,
-                    regex_pattern TEXT NOT NULL,
-                    quell_tabelle TEXT NOT NULL,
-                    quell_feld TEXT NOT NULL,
-                    Hit_Platz TEXT,
-                    Hit_StartNr TEXT,
-                    Hit_Zeit TEXT,
-                    gefunden_am TIMESTAMP NOT NULL
-                )
-            ''')
-            
-            # Regex-Pattern für spezifische Felder
+            # Regex-Pattern für Hit-Extraktion definieren
             platz_pattern = re.compile(r'^[1-4]')
             startnr_pattern = re.compile(r'\s([1-9][0-9]?)$')
             zeit_pattern = re.compile(r'0[1-3]:[0-5][0-9]\.[0-9][0-9]')
             
+            # Typ-Pattern für zeile_inhalt_Typ
+            boot_pattern = re.compile(r'^[1-4] .+0[1-3]:[0-5][0-9]\.[0-9][0-9] [1-9][0-9]?')
+            sportler_pattern = re.compile(r'\([0-9]+\)')
+            
             # Treffer einfügen
             for row_id, inhalt in self.gefundene_treffer:
+                # Originalen Inhalt speichern
+                zeile_inhalt_orig = inhalt
+                
+                # Typ bestimmen
+                zeile_typ = None
+                if boot_pattern.match(inhalt):
+                    zeile_typ = "Boot"
+                elif sportler_pattern.search(inhalt):
+                    zeile_typ = "Sportler"
+                
                 # Hit_Platz extrahieren (^[1-4])
                 hit_platz = None
                 platz_match = platz_pattern.match(inhalt)
@@ -497,10 +635,49 @@ class RegexTrefferApp:
                 if zeit_match:
                     hit_zeit = zeit_match.group()
                 
-                cursor.execute('''
-                    INSERT INTO Treffer (extracted_data_id, zeile_inhalt, regex_pattern, quell_tabelle, quell_feld, Hit_Platz, Hit_StartNr, Hit_Zeit, gefunden_am)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-                ''', (row_id, inhalt, self.regex_pattern, self.ausgewaehlte_tabelle, self.ausgewaehltes_feld, hit_platz, hit_startnr, hit_zeit, datetime.now()))
+                # zeile_inhalt bereinigen
+                zeile_bereinigt = inhalt
+                
+                # Platz entfernen (am Anfang)
+                if hit_platz:
+                    zeile_bereinigt = re.sub(r'^[1-4]\s*', '', zeile_bereinigt)
+                
+                # Zeit entfernen
+                if hit_zeit:
+                    zeile_bereinigt = zeile_bereinigt.replace(hit_zeit, '')
+                
+                # Startnummer entfernen (am Ende)
+                if hit_startnr:
+                    zeile_bereinigt = re.sub(r'\s+' + re.escape(hit_startnr) + r'$', '', zeile_bereinigt)
+                
+                # "rgm." entfernen
+                zeile_bereinigt = zeile_bereinigt.replace('rgm.', '')
+                
+                # Boot-Pattern entfernen [1-9]
+                zeile_bereinigt = re.sub(r'(- Boot [1-9] -)', ' ', zeile_bereinigt)
+                
+                # Führende und folgende Leerzeichen entfernen
+                zeile_bereinigt = zeile_bereinigt.strip()
+                
+                # Doppelte Leerzeichen reduzieren
+                zeile_bereinigt = re.sub(r'\s+', ' ', zeile_bereinigt)
+                
+                # Sicherheitsprüfung vor INSERT
+                try:
+                    cursor.execute('''
+                        INSERT INTO Treffer (extracted_data_id, zeile_inhalt, zeile_inhalt_orig, regex_pattern, quell_tabelle, quell_feld, Hit_Platz, Hit_StartNr, Hit_Zeit, zeile_inhalt_Typ, gefunden_am)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ''', (row_id, zeile_bereinigt, zeile_inhalt_orig, self.regex_pattern, self.ausgewaehlte_tabelle, self.ausgewaehltes_feld, hit_platz, hit_startnr, hit_zeit, zeile_typ, datetime.now()))
+                except sqlite3.OperationalError as e:
+                    if "no column named" in str(e):
+                        print(f"Spalten-Fehler: {e}")
+                        # Fallback auf einfachen INSERT ohne neue Spalten
+                        cursor.execute('''
+                            INSERT INTO Treffer (extracted_data_id, zeile_inhalt, regex_pattern, quell_tabelle, quell_feld, gefunden_am)
+                            VALUES (?, ?, ?, ?, ?, ?)
+                        ''', (row_id, zeile_bereinigt, self.regex_pattern, self.ausgewaehlte_tabelle, self.ausgewaehltes_feld, datetime.now()))
+                    else:
+                        raise
             
             conn.commit()
             conn.close()
@@ -529,7 +706,7 @@ class RegexTrefferApp:
             
             # Treffer abrufen
             cursor.execute('''
-                SELECT T.id, T.extracted_data_id, T.zeile_inhalt, T.regex_pattern, T.quell_tabelle, T.quell_feld, T.Hit_Platz, T.Hit_StartNr, T.Hit_Zeit, T.gefunden_am
+                SELECT T.id, T.extracted_data_id, T.zeile_inhalt, T.zeile_inhalt_orig, T.regex_pattern, T.quell_tabelle, T.quell_feld, T.Hit_Platz, T.Hit_StartNr, T.Hit_Zeit, T.zeile_inhalt_Typ, T.gefunden_am
                 FROM Treffer T
                 ORDER BY T.id DESC
             ''')
@@ -567,14 +744,14 @@ class RegexTrefferApp:
             hsb.config(command=tree.xview)
             
             # Spalten definieren
-            spalten = ("ID", "Quell_ID", "Zeile_Inhalt", "Regex_Pattern", "Quell_Tabelle", "Quell_Feld", "Hit_Platz", "Hit_StartNr", "Hit_Zeit", "Gefunden_am")
+            spalten = ("ID", "Quell_ID", "Zeile_Inhalt", "Zeile_Inhalt_Orig", "Regex_Pattern", "Quell_Tabelle", "Quell_Feld", "Hit_Platz", "Hit_StartNr", "Hit_Zeit", "Zeile_Inhalt_Typ", "Gefunden_am")
             tree["columns"] = spalten
             tree["show"] = "headings"
             
             # Spaltenüberschriften
             for col in spalten:
                 tree.heading(col, text=col)
-                if col in ["Hit_Platz", "Hit_StartNr", "Hit_Zeit"]:
+                if col in ["Hit_Platz", "Hit_StartNr", "Hit_Zeit", "Zeile_Inhalt_Typ"]:
                     tree.column(col, width=100, anchor=tk.W)
                 else:
                     tree.column(col, width=150, anchor=tk.W)

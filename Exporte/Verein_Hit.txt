@@ -1,646 +1,646 @@
 ID;zeile_inhalt_orig;extracted_data_id;zeile_inhalt_ohne_treffer;Verein_DRVID;Verein;gefunden_am
-1;1 RG Eberbach 01:43.73 5;7;1 01:43.73 5;11004;RG Eberbach;2025-11-29 13:42:51
-2;2 RV Hellas Offenbach 01:50.78 1;9;2 01:50.78 1;11638;RV Hellas Offenbach;2025-11-29 13:42:51
-3;3 Hanauer RG - Boot 1 - 01:51.64 2;11;3 - Boot 1 - 01:51.64 2;11627;Hanauer RG;2025-11-29 13:42:51
-4;4 Hanauer RC Hassia 01:53.98 4;13;4 01:53.98 4;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-5;1 Frankfurter RG Oberrad - Boot 1 - 01:45.78 7;17;1 - Boot 1 - 01:45.78 7;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-6;2 Nassovia Höchst 01:49.12 8;19;2 01:49.12 8;11612;Nassovia Höchst;2025-11-29 13:42:51
-7;3 Hanauer RG - Boot 2 - 01:51.38 6;21;3 - Boot 2 - 01:51.38 6;11627;Hanauer RG;2025-11-29 13:42:51
-8;4 RG Eberbach 01:54.99 9;23;4 01:54.99 9;11004;RG Eberbach;2025-11-29 13:42:51
-9;1 RC Karlstadt 01:48.84 11;27;1 01:48.84 11;11107;RC Karlstadt;2025-11-29 13:42:51
-10;2 Wormser RC 01:49.51 12;29;2 01:49.51 12;12038;Wormser RC;2025-11-29 13:42:51
-11;3 RG Wetzlar 01:50.58 10;31;3 01:50.58 10;11647;RG Wetzlar;2025-11-29 13:42:51
-12;1 Frankfurter RG Oberrad - Boot 2 - 01:56.31 13;35;1 - Boot 2 - 01:56.31 13;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-13;2 Hanauer RG - Boot 4 - 01:57.42 15;37;2 - Boot 4 - 01:57.42 15;11627;Hanauer RG;2025-11-29 13:42:51
-14;3 Hanauer RG - Boot 3 - 01:58.00 14;39;3 - Boot 3 - 01:58.00 14;11627;Hanauer RG;2025-11-29 13:42:51
-15;4 Frankfurter RC 02:04.32 16;41;4 02:04.32 16;11616;Frankfurter RC;2025-11-29 13:42:51
-16;1 Hanauer RC Hassia 01:38.28 1;48;1 01:38.28 1;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-17;2 Wormser RC 01:41.48 3;50;2 01:41.48 3;12038;Wormser RC;2025-11-29 13:42:51
-18;3 RG Wetzlar 01:46.33 2;52;3 01:46.33 2;11647;RG Wetzlar;2025-11-29 13:42:51
-19;4 RG Wetzlar 02:05.99 7;54;4 02:05.99 7;11647;RG Wetzlar;2025-11-29 13:42:51
-20;1 Marburger RV 01:43.44 5;58;1 01:43.44 5;11636;Marburger RV;2025-11-29 13:42:51
-21;2 Hanauer RG 01:47.64 4;60;2 01:47.64 4;11627;Hanauer RG;2025-11-29 13:42:51
-22;3 WSV Hellas Gießen 01:56.33 6;62;3 01:56.33 6;11623;WSV Hellas Gießen;2025-11-29 13:42:51
-23;1 RG Wetzlar 01:43.16 5;71;1 01:43.16 5;11647;RG Wetzlar;2025-11-29 13:42:51
-24;2 Frankfurter RG Germania - Boot 1 - 01:43.60 4;73;2 - Boot 1 - 01:43.60 4;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-25;3 RC Möve Grossauheim 01:43.94 1;75;3 01:43.94 1;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-26;4 Frankfurter RG Oberrad - Boot 1 - 01:46.43 2;77;4 - Boot 1 - 01:46.43 2;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-27;1 Frankfurter RG Germania - Boot 2 - 01:45.58 8;81;1 - Boot 2 - 01:45.58 8;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-28;2 Frankfurter RG Germania - Boot 3 - 01:52.53 10;83;2 - Boot 3 - 01:52.53 10;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-29;3 Frankfurter RG Oberrad - Boot 2 - 02:01.15 9;85;3 - Boot 2 - 02:01.15 9;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-30;4 SG Wiking - Boot 2 - 02:14.41 6;87;4 - Boot 2 - 02:14.41 6;11643;SG Wiking;2025-11-29 13:42:51
-31;1 Hanauer RG 01:52.22 11;91;1 01:52.22 11;11627;Hanauer RG;2025-11-29 13:42:51
-32;2 Frankfurter RC 02:02.07 13;93;2 02:02.07 13;11616;Frankfurter RC;2025-11-29 13:42:51
-33;3 Mühlheimer RV 02:09.46 12;95;3 02:09.46 12;11637;Mühlheimer RV;2025-11-29 13:42:51
-34;1 WSV Offenbach am Main-Bürgel - Boot 1 - 01:57.94 2;108;1 am Main-Bürgel - Boot 1 - 01:57.94 2;11642;WSV Offenbach;2025-11-29 13:42:51
-35;2 Hanauer RC Hassia - Boot 1 - 01:59.16 3;110;2 - Boot 1 - 01:59.16 3;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-36;3 RC Möve Grossauheim 02:00.66 1;112;3 02:00.66 1;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-37;1 Limburger ClfW - Boot 1 - 01:56.16 5;116;1 - Boot 1 - 01:56.16 5;11635;Limburger ClfW;2025-11-29 13:42:51
-38;2 WSV Offenbach am Main-Bürgel - Boot 2 - 02:00.90 8;118;2 am Main-Bürgel - Boot 2 - 02:00.90 8;11642;WSV Offenbach;2025-11-29 13:42:51
-39;3 SG Wiking - Boot 1 - 02:02.73 4;120;3 - Boot 1 - 02:02.73 4;11643;SG Wiking;2025-11-29 13:42:51
-40;1 Nassovia Höchst 01:57.97 12;124;1 01:57.97 12;11612;Nassovia Höchst;2025-11-29 13:42:51
-41;2 Limburger ClfW - Boot 2 - 01:59.33 9;126;2 - Boot 2 - 01:59.33 9;11635;Limburger ClfW;2025-11-29 13:42:51
-42;3 RG Wetzlar 02:05.52 11;128;3 02:05.52 11;11647;RG Wetzlar;2025-11-29 13:42:51
-43;4 SG Wiking - Boot 2 - 02:11.97 10;130;4 - Boot 2 - 02:11.97 10;11643;SG Wiking;2025-11-29 13:42:51
-44;1 Limburger ClfW - Boot 3 - 01:59.75 13;134;1 - Boot 3 - 01:59.75 13;11635;Limburger ClfW;2025-11-29 13:42:51
-45;2 RG Eberbach 02:00.70 14;136;2 02:00.70 14;11004;RG Eberbach;2025-11-29 13:42:51
-46;3 WSV Hellas Gießen 02:03.63 15;138;3 02:03.63 15;11623;WSV Hellas Gießen;2025-11-29 13:42:51
-47;1 RC Aschaffenburg 02:01.59 19;142;1 02:01.59 19;11101;RC Aschaffenburg;2025-11-29 13:42:51
-48;2 Hanauer RG 02:18.30 18;144;2 02:18.30 18;11627;Hanauer RG;2025-11-29 13:42:51
-49;1 Hanauer RC Hassia 01:46.24 3;153;1 01:46.24 3;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-50;2 Rgm. Frankfurter RG Germania/ SRR Schillerschule Frankfurt 01:46.24 1;156;2 Rgm. Frankfurter RG Germania/ 01:46.24 1;15626;SRR Schillerschule Frankfurt;2025-11-29 13:42:51
-51;3 Frankfurter RC 01:49.23 2;159;3 01:49.23 2;11616;Frankfurter RC;2025-11-29 13:42:51
-52;1 Hanauer RC Hassia 01:31.14 4;169;1 01:31.14 4;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-53;2 Offenbacher RG Undine 01:35.71 5;171;2 01:35.71 5;11641;Offenbacher RG Undine;2025-11-29 13:42:51
-54;3 RG Eberbach 01:37.02 3;173;3 01:37.02 3;11004;RG Eberbach;2025-11-29 13:42:51
-55;1 Marburger RV 01:47.39 8;181;1 01:47.39 8;11636;Marburger RV;2025-11-29 13:42:51
-56;2 Hanauer RC Hassia 01:50.72 3;183;2 01:50.72 3;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-57;1 Frauen-RV Freiweg Frankfurt 01:52.70 4;187;1 01:52.70 4;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 13:42:51
-58;2 Frankfurter RG Borussia 01:55.00 5;189;2 01:55.00 5;11607;Frankfurter RG Borussia;2025-11-29 13:42:51
-59;3 RG Wetzlar 01:59.95 7;191;3 01:59.95 7;11647;RG Wetzlar;2025-11-29 13:42:51
-60;4 RV Hellas Offenbach 02:08.33 6;193;4 02:08.33 6;11638;RV Hellas Offenbach;2025-11-29 13:42:51
-61;1 RC Aschaffenburg - Boot 1 - 02:04.12 1;205;1 - Boot 1 - 02:04.12 1;11101;RC Aschaffenburg;2025-11-29 13:42:51
-62;2 Limburger ClfW - Boot 1 - 02:13.07 2;207;2 - Boot 1 - 02:13.07 2;11635;Limburger ClfW;2025-11-29 13:42:51
-63;3 SG Wiking - Boot 1 - 02:13.48 4;209;3 - Boot 1 - 02:13.48 4;11643;SG Wiking;2025-11-29 13:42:51
-64;4 RC Aschaffenburg - Boot 2 - 02:26.07 5;211;4 - Boot 2 - 02:26.07 5;11101;RC Aschaffenburg;2025-11-29 13:42:51
-65;1 Hanauer RC Hassia 02:12.01 8;215;1 02:12.01 8;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-66;2 Limburger ClfW - Boot 2 - 02:14.35 7;217;2 - Boot 2 - 02:14.35 7;11635;Limburger ClfW;2025-11-29 13:42:51
-67;3 SG Wiking - Boot 2 - 02:24.08 6;219;3 - Boot 2 - 02:24.08 6;11643;SG Wiking;2025-11-29 13:42:51
-68;1 RC Karlstadt - Boot 1 - 02:02.70 10;223;1 - Boot 1 - 02:02.70 10;11107;RC Karlstadt;2025-11-29 13:42:51
-69;2 RG Wetzlar - Boot 2 - 02:12.15 11;225;2 - Boot 2 - 02:12.15 11;11647;RG Wetzlar;2025-11-29 13:42:51
-70;3 Limburger ClfW - Boot 3 - 02:33.63 9;227;3 - Boot 3 - 02:33.63 9;11635;Limburger ClfW;2025-11-29 13:42:51
-71;1 Hanauer RG - Boot 2 - 02:16.43 14;231;1 - Boot 2 - 02:16.43 14;11627;Hanauer RG;2025-11-29 13:42:51
-72;2 Mühlheimer RV - Boot 2 - 02:25.19 13;233;2 - Boot 2 - 02:25.19 13;11637;Mühlheimer RV;2025-11-29 13:42:51
-73;3 Hanauer RG - Boot 1 - 02:26.41 12;235;3 - Boot 1 - 02:26.41 12;11627;Hanauer RG;2025-11-29 13:42:51
-74;1 Mühlheimer RV - Boot 1 - 02:10.90 17;239;1 - Boot 1 - 02:10.90 17;11637;Mühlheimer RV;2025-11-29 13:42:51
-75;2 RC Karlstadt - Boot 2 - 02:12.77 15;241;2 - Boot 2 - 02:12.77 15;11107;RC Karlstadt;2025-11-29 13:42:51
-76;3 Hanauer RG - Boot 3 - 02:29.32 16;243;3 - Boot 3 - 02:29.32 16;11627;Hanauer RG;2025-11-29 13:42:51
-77;1 Mühlheimer RV - Boot 3 - 02:09.35 21;247;1 - Boot 3 - 02:09.35 21;11637;Mühlheimer RV;2025-11-29 13:42:51
-78;2 Hanauer RG - Boot 4 - 02:12.02 18;249;2 - Boot 4 - 02:12.02 18;11627;Hanauer RG;2025-11-29 13:42:51
-79;3 Hanauer RG - Boot 5 - 02:18.80 20;251;3 - Boot 5 - 02:18.80 20;11627;Hanauer RG;2025-11-29 13:42:51
-80;1 Mühlheimer RV 01:40.89 1;263;1 01:40.89 1;11637;Mühlheimer RV;2025-11-29 13:42:51
-81;2 Gießener RC Hassia 01:47.15 4;265;2 01:47.15 4;11622;Gießener RC Hassia;2025-11-29 13:42:51
-82;3 Frauen-RV Freiweg Frankfurt 01:48.39 2;267;3 01:48.39 2;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 13:42:51
-83;1 Hanauer RC Hassia 02:10.09 1;274;1 02:10.09 1;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-84;2 Limburger ClfW 02:15.18 2;276;2 02:15.18 2;11635;Limburger ClfW;2025-11-29 13:42:51
-85;3 RG Wetzlar 02:35.92 4;278;3 02:35.92 4;11647;RG Wetzlar;2025-11-29 13:42:51
-86;1 Frankfurter RG Germania 01:58.91 1;289;1 01:58.91 1;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-87;2 Frankfurter RC 02:04.01 2;291;2 02:04.01 2;11616;Frankfurter RC;2025-11-29 13:42:51
-88;1 Limburger ClfW 02:13.85 4;297;1 02:13.85 4;11635;Limburger ClfW;2025-11-29 13:42:51
-89;2 Hanauer RG 02:16.04 8;299;2 02:16.04 8;11627;Hanauer RG;2025-11-29 13:42:51
-90;3 Frankfurter Ruder- und Kanusport Verein 02:17.96 9;301;3 02:17.96 9;11620;Frankfurter Ruder- und Kanusport Verein;2025-11-29 13:42:51
-91;1 Frankfurter RC - Boot 1 - 01:48.99 3;315;1 - Boot 1 - 01:48.99 3;11616;Frankfurter RC;2025-11-29 13:42:51
-92;2 Hanauer RC Hassia - Boot 1 - 01:52.99 1;317;2 - Boot 1 - 01:52.99 1;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-93;3 RG Eberbach 01:55.50 2;319;3 01:55.50 2;11004;RG Eberbach;2025-11-29 13:42:51
-94;1 Frankfurter RC - Boot 2 - 01:50.17 12;323;1 - Boot 2 - 01:50.17 12;11616;Frankfurter RC;2025-11-29 13:42:51
-95;2 Nassovia Höchst 01:50.40 5;325;2 01:50.40 5;11612;Nassovia Höchst;2025-11-29 13:42:51
-96;1 Frankfurter RG Oberrad - Boot 2 - 01:52.68 8;329;1 - Boot 2 - 01:52.68 8;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-97;2 SG Wiking 01:59.17 9;331;2 01:59.17 9;11643;SG Wiking;2025-11-29 13:42:51
-98;3 RG Wetzlar - Boot 1 - 02:02.40 7;333;3 - Boot 1 - 02:02.40 7;11647;RG Wetzlar;2025-11-29 13:42:51
-99;1 Frankfurter RG Oberrad - Boot 1 - 01:53.65 10;337;1 - Boot 1 - 01:53.65 10;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-100;2 RG Wetzlar - Boot 2 - 01:58.27 11;339;2 - Boot 2 - 01:58.27 11;11647;RG Wetzlar;2025-11-29 13:42:51
-101;1 Frankfurter RG Oberrad 01:44.80 1;347;1 01:44.80 1;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-102;2 Hanauer RC Hassia 01:49.39 2;349;2 01:49.39 2;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-103;1 Limburger ClfW - Boot 1 - 01:36.48 1;358;1 - Boot 1 - 01:36.48 1;11635;Limburger ClfW;2025-11-29 13:42:51
-104;2 Frankfurter RG Borussia 01:38.90 2;360;2 01:38.90 2;11607;Frankfurter RG Borussia;2025-11-29 13:42:51
-105;3 Gießener RC Hassia 01:42.71 3;362;3 01:42.71 3;11622;Gießener RC Hassia;2025-11-29 13:42:51
-106;1 Limburger ClfW - Boot 2 - 01:37.90 4;366;1 - Boot 2 - 01:37.90 4;11635;Limburger ClfW;2025-11-29 13:42:51
-107;2 Marburger RV 01:40.54 5;368;2 01:40.54 5;11636;Marburger RV;2025-11-29 13:42:51
-108;3 RV Hellas Offenbach 01:46.75 6;370;3 01:46.75 6;11638;RV Hellas Offenbach;2025-11-29 13:42:51
-109;1 Rgm. Frankfurter RC/ Frankfurter RG Germania 01:36.03 7;374;1 Rgm. Frankfurter RC/ 01:36.03 7;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-110;2 Rgm. Frankfurter RC/ SG Wiking 01:38.56 9;376;2 Rgm. / SG Wiking 01:38.56 9;11616;Frankfurter RC;2025-11-29 13:42:51
-111;3 Rgm. RG Wetzlar/ WSV Hellas Gießen 01:48.86 8;378;3 Rgm. RG Wetzlar/ 01:48.86 8;11623;WSV Hellas Gießen;2025-11-29 13:42:51
-112;1 SG Wiking 01:56.97 2;383;1 01:56.97 2;11643;SG Wiking;2025-11-29 13:42:51
-113;2 Hanauer RC Hassia 02:00.25 1;385;2 02:00.25 1;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-114;1 RC Karlstadt 02:06.40 4;389;1 02:06.40 4;11107;RC Karlstadt;2025-11-29 13:42:51
-115;2 Limburger ClfW 02:13.30 3;391;2 02:13.30 3;11635;Limburger ClfW;2025-11-29 13:42:51
-116;1 Frankfurter RG Oberrad 01:47.61 1;396;1 01:47.61 1;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-117;2 WSV Offenbach am Main-Bürgel 01:52.26 2;398;2 am Main-Bürgel 01:52.26 2;11642;WSV Offenbach;2025-11-29 13:42:51
-118;1 Nassovia Höchst 01:30.01 4;407;1 01:30.01 4;11612;Nassovia Höchst;2025-11-29 13:42:51
-119;2 Limburger ClfW 01:32.49 1;409;2 01:32.49 1;11635;Limburger ClfW;2025-11-29 13:42:51
-120;3 Frankfurter RG Germania 01:33.41 2;411;3 01:33.41 2;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-121;1 Hanauer RC Hassia 01:28.36 5;415;1 01:28.36 5;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-122;2 Wormser RC 01:30.65 6;417;2 01:30.65 6;12038;Wormser RC;2025-11-29 13:42:51
-123;1 Frankfurter RG Oberrad - Boot 2 - 01:48.94 2;426;1 - Boot 2 - 01:48.94 2;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-124;2 Frankfurter RG Oberrad - Boot 1 - 01:53.99 1;428;2 - Boot 1 - 01:53.99 1;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-125;3 SG Wiking - Boot 1 - 01:59.11 3;430;3 - Boot 1 - 01:59.11 3;11643;SG Wiking;2025-11-29 13:42:51
-126;1 RG Wetzlar 01:52.77 4;434;1 01:52.77 4;11647;RG Wetzlar;2025-11-29 13:42:51
-127;2 Frankfurter RC 02:02.06 5;436;2 02:02.06 5;11616;Frankfurter RC;2025-11-29 13:42:51
-128;3 Frankfurter RG Oberrad - Boot 3 - 02:10.06 6;438;3 - Boot 3 - 02:10.06 6;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-129;1 Nassovia Höchst 02:02.84 7;442;1 02:02.84 7;11612;Nassovia Höchst;2025-11-29 13:42:51
-130;2 SG Wiking - Boot 2 - 02:13.37 8;444;2 - Boot 2 - 02:13.37 8;11643;SG Wiking;2025-11-29 13:42:51
-131;1 Frankfurter RC 02:12.15 12;448;1 02:12.15 12;11616;Frankfurter RC;2025-11-29 13:42:51
-132;2 RC Möve Grossauheim 02:13.04 13;450;2 02:13.04 13;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-133;3 Mühlheimer RV 02:21.58 10;452;3 02:21.58 10;11637;Mühlheimer RV;2025-11-29 13:42:51
-134;4 Hanauer RG 02:28.74 11;454;4 02:28.74 11;11627;Hanauer RG;2025-11-29 13:42:51
-135;1 Rgm. RC Möve Grossauheim/ Mühlheimer RV 01:38.70 3;465;1 Rgm. / Mühlheimer RV 01:38.70 3;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-136;2 WSV Offenbach am Main-Bürgel 01:41.76 1;467;2 am Main-Bürgel 01:41.76 1;11642;WSV Offenbach;2025-11-29 13:42:51
-137;3 WSV Offenbach am Main-Bürgel 01:45.23 4;469;3 am Main-Bürgel 01:45.23 4;11642;WSV Offenbach;2025-11-29 13:42:51
-138;1 Rgm. Nassovia Höchst/ Limburger ClfW/ WSV Offenbach am Main-Bürgel 01:42.54 2;476;1 Rgm. / Limburger ClfW/ WSV Offenbach am Main-Bürgel 01:42.54 2;11612;Nassovia Höchst;2025-11-29 13:42:51
-139;2 RC Möve Grossauheim 01:51.28 1;479;2 01:51.28 1;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-140;1 Frankfurter RG Germania 01:49.45 3;485;1 01:49.45 3;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-141;2 SG Wiking 01:54.18 1;488;2 01:54.18 1;11643;SG Wiking;2025-11-29 13:42:51
-142;3 Limburger ClfW 02:02.42 2;491;3 02:02.42 2;11635;Limburger ClfW;2025-11-29 13:42:51
-143;1 Hersfelder RV 01:33.71 2;497;1 01:33.71 2;11628;Hersfelder RV;2025-11-29 13:42:51
-144;2 Rgm. Frankfurter RG Borussia/ RC Aschaffenburg 01:42.80 4;499;2 Rgm. / RC Aschaffenburg 01:42.80 4;11607;Frankfurter RG Borussia;2025-11-29 13:42:51
-145;3 Frauen-RV Freiweg Frankfurt 01:44.31 3;502;3 01:44.31 3;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 13:42:51
-146;4 Frauen-RV Freiweg Frankfurt 01:51.12 1;504;4 01:51.12 1;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 13:42:51
-147;1 Marburger RV - Boot 1 - 01:35.38 2;513;1 - Boot 1 - 01:35.38 2;11636;Marburger RV;2025-11-29 13:42:51
-148;2 Nassovia Höchst - Boot 1 - 01:37.19 5;515;2 - Boot 1 - 01:37.19 5;11612;Nassovia Höchst;2025-11-29 13:42:51
-149;3 Hanauer RC Hassia - Boot 1 - 01:37.56 1;517;3 - Boot 1 - 01:37.56 1;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-150;4 RG Wetzlar - Boot 1 - 01:41.48 3;519;4 - Boot 1 - 01:41.48 3;11647;RG Wetzlar;2025-11-29 13:42:51
-151;1 RG Eberbach 01:40.77 7;523;1 01:40.77 7;11004;RG Eberbach;2025-11-29 13:42:51
-152;2 RG Eberbach 01:41.13 9;525;2 01:41.13 9;11004;RG Eberbach;2025-11-29 13:42:51
-153;3 Hanauer RC Hassia - Boot 2 - 01:41.46 8;527;3 - Boot 2 - 01:41.46 8;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-154;4 Wormser RC - Boot 1 - 01:44.19 6;529;4 - Boot 1 - 01:44.19 6;12038;Wormser RC;2025-11-29 13:42:51
-155;1 RC Aschaffenburg 01:47.17 11;533;1 01:47.17 11;11101;RC Aschaffenburg;2025-11-29 13:42:51
-156;2 Offenbacher RG Undine 01:52.49 13;535;2 01:52.49 13;11641;Offenbacher RG Undine;2025-11-29 13:42:51
-157;1 Frankfurter RG Oberrad 01:44.89 16;539;1 01:44.89 16;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-158;2 Limburger ClfW 01:46.34 15;541;2 01:46.34 15;11635;Limburger ClfW;2025-11-29 13:42:51
-159;3 Nassovia Höchst - Boot 2 - 01:49.81 14;543;3 - Boot 2 - 01:49.81 14;11612;Nassovia Höchst;2025-11-29 13:42:51
-160;1 Frankfurter RC 01:46.89 20;547;1 01:46.89 20;11616;Frankfurter RC;2025-11-29 13:42:51
-161;2 WSV Offenbach am Main-Bürgel - Boot 3 - 01:49.41 21;549;2 am Main-Bürgel - Boot 3 - 01:49.41 21;11642;WSV Offenbach;2025-11-29 13:42:51
-162;3 RC Möve Grossauheim 01:50.19 19;551;3 01:50.19 19;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-163;4 RG Wetzlar - Boot 2 - 01:52.35 18;553;4 - Boot 2 - 01:52.35 18;11647;RG Wetzlar;2025-11-29 13:42:51
-164;1 Offenbacher RG Undine 01:32.08 1;568;1 01:32.08 1;11641;Offenbacher RG Undine;2025-11-29 13:42:51
-165;2 Frankfurter RG Germania - Boot 1 - 01:32.43 2;570;2 - Boot 1 - 01:32.43 2;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-166;3 Frankfurter RG Germania - Boot 2 - 01:34.47 5;572;3 - Boot 2 - 01:34.47 5;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-167;4 Rgm. Hanauer RC Hassia/ Hanauer RG 01:40.83 4;574;4 Rgm. / Hanauer RG 01:40.83 4;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-168;1 Frankfurter RG Oberrad 01:39.70 6;578;1 01:39.70 6;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-169;2 Hanauer RG - Boot 1 - 01:40.15 7;580;2 - Boot 1 - 01:40.15 7;11627;Hanauer RG;2025-11-29 13:42:51
-170;1 Hanauer RG - Boot 2 - 01:43.69 8;584;1 - Boot 2 - 01:43.69 8;11627;Hanauer RG;2025-11-29 13:42:51
-171;2 Hanauer RC Hassia 01:52.58 9;586;2 01:52.58 9;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-172;1 Frankfurter RG Borussia 01:42.20 1;593;1 01:42.20 1;11607;Frankfurter RG Borussia;2025-11-29 13:42:51
-173;2 Gießener RC Hassia 01:44.52 2;595;2 01:44.52 2;11622;Gießener RC Hassia;2025-11-29 13:42:51
-174;1 RV Hellas Offenbach 01:44.54 4;599;1 01:44.54 4;11638;RV Hellas Offenbach;2025-11-29 13:42:51
-175;2 Marburger RV 01:49.41 3;601;2 01:49.41 3;11636;Marburger RV;2025-11-29 13:42:51
-176;1 RC Möve Grossauheim 01:41.76 7;605;1 01:41.76 7;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-177;2 Wormser RC 01:42.59 5;607;2 01:42.59 5;12038;Wormser RC;2025-11-29 13:42:51
-178;3 WSV Hellas Gießen 01:47.74 6;609;3 01:47.74 6;11623;WSV Hellas Gießen;2025-11-29 13:42:51
-179;1 RC Aschaffenburg 01:49.98 2;614;1 01:49.98 2;11101;RC Aschaffenburg;2025-11-29 13:42:51
-180;2 WSV Hellas Gießen 01:55.73 1;616;2 01:55.73 1;11623;WSV Hellas Gießen;2025-11-29 13:42:51
-181;1 Frankfurter RG Oberrad 01:55.64 4;620;1 01:55.64 4;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-182;2 Wormser RC 02:05.14 5;622;2 02:05.14 5;12038;Wormser RC;2025-11-29 13:42:51
-183;1 Rgm. RV Hellas Offenbach/ Limburger ClfW 01:49.78 1;634;1 Rgm. / Limburger ClfW 01:49.78 1;11638;RV Hellas Offenbach;2025-11-29 13:42:51
-184;2 Frauen-RV Freiweg Frankfurt 01:53.64 2;636;2 01:53.64 2;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 13:42:51
-185;1 RG Eberbach 01:25.05 2;641;1 01:25.05 2;11004;RG Eberbach;2025-11-29 13:42:51
-186;2 Rgm. Marburger RV/ Gießener RC Hassia/ RG Wetzlar 01:26.52 1;643;2 Rgm. Marburger RV/ / RG Wetzlar 01:26.52 1;11622;Gießener RC Hassia;2025-11-29 13:42:51
-187;3 Frankfurter RG Germania 02:13.24 3;646;3 02:13.24 3;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-188;1 Rgm. Hanauer RC Hassia/ RV Dorsten 01:26.30 6;650;1 Rgm. / RV Dorsten 01:26.30 6;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-189;2 Rgm. RC Möve Grossauheim/ Mühlheimer RV 01:34.91 4;653;2 Rgm. / Mühlheimer RV 01:34.91 4;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-190;3 WSV Offenbach am Main-Bürgel 01:35.30 5;656;3 am Main-Bürgel 01:35.30 5;11642;WSV Offenbach;2025-11-29 13:42:51
-191;1 RG Wetzlar 01:44.84 4;661;1 01:44.84 4;11647;RG Wetzlar;2025-11-29 13:42:51
-192;2 RC Möve Grossauheim - Boot 2 - 01:48.04 5;663;2 - Boot 2 - 01:48.04 5;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-193;3 SG Wiking - Boot 1 - 01:57.40 3;665;3 - Boot 1 - 01:57.40 3;11643;SG Wiking;2025-11-29 13:42:51
-194;4 RC Karlstadt 02:01.33 2;667;4 02:01.33 2;11107;RC Karlstadt;2025-11-29 13:42:51
-195;1 SG Wiking - Boot 2 - 01:54.08 6;671;1 - Boot 2 - 01:54.08 6;11643;SG Wiking;2025-11-29 13:42:51
-196;2 RC Möve Grossauheim - Boot 3 - 01:58.70 12;673;2 - Boot 3 - 01:58.70 12;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-197;3 SG Wiking - Boot 3 - 02:09.07 8;675;3 - Boot 3 - 02:09.07 8;11643;SG Wiking;2025-11-29 13:42:51
-198;1 WSV Offenbach am Main-Bürgel 01:54.28 9;679;1 am Main-Bürgel 01:54.28 9;11642;WSV Offenbach;2025-11-29 13:42:51
-199;2 Hanauer RG - Boot 1 - 01:57.82 10;681;2 - Boot 1 - 01:57.82 10;11627;Hanauer RG;2025-11-29 13:42:51
-200;3 Hanauer RG - Boot 2 - 02:13.96 11;683;3 - Boot 2 - 02:13.96 11;11627;Hanauer RG;2025-11-29 13:42:51
-201;4 Frankfurter Ruder- und Kanusport Verein 02:18.84 13;685;4 02:18.84 13;11620;Frankfurter Ruder- und Kanusport Verein;2025-11-29 13:42:51
-202;1 Hanauer RC Hassia 01:50.56 1;697;1 01:50.56 1;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-203;2 SRR Schillerschule Frankfurt 01:52.04 3;699;2 01:52.04 3;15626;SRR Schillerschule Frankfurt;2025-11-29 13:42:51
-204;3 Frankfurter RC - Boot 1 - 01:58.75 2;701;3 - Boot 1 - 01:58.75 2;11616;Frankfurter RC;2025-11-29 13:42:51
-205;4 Limburger ClfW 01:59.84 4;703;4 01:59.84 4;11635;Limburger ClfW;2025-11-29 13:42:51
-206;1 Frankfurter RC - Boot 2 - 02:03.87 5;707;1 - Boot 2 - 02:03.87 5;11616;Frankfurter RC;2025-11-29 13:42:51
-207;2 RC Karlstadt 02:08.78 8;709;2 02:08.78 8;11107;RC Karlstadt;2025-11-29 13:42:51
-208;3 RC Möve Grossauheim 02:12.02 7;711;3 02:12.02 7;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-209;1 Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia 01:25.05 3;718;1 Rgm. RC Möve Grossauheim/ 01:25.05 3;11607;Frankfurter RG Borussia;2025-11-29 13:42:51
-210;2 Wormser RC 01:26.25 2;721;2 01:26.25 2;12038;Wormser RC;2025-11-29 13:42:51
-211;3 Nassovia Höchst 01:26.48 1;723;3 01:26.48 1;11612;Nassovia Höchst;2025-11-29 13:42:51
-212;1 Hanauer RC Hassia 01:24.48 5;727;1 01:24.48 5;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-213;2 Hanauer RG 01:26.07 4;729;2 01:26.07 4;11627;Hanauer RG;2025-11-29 13:42:51
-214;3 Frankfurter RG Germania 01:26.83 6;731;3 01:26.83 6;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-215;1 RC Aschaffenburg - Boot 1 - 01:42.91 2;743;1 - Boot 1 - 01:42.91 2;11101;RC Aschaffenburg;2025-11-29 13:42:51
-216;2 Mühlheimer RV - Boot 1 - 01:45.64 4;745;2 - Boot 1 - 01:45.64 4;11637;Mühlheimer RV;2025-11-29 13:42:51
-217;3 SG Wiking 01:47.64 3;747;3 01:47.64 3;11643;SG Wiking;2025-11-29 13:42:51
-218;4 Hanauer RG - Boot 1 - 01:52.29 1;749;4 - Boot 1 - 01:52.29 1;11627;Hanauer RG;2025-11-29 13:42:51
-219;1 RV Hellas Offenbach 01:45.21 6;753;1 01:45.21 6;11638;RV Hellas Offenbach;2025-11-29 13:42:51
-220;2 RG Eberbach 01:48.25 8;755;2 01:48.25 8;11004;RG Eberbach;2025-11-29 13:42:51
-221;1 WSV Offenbach am Main-Bürgel - Boot 1 - 01:50.90 9;759;1 am Main-Bürgel - Boot 1 - 01:50.90 9;11642;WSV Offenbach;2025-11-29 13:42:51
-222;2 Mühlheimer RV - Boot 2 - 02:02.68 11;761;2 - Boot 2 - 02:02.68 11;11637;Mühlheimer RV;2025-11-29 13:42:51
-223;1 Wormser RC 01:48.53 15;767;1 01:48.53 15;12038;Wormser RC;2025-11-29 13:42:51
-224;2 WSV Offenbach am Main-Bürgel - Boot 2 - 01:49.19 13;769;2 am Main-Bürgel - Boot 2 - 01:49.19 13;11642;WSV Offenbach;2025-11-29 13:42:51
-225;3 Hanauer RG - Boot 3 - 02:02.30 14;771;3 - Boot 3 - 02:02.30 14;11627;Hanauer RG;2025-11-29 13:42:51
-226;1 RC Aschaffenburg - Boot 4 - 01:49.53 16;775;1 - Boot 4 - 01:49.53 16;11101;RC Aschaffenburg;2025-11-29 13:42:51
-227;2 Frankfurter RC - Boot 1 - 01:52.53 18;777;2 - Boot 1 - 01:52.53 18;11616;Frankfurter RC;2025-11-29 13:42:51
-228;3 Offenbacher RG Undine - Boot 2 - 01:57.71 17;779;3 - Boot 2 - 01:57.71 17;11641;Offenbacher RG Undine;2025-11-29 13:42:51
-229;1 Frankfurter RC - Boot 2 - 01:59.82 20;783;1 - Boot 2 - 01:59.82 20;11616;Frankfurter RC;2025-11-29 13:42:51
-230;2 Marburger RV 02:18.18 19;785;2 02:18.18 19;11636;Marburger RV;2025-11-29 13:42:51
-231;1 Limburger ClfW - Boot 1 - 01:47.65 4;798;1 - Boot 1 - 01:47.65 4;11635;Limburger ClfW;2025-11-29 13:42:51
-232;2 WSV Offenbach am Main-Bürgel 01:53.19 3;800;2 am Main-Bürgel 01:53.19 3;11642;WSV Offenbach;2025-11-29 13:42:51
-233;3 RC Möve Grossauheim - Boot 1 - 01:59.10 1;802;3 - Boot 1 - 01:59.10 1;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-234;1 Frankfurter RG Germania 01:49.66 6;806;1 01:49.66 6;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-235;2 RC Möve Grossauheim - Boot 2 - 01:50.52 5;808;2 - Boot 2 - 01:50.52 5;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-236;1 RC Aschaffenburg 01:52.79 9;812;1 01:52.79 9;11101;RC Aschaffenburg;2025-11-29 13:42:51
-237;2 SG Wiking 02:04.74 7;814;2 02:04.74 7;11643;SG Wiking;2025-11-29 13:42:51
-238;3 RC Möve Grossauheim - Boot 3 - 02:04.96 10;816;3 - Boot 3 - 02:04.96 10;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-239;1 RC Karlstadt 02:09.26 1;824;1 02:09.26 1;11107;RC Karlstadt;2025-11-29 13:42:51
-240;2 RC Karlstadt 02:14.44 2;826;2 02:14.44 2;11107;RC Karlstadt;2025-11-29 13:42:51
-241;1 Marburger RV 01:42.29 2;831;1 01:42.29 2;11636;Marburger RV;2025-11-29 13:42:51
-242;2 Rgm. Ruder-Gesellschaft HANSA e.V./ Limburger ClfW 01:48.29 1;833;2 Rgm. / Limburger ClfW 01:48.29 1;11511;Ruder-Gesellschaft HANSA e.V.;2025-11-29 13:42:51
-243;3 Rgm. Frankfurter RG Borussia/ Gießener RC Hassia 01:48.65 7;835;3 Rgm. / Gießener RC Hassia 01:48.65 7;11607;Frankfurter RG Borussia;2025-11-29 13:42:51
-244;4 RV Hellas Offenbach 02:01.05 3;837;4 02:01.05 3;11638;RV Hellas Offenbach;2025-11-29 13:42:51
-245;1 Frankfurter RC 01:42.51 5;841;1 01:42.51 5;11616;Frankfurter RC;2025-11-29 13:42:51
-246;2 Hanauer RC Hassia 01:43.17 4;843;2 01:43.17 4;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-247;3 Hanauer RG 03:51.66 6;845;3 03:51.66 6;11627;Hanauer RG;2025-11-29 13:42:51
-248;1 Hanauer RC Hassia - Boot 1 - 01:34.66 2;854;1 - Boot 1 - 01:34.66 2;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-249;2 Nassovia Höchst - Boot 1 - 01:35.04 3;856;2 - Boot 1 - 01:35.04 3;11612;Nassovia Höchst;2025-11-29 13:42:51
-250;3 Hanauer RC Hassia - Boot 2 - 01:44.46 7;858;3 - Boot 2 - 01:44.46 7;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-251;1 Frankfurter RG Oberrad - Boot 2 - 01:43.19 4;862;1 - Boot 2 - 01:43.19 4;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-252;2 Frankfurter RG Oberrad - Boot 1 - 01:49.42 1;864;2 - Boot 1 - 01:49.42 1;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-253;1 Frankfurter RG Oberrad - Boot 3 - 01:40.96 10;868;1 - Boot 3 - 01:40.96 10;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-254;2 Nassovia Höchst - Boot 2 - 01:44.32 12;870;2 - Boot 2 - 01:44.32 12;11612;Nassovia Höchst;2025-11-29 13:42:51
-255;3 Hanauer RG 01:54.61 11;872;3 01:54.61 11;11627;Hanauer RG;2025-11-29 13:42:51
-256;1 RC Aschaffenburg 01:38.26 2;882;1 01:38.26 2;11101;RC Aschaffenburg;2025-11-29 13:42:51
-257;2 SG Wiking 01:40.65 4;885;2 01:40.65 4;11643;SG Wiking;2025-11-29 13:42:51
-258;3 Frankfurter RG Germania 01:40.88 5;888;3 01:40.88 5;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-259;4 Frankfurter RG Oberrad 01:45.95 1;891;4 01:45.95 1;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-260;1 Marburger RV 01:26.57 3;899;1 01:26.57 3;11636;Marburger RV;2025-11-29 13:42:51
-261;2 Rgm. Ruder-Gesellschaft HANSA e.V./ Limburger ClfW 01:27.24 1;901;2 Rgm. / Limburger ClfW 01:27.24 1;11511;Ruder-Gesellschaft HANSA e.V.;2025-11-29 13:42:51
-262;3 Rgm. Hanauer RG/ RC Möve Grossauheim 01:38.21 2;904;3 Rgm. Hanauer RG/ 01:38.21 2;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-263;1 Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia 01:36.89 1;914;1 Rgm. RC Möve Grossauheim/ 01:36.89 1;11607;Frankfurter RG Borussia;2025-11-29 13:42:51
-264;2 Rgm. WSV Hellas Gießen/ RV Kurhessen-Cassel 01:40.04 2;916;2 Rgm. WSV Hellas Gießen/ 01:40.04 2;11632;RV Kurhessen-Cassel;2025-11-29 13:42:51
-265;1 RC Möve Grossauheim 01:35.83 2;921;1 01:35.83 2;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-266;2 Rgm. Hanauer RG/ Mühlheimer RV 01:38.00 1;923;2 Rgm. Hanauer RG/ 01:38.00 1;11637;Mühlheimer RV;2025-11-29 13:42:51
-267;3 Frauen-RV Freiweg Frankfurt 01:54.59 3;925;3 01:54.59 3;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 13:42:51
-268;1 Rgm. RV Hellas Offenbach/ Flörsheimer RV 01:40.12 4;929;1 Rgm. / Flörsheimer RV 01:40.12 4;11638;RV Hellas Offenbach;2025-11-29 13:42:51
-269;2 Gießener RC Hassia 01:44.23 5;931;2 01:44.23 5;11622;Gießener RC Hassia;2025-11-29 13:42:51
-270;1 SG Wiking 01:59.30 1;936;1 01:59.30 1;11643;SG Wiking;2025-11-29 13:42:51
-271;2 Limburger ClfW - Boot 1 - 02:00.40 4;938;2 - Boot 1 - 02:00.40 4;11635;Limburger ClfW;2025-11-29 13:42:51
-272;3 RC Aschaffenburg 02:03.20 3;940;3 02:03.20 3;11101;RC Aschaffenburg;2025-11-29 13:42:51
-273;1 RC Karlstadt 02:05.51 6;944;1 02:05.51 6;11107;RC Karlstadt;2025-11-29 13:42:51
-274;2 Limburger ClfW - Boot 2 - 02:24.49 5;946;2 - Boot 2 - 02:24.49 5;11635;Limburger ClfW;2025-11-29 13:42:51
-275;1 Mühlheimer RV 02:05.08 8;950;1 02:05.08 8;11637;Mühlheimer RV;2025-11-29 13:42:51
-276;2 Hanauer RG - Boot 2 - 02:08.24 9;952;2 - Boot 2 - 02:08.24 9;11627;Hanauer RG;2025-11-29 13:42:51
-277;3 Hanauer RG - Boot 1 - 02:18.21 7;954;3 - Boot 1 - 02:18.21 7;11627;Hanauer RG;2025-11-29 13:42:51
-278;1 RV Hellas Offenbach 01:44.40 4;965;1 01:44.40 4;11638;RV Hellas Offenbach;2025-11-29 13:42:51
-279;2 Mühlheimer RV - Boot 1 - 01:46.68 2;967;2 - Boot 1 - 01:46.68 2;11637;Mühlheimer RV;2025-11-29 13:42:51
-280;3 WSV Offenbach am Main-Bürgel - Boot 1 - 01:46.96 1;969;3 am Main-Bürgel - Boot 1 - 01:46.96 1;11642;WSV Offenbach;2025-11-29 13:42:51
-281;4 RC Möve Grossauheim 01:54.02 3;971;4 01:54.02 3;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-282;1 RC Aschaffenburg 01:48.22 7;975;1 01:48.22 7;11101;RC Aschaffenburg;2025-11-29 13:42:51
-283;2 Frankfurter Ruder- und Kanusport Verein 01:50.14 8;977;2 01:50.14 8;11620;Frankfurter Ruder- und Kanusport Verein;2025-11-29 13:42:51
-284;3 WSV Offenbach am Main-Bürgel - Boot 3 - 01:52.37 6;979;3 am Main-Bürgel - Boot 3 - 01:52.37 6;11642;WSV Offenbach;2025-11-29 13:42:51
-285;4 Mühlheimer RV - Boot 2 - 01:53.42 9;981;4 - Boot 2 - 01:53.42 9;11637;Mühlheimer RV;2025-11-29 13:42:51
-286;1 WSV Offenbach am Main-Bürgel - Boot 4 - 01:53.98 10;985;1 am Main-Bürgel - Boot 4 - 01:53.98 10;11642;WSV Offenbach;2025-11-29 13:42:51
-287;2 Frankfurter RC 01:54.21 11;987;2 01:54.21 11;11616;Frankfurter RC;2025-11-29 13:42:51
-288;1 Frankfurter RC 01:42.07 4;994;1 01:42.07 4;11616;Frankfurter RC;2025-11-29 13:42:51
-289;2 WSV Offenbach am Main-Bürgel 01:42.29 2;996;2 am Main-Bürgel 01:42.29 2;11642;WSV Offenbach;2025-11-29 13:42:51
-290;3 Marburger RV 02:00.25 6;998;3 02:00.25 6;11636;Marburger RV;2025-11-29 13:42:51
-291;1 Rgm. Frankfurter RG Germania/ Weilburger RV 01:40.98 1;1011;1 Rgm. / Weilburger RV 01:40.98 1;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-292;2 Frankfurter RG Oberrad 01:44.16 2;1013;2 01:44.16 2;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-293;3 Hanauer RC Hassia 01:46.05 3;1015;3 01:46.05 3;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-294;1 Frankfurter RC - Boot 2 - 01:42.27 10;1019;1 - Boot 2 - 01:42.27 10;11616;Frankfurter RC;2025-11-29 13:42:51
-295;2 Nassovia Höchst 01:44.03 6;1021;2 01:44.03 6;11612;Nassovia Höchst;2025-11-29 13:42:51
-296;3 RG Eberbach 01:50.32 4;1023;3 01:50.32 4;11004;RG Eberbach;2025-11-29 13:42:51
-297;1 Frankfurter RG Oberrad 01:47.90 9;1027;1 01:47.90 9;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-298;2 Frankfurter RC - Boot 1 - 01:48.96 8;1029;2 - Boot 1 - 01:48.96 8;11616;Frankfurter RC;2025-11-29 13:42:51
-299;3 RG Wetzlar 01:54.47 7;1031;3 01:54.47 7;11647;RG Wetzlar;2025-11-29 13:42:51
-300;1 Hanauer RC Hassia 01:30.51 4;1037;1 01:30.51 4;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-301;2 Frankfurter RG Germania 01:33.91 3;1039;2 01:33.91 3;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-302;3 RG Eberbach 01:34.21 1;1041;3 01:34.21 1;11004;RG Eberbach;2025-11-29 13:42:51
-303;4 Hanauer RG 01:39.90 2;1043;4 01:39.90 2;11627;Hanauer RG;2025-11-29 13:42:51
-304;1 Rgm. WSV Offenbach am Main-Bürgel/ Nassovia Höchst 01:35.33 8;1047;1 Rgm. WSV Offenbach am Main-Bürgel/ 01:35.33 8;11612;Nassovia Höchst;2025-11-29 13:42:51
-305;2 Rgm. Marburger RV/ Gießener RC Hassia 01:35.61 6;1049;2 Rgm. Marburger RV/ 01:35.61 6;11622;Gießener RC Hassia;2025-11-29 13:42:51
-306;3 Wormser RC 01:36.73 5;1051;3 01:36.73 5;12038;Wormser RC;2025-11-29 13:42:51
-307;1 RC Möve Grossauheim 01:39.54 9;1055;1 01:39.54 9;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-308;2 Frankfurter RG Oberrad 01:42.15 10;1057;2 01:42.15 10;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-309;1 Limburger ClfW 01:38.83 2;1064;1 01:38.83 2;11635;Limburger ClfW;2025-11-29 13:42:51
-310;2 Frauen-RV Freiweg Frankfurt 01:42.43 1;1066;2 01:42.43 1;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 13:42:51
-311;1 RC Möve Grossauheim 01:59.31 10;1075;1 01:59.31 10;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-312;2 Frankfurter RG Oberrad - Boot 1 - 02:03.82 1;1077;2 - Boot 1 - 02:03.82 1;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-313;1 Frankfurter RG Oberrad - Boot 2 - 01:58.97 5;1081;1 - Boot 2 - 01:58.97 5;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-314;2 Frankfurter RG Oberrad - Boot 3 - 02:08.82 3;1083;2 - Boot 3 - 02:08.82 3;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-315;3 RC Möve Grossauheim - Boot 1 - 02:10.38 4;1085;3 - Boot 1 - 02:10.38 4;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-316;1 RC Aschaffenburg - Boot 1 - 02:00.82 6;1089;1 - Boot 1 - 02:00.82 6;11101;RC Aschaffenburg;2025-11-29 13:42:51
-317;2 Frankfurter RG Oberrad - Boot 4 - 02:01.27 8;1091;2 - Boot 4 - 02:01.27 8;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-318;1 SG Wiking 01:44.75 1;1099;1 01:44.75 1;11643;SG Wiking;2025-11-29 13:42:51
-319;2 Frankfurter RG Germania 02:04.33 3;1102;2 02:04.33 3;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-320;1 Rgm. Frankfurter RG Germania/ Weilburger RV 01:27.48 1;1111;1 Rgm. / Weilburger RV 01:27.48 1;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-321;2 Rgm. Hanauer RC Hassia/ RV Dorsten 01:29.88 3;1114;2 Rgm. / RV Dorsten 01:29.88 3;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-322;3 Frankfurter RG Oberrad 01:44.75 5;1117;3 01:44.75 5;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-323;1 RV Hellas Offenbach 01:44.50 1;1129;1 01:44.50 1;11638;RV Hellas Offenbach;2025-11-29 13:42:51
-324;2 SG Wiking - Boot 1 - 01:45.64 2;1131;2 - Boot 1 - 01:45.64 2;11643;SG Wiking;2025-11-29 13:42:51
-325;3 Hanauer RG - Boot 1 - 01:49.51 3;1133;3 - Boot 1 - 01:49.51 3;11627;Hanauer RG;2025-11-29 13:42:51
-326;1 RG Eberbach - Boot 1 - 01:44.85 5;1137;1 - Boot 1 - 01:44.85 5;11004;RG Eberbach;2025-11-29 13:42:51
-327;2 Mühlheimer RV 01:50.53 17;1139;2 01:50.53 17;11637;Mühlheimer RV;2025-11-29 13:42:51
-328;3 SG Wiking - Boot 2 - 01:53.84 6;1141;3 - Boot 2 - 01:53.84 6;11643;SG Wiking;2025-11-29 13:42:51
-329;1 Frankfurter RG Oberrad - Boot 1 - 01:44.80 9;1145;1 - Boot 1 - 01:44.80 9;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-330;2 Hanauer RG - Boot 2 - 01:48.86 8;1147;2 - Boot 2 - 01:48.86 8;11627;Hanauer RG;2025-11-29 13:42:51
-331;3 RG Wetzlar 01:52.32 7;1149;3 01:52.32 7;11647;RG Wetzlar;2025-11-29 13:42:51
-332;1 RC Karlstadt 01:47.91 12;1153;1 01:47.91 12;11107;RC Karlstadt;2025-11-29 13:42:51
-333;2 Wormser RC 01:49.26 11;1155;2 01:49.26 11;12038;Wormser RC;2025-11-29 13:42:51
-334;3 RG Eberbach - Boot 2 - 01:54.94 10;1157;3 - Boot 2 - 01:54.94 10;11004;RG Eberbach;2025-11-29 13:42:51
-335;1 Frankfurter RG Oberrad - Boot 2 - 01:55.75 14;1161;1 - Boot 2 - 01:55.75 14;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-336;2 Hanauer RG - Boot 4 - 01:57.57 16;1163;2 - Boot 4 - 01:57.57 16;11627;Hanauer RG;2025-11-29 13:42:51
-337;1 Wormser RC 01:39.56 4;1173;1 01:39.56 4;12038;Wormser RC;2025-11-29 13:42:51
-338;2 RG Wetzlar 01:42.98 3;1175;2 01:42.98 3;11647;RG Wetzlar;2025-11-29 13:42:51
-339;3 Marburger RV 01:44.18 1;1177;3 01:44.18 1;11636;Marburger RV;2025-11-29 13:42:51
-340;1 Hanauer RG 01:48.26 5;1181;1 01:48.26 5;11627;Hanauer RG;2025-11-29 13:42:51
-341;2 WSV Hellas Gießen 01:51.63 6;1183;2 01:51.63 6;11623;WSV Hellas Gießen;2025-11-29 13:42:51
-342;1 Frankfurter RG Germania - Boot 1 - 01:40.27 3;1194;1 - Boot 1 - 01:40.27 3;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-343;2 SG Wiking - Boot 1 - 01:42.05 2;1196;2 - Boot 1 - 01:42.05 2;11643;SG Wiking;2025-11-29 13:42:51
-344;3 RC Möve Grossauheim 01:45.27 1;1198;3 01:45.27 1;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-345;1 Frankfurter RG Oberrad - Boot 1 - 01:45.98 4;1202;1 - Boot 1 - 01:45.98 4;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-346;2 SG Wiking - Boot 2 - 01:53.87 5;1204;2 - Boot 2 - 01:53.87 5;11643;SG Wiking;2025-11-29 13:42:51
-347;1 Frankfurter RG Germania - Boot 2 - 01:44.26 6;1208;1 - Boot 2 - 01:44.26 6;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-348;2 Frankfurter RG Germania - Boot 4 - 01:47.41 10;1210;2 - Boot 4 - 01:47.41 10;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-349;3 Frankfurter RG Oberrad - Boot 2 - 01:51.24 9;1212;3 - Boot 2 - 01:51.24 9;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-350;1 Hanauer RG 01:51.09 13;1216;1 01:51.09 13;11627;Hanauer RG;2025-11-29 13:42:51
-351;2 Frankfurter RC 01:57.58 12;1218;2 01:57.58 12;11616;Frankfurter RC;2025-11-29 13:42:51
-352;3 Mühlheimer RV 02:04.61 11;1220;3 02:04.61 11;11637;Mühlheimer RV;2025-11-29 13:42:51
-353;1 WSV Offenbach am Main-Bürgel - Boot 1 - 01:55.34 2;1229;1 am Main-Bürgel - Boot 1 - 01:55.34 2;11642;WSV Offenbach;2025-11-29 13:42:51
-354;2 WSV Offenbach am Main-Bürgel - Boot 2 - 01:56.84 4;1231;2 am Main-Bürgel - Boot 2 - 01:56.84 4;11642;WSV Offenbach;2025-11-29 13:42:51
-355;3 SG Wiking - Boot 1 - 01:57.40 1;1233;3 - Boot 1 - 01:57.40 1;11643;SG Wiking;2025-11-29 13:42:51
-356;1 RC Aschaffenburg 02:00.86 10;1237;1 02:00.86 10;11101;RC Aschaffenburg;2025-11-29 13:42:51
-357;2 RG Wetzlar 02:07.49 5;1239;2 02:07.49 5;11647;RG Wetzlar;2025-11-29 13:42:51
-358;3 SG Wiking - Boot 2 - 02:11.85 6;1241;3 - Boot 2 - 02:11.85 6;11643;SG Wiking;2025-11-29 13:42:51
-359;1 RG Eberbach 02:01.06 7;1245;1 02:01.06 7;11004;RG Eberbach;2025-11-29 13:42:51
-360;2 Hanauer RG 02:16.00 9;1247;2 02:16.00 9;11627;Hanauer RG;2025-11-29 13:42:51
-361;1 Rgm. Frankfurter RG Germania/ SRR Schillerschule Frankfurt 01:44.25 1;1260;1 Rgm. Frankfurter RG Germania/ 01:44.25 1;15626;SRR Schillerschule Frankfurt;2025-11-29 13:42:51
-362;2 Frankfurter RC 01:51.91 2;1263;2 01:51.91 2;11616;Frankfurter RC;2025-11-29 13:42:51
-363;1 Offenbacher RG Undine 01:33.16 4;1269;1 01:33.16 4;11641;Offenbacher RG Undine;2025-11-29 13:42:51
-364;2 RG Eberbach 01:38.11 2;1271;2 01:38.11 2;11004;RG Eberbach;2025-11-29 13:42:51
-365;3 Rgm. RC Möve Grossauheim/ Mühlheimer RV 01:45.97 3;1273;3 Rgm. / Mühlheimer RV 01:45.97 3;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-366;1 Marburger RV 01:46.31 2;1280;1 01:46.31 2;11636;Marburger RV;2025-11-29 13:42:51
-367;2 Hanauer RG 01:50.10 7;1282;2 01:50.10 7;11627;Hanauer RG;2025-11-29 13:42:51
-368;1 Frankfurter RG Borussia - Boot 2 - 01:55.64 5;1286;1 - Boot 2 - 01:55.64 5;11607;Frankfurter RG Borussia;2025-11-29 13:42:51
-369;2 RV Hellas Offenbach 02:09.56 4;1288;2 02:09.56 4;11638;RV Hellas Offenbach;2025-11-29 13:42:51
-370;1 Hanauer RC Hassia 01:58.56 3;1292;1 01:58.56 3;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-371;2 RG Wetzlar 02:01.34 6;1294;2 02:01.34 6;11647;RG Wetzlar;2025-11-29 13:42:51
-372;1 Hanauer RC Hassia 02:13.47 4;1305;1 02:13.47 4;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-373;2 RC Aschaffenburg 02:19.70 1;1307;2 02:19.70 1;11101;RC Aschaffenburg;2025-11-29 13:42:51
-374;3 SG Wiking - Boot 1 - 02:23.77 2;1309;3 - Boot 1 - 02:23.77 2;11643;SG Wiking;2025-11-29 13:42:51
-375;1 RC Aschaffenburg 01:59.22 6;1313;1 01:59.22 6;11101;RC Aschaffenburg;2025-11-29 13:42:51
-376;2 RC Karlstadt - Boot 1 - 02:01.82 7;1315;2 - Boot 1 - 02:01.82 7;11107;RC Karlstadt;2025-11-29 13:42:51
-377;3 SG Wiking - Boot 2 - 02:09.73 5;1317;3 - Boot 2 - 02:09.73 5;11643;SG Wiking;2025-11-29 13:42:51
-378;1 Mühlheimer RV - Boot 1 - 02:09.21 9;1321;1 - Boot 1 - 02:09.21 9;11637;Mühlheimer RV;2025-11-29 13:42:51
-379;2 RC Karlstadt - Boot 2 - 02:14.26 10;1323;2 - Boot 2 - 02:14.26 10;11107;RC Karlstadt;2025-11-29 13:42:51
-380;3 Hanauer RG - Boot 2 - 02:21.83 11;1325;3 - Boot 2 - 02:21.83 11;11627;Hanauer RG;2025-11-29 13:42:51
-381;4 Hanauer RG - Boot 1 - 02:27.99 8;1327;4 - Boot 1 - 02:27.99 8;11627;Hanauer RG;2025-11-29 13:42:51
-382;1 Hanauer RG - Boot 4 - 02:16.98 12;1331;1 - Boot 4 - 02:16.98 12;11627;Hanauer RG;2025-11-29 13:42:51
-383;2 Hanauer RG - Boot 3 - 02:27.87 13;1333;2 - Boot 3 - 02:27.87 13;11627;Hanauer RG;2025-11-29 13:42:51
-384;3 Mühlheimer RV - Boot 2 - 02:30.63 14;1335;3 - Boot 2 - 02:30.63 14;11637;Mühlheimer RV;2025-11-29 13:42:51
-385;1 Mühlheimer RV - Boot 3 - 02:14.86 17;1339;1 - Boot 3 - 02:14.86 17;11637;Mühlheimer RV;2025-11-29 13:42:51
-386;2 Hanauer RG - Boot 5 - 02:22.52 16;1341;2 - Boot 5 - 02:22.52 16;11627;Hanauer RG;2025-11-29 13:42:51
-387;3 WSV Offenbach am Main-Bürgel 02:48.73 18;1343;3 am Main-Bürgel 02:48.73 18;11642;WSV Offenbach;2025-11-29 13:42:51
-388;1 Mühlheimer RV 01:48.64 2;1351;1 01:48.64 2;11637;Mühlheimer RV;2025-11-29 13:42:51
-389;2 Frauen-RV Freiweg Frankfurt 01:56.11 1;1353;2 01:56.11 1;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 13:42:51
-390;1 Hanauer RG - Boot 1 - 01:50.27 3;1357;1 - Boot 1 - 01:50.27 3;11627;Hanauer RG;2025-11-29 13:42:51
-391;2 Gießener RC Hassia 01:51.05 6;1359;2 01:51.05 6;11622;Gießener RC Hassia;2025-11-29 13:42:51
-392;3 Hanauer RG - Boot 2 - 01:52.61 4;1361;3 - Boot 2 - 01:52.61 4;11627;Hanauer RG;2025-11-29 13:42:51
-393;1 Hanauer RC Hassia 02:13.00 1;1372;1 02:13.00 1;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-394;2 WSV Offenbach am Main-Bürgel 02:36.00 2;1374;2 am Main-Bürgel 02:36.00 2;11642;WSV Offenbach;2025-11-29 13:42:51
-395;3 RG Wetzlar 02:37.28 3;1376;3 02:37.28 3;11647;RG Wetzlar;2025-11-29 13:42:51
-396;1 Frankfurter RG Germania 01:59.18 1;1385;1 01:59.18 1;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-397;2 Frankfurter RC 02:04.72 2;1387;2 02:04.72 2;11616;Frankfurter RC;2025-11-29 13:42:51
-398;3 RG Wetzlar - Boot 1 - 02:19.24 3;1389;3 - Boot 1 - 02:19.24 3;11647;RG Wetzlar;2025-11-29 13:42:51
-399;1 Frankfurter Ruder- und Kanusport Verein 02:16.14 7;1393;1 02:16.14 7;11620;Frankfurter Ruder- und Kanusport Verein;2025-11-29 13:42:51
-400;2 Hanauer RG 02:18.32 4;1395;2 02:18.32 4;11627;Hanauer RG;2025-11-29 13:42:51
-401;1 Frankfurter RC - Boot 2 - 01:52.65 3;1403;1 - Boot 2 - 01:52.65 3;11616;Frankfurter RC;2025-11-29 13:42:51
-402;2 RG Eberbach 02:00.06 2;1405;2 02:00.06 2;11004;RG Eberbach;2025-11-29 13:42:51
-403;1 Frankfurter RG Oberrad 01:54.82 6;1409;1 01:54.82 6;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-404;2 RG Wetzlar - Boot 2 - 01:59.28 5;1411;2 - Boot 2 - 01:59.28 5;11647;RG Wetzlar;2025-11-29 13:42:51
-405;3 SG Wiking 01:59.80 4;1413;3 01:59.80 4;11643;SG Wiking;2025-11-29 13:42:51
-406;4 RG Wetzlar - Boot 1 - 02:01.50 7;1415;4 - Boot 1 - 02:01.50 7;11647;RG Wetzlar;2025-11-29 13:42:51
-407;1 Rgm. Hanauer RC Hassia/ Frankfurter RG Borussia 01:34.59 1;1426;1 Rgm. Hanauer RC Hassia/ 01:34.59 1;11607;Frankfurter RG Borussia;2025-11-29 13:42:51
-408;2 Frankfurter RG Borussia 01:43.11 3;1428;2 01:43.11 3;11607;Frankfurter RG Borussia;2025-11-29 13:42:51
-409;3 Gießener RC Hassia 01:43.53 2;1430;3 01:43.53 2;11622;Gießener RC Hassia;2025-11-29 13:42:51
-410;1 Rgm. DRC Ingolstadt/ RC Möve Grossauheim 01:40.36 8;1434;1 Rgm. DRC Ingolstadt/ 01:40.36 8;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-411;2 Marburger RV 01:42.45 5;1436;2 01:42.45 5;11636;Marburger RV;2025-11-29 13:42:51
-412;3 RV Hellas Offenbach 01:52.07 6;1438;3 01:52.07 6;11638;RV Hellas Offenbach;2025-11-29 13:42:51
-413;1 Rgm. Frankfurter RC/ Frankfurter RG Germania 01:36.24 4;1442;1 Rgm. Frankfurter RC/ 01:36.24 4;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-414;2 Rgm. Frankfurter RC/ SG Wiking 01:38.92 7;1444;2 Rgm. / SG Wiking 01:38.92 7;11616;Frankfurter RC;2025-11-29 13:42:51
-415;1 SG Wiking 01:58.63 1;1449;1 01:58.63 1;11643;SG Wiking;2025-11-29 13:42:51
-416;2 RC Karlstadt 02:06.91 2;1451;2 02:06.91 2;11107;RC Karlstadt;2025-11-29 13:42:51
-417;1 Frankfurter RG Oberrad 01:47.17 3;1456;1 01:47.17 3;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-418;2 RC Möve Grossauheim 02:02.60 2;1458;2 02:02.60 2;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-419;1 Wormser RC 01:33.02 4;1465;1 01:33.02 4;12038;Wormser RC;2025-11-29 13:42:51
-420;2 Mühlheimer RV 01:34.45 3;1467;2 01:34.45 3;11637;Mühlheimer RV;2025-11-29 13:42:51
-421;3 Frankfurter RG Germania 01:35.96 1;1469;3 01:35.96 1;11610;Frankfurter RG Germania;2025-11-29 13:42:51
-422;1 Frankfurter RG Oberrad - Boot 1 - 01:53.16 2;1481;1 - Boot 1 - 01:53.16 2;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-423;2 Frankfurter RG Oberrad - Boot 2 - 01:55.21 3;1483;2 - Boot 2 - 01:55.21 3;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-424;3 SG Wiking - Boot 1 - 02:08.98 1;1485;3 - Boot 1 - 02:08.98 1;11643;SG Wiking;2025-11-29 13:42:51
-425;1 RG Wetzlar 01:54.49 5;1489;1 01:54.49 5;11647;RG Wetzlar;2025-11-29 13:42:51
-426;2 Frankfurter RC 02:06.38 6;1491;2 02:06.38 6;11616;Frankfurter RC;2025-11-29 13:42:51
-427;3 SG Wiking - Boot 2 - 02:08.41 4;1493;3 - Boot 2 - 02:08.41 4;11643;SG Wiking;2025-11-29 13:42:51
-428;1 Mühlheimer RV 02:24.05 7;1497;1 02:24.05 7;11637;Mühlheimer RV;2025-11-29 13:42:51
-429;2 SG Wiking - Boot 3 - 02:24.44 9;1499;2 - Boot 3 - 02:24.44 9;11643;SG Wiking;2025-11-29 13:42:51
-430;3 Hanauer RG 02:26.28 8;1501;3 02:26.28 8;11627;Hanauer RG;2025-11-29 13:42:51
-431;1 Frankfurter RG Oberrad - Boot 3 - 02:09.41 10;1505;1 - Boot 3 - 02:09.41 10;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-432;2 RC Möve Grossauheim 02:11.33 12;1507;2 02:11.33 12;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-433;3 Frankfurter RC 02:16.78 11;1509;3 02:16.78 11;11616;Frankfurter RC;2025-11-29 13:42:51
-434;1 Rgm. RC Möve Grossauheim/ Mühlheimer RV 01:37.08 3;1514;1 Rgm. / Mühlheimer RV 01:37.08 3;11625;RC Möve Grossauheim;2025-11-29 13:42:51
-435;2 WSV Offenbach am Main-Bürgel - Boot 1 - 01:41.20 2;1516;2 am Main-Bürgel - Boot 1 - 01:41.20 2;11642;WSV Offenbach;2025-11-29 13:42:51
-436;3 WSV Offenbach am Main-Bürgel - Boot 2 - 01:46.56 4;1518;3 am Main-Bürgel - Boot 2 - 01:46.56 4;11642;WSV Offenbach;2025-11-29 13:42:51
-437;1 RG Wetzlar - Boot 1 - 01:38.85 4;1532;1 - Boot 1 - 01:38.85 4;11647;RG Wetzlar;2025-11-29 13:42:51
-438;2 RG Eberbach - Boot 1 - 01:39.81 2;1534;2 - Boot 1 - 01:39.81 2;11004;RG Eberbach;2025-11-29 13:42:51
-439;3 Wormser RC - Boot 1 - 01:43.44 3;1536;3 - Boot 1 - 01:43.44 3;12038;Wormser RC;2025-11-29 13:42:51
-440;4 Hanauer RC Hassia - Boot 1 - 01:44.97 1;1538;4 - Boot 1 - 01:44.97 1;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-441;1 Hanauer RC Hassia - Boot 2 - 01:36.29 5;1542;1 - Boot 2 - 01:36.29 5;11626;Hanauer RC Hassia;2025-11-29 13:42:51
-442;2 Marburger RV - Boot 1 - 01:39.55 8;1544;2 - Boot 1 - 01:39.55 8;11636;Marburger RV;2025-11-29 13:42:51
-443;3 RG Eberbach - Boot 2 - 01:43.99 7;1546;3 - Boot 2 - 01:43.99 7;11004;RG Eberbach;2025-11-29 13:42:51
-444;1 Wormser RC - Boot 2 - 01:43.32 11;1550;1 - Boot 2 - 01:43.32 11;12038;Wormser RC;2025-11-29 13:42:51
-445;2 Frankfurter RG Oberrad 01:46.03 10;1552;2 01:46.03 10;11614;Frankfurter RG Oberrad;2025-11-29 13:42:51
-446;3 Marburger RV - Boot 2 - 01:48.75 9;1554;3 - Boot 2 - 01:48.75 9;11636;Marburger RV;2025-11-29 13:42:51
-447;1 RC Aschaffenburg 01:49.70 13;1558;1 01:49.70 13;11101;RC Aschaffenburg;2025-11-29 13:42:52
-448;2 Offenbacher RG Undine 01:52.23 12;1560;2 01:52.23 12;11641;Offenbacher RG Undine;2025-11-29 13:42:52
-449;1 Frankfurter RC 01:47.67 14;1564;1 01:47.67 14;11616;Frankfurter RC;2025-11-29 13:42:52
-450;2 RG Wetzlar - Boot 2 - 01:49.40 16;1566;2 - Boot 2 - 01:49.40 16;11647;RG Wetzlar;2025-11-29 13:42:52
-451;3 RC Möve Grossauheim 01:49.64 15;1568;3 01:49.64 15;11625;RC Möve Grossauheim;2025-11-29 13:42:52
-452;1 Offenbacher RG Undine 01:32.15 4;1580;1 01:32.15 4;11641;Offenbacher RG Undine;2025-11-29 13:42:52
-453;2 Frankfurter RG Germania - Boot 2 - 01:34.57 5;1582;2 - Boot 2 - 01:34.57 5;11610;Frankfurter RG Germania;2025-11-29 13:42:52
-454;3 Frankfurter RG Germania - Boot 1 - 01:39.48 1;1584;3 - Boot 1 - 01:39.48 1;11610;Frankfurter RG Germania;2025-11-29 13:42:52
-455;4 SG Wiking 01:46.61 2;1586;4 01:46.61 2;11643;SG Wiking;2025-11-29 13:42:52
-456;1 Frankfurter RG Oberrad 01:39.27 7;1590;1 01:39.27 7;11614;Frankfurter RG Oberrad;2025-11-29 13:42:52
-457;2 Hanauer RG - Boot 1 - 01:40.80 6;1592;2 - Boot 1 - 01:40.80 6;11627;Hanauer RG;2025-11-29 13:42:52
-458;3 Hanauer RG - Boot 2 - 01:43.84 8;1594;3 - Boot 2 - 01:43.84 8;11627;Hanauer RG;2025-11-29 13:42:52
-459;1 Frankfurter RG Borussia 01:41.47 2;1601;1 01:41.47 2;11607;Frankfurter RG Borussia;2025-11-29 13:42:52
-460;2 Gießener RC Hassia 01:42.90 1;1603;2 01:42.90 1;11622;Gießener RC Hassia;2025-11-29 13:42:52
-461;1 Marburger RV 01:43.89 4;1607;1 01:43.89 4;11636;Marburger RV;2025-11-29 13:42:52
-462;2 RV Hellas Offenbach 01:45.30 5;1609;2 01:45.30 5;11638;RV Hellas Offenbach;2025-11-29 13:42:52
-463;1 RC Möve Grossauheim 01:41.92 6;1613;1 01:41.92 6;11625;RC Möve Grossauheim;2025-11-29 13:42:52
-464;2 Wormser RC 01:43.31 3;1615;2 01:43.31 3;12038;Wormser RC;2025-11-29 13:42:52
-465;1 RC Aschaffenburg 01:49.98 2;1620;1 01:49.98 2;11101;RC Aschaffenburg;2025-11-29 13:42:52
-466;2 WSV Hellas Gießen 01:57.47 1;1622;2 01:57.47 1;11623;WSV Hellas Gießen;2025-11-29 13:42:52
-467;1 Frankfurter RG Oberrad 01:57.31 5;1626;1 01:57.31 5;11614;Frankfurter RG Oberrad;2025-11-29 13:42:52
-468;2 Wormser RC 02:08.47 3;1628;2 02:08.47 3;12038;Wormser RC;2025-11-29 13:42:52
-469;1 Frankfurter RG Germania 01:22.65 2;1640;1 01:22.65 2;11610;Frankfurter RG Germania;2025-11-29 13:42:52
-470;2 RG Eberbach 01:24.26 1;1642;2 01:24.26 1;11004;RG Eberbach;2025-11-29 13:42:52
-471;3 Rgm. RC Möve Grossauheim/ Mühlheimer RV 01:37.10 3;1644;3 Rgm. / Mühlheimer RV 01:37.10 3;11625;RC Möve Grossauheim;2025-11-29 13:42:52
-472;1 Rgm. Marburger RV/ Gießener RC Hassia/ RG Wetzlar 01:26.69 4;1649;1 Rgm. Marburger RV/ / RG Wetzlar 01:26.69 4;11622;Gießener RC Hassia;2025-11-29 13:42:52
-473;2 Rgm. WSV Offenbach am Main-Bürgel/ Nassovia Höchst 01:29.51 5;1652;2 Rgm. WSV Offenbach am Main-Bürgel/ 01:29.51 5;11612;Nassovia Höchst;2025-11-29 13:42:52
-474;1 RC Möve Grossauheim - Boot 1 - 01:47.56 2;1658;1 - Boot 1 - 01:47.56 2;11625;RC Möve Grossauheim;2025-11-29 13:42:52
-475;2 SG Wiking - Boot 1 - 01:54.21 1;1660;2 - Boot 1 - 01:54.21 1;11643;SG Wiking;2025-11-29 13:42:52
-476;3 RC Karlstadt 02:00.12 3;1662;3 02:00.12 3;11107;RC Karlstadt;2025-11-29 13:42:52
-477;1 RC Möve Grossauheim - Boot 2 - 01:54.21 4;1666;1 - Boot 2 - 01:54.21 4;11625;RC Möve Grossauheim;2025-11-29 13:42:52
-478;2 SG Wiking - Boot 2 - 01:55.58 5;1668;2 - Boot 2 - 01:55.58 5;11643;SG Wiking;2025-11-29 13:42:52
-479;3 SG Wiking - Boot 3 - 02:06.55 7;1670;3 - Boot 3 - 02:06.55 7;11643;SG Wiking;2025-11-29 13:42:52
-480;1 WSV Offenbach am Main-Bürgel 01:54.07 8;1674;1 am Main-Bürgel 01:54.07 8;11642;WSV Offenbach;2025-11-29 13:42:52
-481;2 Hanauer RG - Boot 2 - 02:07.59 10;1676;2 - Boot 2 - 02:07.59 10;11627;Hanauer RG;2025-11-29 13:42:52
-482;3 Frankfurter Ruder- und Kanusport Verein 02:17.22 11;1678;3 02:17.22 11;11620;Frankfurter Ruder- und Kanusport Verein;2025-11-29 13:42:52
-483;1 SRR Schillerschule Frankfurt 01:48.82 1;1686;1 01:48.82 1;15626;SRR Schillerschule Frankfurt;2025-11-29 13:42:52
-484;2 Frankfurter RC 01:55.27 3;1688;2 01:55.27 3;11616;Frankfurter RC;2025-11-29 13:42:52
-485;3 Frankfurter RC 02:01.12 4;1690;3 02:01.12 4;11616;Frankfurter RC;2025-11-29 13:42:52
-486;1 RC Karlstadt 01:57.39 6;1694;1 01:57.39 6;11107;RC Karlstadt;2025-11-29 13:42:52
-487;2 RC Möve Grossauheim 02:08.40 5;1696;2 02:08.40 5;11625;RC Möve Grossauheim;2025-11-29 13:42:52
-488;1 Wormser RC 01:19.67 1;1707;1 01:19.67 1;12038;Wormser RC;2025-11-29 13:42:52
-489;2 Rgm. RG Wetzlar/ Marburger RV/ Gießener R.G./ Gießener RC Hassia 01:19.91 4;1709;2 Rgm. RG Wetzlar/ Marburger RV/ Gießener R.G./ 01:19.91 4;11622;Gießener RC Hassia;2025-11-29 13:42:52
-490;3 Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia 01:20.92 2;1712;3 Rgm. RC Möve Grossauheim/ 01:20.92 2;11607;Frankfurter RG Borussia;2025-11-29 13:42:52
-491;4 Frankfurter RG Germania 01:22.87 3;1715;4 01:22.87 3;11610;Frankfurter RG Germania;2025-11-29 13:42:52
-492;1 Rgm. Hanauer RG/ WSV Offenbach am Main-Bürgel 01:34.49 1;1720;1 Rgm. Hanauer RG/ am Main-Bürgel 01:34.49 1;11642;WSV Offenbach;2025-11-29 13:42:52
-493;2 Rgm. Marburger RV/ Frankfurter RG Borussia 01:37.30 2;1723;2 Rgm. Marburger RV/ 01:37.30 2;11607;Frankfurter RG Borussia;2025-11-29 13:42:52
-494;1 RC Aschaffenburg - Boot 1 - 01:41.21 1;1729;1 - Boot 1 - 01:41.21 1;11101;RC Aschaffenburg;2025-11-29 13:42:52
-495;2 RV Hellas Offenbach 01:44.61 6;1731;2 01:44.61 6;11638;RV Hellas Offenbach;2025-11-29 13:42:52
-496;3 RG Eberbach 01:45.95 4;1733;3 01:45.95 4;11004;RG Eberbach;2025-11-29 13:42:52
-497;1 Wormser RC 01:48.73 12;1737;1 01:48.73 12;12038;Wormser RC;2025-11-29 13:42:52
-498;2 WSV Offenbach am Main-Bürgel - Boot 1 - 01:53.18 9;1739;2 am Main-Bürgel - Boot 1 - 01:53.18 9;11642;WSV Offenbach;2025-11-29 13:42:52
-499;3 Offenbacher RG Undine - Boot 2 - 01:54.15 11;1741;3 - Boot 2 - 01:54.15 11;11641;Offenbacher RG Undine;2025-11-29 13:42:52
-500;4 Hanauer RG - Boot 2 - 02:02.34 8;1743;4 - Boot 2 - 02:02.34 8;11627;Hanauer RG;2025-11-29 13:42:52
-501;1 RC Aschaffenburg - Boot 4 - 01:46.41 16;1747;1 - Boot 4 - 01:46.41 16;11101;RC Aschaffenburg;2025-11-29 13:42:52
-502;2 WSV Offenbach am Main-Bürgel - Boot 2 - 01:47.36 14;1749;2 am Main-Bürgel - Boot 2 - 01:47.36 14;11642;WSV Offenbach;2025-11-29 13:42:52
-503;3 Mühlheimer RV - Boot 2 - 01:59.03 13;1751;3 - Boot 2 - 01:59.03 13;11637;Mühlheimer RV;2025-11-29 13:42:52
-504;1 Frankfurter RC 01:59.58 17;1755;1 01:59.58 17;11616;Frankfurter RC;2025-11-29 13:42:52
-505;2 Marburger RV 02:15.58 18;1757;2 02:15.58 18;11636;Marburger RV;2025-11-29 13:42:52
-506;1 WSV Offenbach am Main-Bürgel 01:47.00 2;1773;1 am Main-Bürgel 01:47.00 2;11642;WSV Offenbach;2025-11-29 13:42:52
-507;2 Frankfurter RG Germania 01:47.56 1;1775;2 01:47.56 1;11610;Frankfurter RG Germania;2025-11-29 13:42:52
-508;3 RC Möve Grossauheim - Boot 1 - 01:53.01 3;1777;3 - Boot 1 - 01:53.01 3;11625;RC Möve Grossauheim;2025-11-29 13:42:52
-509;1 RC Aschaffenburg 01:50.17 7;1781;1 01:50.17 7;11101;RC Aschaffenburg;2025-11-29 13:42:52
-510;2 WSV Hellas Gießen 01:53.18 5;1783;2 01:53.18 5;11623;WSV Hellas Gießen;2025-11-29 13:42:52
-511;3 RC Möve Grossauheim - Boot 2 - 02:02.74 8;1785;3 - Boot 2 - 02:02.74 8;11625;RC Möve Grossauheim;2025-11-29 13:42:52
-512;1 RC Karlstadt 02:05.49 1;1793;1 02:05.49 1;11107;RC Karlstadt;2025-11-29 13:42:52
-513;2 RC Karlstadt 02:10.68 2;1795;2 02:10.68 2;11107;RC Karlstadt;2025-11-29 13:42:52
-514;1 Hanauer RG - Boot 1 - 01:37.83 1;1800;1 - Boot 1 - 01:37.83 1;11627;Hanauer RG;2025-11-29 13:42:52
-515;2 Marburger RV 01:38.05 4;1802;2 01:38.05 4;11636;Marburger RV;2025-11-29 13:42:52
-516;3 Hanauer RC Hassia 01:42.67 2;1804;3 01:42.67 2;11626;Hanauer RC Hassia;2025-11-29 13:42:52
-517;1 Rgm. Gießener RC Hassia/ DRC Ingolstadt 01:46.77 8;1808;1 Rgm. / DRC Ingolstadt 01:46.77 8;11622;Gießener RC Hassia;2025-11-29 13:42:52
-518;2 RV Hellas Offenbach 01:54.18 5;1810;2 01:54.18 5;11638;RV Hellas Offenbach;2025-11-29 13:42:52
-519;1 Frankfurter RC 01:41.71 6;1814;1 01:41.71 6;11616;Frankfurter RC;2025-11-29 13:42:52
-520;2 Hanauer RG - Boot 2 - 01:56.08 7;1816;2 - Boot 2 - 01:56.08 7;11627;Hanauer RG;2025-11-29 13:42:52
-521;1 Frankfurter RG Oberrad - Boot 2 - 01:40.17 4;1827;1 - Boot 2 - 01:40.17 4;11614;Frankfurter RG Oberrad;2025-11-29 13:42:52
-522;2 RG Wetzlar 01:41.39 1;1829;2 01:41.39 1;11647;RG Wetzlar;2025-11-29 13:42:52
-523;3 Frankfurter RC 01:41.92 3;1831;3 01:41.92 3;11616;Frankfurter RC;2025-11-29 13:42:52
-524;4 Frankfurter RG Oberrad - Boot 1 - 01:49.55 5;1833;4 - Boot 1 - 01:49.55 5;11614;Frankfurter RG Oberrad;2025-11-29 13:42:52
-525;1 Frankfurter RG Oberrad 01:40.98 7;1837;1 01:40.98 7;11614;Frankfurter RG Oberrad;2025-11-29 13:42:52
-526;2 RG Wetzlar 01:49.40 6;1839;2 01:49.40 6;11647;RG Wetzlar;2025-11-29 13:42:52
-527;3 Hanauer RG 02:25.31 8;1841;3 02:25.31 8;11627;Hanauer RG;2025-11-29 13:42:52
-528;1 Rgm. RC Möve Grossauheim/ WSV Offenbach am Main-Bürgel 01:41.99 4;1848;1 Rgm. / WSV Offenbach am Main-Bürgel 01:41.99 4;11625;RC Möve Grossauheim;2025-11-29 13:42:52
-529;2 Rgm. Frankfurter RG Borussia/ RC Aschaffenburg 01:43.63 3;1850;2 Rgm. / RC Aschaffenburg 01:43.63 3;11607;Frankfurter RG Borussia;2025-11-29 13:42:52
-530;3 Frauen-RV Freiweg Frankfurt 01:47.56 1;1853;3 01:47.56 1;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 13:42:52
-531;1 RC Aschaffenburg 01:38.78 2;1860;1 01:38.78 2;11101;RC Aschaffenburg;2025-11-29 13:42:52
-532;2 Frankfurter RG Germania 01:39.98 3;1863;2 01:39.98 3;11610;Frankfurter RG Germania;2025-11-29 13:42:52
-533;3 Frankfurter RG Oberrad 01:46.74 1;1866;3 01:46.74 1;11614;Frankfurter RG Oberrad;2025-11-29 13:42:52
-534;1 Rgm. Hanauer RC Hassia/ Frankfurter RG Oberrad/ Frankfurter RC/ Frankfurter RG 01:26.51 2;1872;1 Rgm. Hanauer RC Hassia/ / Frankfurter RC/ Frankfurter RG 01:26.51 2;11614;Frankfurter RG Oberrad;2025-11-29 13:42:52
-535;2 Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia/ DRC Ingolstadt/ Gießener R.G. 01:29.92 3;1876;2 Rgm. RC Möve Grossauheim/ / DRC Ingolstadt/ Gießener R.G. 01:29.92 3;11607;Frankfurter RG Borussia;2025-11-29 13:42:52
-536;3 Marburger RV 01:30.16 1;1879;3 01:30.16 1;11636;Marburger RV;2025-11-29 13:42:52
-537;1 Rgm. Ruderclub Zellingen v. 1946 e.V./ Würzburger Ruderverein Bayern von 1875/1905 e.V. 01:34.27 1;1888;1 Rgm. Ruderclub Zellingen v. 1946 e.V./ 01:34.27 1;11135;Würzburger Ruderverein Bayern von 1875/1905 e.V.;2025-11-29 13:42:52
-538;2 Rgm. Hanauer RG/ Mühlheimer RV 01:35.55 2;1890;2 Rgm. Hanauer RG/ 01:35.55 2;11637;Mühlheimer RV;2025-11-29 13:42:52
-539;3 Hanauer RG 01:37.36 3;1892;3 01:37.36 3;11627;Hanauer RG;2025-11-29 13:42:52
-540;1 Hersfelder RV 01:32.78 4;1896;1 01:32.78 4;11628;Hersfelder RV;2025-11-29 13:42:52
-541;2 Rgm. RV Hellas Offenbach/ Flörsheimer RV 01:36.23 5;1898;2 Rgm. / Flörsheimer RV 01:36.23 5;11638;RV Hellas Offenbach;2025-11-29 13:42:52
-542;1 RC Aschaffenburg 01:55.25 2;1903;1 01:55.25 2;11101;RC Aschaffenburg;2025-11-29 13:42:52
-543;2 SG Wiking 01:56.64 1;1905;2 01:56.64 1;11643;SG Wiking;2025-11-29 13:42:52
-544;3 RC Karlstadt 02:00.34 3;1907;3 02:00.34 3;11107;RC Karlstadt;2025-11-29 13:42:52
-545;1 Hanauer RG - Boot 1 - 02:02.35 4;1911;1 - Boot 1 - 02:02.35 4;11627;Hanauer RG;2025-11-29 13:42:52
-546;2 Hanauer RG - Boot 2 - 02:05.53 5;1913;2 - Boot 2 - 02:05.53 5;11627;Hanauer RG;2025-11-29 13:42:52
-547;3 Mühlheimer RV 02:05.81 6;1915;3 02:05.81 6;11637;Mühlheimer RV;2025-11-29 13:42:52
-548;1 Mühlheimer RV - Boot 1 - 01:41.00 2;1920;1 - Boot 1 - 01:41.00 2;11637;Mühlheimer RV;2025-11-29 13:42:52
-549;2 WSV Offenbach am Main-Bürgel - Boot 2 - 01:42.42 5;1922;2 am Main-Bürgel - Boot 2 - 01:42.42 5;11642;WSV Offenbach;2025-11-29 13:42:52
-550;3 RV Hellas Offenbach 01:44.74 3;1924;3 01:44.74 3;11638;RV Hellas Offenbach;2025-11-29 13:42:52
-551;4 RC Möve Grossauheim 01:44.94 4;1926;4 01:44.94 4;11625;RC Möve Grossauheim;2025-11-29 13:42:52
-552;1 RC Aschaffenburg 01:43.96 9;1930;1 01:43.96 9;11101;RC Aschaffenburg;2025-11-29 13:42:52
-553;2 Frankfurter Ruder- und Kanusport Verein 01:48.19 6;1932;2 01:48.19 6;11620;Frankfurter Ruder- und Kanusport Verein;2025-11-29 13:42:52
-554;3 WSV Offenbach am Main-Bürgel - Boot 3 - 01:48.41 8;1934;3 am Main-Bürgel - Boot 3 - 01:48.41 8;11642;WSV Offenbach;2025-11-29 13:42:52
-555;4 Mühlheimer RV - Boot 2 - 01:52.42 7;1936;4 - Boot 2 - 01:52.42 7;11637;Mühlheimer RV;2025-11-29 13:42:52
-556;1 Frankfurter RC 01:50.58 10;1940;1 01:50.58 10;11616;Frankfurter RC;2025-11-29 13:42:52
-557;2 WSV Offenbach am Main-Bürgel - Boot 4 - 01:52.43 11;1942;2 am Main-Bürgel - Boot 4 - 01:52.43 11;11642;WSV Offenbach;2025-11-29 13:42:52
-558;1 RC Aschaffenburg - Boot 1 - 01:36.07 2;1953;1 - Boot 1 - 01:36.07 2;11101;RC Aschaffenburg;2025-11-29 13:42:52
-559;2 WSV Offenbach am Main-Bürgel 01:38.84 1;1955;2 am Main-Bürgel 01:38.84 1;11642;WSV Offenbach;2025-11-29 13:42:52
-560;1 Frankfurter RC 01:46.92 4;1959;1 01:46.92 4;11616;Frankfurter RC;2025-11-29 13:42:52
-561;2 Marburger RV 01:58.53 3;1961;2 01:58.53 3;11636;Marburger RV;2025-11-29 13:42:52
-562;1 Rgm. Frankfurter RG Germania/ Weilburger RV 01:40.32 2;1968;1 Rgm. / Weilburger RV 01:40.32 2;11610;Frankfurter RG Germania;2025-11-29 13:42:52
-563;2 Frankfurter RC 01:43.47 3;1970;2 01:43.47 3;11616;Frankfurter RC;2025-11-29 13:42:52
-564;3 RG Eberbach 01:48.20 4;1972;3 01:48.20 4;11004;RG Eberbach;2025-11-29 13:42:52
-565;1 Frankfurter RG Oberrad 01:47.98 6;1976;1 01:47.98 6;11614;Frankfurter RG Oberrad;2025-11-29 13:42:52
-566;2 Frankfurter RC 01:49.98 7;1978;2 01:49.98 7;11616;Frankfurter RC;2025-11-29 13:42:52
-567;3 SG Wiking 01:58.79 5;1980;3 01:58.79 5;11643;SG Wiking;2025-11-29 13:42:52
-568;1 RG Eberbach 01:33.67 1;1987;1 01:33.67 1;11004;RG Eberbach;2025-11-29 13:42:52
-569;2 Rgm. Marburger RV/ Gießener RC Hassia 01:37.05 4;1989;2 Rgm. Marburger RV/ 01:37.05 4;11622;Gießener RC Hassia;2025-11-29 13:42:52
-570;3 Wormser RC 01:40.86 2;1991;3 01:40.86 2;12038;Wormser RC;2025-11-29 13:42:52
-571;1 Rgm. WSV Offenbach am Main-Bürgel/ Nassovia Höchst 01:35.81 6;1995;1 Rgm. WSV Offenbach am Main-Bürgel/ 01:35.81 6;11612;Nassovia Höchst;2025-11-29 13:42:52
-572;2 RC Möve Grossauheim 01:41.16 5;1997;2 01:41.16 5;11625;RC Möve Grossauheim;2025-11-29 13:42:52
-573;3 Frankfurter RG Oberrad 01:43.49 7;1999;3 01:43.49 7;11614;Frankfurter RG Oberrad;2025-11-29 13:42:52
-574;1 RC Möve Grossauheim 01:58.67 10;2010;1 01:58.67 10;11625;RC Möve Grossauheim;2025-11-29 13:42:52
-575;2 Frankfurter RG Oberrad - Boot 1 - 02:05.46 1;2012;2 - Boot 1 - 02:05.46 1;11614;Frankfurter RG Oberrad;2025-11-29 13:42:52
-576;1 Frankfurter RG Oberrad - Boot 2 - 02:00.09 5;2016;1 - Boot 2 - 02:00.09 5;11614;Frankfurter RG Oberrad;2025-11-29 13:42:52
-577;2 Frankfurter RG Oberrad - Boot 3 - 02:09.65 4;2018;2 - Boot 3 - 02:09.65 4;11614;Frankfurter RG Oberrad;2025-11-29 13:42:52
-578;3 RC Möve Grossauheim - Boot 1 - 02:12.32 6;2020;3 - Boot 1 - 02:12.32 6;11625;RC Möve Grossauheim;2025-11-29 13:42:52
-579;1 Frankfurter RG Oberrad - Boot 4 - 02:02.58 7;2024;1 - Boot 4 - 02:02.58 7;11614;Frankfurter RG Oberrad;2025-11-29 13:42:52
-580;2 RC Aschaffenburg - Boot 2 - 02:03.08 9;2026;2 - Boot 2 - 02:03.08 9;11101;RC Aschaffenburg;2025-11-29 13:42:52
-581;3 RC Möve Grossauheim - Boot 2 - 02:21.74 8;2028;3 - Boot 2 - 02:21.74 8;11625;RC Möve Grossauheim;2025-11-29 13:42:52
-582;1 Frankfurter RG Germania 01:39.84 3;2036;1 01:39.84 3;11610;Frankfurter RG Germania;2025-11-29 13:42:52
-583;2 SG Wiking 02:00.79 1;2039;2 02:00.79 1;11643;SG Wiking;2025-11-29 13:42:52
-584;1 Rgm. Frankfurter RG Germania/ Weilburger RV 01:29.05 1;2049;1 Rgm. / Weilburger RV 01:29.05 1;11610;Frankfurter RG Germania;2025-11-29 13:42:52
-585;2 Frankfurter RG Oberrad 01:42.62 2;2052;2 01:42.62 2;11614;Frankfurter RG Oberrad;2025-11-29 13:42:52
-586;2 Rgm. Frankfurter RG Germania/ SRR Schillerschule Frankfurt 01:46.24 1;156;2 Rgm. / 01:46.24 1;11610;Frankfurter RG Germania;2025-11-29 13:42:56
-587;1 Rgm. Frankfurter RC/ Frankfurter RG Germania 01:36.03 7;374;1 Rgm. / 01:36.03 7;11616;Frankfurter RC;2025-11-29 13:42:56
-588;2 Rgm. Frankfurter RC/ SG Wiking 01:38.56 9;376;2 Rgm. / 01:38.56 9;11643;SG Wiking;2025-11-29 13:42:56
-589;3 Rgm. RG Wetzlar/ WSV Hellas Gießen 01:48.86 8;378;3 Rgm. / 01:48.86 8;11647;RG Wetzlar;2025-11-29 13:42:56
-590;1 Rgm. RC Möve Grossauheim/ Mühlheimer RV 01:38.70 3;465;1 Rgm. / 01:38.70 3;11637;Mühlheimer RV;2025-11-29 13:42:56
-591;1 Rgm. Nassovia Höchst/ Limburger ClfW/ WSV Offenbach am Main-Bürgel 01:42.54 2;476;1 Rgm. / / WSV Offenbach am Main-Bürgel 01:42.54 2;11635;Limburger ClfW;2025-11-29 13:42:56
-592;2 Rgm. Frankfurter RG Borussia/ RC Aschaffenburg 01:42.80 4;499;2 Rgm. / 01:42.80 4;11101;RC Aschaffenburg;2025-11-29 13:42:56
-593;4 Rgm. Hanauer RC Hassia/ Hanauer RG 01:40.83 4;574;4 Rgm. / 01:40.83 4;11627;Hanauer RG;2025-11-29 13:42:56
-594;1 Rgm. RV Hellas Offenbach/ Limburger ClfW 01:49.78 1;634;1 Rgm. / 01:49.78 1;11635;Limburger ClfW;2025-11-29 13:42:56
-595;2 Rgm. Marburger RV/ Gießener RC Hassia/ RG Wetzlar 01:26.52 1;643;2 Rgm. / / RG Wetzlar 01:26.52 1;11636;Marburger RV;2025-11-29 13:42:56
-596;1 Rgm. Hanauer RC Hassia/ RV Dorsten 01:26.30 6;650;1 Rgm. / 01:26.30 6;11922;RV Dorsten;2025-11-29 13:42:56
-597;2 Rgm. RC Möve Grossauheim/ Mühlheimer RV 01:34.91 4;653;2 Rgm. / 01:34.91 4;11637;Mühlheimer RV;2025-11-29 13:42:56
-598;1 Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia 01:25.05 3;718;1 Rgm. / 01:25.05 3;11625;RC Möve Grossauheim;2025-11-29 13:42:56
-599;2 Rgm. Ruder-Gesellschaft HANSA e.V./ Limburger ClfW 01:48.29 1;833;2 Rgm. / 01:48.29 1;11635;Limburger ClfW;2025-11-29 13:42:56
-600;3 Rgm. Frankfurter RG Borussia/ Gießener RC Hassia 01:48.65 7;835;3 Rgm. / 01:48.65 7;11622;Gießener RC Hassia;2025-11-29 13:42:56
-601;2 Rgm. Ruder-Gesellschaft HANSA e.V./ Limburger ClfW 01:27.24 1;901;2 Rgm. / 01:27.24 1;11635;Limburger ClfW;2025-11-29 13:42:56
-602;3 Rgm. Hanauer RG/ RC Möve Grossauheim 01:38.21 2;904;3 Rgm. / 01:38.21 2;11627;Hanauer RG;2025-11-29 13:42:56
-603;1 Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia 01:36.89 1;914;1 Rgm. / 01:36.89 1;11625;RC Möve Grossauheim;2025-11-29 13:42:56
-604;2 Rgm. WSV Hellas Gießen/ RV Kurhessen-Cassel 01:40.04 2;916;2 Rgm. / 01:40.04 2;11623;WSV Hellas Gießen;2025-11-29 13:42:56
-605;2 Rgm. Hanauer RG/ Mühlheimer RV 01:38.00 1;923;2 Rgm. / 01:38.00 1;11627;Hanauer RG;2025-11-29 13:42:56
-606;1 Rgm. RV Hellas Offenbach/ Flörsheimer RV 01:40.12 4;929;1 Rgm. / 01:40.12 4;11606;Flörsheimer RV;2025-11-29 13:42:56
-607;1 Rgm. Frankfurter RG Germania/ Weilburger RV 01:40.98 1;1011;1 Rgm. / 01:40.98 1;11646;Weilburger RV;2025-11-29 13:42:56
-608;1 Rgm. WSV Offenbach am Main-Bürgel/ Nassovia Höchst 01:35.33 8;1047;1 Rgm. am Main-Bürgel/ 01:35.33 8;11642;WSV Offenbach;2025-11-29 13:42:56
-609;2 Rgm. Marburger RV/ Gießener RC Hassia 01:35.61 6;1049;2 Rgm. / 01:35.61 6;11636;Marburger RV;2025-11-29 13:42:56
-610;1 Rgm. Frankfurter RG Germania/ Weilburger RV 01:27.48 1;1111;1 Rgm. / 01:27.48 1;11646;Weilburger RV;2025-11-29 13:42:56
-611;2 Rgm. Hanauer RC Hassia/ RV Dorsten 01:29.88 3;1114;2 Rgm. / 01:29.88 3;11922;RV Dorsten;2025-11-29 13:42:56
-612;1 Rgm. Frankfurter RG Germania/ SRR Schillerschule Frankfurt 01:44.25 1;1260;1 Rgm. / 01:44.25 1;11610;Frankfurter RG Germania;2025-11-29 13:42:56
-613;3 Rgm. RC Möve Grossauheim/ Mühlheimer RV 01:45.97 3;1273;3 Rgm. / 01:45.97 3;11637;Mühlheimer RV;2025-11-29 13:42:56
-614;1 Rgm. Hanauer RC Hassia/ Frankfurter RG Borussia 01:34.59 1;1426;1 Rgm. / 01:34.59 1;11626;Hanauer RC Hassia;2025-11-29 13:42:56
-615;1 Rgm. DRC Ingolstadt/ RC Möve Grossauheim 01:40.36 8;1434;1 Rgm. / 01:40.36 8;11106;DRC Ingolstadt;2025-11-29 13:42:56
-616;1 Rgm. Frankfurter RC/ Frankfurter RG Germania 01:36.24 4;1442;1 Rgm. / 01:36.24 4;11616;Frankfurter RC;2025-11-29 13:42:56
-617;2 Rgm. Frankfurter RC/ SG Wiking 01:38.92 7;1444;2 Rgm. / 01:38.92 7;11643;SG Wiking;2025-11-29 13:42:56
-618;1 Rgm. RC Möve Grossauheim/ Mühlheimer RV 01:37.08 3;1514;1 Rgm. / 01:37.08 3;11637;Mühlheimer RV;2025-11-29 13:42:56
-619;3 Rgm. RC Möve Grossauheim/ Mühlheimer RV 01:37.10 3;1644;3 Rgm. / 01:37.10 3;11637;Mühlheimer RV;2025-11-29 13:42:57
-620;1 Rgm. Marburger RV/ Gießener RC Hassia/ RG Wetzlar 01:26.69 4;1649;1 Rgm. / / RG Wetzlar 01:26.69 4;11636;Marburger RV;2025-11-29 13:42:57
-621;2 Rgm. WSV Offenbach am Main-Bürgel/ Nassovia Höchst 01:29.51 5;1652;2 Rgm. am Main-Bürgel/ 01:29.51 5;11642;WSV Offenbach;2025-11-29 13:42:57
-622;2 Rgm. RG Wetzlar/ Marburger RV/ Gießener R.G./ Gießener RC Hassia 01:19.91 4;1709;2 Rgm. RG Wetzlar/ Marburger RV/ / 01:19.91 4;11624;Gießener R.G.;2025-11-29 13:42:57
-623;3 Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia 01:20.92 2;1712;3 Rgm. / 01:20.92 2;11625;RC Möve Grossauheim;2025-11-29 13:42:57
-624;1 Rgm. Hanauer RG/ WSV Offenbach am Main-Bürgel 01:34.49 1;1720;1 Rgm. / am Main-Bürgel 01:34.49 1;11627;Hanauer RG;2025-11-29 13:42:57
-625;2 Rgm. Marburger RV/ Frankfurter RG Borussia 01:37.30 2;1723;2 Rgm. / 01:37.30 2;11636;Marburger RV;2025-11-29 13:42:57
-626;1 Rgm. Gießener RC Hassia/ DRC Ingolstadt 01:46.77 8;1808;1 Rgm. / 01:46.77 8;11106;DRC Ingolstadt;2025-11-29 13:42:57
-627;1 Rgm. RC Möve Grossauheim/ WSV Offenbach am Main-Bürgel 01:41.99 4;1848;1 Rgm. / am Main-Bürgel 01:41.99 4;11642;WSV Offenbach;2025-11-29 13:42:57
-628;2 Rgm. Frankfurter RG Borussia/ RC Aschaffenburg 01:43.63 3;1850;2 Rgm. / 01:43.63 3;11101;RC Aschaffenburg;2025-11-29 13:42:57
-629;1 Rgm. Hanauer RC Hassia/ Frankfurter RG Oberrad/ Frankfurter RC/ Frankfurter RG 01:26.51 2;1872;1 Rgm. / / Frankfurter RC/ Frankfurter RG 01:26.51 2;11626;Hanauer RC Hassia;2025-11-29 13:42:57
-630;2 Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia/ DRC Ingolstadt/ Gießener R.G. 01:29.92 3;1876;2 Rgm. / / DRC Ingolstadt/ Gießener R.G. 01:29.92 3;11625;RC Möve Grossauheim;2025-11-29 13:42:57
-631;1 Rgm. Ruderclub Zellingen v. 1946 e.V./ Würzburger Ruderverein Bayern von 1875/1905 e.V. 01:34.27 1;1888;1 Rgm. / 01:34.27 1;11132;Ruderclub Zellingen v. 1946 e.V.;2025-11-29 13:42:57
-632;2 Rgm. Hanauer RG/ Mühlheimer RV 01:35.55 2;1890;2 Rgm. / 01:35.55 2;11627;Hanauer RG;2025-11-29 13:42:57
-633;2 Rgm. RV Hellas Offenbach/ Flörsheimer RV 01:36.23 5;1898;2 Rgm. / 01:36.23 5;11606;Flörsheimer RV;2025-11-29 13:42:57
-634;1 Rgm. Frankfurter RG Germania/ Weilburger RV 01:40.32 2;1968;1 Rgm. / 01:40.32 2;11646;Weilburger RV;2025-11-29 13:42:57
-635;2 Rgm. Marburger RV/ Gießener RC Hassia 01:37.05 4;1989;2 Rgm. / 01:37.05 4;11636;Marburger RV;2025-11-29 13:42:57
-636;1 Rgm. WSV Offenbach am Main-Bürgel/ Nassovia Höchst 01:35.81 6;1995;1 Rgm. am Main-Bürgel/ 01:35.81 6;11642;WSV Offenbach;2025-11-29 13:42:57
-637;1 Rgm. Frankfurter RG Germania/ Weilburger RV 01:29.05 1;2049;1 Rgm. / 01:29.05 1;11646;Weilburger RV;2025-11-29 13:42:57
-638;1 Rgm. Nassovia Höchst/ Limburger ClfW/ WSV Offenbach am Main-Bürgel 01:42.54 2;476;1 Rgm. / / am Main-Bürgel 01:42.54 2;11642;WSV Offenbach;2025-11-29 13:43:00
-639;2 Rgm. Marburger RV/ Gießener RC Hassia/ RG Wetzlar 01:26.52 1;643;2 Rgm. / / 01:26.52 1;11647;RG Wetzlar;2025-11-29 13:43:00
-640;1 Rgm. Marburger RV/ Gießener RC Hassia/ RG Wetzlar 01:26.69 4;1649;1 Rgm. / / 01:26.69 4;11647;RG Wetzlar;2025-11-29 13:43:01
-641;2 Rgm. RG Wetzlar/ Marburger RV/ Gießener R.G./ Gießener RC Hassia 01:19.91 4;1709;2 Rgm. RG Wetzlar/ / / 01:19.91 4;11636;Marburger RV;2025-11-29 13:43:01
-642;1 Rgm. Hanauer RC Hassia/ Frankfurter RG Oberrad/ Frankfurter RC/ Frankfurter RG 01:26.51 2;1872;1 Rgm. / / / Frankfurter RG 01:26.51 2;11616;Frankfurter RC;2025-11-29 13:43:01
-643;2 Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia/ DRC Ingolstadt/ Gießener R.G. 01:29.92 3;1876;2 Rgm. / / / Gießener R.G. 01:29.92 3;11106;DRC Ingolstadt;2025-11-29 13:43:01
-644;2 Rgm. RG Wetzlar/ Marburger RV/ Gießener R.G./ Gießener RC Hassia 01:19.91 4;1709;2 Rgm. / / / 01:19.91 4;11647;RG Wetzlar;2025-11-29 13:43:05
-645;2 Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia/ DRC Ingolstadt/ Gießener R.G. 01:29.92 3;1876;2 Rgm. / / / 01:29.92 3;11624;Gießener R.G.;2025-11-29 13:43:05
+1;RG Eberbach;7;;11004;RG Eberbach;2025-11-29 16:37:31
+2;RV Hellas Offenbach;9;;11638;RV Hellas Offenbach;2025-11-29 16:37:31
+3;Hanauer RG;11;;11627;Hanauer RG;2025-11-29 16:37:31
+4;Hanauer RC Hassia;13;;11626;Hanauer RC Hassia;2025-11-29 16:37:31
+5;Frankfurter RG Oberrad;17;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:31
+6;Nassovia Höchst;19;;11612;Nassovia Höchst;2025-11-29 16:37:31
+7;Hanauer RG;21;;11627;Hanauer RG;2025-11-29 16:37:31
+8;RG Eberbach;23;;11004;RG Eberbach;2025-11-29 16:37:31
+9;RC Karlstadt;27;;11107;RC Karlstadt;2025-11-29 16:37:31
+10;Wormser RC;29;;12038;Wormser RC;2025-11-29 16:37:31
+11;RG Wetzlar;31;;11647;RG Wetzlar;2025-11-29 16:37:31
+12;Frankfurter RG Oberrad;35;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:31
+13;Hanauer RG;37;;11627;Hanauer RG;2025-11-29 16:37:31
+14;Hanauer RG;39;;11627;Hanauer RG;2025-11-29 16:37:31
+15;Frankfurter RC;41;;11616;Frankfurter RC;2025-11-29 16:37:31
+16;Hanauer RC Hassia;48;;11626;Hanauer RC Hassia;2025-11-29 16:37:31
+17;Wormser RC;50;;12038;Wormser RC;2025-11-29 16:37:31
+18;RG Wetzlar;52;;11647;RG Wetzlar;2025-11-29 16:37:31
+19;RG Wetzlar;54;;11647;RG Wetzlar;2025-11-29 16:37:31
+20;Marburger RV;58;;11636;Marburger RV;2025-11-29 16:37:31
+21;Hanauer RG;60;;11627;Hanauer RG;2025-11-29 16:37:31
+22;WSV Hellas Gießen;62;;11623;WSV Hellas Gießen;2025-11-29 16:37:31
+23;RG Wetzlar;71;;11647;RG Wetzlar;2025-11-29 16:37:31
+24;Frankfurter RG Germania;73;;11610;Frankfurter RG Germania;2025-11-29 16:37:31
+25;RC Möve Grossauheim;75;;11625;RC Möve Grossauheim;2025-11-29 16:37:31
+26;Frankfurter RG Oberrad;77;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:31
+27;Frankfurter RG Germania;81;;11610;Frankfurter RG Germania;2025-11-29 16:37:31
+28;Frankfurter RG Germania;83;;11610;Frankfurter RG Germania;2025-11-29 16:37:31
+29;Frankfurter RG Oberrad;85;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:31
+30;SG Wiking;87;;11643;SG Wiking;2025-11-29 16:37:31
+31;Hanauer RG;91;;11627;Hanauer RG;2025-11-29 16:37:31
+32;Frankfurter RC;93;;11616;Frankfurter RC;2025-11-29 16:37:31
+33;Mühlheimer RV;95;;11637;Mühlheimer RV;2025-11-29 16:37:31
+34;WSV Offenbach am Main-Bürgel;108;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:31
+35;Hanauer RC Hassia;110;;11626;Hanauer RC Hassia;2025-11-29 16:37:31
+36;RC Möve Grossauheim;112;;11625;RC Möve Grossauheim;2025-11-29 16:37:31
+37;Limburger ClfW;116;;11635;Limburger ClfW;2025-11-29 16:37:31
+38;WSV Offenbach am Main-Bürgel;118;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:31
+39;SG Wiking;120;;11643;SG Wiking;2025-11-29 16:37:31
+40;Nassovia Höchst;124;;11612;Nassovia Höchst;2025-11-29 16:37:31
+41;Limburger ClfW;126;;11635;Limburger ClfW;2025-11-29 16:37:31
+42;RG Wetzlar;128;;11647;RG Wetzlar;2025-11-29 16:37:31
+43;SG Wiking;130;;11643;SG Wiking;2025-11-29 16:37:31
+44;Limburger ClfW;134;;11635;Limburger ClfW;2025-11-29 16:37:31
+45;RG Eberbach;136;;11004;RG Eberbach;2025-11-29 16:37:31
+46;WSV Hellas Gießen;138;;11623;WSV Hellas Gießen;2025-11-29 16:37:32
+47;RC Aschaffenburg;142;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+48;Hanauer RG;144;;11627;Hanauer RG;2025-11-29 16:37:32
+49;Hanauer RC Hassia;153;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+50;Rgm. Frankfurter RG Germania/ SRR Schillerschule Frankfurt;156;Rgm. Frankfurter RG Germania/;15626;SRR Schillerschule Frankfurt;2025-11-29 16:37:32
+51;Frankfurter RC;159;;11616;Frankfurter RC;2025-11-29 16:37:32
+52;Hanauer RC Hassia;169;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+53;Offenbacher RG Undine;171;;11641;Offenbacher RG Undine;2025-11-29 16:37:32
+54;RG Eberbach;173;;11004;RG Eberbach;2025-11-29 16:37:32
+55;Marburger RV;181;;11636;Marburger RV;2025-11-29 16:37:32
+56;Hanauer RC Hassia;183;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+57;Frauen-RV Freiweg Frankfurt;187;;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 16:37:32
+58;Frankfurter RG Borussia;189;;11607;Frankfurter RG Borussia;2025-11-29 16:37:32
+59;RG Wetzlar;191;;11647;RG Wetzlar;2025-11-29 16:37:32
+60;RV Hellas Offenbach;193;;11638;RV Hellas Offenbach;2025-11-29 16:37:32
+61;RC Aschaffenburg;205;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+62;Limburger ClfW;207;;11635;Limburger ClfW;2025-11-29 16:37:32
+63;SG Wiking;209;;11643;SG Wiking;2025-11-29 16:37:32
+64;RC Aschaffenburg;211;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+65;Hanauer RC Hassia;215;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+66;Limburger ClfW;217;;11635;Limburger ClfW;2025-11-29 16:37:32
+67;SG Wiking;219;;11643;SG Wiking;2025-11-29 16:37:32
+68;RC Karlstadt;223;;11107;RC Karlstadt;2025-11-29 16:37:32
+69;RG Wetzlar;225;;11647;RG Wetzlar;2025-11-29 16:37:32
+70;Limburger ClfW;227;;11635;Limburger ClfW;2025-11-29 16:37:32
+71;Hanauer RG;231;;11627;Hanauer RG;2025-11-29 16:37:32
+72;Mühlheimer RV;233;;11637;Mühlheimer RV;2025-11-29 16:37:32
+73;Hanauer RG;235;;11627;Hanauer RG;2025-11-29 16:37:32
+74;Mühlheimer RV;239;;11637;Mühlheimer RV;2025-11-29 16:37:32
+75;RC Karlstadt;241;;11107;RC Karlstadt;2025-11-29 16:37:32
+76;Hanauer RG;243;;11627;Hanauer RG;2025-11-29 16:37:32
+77;Mühlheimer RV;247;;11637;Mühlheimer RV;2025-11-29 16:37:32
+78;Hanauer RG;249;;11627;Hanauer RG;2025-11-29 16:37:32
+79;Hanauer RG;251;;11627;Hanauer RG;2025-11-29 16:37:32
+80;Mühlheimer RV;263;;11637;Mühlheimer RV;2025-11-29 16:37:32
+81;Gießener RC Hassia;265;;11622;Gießener RC Hassia;2025-11-29 16:37:32
+82;Frauen-RV Freiweg Frankfurt;267;;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 16:37:32
+83;Hanauer RC Hassia;274;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+84;Limburger ClfW;276;;11635;Limburger ClfW;2025-11-29 16:37:32
+85;RG Wetzlar;278;;11647;RG Wetzlar;2025-11-29 16:37:32
+86;Frankfurter RG Germania;289;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+87;Frankfurter RC;291;;11616;Frankfurter RC;2025-11-29 16:37:32
+88;Limburger ClfW;297;;11635;Limburger ClfW;2025-11-29 16:37:32
+89;Hanauer RG;299;;11627;Hanauer RG;2025-11-29 16:37:32
+90;Frankfurter Ruder- und Kanusport Verein;301;;11620;Frankfurter Ruder- und Kanusport Verein;2025-11-29 16:37:32
+91;Frankfurter RC;315;;11616;Frankfurter RC;2025-11-29 16:37:32
+92;Hanauer RC Hassia;317;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+93;RG Eberbach;319;;11004;RG Eberbach;2025-11-29 16:37:32
+94;Frankfurter RC;323;;11616;Frankfurter RC;2025-11-29 16:37:32
+95;Nassovia Höchst;325;;11612;Nassovia Höchst;2025-11-29 16:37:32
+96;Frankfurter RG Oberrad;329;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+97;SG Wiking;331;;11643;SG Wiking;2025-11-29 16:37:32
+98;RG Wetzlar;333;;11647;RG Wetzlar;2025-11-29 16:37:32
+99;Frankfurter RG Oberrad;337;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+100;RG Wetzlar;339;;11647;RG Wetzlar;2025-11-29 16:37:32
+101;Frankfurter RG Oberrad;347;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+102;Hanauer RC Hassia;349;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+103;Limburger ClfW;358;;11635;Limburger ClfW;2025-11-29 16:37:32
+104;Frankfurter RG Borussia;360;;11607;Frankfurter RG Borussia;2025-11-29 16:37:32
+105;Gießener RC Hassia;362;;11622;Gießener RC Hassia;2025-11-29 16:37:32
+106;Limburger ClfW;366;;11635;Limburger ClfW;2025-11-29 16:37:32
+107;Marburger RV;368;;11636;Marburger RV;2025-11-29 16:37:32
+108;RV Hellas Offenbach;370;;11638;RV Hellas Offenbach;2025-11-29 16:37:32
+109;Rgm. Frankfurter RC/ Frankfurter RG Germania;374;Rgm. Frankfurter RC/;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+110;Rgm. Frankfurter RC/ SG Wiking;376;Rgm. / SG Wiking;11616;Frankfurter RC;2025-11-29 16:37:32
+111;Rgm. RG Wetzlar/ WSV Hellas Gießen;378;Rgm. RG Wetzlar/;11623;WSV Hellas Gießen;2025-11-29 16:37:32
+112;SG Wiking;383;;11643;SG Wiking;2025-11-29 16:37:32
+113;Hanauer RC Hassia;385;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+114;RC Karlstadt;389;;11107;RC Karlstadt;2025-11-29 16:37:32
+115;Limburger ClfW;391;;11635;Limburger ClfW;2025-11-29 16:37:32
+116;Frankfurter RG Oberrad;396;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+117;WSV Offenbach am Main-Bürgel;398;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+118;Nassovia Höchst;407;;11612;Nassovia Höchst;2025-11-29 16:37:32
+119;Limburger ClfW;409;;11635;Limburger ClfW;2025-11-29 16:37:32
+120;Frankfurter RG Germania;411;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+121;Hanauer RC Hassia;415;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+122;Wormser RC;417;;12038;Wormser RC;2025-11-29 16:37:32
+123;Frankfurter RG Oberrad;426;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+124;Frankfurter RG Oberrad;428;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+125;SG Wiking;430;;11643;SG Wiking;2025-11-29 16:37:32
+126;RG Wetzlar;434;;11647;RG Wetzlar;2025-11-29 16:37:32
+127;Frankfurter RC;436;;11616;Frankfurter RC;2025-11-29 16:37:32
+128;Frankfurter RG Oberrad;438;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+129;Nassovia Höchst;442;;11612;Nassovia Höchst;2025-11-29 16:37:32
+130;SG Wiking;444;;11643;SG Wiking;2025-11-29 16:37:32
+131;Frankfurter RC;448;;11616;Frankfurter RC;2025-11-29 16:37:32
+132;RC Möve Grossauheim;450;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+133;Mühlheimer RV;452;;11637;Mühlheimer RV;2025-11-29 16:37:32
+134;Hanauer RG;454;;11627;Hanauer RG;2025-11-29 16:37:32
+135;Rgm. RC Möve Grossauheim/ Mühlheimer RV;465;Rgm. / Mühlheimer RV;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+136;WSV Offenbach am Main-Bürgel;467;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+137;WSV Offenbach am Main-Bürgel;469;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+138;Rgm. Nassovia Höchst/ Limburger ClfW/ WSV Offenbach am Main-Bürgel;476;Rgm. / Limburger ClfW/ WSV Offenbach am Main-Bürgel;11612;Nassovia Höchst;2025-11-29 16:37:32
+139;RC Möve Grossauheim;479;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+140;Frankfurter RG Germania;485;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+141;SG Wiking;488;;11643;SG Wiking;2025-11-29 16:37:32
+142;Limburger ClfW;491;;11635;Limburger ClfW;2025-11-29 16:37:32
+143;Hersfelder RV;497;;11628;Hersfelder RV;2025-11-29 16:37:32
+144;Rgm. Frankfurter RG Borussia/ RC Aschaffenburg;499;Rgm. / RC Aschaffenburg;11607;Frankfurter RG Borussia;2025-11-29 16:37:32
+145;Frauen-RV Freiweg Frankfurt;502;;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 16:37:32
+146;Frauen-RV Freiweg Frankfurt;504;;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 16:37:32
+147;Marburger RV;513;;11636;Marburger RV;2025-11-29 16:37:32
+148;Nassovia Höchst;515;;11612;Nassovia Höchst;2025-11-29 16:37:32
+149;Hanauer RC Hassia;517;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+150;RG Wetzlar;519;;11647;RG Wetzlar;2025-11-29 16:37:32
+151;RG Eberbach;523;;11004;RG Eberbach;2025-11-29 16:37:32
+152;RG Eberbach;525;;11004;RG Eberbach;2025-11-29 16:37:32
+153;Hanauer RC Hassia;527;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+154;Wormser RC;529;;12038;Wormser RC;2025-11-29 16:37:32
+155;RC Aschaffenburg;533;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+156;Offenbacher RG Undine;535;;11641;Offenbacher RG Undine;2025-11-29 16:37:32
+157;Frankfurter RG Oberrad;539;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+158;Limburger ClfW;541;;11635;Limburger ClfW;2025-11-29 16:37:32
+159;Nassovia Höchst;543;;11612;Nassovia Höchst;2025-11-29 16:37:32
+160;Frankfurter RC;547;;11616;Frankfurter RC;2025-11-29 16:37:32
+161;WSV Offenbach am Main-Bürgel;549;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+162;RC Möve Grossauheim;551;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+163;RG Wetzlar;553;;11647;RG Wetzlar;2025-11-29 16:37:32
+164;Offenbacher RG Undine;568;;11641;Offenbacher RG Undine;2025-11-29 16:37:32
+165;Frankfurter RG Germania;570;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+166;Frankfurter RG Germania;572;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+167;Rgm. Hanauer RC Hassia/ Hanauer RG;574;Rgm. / Hanauer RG;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+168;Frankfurter RG Oberrad;578;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+169;Hanauer RG;580;;11627;Hanauer RG;2025-11-29 16:37:32
+170;Hanauer RG;584;;11627;Hanauer RG;2025-11-29 16:37:32
+171;Hanauer RC Hassia;586;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+172;Frankfurter RG Borussia;593;;11607;Frankfurter RG Borussia;2025-11-29 16:37:32
+173;Gießener RC Hassia;595;;11622;Gießener RC Hassia;2025-11-29 16:37:32
+174;RV Hellas Offenbach;599;;11638;RV Hellas Offenbach;2025-11-29 16:37:32
+175;Marburger RV;601;;11636;Marburger RV;2025-11-29 16:37:32
+176;RC Möve Grossauheim;605;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+177;Wormser RC;607;;12038;Wormser RC;2025-11-29 16:37:32
+178;WSV Hellas Gießen;609;;11623;WSV Hellas Gießen;2025-11-29 16:37:32
+179;RC Aschaffenburg;614;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+180;WSV Hellas Gießen;616;;11623;WSV Hellas Gießen;2025-11-29 16:37:32
+181;Frankfurter RG Oberrad;620;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+182;Wormser RC;622;;12038;Wormser RC;2025-11-29 16:37:32
+183;Rgm. RV Hellas Offenbach/ Limburger ClfW;634;Rgm. / Limburger ClfW;11638;RV Hellas Offenbach;2025-11-29 16:37:32
+184;Frauen-RV Freiweg Frankfurt;636;;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 16:37:32
+185;RG Eberbach;641;;11004;RG Eberbach;2025-11-29 16:37:32
+186;Rgm. Marburger RV/ Gießener RC Hassia/ RG Wetzlar;643;Rgm. Marburger RV/ / RG Wetzlar;11622;Gießener RC Hassia;2025-11-29 16:37:32
+187;Frankfurter RG Germania;646;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+188;Rgm. Hanauer RC Hassia/ RV Dorsten;650;Rgm. / RV Dorsten;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+189;Rgm. RC Möve Grossauheim/ Mühlheimer RV;653;Rgm. / Mühlheimer RV;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+190;WSV Offenbach am Main-Bürgel;656;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+191;RG Wetzlar;661;;11647;RG Wetzlar;2025-11-29 16:37:32
+192;RC Möve Grossauheim;663;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+193;SG Wiking;665;;11643;SG Wiking;2025-11-29 16:37:32
+194;RC Karlstadt;667;;11107;RC Karlstadt;2025-11-29 16:37:32
+195;SG Wiking;671;;11643;SG Wiking;2025-11-29 16:37:32
+196;RC Möve Grossauheim;673;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+197;SG Wiking;675;;11643;SG Wiking;2025-11-29 16:37:32
+198;WSV Offenbach am Main-Bürgel;679;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+199;Hanauer RG;681;;11627;Hanauer RG;2025-11-29 16:37:32
+200;Hanauer RG;683;;11627;Hanauer RG;2025-11-29 16:37:32
+201;Frankfurter Ruder- und Kanusport Verein;685;;11620;Frankfurter Ruder- und Kanusport Verein;2025-11-29 16:37:32
+202;Hanauer RC Hassia;697;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+203;SRR Schillerschule Frankfurt;699;;15626;SRR Schillerschule Frankfurt;2025-11-29 16:37:32
+204;Frankfurter RC;701;;11616;Frankfurter RC;2025-11-29 16:37:32
+205;Limburger ClfW;703;;11635;Limburger ClfW;2025-11-29 16:37:32
+206;Frankfurter RC;707;;11616;Frankfurter RC;2025-11-29 16:37:32
+207;RC Karlstadt;709;;11107;RC Karlstadt;2025-11-29 16:37:32
+208;RC Möve Grossauheim;711;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+209;Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia;718;Rgm. RC Möve Grossauheim/;11607;Frankfurter RG Borussia;2025-11-29 16:37:32
+210;Wormser RC;721;;12038;Wormser RC;2025-11-29 16:37:32
+211;Nassovia Höchst;723;;11612;Nassovia Höchst;2025-11-29 16:37:32
+212;Hanauer RC Hassia;727;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+213;Hanauer RG;729;;11627;Hanauer RG;2025-11-29 16:37:32
+214;Frankfurter RG Germania;731;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+215;RC Aschaffenburg;743;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+216;Mühlheimer RV;745;;11637;Mühlheimer RV;2025-11-29 16:37:32
+217;SG Wiking;747;;11643;SG Wiking;2025-11-29 16:37:32
+218;Hanauer RG;749;;11627;Hanauer RG;2025-11-29 16:37:32
+219;RV Hellas Offenbach;753;;11638;RV Hellas Offenbach;2025-11-29 16:37:32
+220;RG Eberbach;755;;11004;RG Eberbach;2025-11-29 16:37:32
+221;WSV Offenbach am Main-Bürgel;759;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+222;Mühlheimer RV;761;;11637;Mühlheimer RV;2025-11-29 16:37:32
+223;Wormser RC;767;;12038;Wormser RC;2025-11-29 16:37:32
+224;WSV Offenbach am Main-Bürgel;769;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+225;Hanauer RG;771;;11627;Hanauer RG;2025-11-29 16:37:32
+226;RC Aschaffenburg;775;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+227;Frankfurter RC;777;;11616;Frankfurter RC;2025-11-29 16:37:32
+228;Offenbacher RG Undine;779;;11641;Offenbacher RG Undine;2025-11-29 16:37:32
+229;Frankfurter RC;783;;11616;Frankfurter RC;2025-11-29 16:37:32
+230;Marburger RV;785;;11636;Marburger RV;2025-11-29 16:37:32
+231;Limburger ClfW;798;;11635;Limburger ClfW;2025-11-29 16:37:32
+232;WSV Offenbach am Main-Bürgel;800;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+233;RC Möve Grossauheim;802;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+234;Frankfurter RG Germania;806;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+235;RC Möve Grossauheim;808;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+236;RC Aschaffenburg;812;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+237;SG Wiking;814;;11643;SG Wiking;2025-11-29 16:37:32
+238;RC Möve Grossauheim;816;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+239;RC Karlstadt;824;;11107;RC Karlstadt;2025-11-29 16:37:32
+240;RC Karlstadt;826;;11107;RC Karlstadt;2025-11-29 16:37:32
+241;Marburger RV;831;;11636;Marburger RV;2025-11-29 16:37:32
+242;Rgm. Ruder-Gesellschaft HANSA e.V./ Limburger ClfW;833;Rgm. / Limburger ClfW;11511;Ruder-Gesellschaft HANSA e.V.;2025-11-29 16:37:32
+243;Rgm. Frankfurter RG Borussia/ Gießener RC Hassia;835;Rgm. / Gießener RC Hassia;11607;Frankfurter RG Borussia;2025-11-29 16:37:32
+244;RV Hellas Offenbach;837;;11638;RV Hellas Offenbach;2025-11-29 16:37:32
+245;Frankfurter RC;841;;11616;Frankfurter RC;2025-11-29 16:37:32
+246;Hanauer RC Hassia;843;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+247;Hanauer RG;845;;11627;Hanauer RG;2025-11-29 16:37:32
+248;Hanauer RC Hassia;854;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+249;Nassovia Höchst;856;;11612;Nassovia Höchst;2025-11-29 16:37:32
+250;Hanauer RC Hassia;858;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+251;Frankfurter RG Oberrad;862;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+252;Frankfurter RG Oberrad;864;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+253;Frankfurter RG Oberrad;868;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+254;Nassovia Höchst;870;;11612;Nassovia Höchst;2025-11-29 16:37:32
+255;Hanauer RG;872;;11627;Hanauer RG;2025-11-29 16:37:32
+256;RC Aschaffenburg;882;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+257;SG Wiking;885;;11643;SG Wiking;2025-11-29 16:37:32
+258;Frankfurter RG Germania;888;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+259;Frankfurter RG Oberrad;891;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+260;Marburger RV;899;;11636;Marburger RV;2025-11-29 16:37:32
+261;Rgm. Ruder-Gesellschaft HANSA e.V./ Limburger ClfW;901;Rgm. / Limburger ClfW;11511;Ruder-Gesellschaft HANSA e.V.;2025-11-29 16:37:32
+262;Rgm. Hanauer RG/ RC Möve Grossauheim;904;Rgm. Hanauer RG/;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+263;Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia;914;Rgm. RC Möve Grossauheim/;11607;Frankfurter RG Borussia;2025-11-29 16:37:32
+264;Rgm. WSV Hellas Gießen/ RV Kurhessen-Cassel;916;Rgm. WSV Hellas Gießen/;11632;RV Kurhessen-Cassel;2025-11-29 16:37:32
+265;RC Möve Grossauheim;921;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+266;Rgm. Hanauer RG/ Mühlheimer RV;923;Rgm. Hanauer RG/;11637;Mühlheimer RV;2025-11-29 16:37:32
+267;Frauen-RV Freiweg Frankfurt;925;;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 16:37:32
+268;Rgm. RV Hellas Offenbach/ Flörsheimer RV;929;Rgm. / Flörsheimer RV;11638;RV Hellas Offenbach;2025-11-29 16:37:32
+269;Gießener RC Hassia;931;;11622;Gießener RC Hassia;2025-11-29 16:37:32
+270;SG Wiking;936;;11643;SG Wiking;2025-11-29 16:37:32
+271;Limburger ClfW;938;;11635;Limburger ClfW;2025-11-29 16:37:32
+272;RC Aschaffenburg;940;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+273;RC Karlstadt;944;;11107;RC Karlstadt;2025-11-29 16:37:32
+274;Limburger ClfW;946;;11635;Limburger ClfW;2025-11-29 16:37:32
+275;Mühlheimer RV;950;;11637;Mühlheimer RV;2025-11-29 16:37:32
+276;Hanauer RG;952;;11627;Hanauer RG;2025-11-29 16:37:32
+277;Hanauer RG;954;;11627;Hanauer RG;2025-11-29 16:37:32
+278;RV Hellas Offenbach;965;;11638;RV Hellas Offenbach;2025-11-29 16:37:32
+279;Mühlheimer RV;967;;11637;Mühlheimer RV;2025-11-29 16:37:32
+280;WSV Offenbach am Main-Bürgel;969;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+281;RC Möve Grossauheim;971;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+282;RC Aschaffenburg;975;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+283;Frankfurter Ruder- und Kanusport Verein;977;;11620;Frankfurter Ruder- und Kanusport Verein;2025-11-29 16:37:32
+284;WSV Offenbach am Main-Bürgel;979;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+285;Mühlheimer RV;981;;11637;Mühlheimer RV;2025-11-29 16:37:32
+286;WSV Offenbach am Main-Bürgel;985;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+287;Frankfurter RC;987;;11616;Frankfurter RC;2025-11-29 16:37:32
+288;Frankfurter RC;994;;11616;Frankfurter RC;2025-11-29 16:37:32
+289;WSV Offenbach am Main-Bürgel;996;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+290;Marburger RV;998;;11636;Marburger RV;2025-11-29 16:37:32
+291;Rgm. Frankfurter RG Germania/ Weilburger RV;1011;Rgm. / Weilburger RV;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+292;Frankfurter RG Oberrad;1013;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+293;Hanauer RC Hassia;1015;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+294;Frankfurter RC;1019;;11616;Frankfurter RC;2025-11-29 16:37:32
+295;Nassovia Höchst;1021;;11612;Nassovia Höchst;2025-11-29 16:37:32
+296;RG Eberbach;1023;;11004;RG Eberbach;2025-11-29 16:37:32
+297;Frankfurter RG Oberrad;1027;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+298;Frankfurter RC;1029;;11616;Frankfurter RC;2025-11-29 16:37:32
+299;RG Wetzlar;1031;;11647;RG Wetzlar;2025-11-29 16:37:32
+300;Hanauer RC Hassia;1037;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+301;Frankfurter RG Germania;1039;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+302;RG Eberbach;1041;;11004;RG Eberbach;2025-11-29 16:37:32
+303;Hanauer RG;1043;;11627;Hanauer RG;2025-11-29 16:37:32
+304;Rgm. WSV Offenbach am Main-Bürgel/ Nassovia Höchst;1047;Rgm. WSV Offenbach am Main-Bürgel/;11612;Nassovia Höchst;2025-11-29 16:37:32
+305;Rgm. Marburger RV/ Gießener RC Hassia;1049;Rgm. Marburger RV/;11622;Gießener RC Hassia;2025-11-29 16:37:32
+306;Wormser RC;1051;;12038;Wormser RC;2025-11-29 16:37:32
+307;RC Möve Grossauheim;1055;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+308;Frankfurter RG Oberrad;1057;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+309;Limburger ClfW;1064;;11635;Limburger ClfW;2025-11-29 16:37:32
+310;Frauen-RV Freiweg Frankfurt;1066;;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 16:37:32
+311;RC Möve Grossauheim;1075;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+312;Frankfurter RG Oberrad;1077;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+313;Frankfurter RG Oberrad;1081;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+314;Frankfurter RG Oberrad;1083;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+315;RC Möve Grossauheim;1085;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+316;RC Aschaffenburg;1089;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+317;Frankfurter RG Oberrad;1091;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+318;SG Wiking;1099;;11643;SG Wiking;2025-11-29 16:37:32
+319;Frankfurter RG Germania;1102;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+320;Rgm. Frankfurter RG Germania/ Weilburger RV;1111;Rgm. / Weilburger RV;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+321;Rgm. Hanauer RC Hassia/ RV Dorsten;1114;Rgm. / RV Dorsten;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+322;Frankfurter RG Oberrad;1117;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+323;RV Hellas Offenbach;1129;;11638;RV Hellas Offenbach;2025-11-29 16:37:32
+324;SG Wiking;1131;;11643;SG Wiking;2025-11-29 16:37:32
+325;Hanauer RG;1133;;11627;Hanauer RG;2025-11-29 16:37:32
+326;RG Eberbach;1137;;11004;RG Eberbach;2025-11-29 16:37:32
+327;Mühlheimer RV;1139;;11637;Mühlheimer RV;2025-11-29 16:37:32
+328;SG Wiking;1141;;11643;SG Wiking;2025-11-29 16:37:32
+329;Frankfurter RG Oberrad;1145;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+330;Hanauer RG;1147;;11627;Hanauer RG;2025-11-29 16:37:32
+331;RG Wetzlar;1149;;11647;RG Wetzlar;2025-11-29 16:37:32
+332;RC Karlstadt;1153;;11107;RC Karlstadt;2025-11-29 16:37:32
+333;Wormser RC;1155;;12038;Wormser RC;2025-11-29 16:37:32
+334;RG Eberbach;1157;;11004;RG Eberbach;2025-11-29 16:37:32
+335;Frankfurter RG Oberrad;1161;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+336;Hanauer RG;1163;;11627;Hanauer RG;2025-11-29 16:37:32
+337;Wormser RC;1173;;12038;Wormser RC;2025-11-29 16:37:32
+338;RG Wetzlar;1175;;11647;RG Wetzlar;2025-11-29 16:37:32
+339;Marburger RV;1177;;11636;Marburger RV;2025-11-29 16:37:32
+340;Hanauer RG;1181;;11627;Hanauer RG;2025-11-29 16:37:32
+341;WSV Hellas Gießen;1183;;11623;WSV Hellas Gießen;2025-11-29 16:37:32
+342;Frankfurter RG Germania;1194;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+343;SG Wiking;1196;;11643;SG Wiking;2025-11-29 16:37:32
+344;RC Möve Grossauheim;1198;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+345;Frankfurter RG Oberrad;1202;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+346;SG Wiking;1204;;11643;SG Wiking;2025-11-29 16:37:32
+347;Frankfurter RG Germania;1208;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+348;Frankfurter RG Germania;1210;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+349;Frankfurter RG Oberrad;1212;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+350;Hanauer RG;1216;;11627;Hanauer RG;2025-11-29 16:37:32
+351;Frankfurter RC;1218;;11616;Frankfurter RC;2025-11-29 16:37:32
+352;Mühlheimer RV;1220;;11637;Mühlheimer RV;2025-11-29 16:37:32
+353;WSV Offenbach am Main-Bürgel;1229;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+354;WSV Offenbach am Main-Bürgel;1231;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+355;SG Wiking;1233;;11643;SG Wiking;2025-11-29 16:37:32
+356;RC Aschaffenburg;1237;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+357;RG Wetzlar;1239;;11647;RG Wetzlar;2025-11-29 16:37:32
+358;SG Wiking;1241;;11643;SG Wiking;2025-11-29 16:37:32
+359;RG Eberbach;1245;;11004;RG Eberbach;2025-11-29 16:37:32
+360;Hanauer RG;1247;;11627;Hanauer RG;2025-11-29 16:37:32
+361;Rgm. Frankfurter RG Germania/ SRR Schillerschule Frankfurt;1260;Rgm. Frankfurter RG Germania/;15626;SRR Schillerschule Frankfurt;2025-11-29 16:37:32
+362;Frankfurter RC;1263;;11616;Frankfurter RC;2025-11-29 16:37:32
+363;Offenbacher RG Undine;1269;;11641;Offenbacher RG Undine;2025-11-29 16:37:32
+364;RG Eberbach;1271;;11004;RG Eberbach;2025-11-29 16:37:32
+365;Rgm. RC Möve Grossauheim/ Mühlheimer RV;1273;Rgm. / Mühlheimer RV;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+366;Marburger RV;1280;;11636;Marburger RV;2025-11-29 16:37:32
+367;Hanauer RG;1282;;11627;Hanauer RG;2025-11-29 16:37:32
+368;Frankfurter RG Borussia;1286;;11607;Frankfurter RG Borussia;2025-11-29 16:37:32
+369;RV Hellas Offenbach;1288;;11638;RV Hellas Offenbach;2025-11-29 16:37:32
+370;Hanauer RC Hassia;1292;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+371;RG Wetzlar;1294;;11647;RG Wetzlar;2025-11-29 16:37:32
+372;Hanauer RC Hassia;1305;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+373;RC Aschaffenburg;1307;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+374;SG Wiking;1309;;11643;SG Wiking;2025-11-29 16:37:32
+375;RC Aschaffenburg;1313;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+376;RC Karlstadt;1315;;11107;RC Karlstadt;2025-11-29 16:37:32
+377;SG Wiking;1317;;11643;SG Wiking;2025-11-29 16:37:32
+378;Mühlheimer RV;1321;;11637;Mühlheimer RV;2025-11-29 16:37:32
+379;RC Karlstadt;1323;;11107;RC Karlstadt;2025-11-29 16:37:32
+380;Hanauer RG;1325;;11627;Hanauer RG;2025-11-29 16:37:32
+381;Hanauer RG;1327;;11627;Hanauer RG;2025-11-29 16:37:32
+382;Hanauer RG;1331;;11627;Hanauer RG;2025-11-29 16:37:32
+383;Hanauer RG;1333;;11627;Hanauer RG;2025-11-29 16:37:32
+384;Mühlheimer RV;1335;;11637;Mühlheimer RV;2025-11-29 16:37:32
+385;Mühlheimer RV;1339;;11637;Mühlheimer RV;2025-11-29 16:37:32
+386;Hanauer RG;1341;;11627;Hanauer RG;2025-11-29 16:37:32
+387;WSV Offenbach am Main-Bürgel;1343;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+388;Mühlheimer RV;1351;;11637;Mühlheimer RV;2025-11-29 16:37:32
+389;Frauen-RV Freiweg Frankfurt;1353;;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 16:37:32
+390;Hanauer RG;1357;;11627;Hanauer RG;2025-11-29 16:37:32
+391;Gießener RC Hassia;1359;;11622;Gießener RC Hassia;2025-11-29 16:37:32
+392;Hanauer RG;1361;;11627;Hanauer RG;2025-11-29 16:37:32
+393;Hanauer RC Hassia;1372;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+394;WSV Offenbach am Main-Bürgel;1374;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+395;RG Wetzlar;1376;;11647;RG Wetzlar;2025-11-29 16:37:32
+396;Frankfurter RG Germania;1385;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+397;Frankfurter RC;1387;;11616;Frankfurter RC;2025-11-29 16:37:32
+398;RG Wetzlar;1389;;11647;RG Wetzlar;2025-11-29 16:37:32
+399;Frankfurter Ruder- und Kanusport Verein;1393;;11620;Frankfurter Ruder- und Kanusport Verein;2025-11-29 16:37:32
+400;Hanauer RG;1395;;11627;Hanauer RG;2025-11-29 16:37:32
+401;Frankfurter RC;1403;;11616;Frankfurter RC;2025-11-29 16:37:32
+402;RG Eberbach;1405;;11004;RG Eberbach;2025-11-29 16:37:32
+403;Frankfurter RG Oberrad;1409;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+404;RG Wetzlar;1411;;11647;RG Wetzlar;2025-11-29 16:37:32
+405;SG Wiking;1413;;11643;SG Wiking;2025-11-29 16:37:32
+406;RG Wetzlar;1415;;11647;RG Wetzlar;2025-11-29 16:37:32
+407;Rgm. Hanauer RC Hassia/ Frankfurter RG Borussia;1426;Rgm. Hanauer RC Hassia/;11607;Frankfurter RG Borussia;2025-11-29 16:37:32
+408;Frankfurter RG Borussia;1428;;11607;Frankfurter RG Borussia;2025-11-29 16:37:32
+409;Gießener RC Hassia;1430;;11622;Gießener RC Hassia;2025-11-29 16:37:32
+410;Rgm. DRC Ingolstadt/ RC Möve Grossauheim;1434;Rgm. DRC Ingolstadt/;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+411;Marburger RV;1436;;11636;Marburger RV;2025-11-29 16:37:32
+412;RV Hellas Offenbach;1438;;11638;RV Hellas Offenbach;2025-11-29 16:37:32
+413;Rgm. Frankfurter RC/ Frankfurter RG Germania;1442;Rgm. Frankfurter RC/;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+414;Rgm. Frankfurter RC/ SG Wiking;1444;Rgm. / SG Wiking;11616;Frankfurter RC;2025-11-29 16:37:32
+415;SG Wiking;1449;;11643;SG Wiking;2025-11-29 16:37:32
+416;RC Karlstadt;1451;;11107;RC Karlstadt;2025-11-29 16:37:32
+417;Frankfurter RG Oberrad;1456;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+418;RC Möve Grossauheim;1458;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+419;Wormser RC;1465;;12038;Wormser RC;2025-11-29 16:37:32
+420;Mühlheimer RV;1467;;11637;Mühlheimer RV;2025-11-29 16:37:32
+421;Frankfurter RG Germania;1469;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+422;Frankfurter RG Oberrad;1481;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+423;Frankfurter RG Oberrad;1483;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+424;SG Wiking;1485;;11643;SG Wiking;2025-11-29 16:37:32
+425;RG Wetzlar;1489;;11647;RG Wetzlar;2025-11-29 16:37:32
+426;Frankfurter RC;1491;;11616;Frankfurter RC;2025-11-29 16:37:32
+427;SG Wiking;1493;;11643;SG Wiking;2025-11-29 16:37:32
+428;Mühlheimer RV;1497;;11637;Mühlheimer RV;2025-11-29 16:37:32
+429;SG Wiking;1499;;11643;SG Wiking;2025-11-29 16:37:32
+430;Hanauer RG;1501;;11627;Hanauer RG;2025-11-29 16:37:32
+431;Frankfurter RG Oberrad;1505;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+432;RC Möve Grossauheim;1507;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+433;Frankfurter RC;1509;;11616;Frankfurter RC;2025-11-29 16:37:32
+434;Rgm. RC Möve Grossauheim/ Mühlheimer RV;1514;Rgm. / Mühlheimer RV;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+435;WSV Offenbach am Main-Bürgel;1516;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+436;WSV Offenbach am Main-Bürgel;1518;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+437;RG Wetzlar;1532;;11647;RG Wetzlar;2025-11-29 16:37:32
+438;RG Eberbach;1534;;11004;RG Eberbach;2025-11-29 16:37:32
+439;Wormser RC;1536;;12038;Wormser RC;2025-11-29 16:37:32
+440;Hanauer RC Hassia;1538;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+441;Hanauer RC Hassia;1542;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+442;Marburger RV;1544;;11636;Marburger RV;2025-11-29 16:37:32
+443;RG Eberbach;1546;;11004;RG Eberbach;2025-11-29 16:37:32
+444;Wormser RC;1550;;12038;Wormser RC;2025-11-29 16:37:32
+445;Frankfurter RG Oberrad;1552;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+446;Marburger RV;1554;;11636;Marburger RV;2025-11-29 16:37:32
+447;RC Aschaffenburg;1558;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+448;Offenbacher RG Undine;1560;;11641;Offenbacher RG Undine;2025-11-29 16:37:32
+449;Frankfurter RC;1564;;11616;Frankfurter RC;2025-11-29 16:37:32
+450;RG Wetzlar;1566;;11647;RG Wetzlar;2025-11-29 16:37:32
+451;RC Möve Grossauheim;1568;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+452;Offenbacher RG Undine;1580;;11641;Offenbacher RG Undine;2025-11-29 16:37:32
+453;Frankfurter RG Germania;1582;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+454;Frankfurter RG Germania;1584;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+455;SG Wiking;1586;;11643;SG Wiking;2025-11-29 16:37:32
+456;Frankfurter RG Oberrad;1590;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+457;Hanauer RG;1592;;11627;Hanauer RG;2025-11-29 16:37:32
+458;Hanauer RG;1594;;11627;Hanauer RG;2025-11-29 16:37:32
+459;Frankfurter RG Borussia;1601;;11607;Frankfurter RG Borussia;2025-11-29 16:37:32
+460;Gießener RC Hassia;1603;;11622;Gießener RC Hassia;2025-11-29 16:37:32
+461;Marburger RV;1607;;11636;Marburger RV;2025-11-29 16:37:32
+462;RV Hellas Offenbach;1609;;11638;RV Hellas Offenbach;2025-11-29 16:37:32
+463;RC Möve Grossauheim;1613;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+464;Wormser RC;1615;;12038;Wormser RC;2025-11-29 16:37:32
+465;RC Aschaffenburg;1620;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+466;WSV Hellas Gießen;1622;;11623;WSV Hellas Gießen;2025-11-29 16:37:32
+467;Frankfurter RG Oberrad;1626;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:32
+468;Wormser RC;1628;;12038;Wormser RC;2025-11-29 16:37:32
+469;Frankfurter RG Germania;1640;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+470;RG Eberbach;1642;;11004;RG Eberbach;2025-11-29 16:37:32
+471;Rgm. RC Möve Grossauheim/ Mühlheimer RV;1644;Rgm. / Mühlheimer RV;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+472;Rgm. Marburger RV/ Gießener RC Hassia/ RG Wetzlar;1649;Rgm. Marburger RV/ / RG Wetzlar;11622;Gießener RC Hassia;2025-11-29 16:37:32
+473;Rgm. WSV Offenbach am Main-Bürgel/ Nassovia Höchst;1652;Rgm. WSV Offenbach am Main-Bürgel/;11612;Nassovia Höchst;2025-11-29 16:37:32
+474;RC Möve Grossauheim;1658;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+475;SG Wiking;1660;;11643;SG Wiking;2025-11-29 16:37:32
+476;RC Karlstadt;1662;;11107;RC Karlstadt;2025-11-29 16:37:32
+477;RC Möve Grossauheim;1666;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+478;SG Wiking;1668;;11643;SG Wiking;2025-11-29 16:37:32
+479;SG Wiking;1670;;11643;SG Wiking;2025-11-29 16:37:32
+480;WSV Offenbach am Main-Bürgel;1674;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+481;Hanauer RG;1676;;11627;Hanauer RG;2025-11-29 16:37:32
+482;Frankfurter Ruder- und Kanusport Verein;1678;;11620;Frankfurter Ruder- und Kanusport Verein;2025-11-29 16:37:32
+483;SRR Schillerschule Frankfurt;1686;;15626;SRR Schillerschule Frankfurt;2025-11-29 16:37:32
+484;Frankfurter RC;1688;;11616;Frankfurter RC;2025-11-29 16:37:32
+485;Frankfurter RC;1690;;11616;Frankfurter RC;2025-11-29 16:37:32
+486;RC Karlstadt;1694;;11107;RC Karlstadt;2025-11-29 16:37:32
+487;RC Möve Grossauheim;1696;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+488;Wormser RC;1707;;12038;Wormser RC;2025-11-29 16:37:32
+489;Rgm. RG Wetzlar/ Marburger RV/ Gießener R.G./ Gießener RC Hassia;1709;Rgm. RG Wetzlar/ Marburger RV/ Gießener R.G./;11622;Gießener RC Hassia;2025-11-29 16:37:32
+490;Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia;1712;Rgm. RC Möve Grossauheim/;11607;Frankfurter RG Borussia;2025-11-29 16:37:32
+491;Frankfurter RG Germania;1715;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+492;Rgm. Hanauer RG/ WSV Offenbach am Main-Bürgel;1720;Rgm. Hanauer RG/ am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+493;Rgm. Marburger RV/ Frankfurter RG Borussia;1723;Rgm. Marburger RV/;11607;Frankfurter RG Borussia;2025-11-29 16:37:32
+494;RC Aschaffenburg;1729;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+495;RV Hellas Offenbach;1731;;11638;RV Hellas Offenbach;2025-11-29 16:37:32
+496;RG Eberbach;1733;;11004;RG Eberbach;2025-11-29 16:37:32
+497;Wormser RC;1737;;12038;Wormser RC;2025-11-29 16:37:32
+498;WSV Offenbach am Main-Bürgel;1739;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+499;Offenbacher RG Undine;1741;;11641;Offenbacher RG Undine;2025-11-29 16:37:32
+500;Hanauer RG;1743;;11627;Hanauer RG;2025-11-29 16:37:32
+501;RC Aschaffenburg;1747;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+502;WSV Offenbach am Main-Bürgel;1749;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+503;Mühlheimer RV;1751;;11637;Mühlheimer RV;2025-11-29 16:37:32
+504;Frankfurter RC;1755;;11616;Frankfurter RC;2025-11-29 16:37:32
+505;Marburger RV;1757;;11636;Marburger RV;2025-11-29 16:37:32
+506;WSV Offenbach am Main-Bürgel;1773;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:32
+507;Frankfurter RG Germania;1775;;11610;Frankfurter RG Germania;2025-11-29 16:37:32
+508;RC Möve Grossauheim;1777;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+509;RC Aschaffenburg;1781;;11101;RC Aschaffenburg;2025-11-29 16:37:32
+510;WSV Hellas Gießen;1783;;11623;WSV Hellas Gießen;2025-11-29 16:37:32
+511;RC Möve Grossauheim;1785;;11625;RC Möve Grossauheim;2025-11-29 16:37:32
+512;RC Karlstadt;1793;;11107;RC Karlstadt;2025-11-29 16:37:32
+513;RC Karlstadt;1795;;11107;RC Karlstadt;2025-11-29 16:37:32
+514;Hanauer RG;1800;;11627;Hanauer RG;2025-11-29 16:37:32
+515;Marburger RV;1802;;11636;Marburger RV;2025-11-29 16:37:32
+516;Hanauer RC Hassia;1804;;11626;Hanauer RC Hassia;2025-11-29 16:37:32
+517;Rgm. Gießener RC Hassia/ DRC Ingolstadt;1808;Rgm. / DRC Ingolstadt;11622;Gießener RC Hassia;2025-11-29 16:37:32
+518;RV Hellas Offenbach;1810;;11638;RV Hellas Offenbach;2025-11-29 16:37:32
+519;Frankfurter RC;1814;;11616;Frankfurter RC;2025-11-29 16:37:33
+520;Hanauer RG;1816;;11627;Hanauer RG;2025-11-29 16:37:33
+521;Frankfurter RG Oberrad;1827;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:33
+522;RG Wetzlar;1829;;11647;RG Wetzlar;2025-11-29 16:37:33
+523;Frankfurter RC;1831;;11616;Frankfurter RC;2025-11-29 16:37:33
+524;Frankfurter RG Oberrad;1833;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:33
+525;Frankfurter RG Oberrad;1837;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:33
+526;RG Wetzlar;1839;;11647;RG Wetzlar;2025-11-29 16:37:33
+527;Hanauer RG;1841;;11627;Hanauer RG;2025-11-29 16:37:33
+528;Rgm. RC Möve Grossauheim/ WSV Offenbach am Main-Bürgel;1848;Rgm. / WSV Offenbach am Main-Bürgel;11625;RC Möve Grossauheim;2025-11-29 16:37:33
+529;Rgm. Frankfurter RG Borussia/ RC Aschaffenburg;1850;Rgm. / RC Aschaffenburg;11607;Frankfurter RG Borussia;2025-11-29 16:37:33
+530;Frauen-RV Freiweg Frankfurt;1853;;11609;Frauen-RV Freiweg Frankfurt;2025-11-29 16:37:33
+531;RC Aschaffenburg;1860;;11101;RC Aschaffenburg;2025-11-29 16:37:33
+532;Frankfurter RG Germania;1863;;11610;Frankfurter RG Germania;2025-11-29 16:37:33
+533;Frankfurter RG Oberrad;1866;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:33
+534;Rgm. Hanauer RC Hassia/ Frankfurter RG Oberrad/ Frankfurter RC/ Frankfurter RG;1872;Rgm. Hanauer RC Hassia/ / Frankfurter RC/ Frankfurter RG;11614;Frankfurter RG Oberrad;2025-11-29 16:37:33
+535;Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia/ DRC Ingolstadt/ Gießener R.G.;1876;Rgm. RC Möve Grossauheim/ / DRC Ingolstadt/ Gießener R.G.;11607;Frankfurter RG Borussia;2025-11-29 16:37:33
+536;Marburger RV;1879;;11636;Marburger RV;2025-11-29 16:37:33
+537;Rgm. Ruderclub Zellingen v. 1946 e.V./ Würzburger Ruderverein Bayern von 1875/1905 e.V.;1888;Rgm. Ruderclub Zellingen v. 1946 e.V./;11135;Würzburger Ruderverein Bayern von 1875/1905 e.V.;2025-11-29 16:37:33
+538;Rgm. Hanauer RG/ Mühlheimer RV;1890;Rgm. Hanauer RG/;11637;Mühlheimer RV;2025-11-29 16:37:33
+539;Hanauer RG;1892;;11627;Hanauer RG;2025-11-29 16:37:33
+540;Hersfelder RV;1896;;11628;Hersfelder RV;2025-11-29 16:37:33
+541;Rgm. RV Hellas Offenbach/ Flörsheimer RV;1898;Rgm. / Flörsheimer RV;11638;RV Hellas Offenbach;2025-11-29 16:37:33
+542;RC Aschaffenburg;1903;;11101;RC Aschaffenburg;2025-11-29 16:37:33
+543;SG Wiking;1905;;11643;SG Wiking;2025-11-29 16:37:33
+544;RC Karlstadt;1907;;11107;RC Karlstadt;2025-11-29 16:37:33
+545;Hanauer RG;1911;;11627;Hanauer RG;2025-11-29 16:37:33
+546;Hanauer RG;1913;;11627;Hanauer RG;2025-11-29 16:37:33
+547;Mühlheimer RV;1915;;11637;Mühlheimer RV;2025-11-29 16:37:33
+548;Mühlheimer RV;1920;;11637;Mühlheimer RV;2025-11-29 16:37:33
+549;WSV Offenbach am Main-Bürgel;1922;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:33
+550;RV Hellas Offenbach;1924;;11638;RV Hellas Offenbach;2025-11-29 16:37:33
+551;RC Möve Grossauheim;1926;;11625;RC Möve Grossauheim;2025-11-29 16:37:33
+552;RC Aschaffenburg;1930;;11101;RC Aschaffenburg;2025-11-29 16:37:33
+553;Frankfurter Ruder- und Kanusport Verein;1932;;11620;Frankfurter Ruder- und Kanusport Verein;2025-11-29 16:37:33
+554;WSV Offenbach am Main-Bürgel;1934;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:33
+555;Mühlheimer RV;1936;;11637;Mühlheimer RV;2025-11-29 16:37:33
+556;Frankfurter RC;1940;;11616;Frankfurter RC;2025-11-29 16:37:33
+557;WSV Offenbach am Main-Bürgel;1942;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:33
+558;RC Aschaffenburg;1953;;11101;RC Aschaffenburg;2025-11-29 16:37:33
+559;WSV Offenbach am Main-Bürgel;1955;am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:33
+560;Frankfurter RC;1959;;11616;Frankfurter RC;2025-11-29 16:37:33
+561;Marburger RV;1961;;11636;Marburger RV;2025-11-29 16:37:33
+562;Rgm. Frankfurter RG Germania/ Weilburger RV;1968;Rgm. / Weilburger RV;11610;Frankfurter RG Germania;2025-11-29 16:37:33
+563;Frankfurter RC;1970;;11616;Frankfurter RC;2025-11-29 16:37:33
+564;RG Eberbach;1972;;11004;RG Eberbach;2025-11-29 16:37:33
+565;Frankfurter RG Oberrad;1976;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:33
+566;Frankfurter RC;1978;;11616;Frankfurter RC;2025-11-29 16:37:33
+567;SG Wiking;1980;;11643;SG Wiking;2025-11-29 16:37:33
+568;RG Eberbach;1987;;11004;RG Eberbach;2025-11-29 16:37:33
+569;Rgm. Marburger RV/ Gießener RC Hassia;1989;Rgm. Marburger RV/;11622;Gießener RC Hassia;2025-11-29 16:37:33
+570;Wormser RC;1991;;12038;Wormser RC;2025-11-29 16:37:33
+571;Rgm. WSV Offenbach am Main-Bürgel/ Nassovia Höchst;1995;Rgm. WSV Offenbach am Main-Bürgel/;11612;Nassovia Höchst;2025-11-29 16:37:33
+572;RC Möve Grossauheim;1997;;11625;RC Möve Grossauheim;2025-11-29 16:37:33
+573;Frankfurter RG Oberrad;1999;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:33
+574;RC Möve Grossauheim;2010;;11625;RC Möve Grossauheim;2025-11-29 16:37:33
+575;Frankfurter RG Oberrad;2012;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:33
+576;Frankfurter RG Oberrad;2016;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:33
+577;Frankfurter RG Oberrad;2018;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:33
+578;RC Möve Grossauheim;2020;;11625;RC Möve Grossauheim;2025-11-29 16:37:33
+579;Frankfurter RG Oberrad;2024;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:33
+580;RC Aschaffenburg;2026;;11101;RC Aschaffenburg;2025-11-29 16:37:33
+581;RC Möve Grossauheim;2028;;11625;RC Möve Grossauheim;2025-11-29 16:37:33
+582;Frankfurter RG Germania;2036;;11610;Frankfurter RG Germania;2025-11-29 16:37:33
+583;SG Wiking;2039;;11643;SG Wiking;2025-11-29 16:37:33
+584;Rgm. Frankfurter RG Germania/ Weilburger RV;2049;Rgm. / Weilburger RV;11610;Frankfurter RG Germania;2025-11-29 16:37:33
+585;Frankfurter RG Oberrad;2052;;11614;Frankfurter RG Oberrad;2025-11-29 16:37:33
+586;Rgm. Frankfurter RG Germania/ SRR Schillerschule Frankfurt;156;Rgm. /;11610;Frankfurter RG Germania;2025-11-29 16:37:37
+587;Rgm. Frankfurter RC/ Frankfurter RG Germania;374;Rgm. /;11616;Frankfurter RC;2025-11-29 16:37:37
+588;Rgm. Frankfurter RC/ SG Wiking;376;Rgm. /;11643;SG Wiking;2025-11-29 16:37:37
+589;Rgm. RG Wetzlar/ WSV Hellas Gießen;378;Rgm. /;11647;RG Wetzlar;2025-11-29 16:37:37
+590;Rgm. RC Möve Grossauheim/ Mühlheimer RV;465;Rgm. /;11637;Mühlheimer RV;2025-11-29 16:37:37
+591;Rgm. Nassovia Höchst/ Limburger ClfW/ WSV Offenbach am Main-Bürgel;476;Rgm. / / WSV Offenbach am Main-Bürgel;11635;Limburger ClfW;2025-11-29 16:37:37
+592;Rgm. Frankfurter RG Borussia/ RC Aschaffenburg;499;Rgm. /;11101;RC Aschaffenburg;2025-11-29 16:37:37
+593;Rgm. Hanauer RC Hassia/ Hanauer RG;574;Rgm. /;11627;Hanauer RG;2025-11-29 16:37:37
+594;Rgm. RV Hellas Offenbach/ Limburger ClfW;634;Rgm. /;11635;Limburger ClfW;2025-11-29 16:37:37
+595;Rgm. Marburger RV/ Gießener RC Hassia/ RG Wetzlar;643;Rgm. / / RG Wetzlar;11636;Marburger RV;2025-11-29 16:37:37
+596;Rgm. Hanauer RC Hassia/ RV Dorsten;650;Rgm. /;11922;RV Dorsten;2025-11-29 16:37:37
+597;Rgm. RC Möve Grossauheim/ Mühlheimer RV;653;Rgm. /;11637;Mühlheimer RV;2025-11-29 16:37:37
+598;Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia;718;Rgm. /;11625;RC Möve Grossauheim;2025-11-29 16:37:37
+599;Rgm. Ruder-Gesellschaft HANSA e.V./ Limburger ClfW;833;Rgm. /;11635;Limburger ClfW;2025-11-29 16:37:37
+600;Rgm. Frankfurter RG Borussia/ Gießener RC Hassia;835;Rgm. /;11622;Gießener RC Hassia;2025-11-29 16:37:37
+601;Rgm. Ruder-Gesellschaft HANSA e.V./ Limburger ClfW;901;Rgm. /;11635;Limburger ClfW;2025-11-29 16:37:37
+602;Rgm. Hanauer RG/ RC Möve Grossauheim;904;Rgm. /;11627;Hanauer RG;2025-11-29 16:37:37
+603;Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia;914;Rgm. /;11625;RC Möve Grossauheim;2025-11-29 16:37:37
+604;Rgm. WSV Hellas Gießen/ RV Kurhessen-Cassel;916;Rgm. /;11623;WSV Hellas Gießen;2025-11-29 16:37:37
+605;Rgm. Hanauer RG/ Mühlheimer RV;923;Rgm. /;11627;Hanauer RG;2025-11-29 16:37:37
+606;Rgm. RV Hellas Offenbach/ Flörsheimer RV;929;Rgm. /;11606;Flörsheimer RV;2025-11-29 16:37:37
+607;Rgm. Frankfurter RG Germania/ Weilburger RV;1011;Rgm. /;11646;Weilburger RV;2025-11-29 16:37:37
+608;Rgm. WSV Offenbach am Main-Bürgel/ Nassovia Höchst;1047;Rgm. am Main-Bürgel/;11642;WSV Offenbach;2025-11-29 16:37:37
+609;Rgm. Marburger RV/ Gießener RC Hassia;1049;Rgm. /;11636;Marburger RV;2025-11-29 16:37:37
+610;Rgm. Frankfurter RG Germania/ Weilburger RV;1111;Rgm. /;11646;Weilburger RV;2025-11-29 16:37:37
+611;Rgm. Hanauer RC Hassia/ RV Dorsten;1114;Rgm. /;11922;RV Dorsten;2025-11-29 16:37:37
+612;Rgm. Frankfurter RG Germania/ SRR Schillerschule Frankfurt;1260;Rgm. /;11610;Frankfurter RG Germania;2025-11-29 16:37:37
+613;Rgm. RC Möve Grossauheim/ Mühlheimer RV;1273;Rgm. /;11637;Mühlheimer RV;2025-11-29 16:37:37
+614;Rgm. Hanauer RC Hassia/ Frankfurter RG Borussia;1426;Rgm. /;11626;Hanauer RC Hassia;2025-11-29 16:37:37
+615;Rgm. DRC Ingolstadt/ RC Möve Grossauheim;1434;Rgm. /;11106;DRC Ingolstadt;2025-11-29 16:37:37
+616;Rgm. Frankfurter RC/ Frankfurter RG Germania;1442;Rgm. /;11616;Frankfurter RC;2025-11-29 16:37:37
+617;Rgm. Frankfurter RC/ SG Wiking;1444;Rgm. /;11643;SG Wiking;2025-11-29 16:37:37
+618;Rgm. RC Möve Grossauheim/ Mühlheimer RV;1514;Rgm. /;11637;Mühlheimer RV;2025-11-29 16:37:37
+619;Rgm. RC Möve Grossauheim/ Mühlheimer RV;1644;Rgm. /;11637;Mühlheimer RV;2025-11-29 16:37:37
+620;Rgm. Marburger RV/ Gießener RC Hassia/ RG Wetzlar;1649;Rgm. / / RG Wetzlar;11636;Marburger RV;2025-11-29 16:37:37
+621;Rgm. WSV Offenbach am Main-Bürgel/ Nassovia Höchst;1652;Rgm. am Main-Bürgel/;11642;WSV Offenbach;2025-11-29 16:37:37
+622;Rgm. RG Wetzlar/ Marburger RV/ Gießener R.G./ Gießener RC Hassia;1709;Rgm. RG Wetzlar/ Marburger RV/ /;11624;Gießener R.G.;2025-11-29 16:37:37
+623;Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia;1712;Rgm. /;11625;RC Möve Grossauheim;2025-11-29 16:37:37
+624;Rgm. Hanauer RG/ WSV Offenbach am Main-Bürgel;1720;Rgm. / am Main-Bürgel;11627;Hanauer RG;2025-11-29 16:37:37
+625;Rgm. Marburger RV/ Frankfurter RG Borussia;1723;Rgm. /;11636;Marburger RV;2025-11-29 16:37:37
+626;Rgm. Gießener RC Hassia/ DRC Ingolstadt;1808;Rgm. /;11106;DRC Ingolstadt;2025-11-29 16:37:37
+627;Rgm. RC Möve Grossauheim/ WSV Offenbach am Main-Bürgel;1848;Rgm. / am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:37
+628;Rgm. Frankfurter RG Borussia/ RC Aschaffenburg;1850;Rgm. /;11101;RC Aschaffenburg;2025-11-29 16:37:37
+629;Rgm. Hanauer RC Hassia/ Frankfurter RG Oberrad/ Frankfurter RC/ Frankfurter RG;1872;Rgm. / / Frankfurter RC/ Frankfurter RG;11626;Hanauer RC Hassia;2025-11-29 16:37:37
+630;Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia/ DRC Ingolstadt/ Gießener R.G.;1876;Rgm. / / DRC Ingolstadt/ Gießener R.G.;11625;RC Möve Grossauheim;2025-11-29 16:37:37
+631;Rgm. Ruderclub Zellingen v. 1946 e.V./ Würzburger Ruderverein Bayern von 1875/1905 e.V.;1888;Rgm. /;11132;Ruderclub Zellingen v. 1946 e.V.;2025-11-29 16:37:37
+632;Rgm. Hanauer RG/ Mühlheimer RV;1890;Rgm. /;11627;Hanauer RG;2025-11-29 16:37:37
+633;Rgm. RV Hellas Offenbach/ Flörsheimer RV;1898;Rgm. /;11606;Flörsheimer RV;2025-11-29 16:37:37
+634;Rgm. Frankfurter RG Germania/ Weilburger RV;1968;Rgm. /;11646;Weilburger RV;2025-11-29 16:37:37
+635;Rgm. Marburger RV/ Gießener RC Hassia;1989;Rgm. /;11636;Marburger RV;2025-11-29 16:37:37
+636;Rgm. WSV Offenbach am Main-Bürgel/ Nassovia Höchst;1995;Rgm. am Main-Bürgel/;11642;WSV Offenbach;2025-11-29 16:37:37
+637;Rgm. Frankfurter RG Germania/ Weilburger RV;2049;Rgm. /;11646;Weilburger RV;2025-11-29 16:37:37
+638;Rgm. Nassovia Höchst/ Limburger ClfW/ WSV Offenbach am Main-Bürgel;476;Rgm. / / am Main-Bürgel;11642;WSV Offenbach;2025-11-29 16:37:41
+639;Rgm. Marburger RV/ Gießener RC Hassia/ RG Wetzlar;643;Rgm. / /;11647;RG Wetzlar;2025-11-29 16:37:41
+640;Rgm. Marburger RV/ Gießener RC Hassia/ RG Wetzlar;1649;Rgm. / /;11647;RG Wetzlar;2025-11-29 16:37:41
+641;Rgm. RG Wetzlar/ Marburger RV/ Gießener R.G./ Gießener RC Hassia;1709;Rgm. RG Wetzlar/ / /;11636;Marburger RV;2025-11-29 16:37:41
+642;Rgm. Hanauer RC Hassia/ Frankfurter RG Oberrad/ Frankfurter RC/ Frankfurter RG;1872;Rgm. / / / Frankfurter RG;11616;Frankfurter RC;2025-11-29 16:37:41
+643;Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia/ DRC Ingolstadt/ Gießener R.G.;1876;Rgm. / / / Gießener R.G.;11106;DRC Ingolstadt;2025-11-29 16:37:41
+644;Rgm. RG Wetzlar/ Marburger RV/ Gießener R.G./ Gießener RC Hassia;1709;Rgm. / / /;11647;RG Wetzlar;2025-11-29 16:37:43
+645;Rgm. RC Möve Grossauheim/ Frankfurter RG Borussia/ DRC Ingolstadt/ Gießener R.G.;1876;Rgm. / / /;11624;Gießener R.G.;2025-11-29 16:37:43

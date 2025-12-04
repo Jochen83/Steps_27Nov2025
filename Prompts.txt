@@ -25,6 +25,7 @@ Bootszeile erfassen in GA_ER_23
 3 Hanauer RG - Boot 1 - 01:51.64 2
 1 Hanauer RC Hassia 01:46.24 3
 2 Rgm. Frankfurter RG Germania/ SRR Schillerschule Frankfurt 01:46.24 1
+1 WSV Offenbach am Main-Bürgel - Boot 1 - 01:57.94 2
 
 ^[1-4][ \w]*[\.]?[ \w]*\/*[ \w]*([- Boot ]*[1-9]*[ -])*0[1-3]:[0-5][0-9].[0-9][0-9] [1-9][0-9]?
 
@@ -42,15 +43,33 @@ Reason: Request Failed: 400 {"error":{"message":"no endpoints available for this
 
 ich hab daraufhin in GutCopilot auf Pro Version updedated 48,- pro JAhr
 
-Tabelle 
-Treffer zeile_inhalt
-	id
-	extracted_data_id
-Vereine Verein_ID
-	Verein
-	Lettern
-	Kurzident
-	Kurzident2
+Prompt: (Vereine in Tabelle hier(GA_ER_2023_271125_529) finden und dann 
+in der DB regatta_unified.db werden folgende Tabellen und Felder gebraucht Treffer: zeile_inhalt; id; extracted_data_id
+Tabelle Vereine:  Verein_ID; Verein; Lettern; Kurzident; Kurzident2
+neue Tabelle . Treffer_Verein_Hit Felder: zeile_inhalt ; ID ; extracted_data_id; zeile_inhalt_ohne_treffer mit dem entfernten Verein; Verein_ID; Verein
+In der Tabelle Treffer im Feld zeile_inhalt String sind Vereinsnamen enthalten die mit dem Feldinhalt der Tabelle Vereine Feld Verein in mehreren Schritten abzugleichen sind
+Erster Schritt  direkter vergleich ob der String aus Feld Verein enthalten ist in Feld zeile_inhalt. 
+es wir eine Ergebnis Treffer_Verein_Hit erstellt. bei Treffer wird in die Felder : zeile_inhalt ; ID ; extracted_data_id; zeile_inhalt_ohne_treffer mit dem entfernten Verein; Verein_ID; Verein geschrieben 
+zweiter Schritt : Die Treffer_Verein_Hit wird ein weiteres mal durchlaufen , mit dem gleichen Abgleich, da es sein kann das mehrere Vereine in diesem Feld zeile_inhalt_ohne_treffer stehen, 
+es wird eine neuer Datensatz angefügt mit den gleichen Inhalten wie im ersten Schritt. 
+Zweiter Schritt Treffen der Sportler mit (09) ….
+		boot_pattern = re.compile(r'^[1-4] .+0[1-3]:[0-5][0-9]\.[0-9][0-9] [1-9][0-9]?')
+            	sportler_pattern = re.compile(r'\([0-9]+\)')
 
-In der Tabelle Treffer im Feld zeile_inhalt sind Vereinsnamen die mit dem Feldinhalt der Tabelle Vereine Feld Verein in mehren Schritten abzugleichen sind
-Erster Schritt  direkter vergleich ob der String aus Feld Verein enthalten ist
+Prompt:  (Abgleich der Inhalte mit der ZeilenTypen_Such.Vergleich_Ganz_Teil
+Notation Tabelle.Feld. In der Tab ZeilenTypen_Such.txt sind im Feld: QuellWort sind Strings die in den im Tabelle.Feld GA_ER_2023_271125_529.Inhalt der erfassten Ergebnis  entweder 1 zu 1 oder teilweise enthalten sind.
+in Tab.  Feld  ZeilenTypen_Such.Vergleich_Ganz_Teil  ist "g" für 1 zu 1 Vergleich der beiden Felder QuellWort und Inhalt und "t" für Teilvergleich. dazu wird im Feld SuchBeginnTeilstring die Position für
+den Abgleich bei Teilvergleich codiert ist "0" Heist Position im String ; "1" heist am Anfang des Feldes den Vergleich beginnend. eine neue Py Anwendung die den Abgleich der beiden Felder in aufsteigender Reihenfolge des
+Feldes ZeilenTypen_Such.IDZeilenTyp. es soll ein Fenster geöffnet werden mit der Auswahl der Tabellen und der Vergleichsfelder aus beiden Tabellen. Button Start des Abgleichs. : die erste Zeile aus GA_ER_2023_271125_529.Inhalt wird mit allen Zeilen aus
+ZeilenTypen_Such.QuellWort mit den Regeln abgeglichen. bei einem Treffer wird in das Feld GA_ER_2023_271125_529.Typ der String aus ZeilenTypen_Such.TypNutzkurz geschrieben. vor beginn des Abgleichs ein Backup erstellen ausgewählte Datei hier GA_ER_2023_271125_529 in
+BackImport 
+  
+Prompt: neue py Datei: Notation Tabelle.Feld Gruppierung des Inhalt Feldes und Zählen der vorkommen, neue Tabelle erstellen GrupInhalt.Inhalt und  GrupInhalt.Typ das Feld ist Leer , GrupInhalt.Anzahl,  
+Fenster Liste erstellen absteigend nach der Anzahl der Vorkommen, die Zeilen sind editierbar im Feld Typ 
+alle gleichen GA_ER_2023_271125_529.Inhalt =  GrupInhalt.Inhalt nicht leeren Felder GrupInhalt.Typ werden in das Feld  GrupInhalt.Typ GA_ER_2023_271125_529.Typ geschrieben
+
+Prompt: eine Oberfläche für alle Detail Anwendungen 2 Tabell_Import.py, 3 Regex_Treffer.py,4 Tabellen_Abgleich.py ,6 Inhalts_Gruppierung.py , 1 Step1_unified_extractor.py , 5 Verein_Treffer_Match.py 
+gleichzeitig starten oder einzeln starten und beenden kann, natürlich erst wenn alle Prozesse abgeschlossen sind
+
+Prompt: eine Anwendung erstellen die die Tabelle Regatta_ in der Datenbank regatta_unified.db pflegt. Jedes Feld der Tabelle bearbeiten , neue Zeilen anfügen. Auch anfügen neuer Felder ermöglichen. Füge die neue Py Anwendung in Master_Control_Panel.py ein. Wenn ein neuer Datensatz gespeichert ist soll durch Doppelklick auf das Feld Regatta die Anwendung Step1_unified_extractor.py gestartet werden. Es soll ein 
+Feld in der import Tabelle mit namen Regatta eingefügt werden und in jede Zeile soll die ausgewählte Regatta eingefügt werden. Der Tabellen Name in der Anwendung Step1_unified_extractor.py für den Import soll für alle Import heissen und die bisher genutzen Felder beinhalten. plus das neue Feld Regatta je Zeile. Die ausgewählte Regatta soll in der Anwendung Step1_unified_extractor.py angezeigt werden. die neue Tabelle Import wird in die DB  regatta_unified.db eingefügt. 
