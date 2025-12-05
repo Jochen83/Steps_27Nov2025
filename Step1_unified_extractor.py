@@ -120,14 +120,15 @@ class UnifiedTextExtractorApp:
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS extracted_data (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
+                regatta TEXT,
                 dateiname TEXT NOT NULL,
-                quellentyp TEXT NOT NULL,
+                zeile_inhalt TEXT,
+                verarbeitet_am TIMESTAMP,
                 seite_nummer INTEGER,
                 zeile_nummer INTEGER,
-                zeile_inhalt TEXT,
                 zeichen_anzahl INTEGER,
-                verarbeitet_am TIMESTAMP,
-                status TEXT
+                status TEXT,
+                quellentyp TEXT NOT NULL
             )
         ''')
         
@@ -135,22 +136,67 @@ class UnifiedTextExtractorApp:
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS Import (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                regatta_id INTEGER,
+                regatta TEXT,
                 dateiname TEXT,
-                quellentyp TEXT,
+                zeile_inhalt TEXT,
+                verarbeitet_am TIMESTAMP,
                 seite_nummer INTEGER,
                 zeile_nummer INTEGER,
-                zeile_inhalt TEXT,
                 zeichen_anzahl INTEGER,
-                verarbeitet_am TIMESTAMP,
                 status TEXT,
-                regatta TEXT,
+                quellentyp TEXT,
+                regatta_id INTEGER,
                 FOREIGN KEY (regatta_id) REFERENCES Regatta_(id)
             )
         ''')
         
         conn.commit()
         conn.close()
+        
+    def import_tabelle_zuruecksetzen(self):
+        """Löscht die Import-Tabelle und erstellt sie neu"""
+        try:
+            conn = sqlite3.connect(self.db_name)
+            cursor = conn.cursor()
+            
+            # Prüfen ob Import-Tabelle existiert und Anzahl ermitteln
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='Import'")
+            table_exists = cursor.fetchone() is not None
+            
+            alte_anzahl = 0
+            if table_exists:
+                cursor.execute("SELECT COUNT(*) FROM Import")
+                alte_anzahl = cursor.fetchone()[0]
+                self.txt_output.insert(tk.END, f"🗑️ Lösche vorherige Import-Daten: {alte_anzahl} Einträge\n")
+            
+            # Import-Tabelle löschen falls vorhanden
+            cursor.execute("DROP TABLE IF EXISTS Import")
+            
+            # Import-Tabelle neu erstellen
+            cursor.execute('''
+                CREATE TABLE Import (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    regatta TEXT,
+                    dateiname TEXT,
+                    zeile_inhalt TEXT,
+                    verarbeitet_am TIMESTAMP,
+                    seite_nummer INTEGER,
+                    zeile_nummer INTEGER,
+                    zeichen_anzahl INTEGER,
+                    status TEXT,
+                    quellentyp TEXT,
+                    regatta_id INTEGER,
+                    FOREIGN KEY (regatta_id) REFERENCES Regatta_(id)
+                )
+            ''')
+            
+            conn.commit()
+            conn.close()
+            
+            self.txt_output.insert(tk.END, f"🔄 Import-Tabelle neu erstellt für sauberen Import\n")
+            
+        except Exception as e:
+            self.txt_output.insert(tk.END, f"❌ Fehler beim Zurücksetzen der Import-Tabelle: {str(e)}\n")
         
     def modus_geaendert(self):
         """Wird aufgerufen wenn der Verarbeitungsmodus geändert wird"""
@@ -174,31 +220,32 @@ class UnifiedTextExtractorApp:
         zeilen = text.split('\n')
         
         for zeile_nr, zeile in enumerate(zeilen, start=1):
-            # In extracted_data speichern (bestehende Struktur)
+            # In extracted_data speichern (mit regatta-Feld)
             cursor.execute('''
                 INSERT INTO extracted_data 
-                (dateiname, quellentyp, seite_nummer, zeile_nummer, zeile_inhalt, zeichen_anzahl, verarbeitet_am, status)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                (regatta, dateiname, zeile_inhalt, verarbeitet_am, seite_nummer, zeile_nummer, zeichen_anzahl, status, quellentyp)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', (
+                self.selected_regatta_name,
                 dateiname,
-                quellentyp,
+                zeile.strip(),
+                datetime.now(),
                 seite_nr,
                 zeile_nr,
-                zeile.strip(),
                 len(zeile.strip()),
-                datetime.now(),
-                'verarbeitet'
+                'verarbeitet',
+                quellentyp
             ))
             
             # Zusätzlich in Import-Tabelle speichern wenn Regatta ausgewählt
             if self.selected_regatta_id:
                 cursor.execute('''
                     INSERT INTO Import 
-                    (regatta_id, dateiname, quellentyp, seite_nummer, zeile_nummer, zeile_inhalt, zeichen_anzahl, verarbeitet_am, status, regatta)
+                    (regatta, dateiname, zeile_inhalt, verarbeitet_am, seite_nummer, zeile_nummer, zeichen_anzahl, status, quellentyp, regatta_id)
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 ''', (
-                    int(self.selected_regatta_id), dateiname, quellentyp, seite_nr, zeile_nr, zeile.strip(),
-                    len(zeile.strip()), datetime.now(), 'verarbeitet', self.selected_regatta_name
+                    self.selected_regatta_name, dateiname, zeile.strip(), datetime.now(), seite_nr, zeile_nr,
+                    len(zeile.strip()), 'verarbeitet', quellentyp, int(self.selected_regatta_id)
                 ))
         
         conn.commit()
@@ -214,7 +261,7 @@ class UnifiedTextExtractorApp:
             anzahl = cursor.fetchone()[0]
             
             cursor.execute('''
-                SELECT id, dateiname, quellentyp, seite_nummer, zeile_nummer, zeile_inhalt, verarbeitet_am 
+                SELECT id, regatta, dateiname, zeile_inhalt, verarbeitet_am, seite_nummer, zeile_nummer, zeichen_anzahl, status, quellentyp
                 FROM extracted_data 
                 ORDER BY id DESC 
                 LIMIT 50
@@ -229,11 +276,12 @@ class UnifiedTextExtractorApp:
             
             if rows:
                 for row in rows:
-                    seite_info = f" | Seite: {row[3]}" if row[3] else ""
+                    seite_info = f" | Seite: {row[5]}" if row[5] else ""
+                    regatta_info = f" | Regatta: {row[1]}" if row[1] else ""
                     self.txt_output.insert(tk.END, 
-                        f"ID: {row[0]} | Typ: {row[2]} | Datei: {row[1]}{seite_info} | Zeile: {row[4]}\n"
-                        f"Inhalt: {row[5]}\n"  # Vollständiger Inhalt ohne Kürzung
-                        f"Zeit: {row[6]}\n"
+                        f"ID: {row[0]} | Typ: {row[9]} | Datei: {row[2]}{seite_info} | Zeile: {row[6]}{regatta_info}\n"
+                        f"Inhalt: {row[3]}\n"  # Vollständiger Inhalt ohne Kürzung
+                        f"Zeit: {row[4]}\n"
                         + "-"*60 + "\n"
                     )
             else:
@@ -257,8 +305,8 @@ class UnifiedTextExtractorApp:
                 return
             
             cursor.execute('''
-                SELECT id, dateiname, quellentyp, seite_nummer, zeile_nummer, zeile_inhalt, 
-                       zeichen_anzahl, verarbeitet_am, status
+                SELECT id, regatta, dateiname, zeile_inhalt, verarbeitet_am, seite_nummer, 
+                       zeile_nummer, zeichen_anzahl, status, quellentyp
                 FROM extracted_data 
                 ORDER BY dateiname, quellentyp, seite_nummer, zeile_nummer ASC
             ''')
@@ -279,7 +327,7 @@ class UnifiedTextExtractorApp:
                 with open(dateipfad, 'w', encoding='utf-8') as f:
                     if is_csv:
                         # CSV Format mit Semikolon und Feldqualifizierern
-                        f.write('"id";"dateiname";"quellentyp";"seite_nummer";"zeile_nummer";"zeile_inhalt";"zeichen_anzahl";"verarbeitet_am";"status"\n')
+                        f.write('"id";"regatta";"dateiname";"zeile_inhalt";"verarbeitet_am";"seite_nummer";"zeile_nummer";"zeichen_anzahl";"status";"quellentyp"\n')
                         
                         for row in rows:
                             # Felder mit Anführungszeichen escapen
@@ -295,16 +343,17 @@ class UnifiedTextExtractorApp:
                     else:
                         # TXT Format - strukturiert
                         # Feldnamen als Kopfzeile
-                        f.write("ID;Dateiname;Typ;Seite;Zeile;Inhalt;Zeichen;Verarbeitet am;Status\n")
+                        f.write("ID;Regatta;Dateiname;Inhalt;Verarbeitet am;Seite;Zeile;Zeichen;Status;Typ\n")
                         
                         for row in rows:
-                            id_val, dateiname, quellentyp, seite_nr, zeile_nr, inhalt, zeichen, zeit, status = row
+                            id_val, regatta, dateiname, inhalt, zeit, seite_nr, zeile_nr, zeichen, status, quellentyp = row
                             
                             # Zeile mit allen Feldern - VOLLSTÄNDIGER Inhalt
                             seite_str = str(seite_nr) if seite_nr else "-"
                             inhalt_voll = inhalt if inhalt else ""
+                            regatta_str = regatta if regatta else "-"
                             
-                            f.write(f"{id_val};{dateiname};{quellentyp};{seite_str};{zeile_nr};{inhalt_voll};{zeichen};{zeit};{status}\n")
+                            f.write(f"{id_val};{regatta_str};{dateiname};{inhalt_voll};{zeit};{seite_str};{zeile_nr};{zeichen};{status};{quellentyp}\n")
                 
                 messagebox.showinfo("Export erfolgreich", 
                     f"Datenbank erfolgreich exportiert:\n{dateipfad}\n\n{anzahl} Einträge mit allen Feldern")
@@ -397,6 +446,9 @@ class UnifiedTextExtractorApp:
         """Startet die Verarbeitung je nach Modus"""
         self.alle_ergebnisse = []
         self.txt_output.delete(1.0, tk.END)
+        
+        # Import-Tabelle löschen und neu erstellen
+        self.import_tabelle_zuruecksetzen()
         
         self.btn_process.config(state=tk.DISABLED)
         self.root.update()

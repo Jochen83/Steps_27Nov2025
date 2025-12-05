@@ -58,25 +58,25 @@ class MasterControlPanel:
                 'farbe': '#dc3545'
             },
             6: {
-                'name': 'Inhalts Gruppierung',
-                'datei': 'Inhalts_Gruppierung.py',
-                'beschreibung': 'Inhalts-Häufigkeitsanalyse und Typ-Zuordnung',
-                'icon': '📈',
-                'farbe': '#20c997'
-            },
-            7: {
                 'name': 'Regatta Verwaltung',
                 'datei': 'Regatta_Verwaltung.py',
                 'beschreibung': 'Regatta-Stammdaten verwalten und Import steuern',
                 'icon': '🏁',
                 'farbe': '#e83e8c'
             },
-            8: {
+            7: {
                 'name': 'Database Backup Manager',
                 'datei': 'Database_Backup_Manager.py',
                 'beschreibung': 'Datenbank Backup, Wiederherstellung und Basis-Kopien',
                 'icon': '🗄️',
                 'farbe': '#6c757d'
+            },
+            8: {
+                'name': 'Inhalts-Gruppierung',
+                'datei': 'Gruppierung.py',
+                'beschreibung': 'Feldinhalt-Analyse und Typisierung',
+                'icon': '📈',
+                'farbe': '#20c997'
             }
         }
         
@@ -137,7 +137,7 @@ class MasterControlPanel:
         self.app_buttons = {}
         self.status_labels = {}
         
-        # 3x3 Grid für 8 Anwendungen
+        # 3x3 Grid angepasst für 8 Anwendungen
         for i, (app_id, app_info) in enumerate(self.anwendungen.items()):
             row = i // 3
             col = i % 3

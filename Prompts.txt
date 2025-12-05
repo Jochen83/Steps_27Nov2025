@@ -64,12 +64,25 @@ Feldes ZeilenTypen_Such.IDZeilenTyp. es soll ein Fenster geöffnet werden mit de
 ZeilenTypen_Such.QuellWort mit den Regeln abgeglichen. bei einem Treffer wird in das Feld GA_ER_2023_271125_529.Typ der String aus ZeilenTypen_Such.TypNutzkurz geschrieben. vor beginn des Abgleichs ein Backup erstellen ausgewählte Datei hier GA_ER_2023_271125_529 in
 BackImport 
   
-Prompt: neue py Datei: Notation Tabelle.Feld Gruppierung des Inhalt Feldes und Zählen der vorkommen, neue Tabelle erstellen GrupInhalt.Inhalt und  GrupInhalt.Typ das Feld ist Leer , GrupInhalt.Anzahl,  
-Fenster Liste erstellen absteigend nach der Anzahl der Vorkommen, die Zeilen sind editierbar im Feld Typ 
-alle gleichen GA_ER_2023_271125_529.Inhalt =  GrupInhalt.Inhalt nicht leeren Felder GrupInhalt.Typ werden in das Feld  GrupInhalt.Typ GA_ER_2023_271125_529.Typ geschrieben
+
+
+
+Prompt: neue Gruppierung.py Datei: Notation Tabelle.Feld Gruppierung des Inhalt Feldes und Zählen der vorkommen der Inhalte in dieser Tabelle im ausgewählten Feld, neue Tabelle erstellen Gruppen_Anzahl, folgende Felder Gruppen_Anzahl.Inhalt und  Gruppen_Anzahl.Typ das Feld ist Leer , Gruppen_Anzahl.Anzahl,  
+Fenster Liste erstellen absteigend nach der Anzahl der Vorkommen, die Zeilen sind editierbar im Feld Typ. Button Auswahl der Tabelle zur Gruppierung, Button Auswahl des Feldes der Tabelle nach dessen Inhalt gezählt werden soll. Danach wird diese Tabelle in eine neue Tabelle kopiert und mit dem ursprünglichen TabellenNamen plus _Typisier ergänzt und um das Feld Typ ergänzt. Button nach der Gruppierung und dem händischen einfügen des Typs wird dieser Typ an alle Felder des gleichen Inhalts in der TabellenNamen plus _Typisier übertragen
+
+
+
+
 
 Prompt: eine Oberfläche für alle Detail Anwendungen 2 Tabell_Import.py, 3 Regex_Treffer.py,4 Tabellen_Abgleich.py ,6 Inhalts_Gruppierung.py , 1 Step1_unified_extractor.py , 5 Verein_Treffer_Match.py 
 gleichzeitig starten oder einzeln starten und beenden kann, natürlich erst wenn alle Prozesse abgeschlossen sind
 
 Prompt: eine Anwendung erstellen die die Tabelle Regatta_ in der Datenbank regatta_unified.db pflegt. Jedes Feld der Tabelle bearbeiten , neue Zeilen anfügen. Auch anfügen neuer Felder ermöglichen. Füge die neue Py Anwendung in Master_Control_Panel.py ein. Wenn ein neuer Datensatz gespeichert ist soll durch Doppelklick auf das Feld Regatta die Anwendung Step1_unified_extractor.py gestartet werden. Es soll ein 
 Feld in der import Tabelle mit namen Regatta eingefügt werden und in jede Zeile soll die ausgewählte Regatta eingefügt werden. Der Tabellen Name in der Anwendung Step1_unified_extractor.py für den Import soll für alle Import heissen und die bisher genutzen Felder beinhalten. plus das neue Feld Regatta je Zeile. Die ausgewählte Regatta soll in der Anwendung Step1_unified_extractor.py angezeigt werden. die neue Tabelle Import wird in die DB  regatta_unified.db eingefügt. 
+
+Prompt:  erstelle eine neue Anwendung.  Erstelle eine Liste mit allen Tabellen der Datenbank regatta_unified.db. In der Liste kann man eine Zeile auswählen. mit einem Button wird diese Tabelle kopiert und eine neue Tabelle mit der Endung _bak erstellt. hinter das _bak kommt das Datum und die Uhrzeit in folgender Form  JJMMTT_SSMM das heist J = Jahr nur die letzten beiden Ziffern; M=Monat 2 stellig mit führender Null; Tag 2 stellig mit führender Null; Unterstrich ; Uhrzeit 2 stellig mit führender Null; Minute 2 stellig mit führender Null. Eine weiterer Button macht aus der Bak Datei wieder die originale Tabelle. eine Weiterer Button kopiert die ausgewählte Tabelle in eine neue mit der Endung _base und JJMMTT_SSMM. Diese Anwendung wird auch aus der Master_Control_Panel eingefügt. 
+
+
+Prompt: ergänze Button in der Database_Backup_Manager.py Anwendung.  Ziel prüfen ob die Quell Tabelle schon in der entsprechenden Base Tabelle enthalten ist. Auswahl Liste der Quelltabellen die Base Tabelle hat die Notation TabellenName_base und steht damit als Vergleichstabelle fest. es muss nur geprüft werden ob die entsprechende base Tabelle existiert es wird ein Fenster geöffnet in der die Felder zum Vergleich 1 zu 1 der Quell Tabelle und Tablle_base ausgewählt werden. Es wird eine neue Tabelle erstellt Import_Vergleich. Felder ID; Regatta; Zeile_inhalt; Seite_nummer; Seiten_zeile; wenn der Vergleich einen Treffer ergibt dann wird im neuen Feld Enthalten_in_Zeile die ID aus der Tabelle_base des ersten Imports reinschreiben 
+
+Prompt: neue Anwendung: Typisierung

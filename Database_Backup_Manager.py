@@ -171,6 +171,16 @@ class DatabaseBackupManager:
                                          height=3, wraplength=150, justify=tk.CENTER)
         self.btn_delete_table.pack(fill=tk.X, padx=10, pady=5)
         
+        # Vergleichs-Aktionen
+        compare_frame = tk.LabelFrame(right_frame, text="Vergleichs-Aktionen", font=("Arial", 11, "bold"))
+        compare_frame.pack(fill=tk.X, padx=10, pady=10)
+        
+        self.btn_compare_base = tk.Button(compare_frame, text="🔍 Quell-Tabelle mit\nBase-Tabelle vergleichen", 
+                                         command=self.quell_base_vergleich, state=tk.DISABLED,
+                                         bg="#8e44ad", fg="white", font=("Arial", 9, "bold"), 
+                                         height=3, wraplength=150, justify=tk.CENTER)
+        self.btn_compare_base.pack(fill=tk.X, padx=10, pady=5)
+        
         # Log-Bereich
         log_frame = tk.Frame(self.root)
         log_frame.pack(fill=tk.X, padx=15, pady=(0, 10))
@@ -329,6 +339,7 @@ class DatabaseBackupManager:
         self.btn_show_table.config(state=tk.NORMAL)
         self.btn_append_to_base.config(state=tk.NORMAL)
         self.btn_delete_table.config(state=tk.NORMAL)
+        self.btn_compare_base.config(state=tk.NORMAL)
         
         self.status_label.config(text=f"Tabelle '{table_name}' ausgewählt")
     
@@ -353,6 +364,7 @@ class DatabaseBackupManager:
         self.btn_show_table.config(state=tk.NORMAL)
         self.btn_append_to_base.config(state=tk.NORMAL)
         self.btn_delete_table.config(state=tk.NORMAL)
+        self.btn_compare_base.config(state=tk.NORMAL)
         
         # Tabellenansicht direkt öffnen
         self.tabelle_anzeigen()
@@ -547,8 +559,53 @@ class DatabaseBackupManager:
                 
                 cursor.execute(f"DROP TABLE `{base_name}`")
             
-            # Tabelle kopieren
-            cursor.execute(f"CREATE TABLE `{base_name}` AS SELECT * FROM `{self.selected_table}`")
+            # Quelltabellen-Schema analysieren
+            cursor.execute(f"PRAGMA table_info(`{self.selected_table}`)")
+            columns_info = cursor.fetchall()
+            
+            if not columns_info:
+                messagebox.showerror("Fehler", f"Tabelle '{self.selected_table}' hat keine Spalten.")
+                conn.close()
+                return
+            
+            # Schema für Basis-Tabelle erstellen (mit neuem Primary Key und Quell_ID)
+            create_sql = f"CREATE TABLE `{base_name}` (\n"
+            create_sql += "    id INTEGER PRIMARY KEY AUTOINCREMENT,\n"
+            create_sql += "    Quell_ID INTEGER,\n"
+            
+            for col_info in columns_info:
+                col_name = col_info[1]
+                col_type = col_info[2]
+                
+                # Original-ID-Spalte überspringen, wird als Quell_ID behandelt
+                if col_name.lower() == 'id':
+                    continue
+                
+                # Andere Spalten hinzufügen
+                create_sql += f"    `{col_name}` {col_type},\n"
+            
+            create_sql = create_sql.rstrip(',\n') + "\n)"
+            
+            # Basis-Tabelle erstellen
+            cursor.execute(create_sql)
+            
+            # Daten kopieren (Original-ID wird zu Quell_ID)
+            # Spaltenliste ohne 'id' erstellen
+            other_columns = [col_info[1] for col_info in columns_info if col_info[1].lower() != 'id']
+            columns_list = ", ".join([f"`{col}`" for col in other_columns])
+            
+            if other_columns:
+                insert_sql = f"""
+                INSERT INTO `{base_name}` (Quell_ID, {columns_list})
+                SELECT id, {columns_list} FROM `{self.selected_table}`
+                """
+            else:
+                insert_sql = f"""
+                INSERT INTO `{base_name}` (Quell_ID)
+                SELECT id FROM `{self.selected_table}`
+                """
+            
+            cursor.execute(insert_sql)
             
             # Datensätze zählen
             cursor.execute(f"SELECT COUNT(*) FROM `{base_name}`")
@@ -972,20 +1029,72 @@ Text-Suche:
             # Filter-Buttons müssen nach den Funktionsdefinitionen entfernt werden
             # da sie jetzt bereits oben definiert sind
             
-            # Spalten konfigurieren
+            # Spalten intelligenter konfigurieren
+            def calculate_column_width(col_name, sample_data):
+                """Berechnet optimale Spaltenbreite basierend auf Inhalt"""
+                # Mindestbreite für Spaltenname (mit Umbruch)
+                header_lines = []
+                if len(col_name) > 12:
+                    # Lange Spaltennamen in 2 Zeilen aufteilen
+                    words = col_name.replace('_', ' ').split()
+                    if len(words) > 1:
+                        mid = len(words) // 2
+                        line1 = ' '.join(words[:mid])
+                        line2 = ' '.join(words[mid:])
+                        header_lines = [line1, line2]
+                        header_width = max(len(line1), len(line2)) * 8 + 20
+                    else:
+                        header_lines = [col_name[:12], col_name[12:]] if len(col_name) > 12 else [col_name]
+                        header_width = max(len(line) for line in header_lines) * 8 + 20
+                else:
+                    header_lines = [col_name]
+                    header_width = len(col_name) * 8 + 20
+                
+                # Datenbreite analysieren (erste 100 Zeilen als Stichprobe)
+                max_data_width = 0
+                sample_size = min(100, len(sample_data))
+                
+                if sample_size > 0:
+                    col_index = column_names.index(col_name)
+                    for i in range(sample_size):
+                        if i < len(sample_data) and col_index < len(sample_data[i]):
+                            cell_value = str(sample_data[i][col_index]) if sample_data[i][col_index] is not None else ""
+                            max_data_width = max(max_data_width, len(cell_value) * 7)
+                
+                # Optimale Breite bestimmen
+                optimal_width = max(header_width, max_data_width, 60)  # Minimum 60 Pixel
+                return min(optimal_width, 300), header_lines  # Maximum 300 Pixel
+            
+            # Spalten mit optimaler Breite und mehrzeiligen Headern konfigurieren
             for col in column_names:
-                table_tree.heading(col, text=col, command=lambda c=col: sort_by_column(c))
-                width = min(max(len(col) * 8 + 20, 80), 200)  # Dynamische Breite
-                table_tree.column(col, width=width, anchor="w")
+                width, header_lines = calculate_column_width(col, all_rows)
+                
+                # Mehrzeiligen Header erstellen
+                if len(header_lines) > 1:
+                    header_text = '\n'.join(header_lines)
+                else:
+                    header_text = header_lines[0] if header_lines else col
+                
+                table_tree.heading(col, text=header_text, command=lambda c=col: sort_by_column(c))
+                table_tree.column(col, width=width, anchor="w", minwidth=50)
             
-            # Scrollbars
+            # Scrollbars für Tabellenansicht
+            # Vertikaler Scrollbar
             v_scrollbar = ttk.Scrollbar(tree_frame, orient="vertical", command=table_tree.yview)
-            h_scrollbar = ttk.Scrollbar(tree_frame, orient="horizontal", command=table_tree.xview)
-            table_tree.configure(yscrollcommand=v_scrollbar.set, xscrollcommand=h_scrollbar.set)
+            table_tree.configure(yscrollcommand=v_scrollbar.set)
             
-            table_tree.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-            v_scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-            h_scrollbar.pack(side=tk.BOTTOM, fill=tk.X)
+            # Horizontaler Scrollbar  
+            h_scrollbar = ttk.Scrollbar(tree_frame, orient="horizontal", command=table_tree.xview)
+            table_tree.configure(xscrollcommand=h_scrollbar.set)
+            
+            # Grid-Layout für Treeview und Scrollbars
+            table_tree.grid(row=0, column=0, sticky="nsew")
+            v_scrollbar.grid(row=0, column=1, sticky="ns")
+            h_scrollbar.grid(row=1, column=0, sticky="ew")
+            
+            # Grid-Gewichtung für automatische Größenanpassung
+            tree_frame.grid_rowconfigure(0, weight=1)
+            tree_frame.grid_columnconfigure(0, weight=1)
             
             # Rechte Seite - Detailansicht
             right_frame = tk.LabelFrame(main_paned, text="Zeilen-Details", font=("Arial", 11, "bold"))
@@ -1165,21 +1274,57 @@ Text-Suche:
             # Neueste Base-Tabelle wählen (falls mehrere vorhanden)
             target_base_table = base_tables[0][0]
             
-            # Tabellenstrukturen vergleichen
+            # Schema der Quelltabelle und Base-Tabelle analysieren
             cursor.execute(f"PRAGMA table_info(`{self.selected_table}`)")
-            source_columns = [col[1] for col in cursor.fetchall()]
+            source_schema = cursor.fetchall()
+            source_columns = [col[1] for col in source_schema]
             
             cursor.execute(f"PRAGMA table_info(`{target_base_table}`)")
-            target_columns = [col[1] for col in cursor.fetchall()]
+            base_schema = cursor.fetchall()
+            base_columns = [col[1] for col in base_schema]
             
-            if source_columns != target_columns:
-                messagebox.showerror("Struktur-Fehler", 
-                                    f"Tabellenstrukturen sind unterschiedlich!\\n\\n"
-                                    f"Quelle ({self.selected_table}): {len(source_columns)} Spalten\\n"
-                                    f"Ziel ({target_base_table}): {len(target_columns)} Spalten\\n\\n"
-                                    f"Die Strukturen müssen identisch sein.")
-                conn.close()
-                return
+            # Prüfen ob Base-Tabelle die neue Struktur hat (mit Quell_ID)
+            has_quell_id = 'Quell_ID' in base_columns
+            
+            if not has_quell_id:
+                # Alte Base-Tabelle ohne Quell_ID - einfacher Transfer
+                # Entferne 'id' aus Quelltabellen-Spalten für Transfer
+                transfer_columns = [col for col in source_columns if col.lower() != 'id']
+                missing_columns = set(transfer_columns) - set(base_columns)
+                
+                if missing_columns:
+                    messagebox.showerror("Struktur-Fehler", 
+                                        f"Base-Tabelle hat nicht alle benötigten Spalten!\\n\\n"
+                                        f"Fehlende Spalten: {', '.join(missing_columns)}")
+                    conn.close()
+                    return
+                
+                # Transfer ohne ID-Mapping
+                column_list = ', '.join([f'`{col}`' for col in transfer_columns])
+                insert_sql = f"INSERT INTO `{target_base_table}` ({column_list}) SELECT {column_list} FROM `{self.selected_table}`"
+                
+            else:
+                # Neue Base-Tabelle mit Quell_ID - ID-Mapping
+                # Entferne 'id' und 'Quell_ID' aus den Spalten für den Transfer
+                transfer_columns = [col for col in source_columns if col.lower() != 'id']
+                base_data_columns = [col for col in base_columns if col.lower() not in ['id', 'quell_id']]
+                
+                missing_columns = set(transfer_columns) - set(base_data_columns)
+                
+                if missing_columns:
+                    messagebox.showerror("Struktur-Fehler", 
+                                        f"Base-Tabelle hat nicht alle benötigten Spalten!\\n\\n"
+                                        f"Fehlende Spalten: {', '.join(missing_columns)}")
+                    conn.close()
+                    return
+                
+                # SQL für Transfer mit ID-Mapping erstellen
+                # Base-Tabelle bekommt neue ID (AUTO INCREMENT) und Quell_ID aus Import-Tabelle
+                column_list = ', '.join([f'`{col}`' for col in transfer_columns])
+                insert_sql = f"""
+                INSERT INTO `{target_base_table}` (Quell_ID, {column_list}) 
+                SELECT id, {column_list} FROM `{self.selected_table}`
+                """
             
             # Anzahl Datensätze ermitteln
             cursor.execute(f"SELECT COUNT(*) FROM `{self.selected_table}`")
@@ -1188,21 +1333,23 @@ Text-Suche:
             cursor.execute(f"SELECT COUNT(*) FROM `{target_base_table}`")
             target_count_before = cursor.fetchone()[0]
             
-            # Bestätigung
+            # Bestätigung mit zusätzlichen Informationen über ID-Mapping
+            struktur_info = "🔗 ID-Mapping: Import-ID → Base-Quell_ID, neue Base-ID" if has_quell_id else "📋 Direkter Transfer ohne ID-Mapping"
+            
             antwort = messagebox.askyesno("An Base-Tabelle anhängen", 
                                          f"Möchten Sie alle Daten aus '{self.selected_table}' \\n"
                                          f"an '{target_base_table}' anhängen?\\n\\n"
                                          f"Quelle: {source_count} Datensätze\\n"
                                          f"Ziel (vorher): {target_count_before} Datensätze\\n\\n"
+                                         f"{struktur_info}\\n"
                                          f"Die Daten werden am Ende der Base-Tabelle angefügt.")
             
             if not antwort:
                 conn.close()
                 return
             
-            # Daten anhängen
-            column_list = ', '.join([f'`{col}`' for col in source_columns])
-            cursor.execute(f"INSERT INTO `{target_base_table}` ({column_list}) SELECT {column_list} FROM `{self.selected_table}`")
+            # Daten anhängen mit entsprechender SQL-Strategie
+            cursor.execute(insert_sql)
             
             # Erfolg prüfen
             cursor.execute(f"SELECT COUNT(*) FROM `{target_base_table}`")
@@ -1213,18 +1360,22 @@ Text-Suche:
             conn.commit()
             conn.close()
             
-            self.log(f"✅ Daten angehängt: {added_records} Datensätze von '{self.selected_table}' zu '{target_base_table}'")
+            # Erfolgslog mit ID-Mapping Information
+            mapping_info = " (mit ID-Mapping)" if has_quell_id else " (direkter Transfer)"
+            self.log(f"✅ Daten angehängt: {added_records} Datensätze von '{self.selected_table}' zu '{target_base_table}'{mapping_info}")
             self.status_label.config(text=f"{added_records} Datensätze an '{target_base_table}' angehängt")
             
             # Tabellenliste aktualisieren
             self.tabellen_laden()
+            
+            success_detail = f"\\n\\n🔗 ID-Mapping durchgeführt: Import-IDs → Base-Quell_IDs" if has_quell_id else "\\n\\n📋 Direkter Daten-Transfer"
             
             messagebox.showinfo("Anhängen erfolgreich", 
                                f"Erfolgreich angehängt!\\n\\n"
                                f"Von: {self.selected_table}\\n"
                                f"Nach: {target_base_table}\\n\\n"
                                f"{added_records} Datensätze hinzugefügt\\n"
-                               f"Gesamt in Base-Tabelle: {target_count_after}")
+                               f"Gesamt in Base-Tabelle: {target_count_after}{success_detail}")
             
         except Exception as e:
             messagebox.showerror("Anhänge-Fehler", f"Fehler beim Anhängen an Base-Tabelle:\\n{str(e)}")
@@ -1281,6 +1432,7 @@ Text-Suche:
             self.btn_show_table.config(state=tk.DISABLED)
             self.btn_append_to_base.config(state=tk.DISABLED)
             self.btn_delete_table.config(state=tk.DISABLED)
+            self.btn_compare_base.config(state=tk.DISABLED)
             
             # Tabellenliste aktualisieren
             self.tabellen_laden()
@@ -1290,6 +1442,249 @@ Text-Suche:
         except Exception as e:
             messagebox.showerror("Lösch-Fehler", f"Fehler beim Löschen der Tabelle:\\n{str(e)}")
             self.log(f"❌ Lösch-Fehler: {str(e)}")
+
+    def quell_base_vergleich(self):
+        """Vergleicht Quell-Tabelle mit entsprechender Base-Tabelle"""
+        if not self.selected_table:
+            messagebox.showwarning("Keine Auswahl", "Bitte wählen Sie eine Tabelle aus.")
+            return
+        
+        try:
+            # Import_Vergleich Tabelle sofort löschen beim Start des Vergleichs
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            # Prüfen ob Import_Vergleich existiert und Anzahl ermitteln
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='Import_Vergleich'")
+            table_exists = cursor.fetchone() is not None
+            
+            if table_exists:
+                cursor.execute("SELECT COUNT(*) FROM Import_Vergleich")
+                alte_anzahl = cursor.fetchone()[0]
+                cursor.execute("DROP TABLE Import_Vergleich")
+                self.log(f"🗑️ Import_Vergleich Tabelle gelöscht: {alte_anzahl} alte Einträge entfernt")
+                
+                # Tabellenliste aktualisieren
+                self.tabellen_laden()
+            
+            conn.close()
+            
+            # Base-Tabellenname bestimmen (ohne _bak oder _base Suffix)
+            base_table_name = self.selected_table
+            if "_bak" in base_table_name:
+                base_table_name = base_table_name.split("_bak")[0]
+            elif "_base" in base_table_name:
+                base_table_name = base_table_name.split("_base")[0]
+            
+            base_table_name += "_base"
+            
+            # Prüfen ob Base-Tabelle existiert
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            # Suche nach Base-Tabelle (aktuellste)
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE ? ORDER BY name DESC", (f"{base_table_name}%",))
+            base_tables = cursor.fetchall()
+            
+            if not base_tables:
+                messagebox.showwarning("Keine Base-Tabelle", f"Keine Base-Tabelle für '{self.selected_table}' gefunden.\\n\\nBase-Tabelle sollte mit '{base_table_name}' beginnen.")
+                conn.close()
+                return
+            
+            # Aktuellste Base-Tabelle verwenden
+            actual_base_table = base_tables[0][0]
+            
+            # Feldvergleichs-Dialog öffnen
+            self.oeffne_feldvergleich_dialog(self.selected_table, actual_base_table)
+            conn.close()
+            
+        except Exception as e:
+            messagebox.showerror("Vergleichs-Fehler", f"Fehler beim Vorbereiten des Vergleichs:\\n{str(e)}")
+            self.log(f"❌ Vergleichs-Fehler: {str(e)}")
+    
+    def oeffne_feldvergleich_dialog(self, quell_tabelle, base_tabelle):
+        """Öffnet Dialog zur Auswahl der Vergleichsfelder"""
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            # Schema beider Tabellen abrufen
+            cursor.execute(f"PRAGMA table_info(`{quell_tabelle}`)")
+            quell_columns = [col[1] for col in cursor.fetchall()]
+            
+            cursor.execute(f"PRAGMA table_info(`{base_tabelle}`)")
+            base_columns = [col[1] for col in cursor.fetchall()]
+            
+            conn.close()
+            
+            # Dialog-Fenster erstellen
+            dialog = tk.Toplevel(self.root)
+            dialog.title(f"Feldvergleich: {quell_tabelle} ↔ {base_tabelle}")
+            dialog.geometry("600x650")
+            dialog.transient(self.root)
+            dialog.grab_set()
+            
+            # Titel
+            titel_frame = tk.Frame(dialog, bg="#8e44ad", pady=10)
+            titel_frame.pack(fill=tk.X)
+            
+            tk.Label(titel_frame, text=f"🔍 Feldvergleich konfigurieren", 
+                     font=("Arial", 14, "bold"), bg="#8e44ad", fg="white").pack()
+            
+            tk.Label(titel_frame, text=f"Quell-Tabelle: {quell_tabelle} ↔ Base-Tabelle: {base_tabelle}", 
+                     font=("Arial", 10), bg="#8e44ad", fg="white").pack()
+            
+            # Hauptbereich
+            main_frame = tk.Frame(dialog)
+            main_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
+            
+            # Vergleichsfeld-Auswahl
+            tk.Label(main_frame, text="Feld für 1:1 Vergleich auswählen:", font=("Arial", 11, "bold")).pack(anchor=tk.W, pady=(0, 10))
+            
+            # Gemeinsame Felder finden
+            gemeinsame_felder = list(set(quell_columns) & set(base_columns))
+            if not gemeinsame_felder:
+                messagebox.showerror("Keine gemeinsamen Felder", "Keine gemeinsamen Felder zwischen den Tabellen gefunden.")
+                dialog.destroy()
+                return
+            
+            # Standard-Vergleichsfeld: zeile_inhalt falls vorhanden, sonst erstes Feld
+            standard_feld = "zeile_inhalt" if "zeile_inhalt" in gemeinsame_felder else gemeinsame_felder[0]
+            vergleichsfeld_var = tk.StringVar(value=standard_feld)
+            
+            field_frame = tk.Frame(main_frame)
+            field_frame.pack(fill=tk.X, pady=10)
+            
+            tk.Label(field_frame, text="Vergleichsfeld:", font=("Arial", 10)).pack(side=tk.LEFT)
+            field_combo = ttk.Combobox(field_frame, textvariable=vergleichsfeld_var, values=gemeinsame_felder, 
+                                      state="readonly", width=25)
+            field_combo.pack(side=tk.LEFT, padx=(10, 0))
+            
+            # Info-Bereich
+            info_frame = tk.LabelFrame(main_frame, text="Vergleichsinformationen", font=("Arial", 10, "bold"))
+            info_frame.pack(fill=tk.X, pady=20)
+            
+            info_text = f"""
+📋 Vergleichslogik:
+• Vergleicht Werte im gewählten Feld zwischen Quell- und Base-Tabelle
+• Erstellt neue Tabelle 'Import_Vergleich' mit folgenden Feldern:
+  - ID (neue ID)
+  - Regatta (aus Quell-Tabelle)
+  - Zeile_inhalt (aus Quell-Tabelle) 
+  - Seite_nummer (aus Quell-Tabelle)
+  - Seiten_zeile (aus Quell-Tabelle)
+  - Enthalten_in_Zeile (ID aus Base-Tabelle bei Treffer, sonst NULL)
+
+🎯 Bei Übereinstimmung wird die Base-Tabellen-ID eingetragen
+            """
+            
+            tk.Label(info_frame, text=info_text, font=("Arial", 9), justify=tk.LEFT).pack(padx=10, pady=10)
+            
+            # Button-Bereich
+            button_frame = tk.Frame(main_frame)
+            button_frame.pack(fill=tk.X, pady=20)
+            
+            def vergleich_durchfuehren():
+                if not vergleichsfeld_var.get():
+                    messagebox.showwarning("Feld auswählen", "Bitte wählen Sie ein Vergleichsfeld aus.")
+                    return
+                
+                self.fuehre_vergleich_durch(quell_tabelle, base_tabelle, vergleichsfeld_var.get())
+                dialog.destroy()
+            
+            tk.Button(button_frame, text="🚀 Vergleich durchführen", command=vergleich_durchfuehren,
+                      bg="#28a745", fg="white", font=("Arial", 11, "bold")).pack(side=tk.LEFT, padx=(0, 10))
+            
+            tk.Button(button_frame, text="❌ Abbrechen", command=dialog.destroy,
+                      bg="#6c757d", fg="white", font=("Arial", 11, "bold")).pack(side=tk.LEFT)
+            
+        except Exception as e:
+            messagebox.showerror("Dialog-Fehler", f"Fehler beim Öffnen des Vergleichsdialogs:\\n{str(e)}")
+            self.log(f"❌ Dialog-Fehler: {str(e)}")
+    
+    def fuehre_vergleich_durch(self, quell_tabelle, base_tabelle, vergleichsfeld):
+        """Führt den eigentlichen Vergleich durch und erstellt Import_Vergleich Tabelle"""
+        try:
+            conn = sqlite3.connect(self.db_path)
+            cursor = conn.cursor()
+            
+            # Prüfen ob Import_Vergleich bereits existiert und Anzahl ermitteln
+            cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='Import_Vergleich'")
+            table_exists = cursor.fetchone() is not None
+            
+            alte_anzahl = 0
+            if table_exists:
+                cursor.execute("SELECT COUNT(*) FROM Import_Vergleich")
+                alte_anzahl = cursor.fetchone()[0]
+                self.log(f"🗑️ Lösche vorherige Vergleichsdaten: {alte_anzahl} Einträge")
+            
+            # Import_Vergleich Tabelle löschen falls vorhanden
+            cursor.execute("DROP TABLE IF EXISTS Import_Vergleich")
+            
+            # Import_Vergleich Tabelle neu erstellen
+            cursor.execute("""
+                CREATE TABLE Import_Vergleich (
+                    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                    Regatta TEXT,
+                    Zeile_inhalt TEXT,
+                    Seite_nummer INTEGER,
+                    Seiten_zeile INTEGER,
+                    Enthalten_in_Zeile INTEGER
+                )
+            """)
+            
+            self.log(f"🔄 Starte neuen Vergleich: {quell_tabelle} ↔ {base_tabelle} (Feld: {vergleichsfeld})")
+            
+            # Daten aus Quell-Tabelle abrufen
+            cursor.execute(f"SELECT regatta, zeile_inhalt, seite_nummer, zeile_nummer, {vergleichsfeld} FROM `{quell_tabelle}`")
+            quell_daten = cursor.fetchall()
+            
+            gesamt_anzahl = len(quell_daten)
+            self.log(f"📊 Zu vergleichende Datensätze: {gesamt_anzahl}")
+            
+            vergleiche_durchgefuehrt = 0
+            treffer_gefunden = 0
+            
+            # Für jeden Datensatz in Quell-Tabelle prüfen
+            for quell_row in quell_daten:
+                regatta, zeile_inhalt, seite_nummer, zeilen_zeile, vergleichswert = quell_row
+                
+                # Suche in Base-Tabelle nach Übereinstimmung
+                cursor.execute(f"SELECT id FROM `{base_tabelle}` WHERE `{vergleichsfeld}` = ? LIMIT 1", (vergleichswert,))
+                base_match = cursor.fetchone()
+                
+                enthalten_in_zeile = base_match[0] if base_match else None
+                if base_match:
+                    treffer_gefunden += 1
+                
+                # In Import_Vergleich einfügen
+                cursor.execute("""
+                    INSERT INTO Import_Vergleich (Regatta, Zeile_inhalt, Seite_nummer, Seiten_zeile, Enthalten_in_Zeile)
+                    VALUES (?, ?, ?, ?, ?)
+                """, (regatta, zeile_inhalt, seite_nummer, zeilen_zeile, enthalten_in_zeile))
+                
+                vergleiche_durchgefuehrt += 1
+            
+            conn.commit()
+            conn.close()
+            
+            # Ergebnis anzeigen
+            self.log(f"🔍 Vergleich abgeschlossen: {vergleiche_durchgefuehrt} Datensätze verglichen, {treffer_gefunden} Treffer gefunden")
+            self.status_label.config(text=f"Vergleich abgeschlossen: {treffer_gefunden}/{vergleiche_durchgefuehrt} Treffer")
+            
+            # Tabellenliste aktualisieren
+            self.tabellen_laden()
+            
+            messagebox.showinfo("Vergleich abgeschlossen", 
+                               f"Vergleich erfolgreich durchgeführt:\\n\\n"
+                               f"Verglichene Datensätze: {vergleiche_durchgefuehrt}\\n"
+                               f"Gefundene Treffer: {treffer_gefunden}\\n"
+                               f"Vergleichsfeld: {vergleichsfeld}\\n\\n"
+                               f"Ergebnisse in Tabelle 'Import_Vergleich' gespeichert.")
+            
+        except Exception as e:
+            messagebox.showerror("Vergleichs-Fehler", f"Fehler beim Durchführen des Vergleichs:\\n{str(e)}")
+            self.log(f"❌ Vergleichs-Fehler: {str(e)}")
 
 
 if __name__ == "__main__":
